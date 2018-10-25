@@ -1,0 +1,28 @@
+PREFIX afn: <http://jena.hpl.hp.com/ARQ/function#>
+PREFIX fn: <http://www.w3.org/2005/xpath-functions#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX par: <http://parliament.semwebcentral.org/parliament#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX osi: <http://ontologies.geohive.ie/osi#>
+PREFIX my: <http://example.org/ApplicationSchema#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+
+SELECT ?county ?areaLabel ?areaWkt
+WHERE {
+   ?dublin a osi:County.
+   ?dublin rdfs:label "DUBLIN".
+   ?dublin geo:hasGeometry ?dublinGeom.
+   ?dublinGeom geo:asWKT ?dublinWkt.
+  
+   ?area a osi:Local_Electoral_Area.
+   ?area rdfs:label ?areaLabel.
+   ?area geo:hasGeometry ?areaGeom.
+   ?areaGeom geo:asWKT ?areaWkt.
+  
+   FILTER(geof:sfWithin(?areaWkt, ?dublinWkt)).
+  }
