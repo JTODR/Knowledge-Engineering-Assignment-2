@@ -6,12 +6,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 // Jena
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
+import org.apache.jena.rdf.model.RDFNode;
 
 public class RemoteJenaMain {
 	
@@ -27,20 +29,15 @@ public class RemoteJenaMain {
 		// Read in the query string for the received query ID
 		String query= readQuery(queryId);
 		
-		// Get the parameters that are returned from the query
-		String[] selectParams = getQuerySelectParams(query); 
-		
-		
-		// Testing
 		System.out.println(query);
-		for(String param : selectParams) {
-			System.out.println("Param: " + param);
-		}
-		
 		
 		// Send the query to Parliament and get the results
 		System.out.println("Sending query to Parliament...");
-		String[] queryResults = issueSelectQuery(query, selectParams);
+		String[] queryResults = issueSelectQuery(query);
+		if(queryResults == null) {
+			System.err.println("A query result is not a resource or literal, exiting...");
+			System.exit(2);
+		}
 		
 		// Send the results back to the front end
 		System.out.println("Sending query results to front end...");
@@ -56,14 +53,8 @@ public class RemoteJenaMain {
 	private static void sendQueryResults(String[] queryResults) {
 		// TODO: send result to front end		
 	}
-
-	private static String[] getQuerySelectParams(String queryText) {		
-		String selectParams = queryText.split("SELECT")[1];
-		selectParams = selectParams.split("WHERE")[0];
-		return selectParams.trim().replaceAll("\\?", "").split(" ");		
-	}
 	
-	private static String[] issueSelectQuery(String query, String[] selectParams) {
+	private static String[] issueSelectQuery(String query) {
 		QueryExecution exec = QueryExecutionFactory.sparqlService(SERVER_URL, query);
 		ResultSet rs = exec.execSelect();
 		
@@ -74,11 +65,24 @@ public class RemoteJenaMain {
 			// Get current query result set
 		    QuerySolution qs = rs.next() ;
 		    
-		    // For each parameter to the query SELECT, retrieve the returned value for that parameter
-		    for(String param : selectParams) {
-		    	result = result + qs.getLiteral(param).toString() + " | ";
-		    }
-		    
+		    // Get column names from SPARQL SELECT
+	    	Iterator<String> columns = qs.varNames();
+	    	
+	    	// For the current row, get the value at each column (resource or literal)
+	    	while(columns.hasNext()) {
+		    	String column = columns.next();
+		    	//System.out.println("column: " + column);	
+		    	
+		    	RDFNode node = qs.get(column);
+		    	if(node.isLiteral()) {
+		    		result = result + qs.getLiteral(column).toString() + " | ";
+		    	} else if(node.isResource()){
+		    		result = result + qs.getResource(column).toString() + " | ";	
+		    	} else {
+		    		return null;
+		    	}	
+	    	}
+	    	
 		    System.out.println(result);
 		    queryResults.add(result);
 		    result = "";
