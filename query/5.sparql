@@ -38,7 +38,7 @@ WHERE {
      ?trail :trailStartPoint ?trailStartPoint.
      ?trail :trailName ?trailName.
      ?trail :trailClimb ?trailClimb.
-     
-     FILTER(?trailClimb < %PARAM_1% && geof:sfWithin(?trailStartPoint, ?wkt)).
+
+     FILTER(?trailClimb < %PARAM_0% && geof:sfWithin(?trailStartPoint, ?wkt)).
   }
 }

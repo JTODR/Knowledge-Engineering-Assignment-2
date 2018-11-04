@@ -40,6 +40,6 @@ WHERE {
 
      # Get the current district. POINT(LONG, LAT)
      # Assuming that start_longitude and start_latitude get merged to a sf:Point type during RDF conversion
-     FILTER(geof:sfWithin("POINT(%PARAM_2% %PARAM_1%)"^^sf:wktLiteral, ?wkt) && geof:sfWithin(?trailStartPoint, ?wkt)).
+     FILTER(geof:sfWithin("POINT(%PARAM_1% %PARAM_0%)"^^sf:wktLiteral, ?wkt) && geof:sfWithin(?trailStartPoint, ?wkt)).
   }
 }

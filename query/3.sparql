@@ -37,9 +37,9 @@ WHERE {
      ?trail a :trail.
      ?trail :trailStartPoint ?trailStartPoint.
      ?trail :trailLength ?trailLength.
-     
+
      # Assuming that start_longitude and start_latitude get merged to a sf:Point type during RDF conversion
-     FILTER(?trailLength > %PARAM_1% && geof:sfWithin(?trailStartPoint, ?wkt)).
+     FILTER(?trailLength > %PARAM_0% && geof:sfWithin(?trailStartPoint, ?wkt)).
 
   }
 }

@@ -25,9 +25,9 @@ public class RemoteJenaMain {
 
 		// Get the selected query ID from the front end
 		int queryId = getQueryIdFromFrontend();
-
+    String params[] = getParamsFromFrontend();
 		// Read in the query string for the received query ID
-		String query= readQuery(queryId);
+		String query= getQuery(queryId, params);
 
 		System.out.println(query);
 
@@ -48,6 +48,10 @@ public class RemoteJenaMain {
 	private static int getQueryIdFromFrontend() {
 		// TODO: get request from front end
 		return 1;
+	}
+	private static String[] getParamsFromFrontend() {
+		// TODO: get request from front end
+		return new String[0];
 	}
 
 	private static void sendQueryResults(String[] queryResults) {
@@ -91,8 +95,8 @@ public class RemoteJenaMain {
 
 		return queryResults.toArray(new String[0]);
 	}
-	
-	private static String readQuery(int queryId) {
+
+	private static String getQuery(int queryId, String params[]) {
 		String query = queryDir + "\\" + String.valueOf(queryId) + ".sparql";
 		final Path queryPath = Paths.get(query);
 		if (!Files.isReadable(queryPath)) {
@@ -106,8 +110,13 @@ public class RemoteJenaMain {
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
+		String ret = new String(fileBytes);
 
-		return new String(fileBytes);
+		// do the parameter replacement
+		for(int i = 0; i < params.length; i++) {
+			ret = ret.replace("%PARAM_"+i+"%", params[i]);
+		}
+		return  ret;
 	}
 
 }
