@@ -13,7 +13,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX sf: <http://www.opengis.net/ont/sf#>
 
-PREFIX : <http://www.this.com/>
+PREFIX trail: <http://www.this.com/ontologies/irish-trails-ontology#>
 
 # Find districts with trails longer than given length(km).
 #   Parameters:  length(km)
@@ -34,9 +34,8 @@ WHERE {
      ?district geo:hasGeometry ?geom.
      ?geom geo:asWKT ?wkt.
 
-     ?trail a :trail.
-     ?trail :trailStartPoint ?trailStartPoint.
-     ?trail :trailLength ?trailLength.
+     ?trail trail:startPoint ?trailStartPoint.
+     ?trail trail:length ?trailLength.
 
      # Assuming that start_longitude and start_latitude get merged to a sf:Point type during RDF conversion
      FILTER(?trailLength > %PARAM_0% && geof:sfWithin(?trailStartPoint, ?wkt)).

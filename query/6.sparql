@@ -13,7 +13,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX sf: <http://www.opengis.net/ont/sf#>
 
-PREFIX : <http://www.this.com/>
+PREFIX trail: <http://www.this.com/ontologies/irish-trails-ontology#>
 
 # Find trails with given format in the current district.
 #   Parameters:  current lat and long, format
@@ -34,10 +34,9 @@ WHERE {
      ?district geo:hasGeometry ?geom.
      ?geom geo:asWKT ?wkt.
 
-     ?trail a :trail.
-     ?trail :trailStartPoint ?trailStartPoint.
-     ?trail :trailName ?trailName.
-     ?trail :trailFormat "%PARAM_2%"^^rdf:PlainLiteral
+     ?trail trail:startPoint ?trailStartPoint.
+     ?trail trail:name ?trailName.
+     ?trail trail:hasFormat "%PARAM_2%"^^rdf:PlainLiteral
 
      # Get the current district. POINT(LONG, LAT).
      # Assuming that start_longitude and start_latitude get merged to a sf:Point type during RDF conversion
