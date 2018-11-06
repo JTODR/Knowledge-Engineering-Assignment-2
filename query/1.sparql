@@ -11,9 +11,9 @@ PREFIX trail: <http://www.this.com/ontologies/irish-trails-ontology#>
 
 # Find the number of trails in current district.
 #   Parameters:  current long and lat
-#   Returns:     number of trails, (districtName - issues)
+#   Returns:     districtName, number of trails
 
-SELECT (count(distinct ?trail) AS ?count) # ?districtName # -> including results in a 400 error, not sure if it's possible to return both
+SELECT ?districtName (count(distinct ?trail) AS ?count)
 WHERE {
   ?district a osi:Municipal_District.
   ?district rdfs:label ?districtName.
@@ -27,4 +27,4 @@ WHERE {
 
   # Get the current district. POINT(LONG, LAT)
   FILTER(geof:sfWithin("POINT(%PARAM_0% %PARAM_1%)"^^sf:wktLiteral, ?wkt) && geof:sfWithin(?trailStartPoint, ?wkt)).
-}
+} GROUP BY ?districtName
