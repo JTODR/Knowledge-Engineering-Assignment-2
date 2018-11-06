@@ -20,23 +20,15 @@ PREFIX trail: <http://www.this.com/ontologies/irish-trails-ontology#>
 #   Returns:     district, trailName, startPoint, completionTime, dogsAllowed
 
 SELECT ?districtName ?trailName, ?trailStartPoint, ?trailEstimatedCompletionTime, ?trailDogsAllowed
-# ********************************************************
-# Use of 'FROM' gives http 500 error, not sure why.
-# I believe using 'GRAPH ?g' will search all graphs and union the results? I have not tested this
-# ********************************************************
-#FROM <file:///usr/local/ParliamentKB/geohive>
-#FROM <file:///usr/local/ParliamentKB/irish_trails>
-
 WHERE {
-  GRAPH ?g {
-     ?district a osi:Municipal_District.
-     ?district rdfs:label ?districtName.
-     ?district geo:hasGeometry ?geom.
-     ?geom geo:asWKT ?wkt.
+  ?district a osi:Municipal_District.
+  ?district rdfs:label ?districtName.
+  ?district geo:hasGeometry ?geom.
+  ?geom geo:asWKT ?wkt.
 
-     ?trail trail:name ?trailName.
-     ?trail trail:startPoint ?trailStartPoint.
-     ?trail trail:dogsAllowed ?trailDogsAllowed.
-     ?trail trail:estimatedCompletionTime ?trailEstimatedCompletionTime.
-  }
+  ?trail a trail:trail.
+  ?trail trail:name ?trailName.
+  ?trail trail:hasStartPoint ?trailStartPoint.
+  ?trail trail:dogsAllowed ?trailDogsAllowed.
+  ?trail trail:estimatedCompletionTime ?trailEstimatedCompletionTime.
 } ORDER BY ASC(?trailEstimatedCompletionTime)

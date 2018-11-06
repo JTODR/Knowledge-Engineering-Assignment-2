@@ -20,25 +20,16 @@ PREFIX trail: <http://www.this.com/ontologies/irish-trails-ontology#>
 #   Returns:     district, quality, trailName
 
 SELECT ?districtName ?trailQuality ?trailName
-# ********************************************************
-# Use of 'FROM' gives http 500 error, not sure why.
-# I believe using 'GRAPH ?g' will search all graphs and union the results? I have not tested this
-# ********************************************************
-#FROM <file:///usr/local/ParliamentKB/geohive>
-#FROM <file:///usr/local/ParliamentKB/irish_trails>
-
 WHERE {
-  GRAPH ?g {
-     ?district a osi:Municipal_District.
-     ?district rdfs:label ?districtName.
-     ?district geo:hasGeometry ?geom.
-     ?geom geo:asWKT ?wkt.
+  ?district a osi:Municipal_District.
+  ?district rdfs:label ?districtName.
+  ?district geo:hasGeometry ?geom.
+  ?geom geo:asWKT ?wkt.
 
-     ?trail trail:startPoint ?trailStartPoint.
-     ?trail trail:name ?trailName.
-     ?trail trail:hasQuality ?trailQuality.
+  ?trail a trail:trail.
+  ?trail trail:hasStartPoint ?trailStartPoint.
+  ?trail trail:name ?trailName.
+  ?trail trail:hasQuality ?trailQuality.
 
-     # Assuming that start_longitude and start_latitude get merged to a sf:Point type during RDF conversion
-     FILTER(?trailQuality > %PARAM_0% && geof:sfWithin(?trailStartPoint, ?wkt)).
-  }
+  FILTER(?trailQuality > %PARAM_0% && geof:sfWithin(?trailStartPoint, ?wkt)).
 }

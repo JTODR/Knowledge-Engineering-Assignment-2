@@ -20,25 +20,16 @@ PREFIX trail: <http://www.this.com/ontologies/irish-trails-ontology#>
 #   Returns:     number of trails, districtName
 
 SELECT ?districtName (count(?trailStartPoint) AS ?trailCount)
-# ********************************************************
-# Use of 'FROM' gives http 500 error, not sure why.
-# I believe using 'GRAPH ?g' will search all graphs and union the results? I have not tested this
-# ********************************************************
-#FROM <file:///usr/local/ParliamentKB/geohive>
-#FROM <file:///usr/local/ParliamentKB/irish_trails>
-
 WHERE {
-  GRAPH ?g {
-     ?district a osi:Municipal_District.
-     ?district rdfs:label ?districtName.
-     ?district geo:hasGeometry ?geom.
-     ?geom geo:asWKT ?wkt.
+  ?district a osi:Municipal_District.
+  ?district rdfs:label ?districtName.
+  ?district geo:hasGeometry ?geom.
+  ?geom geo:asWKT ?wkt.
 
-     ?trail trail:startPoint ?trailStartPoint.
-     ?trail trail:name ?trailName.
+  ?trail a trail:trail.
+  ?trail trail:hasStartPoint ?trailStartPoint.
+  ?trail trail:name ?trailName.
 
-     # Get the current district. POINT(LONG, LAT)
-     # Assuming that start_longitude and start_latitude get merged to a sf:Point type during RDF conversion
-     FILTER(geof:sfWithin("POINT(%PARAM_1% %PARAM_0%)"^^sf:wktLiteral, ?wkt) && geof:sfWithin(?trailStartPoint, ?wkt)).
-  }
+  # Get the current district. POINT(LONG, LAT)
+  FILTER(geof:sfWithin("POINT(%PARAM_1% %PARAM_0%)"^^sf:wktLiteral, ?wkt) && geof:sfWithin(?trailStartPoint, ?wkt)).
 }
