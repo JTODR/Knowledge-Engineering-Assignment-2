@@ -1,12 +1,6 @@
-PREFIX afn: <http://jena.hpl.hp.com/ARQ/function#>
-PREFIX fn: <http://www.w3.org/2005/xpath-functions#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX par: <http://parliament.semwebcentral.org/parliament#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX time: <http://www.w3.org/2006/time#>
-PREFIX xml: <http://www.w3.org/XML/1998/namespace>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 PREFIX osi: <http://ontologies.geohive.ie/osi#>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
@@ -16,7 +10,7 @@ PREFIX sf: <http://www.opengis.net/ont/sf#>
 PREFIX trail: <http://www.this.com/ontologies/irish-trails-ontology#>
 
 # Find trails in the current district.
-#   Parameters:  current lat and long
+#   Parameters:  current Long and Lat
 #   Returns:     district, trail names
 
 SELECT ?districtName ?trailName
@@ -26,10 +20,11 @@ WHERE {
   ?district geo:hasGeometry ?geom.
   ?geom geo:asWKT ?wkt.
 
-  ?trail a trail:trail.
-  ?trail trail:hasStartPoint ?trailStartPoint.
-  ?trail trail:name ?trailName.
+  ?trail a trail:Trail.
+  ?trail trail:trail_name ?trailName.
+  ?trail trail:hasStartPoint ?spGeom.
+  ?spGeom geo:asWKT ?trailStartPoint.
 
   # Get the current district. POINT(LONG, LAT)
-  FILTER(geof:sfWithin("POINT(%PARAM_1% %PARAM_0%)"^^sf:wktLiteral, ?wkt) && geof:sfWithin(?trailStartPoint, ?wkt)).
+  FILTER(geof:sfWithin("POINT(%PARAM_0% %PARAM_1%)"^^sf:wktLiteral, ?wkt) && geof:sfWithin(?trailStartPoint, ?wkt)).
 }

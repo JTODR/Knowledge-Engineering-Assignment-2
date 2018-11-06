@@ -26,9 +26,10 @@ WHERE {
   ?district geo:hasGeometry ?geom.
   ?geom geo:asWKT ?wkt.
 
-  ?trail a trail:trail.
-  ?trail trail:name ?trailName.
-  ?trail trail:hasStartPoint ?trailStartPoint.
+  ?trail a trail:Trail.
+  ?trail trail:trail_name ?trailName.
+  ?trail trail:hasStartPoint ?spGeom.
+  ?spGeom geo:asWKT ?trailStartPoint.
   ?trail trail:dogsAllowed ?trailDogsAllowed.
   ?trail trail:estimatedCompletionTime ?trailEstimatedCompletionTime.
 } ORDER BY ASC(?trailEstimatedCompletionTime)

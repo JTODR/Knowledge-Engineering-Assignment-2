@@ -26,8 +26,9 @@ WHERE {
   ?district geo:hasGeometry ?geom.
   ?geom geo:asWKT ?wkt.
 
-  ?trail a trail:trail.
-  ?trail trail:hasStartPoint ?trailStartPoint.
+  ?trail a trail:Trail.
+  ?trail trail:hasStartPoint ?spGeom.
+  ?spGeom geo:asWKT ?trailStartPoint.
   ?trail trail:length ?trailLength.
 
   FILTER(?trailLength > %PARAM_0% && geof:sfWithin(?trailStartPoint, ?wkt)).
