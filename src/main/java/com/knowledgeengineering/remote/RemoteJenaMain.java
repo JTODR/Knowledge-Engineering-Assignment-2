@@ -6,9 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.LinkedHashMap;
 
 // Jena
 import org.apache.jena.query.QueryExecution;
@@ -26,32 +24,38 @@ public class RemoteJenaMain {
 		org.apache.log4j.Logger.getRootLogger().setLevel(org.apache.log4j.Level.OFF);
 
 		// Get the selected query ID from the front end
-		//int queryId = getQueryIdFromFrontend();
-		//String params[] = getParamsFromFrontend();
+		// int queryId = getQueryIdFromFrontend();
+		// String params[] = getParamsFromFrontend();
 		// Read in the query string for the received query ID
-		String query= getQuery(1, null);
+		String query = getQuery(1, null);
 
 		System.out.println(query);
 
 		// Send the query to Parliament and get the results
 		System.out.println("Sending query to Parliament...");
-		HashMap<String, ArrayList<String>> queryResults = issueSelectQuery(query);
-		if(queryResults == null) {
+		ArrayList<ArrayList<String>> queryResults = issueSelectQuery(query);
+		if (queryResults == null) {
 			System.err.println("A query result is not a resource or literal, exiting...");
 			System.exit(2);
 		}
-		
-		for(HashMap.Entry<String, ArrayList<String>> pair : queryResults.entrySet()) {
-			String columnName = pair.getKey();
-			System.out.println("Column: " + columnName);
-			for(String result : pair.getValue()) {
-				System.out.println(result);
+
+		/*
+		 * for(HashMap.Entry<String, ArrayList<String>> pair : queryResults.entrySet())
+		 * { String columnName = pair.getKey(); System.out.println("Column: " +
+		 * columnName); for(String result : pair.getValue()) {
+		 * System.out.println(result); } }
+		 */
+
+		for (ArrayList<String> result : queryResults) {
+			for (String item : result) {
+				System.out.print(item + ", ");
 			}
+			System.out.println();
 		}
 
 		// Send the results back to the front end
 		System.out.println("Sending query results to front end...");
-		//sendQueryResults(queryResults);
+		// sendQueryResults(queryResults);
 
 	}
 
@@ -59,6 +63,7 @@ public class RemoteJenaMain {
 		// TODO: get request from front end
 		return 1;
 	}
+
 	private static String[] getParamsFromFrontend() {
 		// TODO: get request from front end
 		return new String[0];
@@ -68,67 +73,53 @@ public class RemoteJenaMain {
 		// TODO: send result to front end
 	}
 
-	private static HashMap<String, ArrayList<String>> issueSelectQuery(String query) {
+	private static ArrayList<ArrayList<String>> issueSelectQuery(String query) {
+		// Execute the SPARQL query and get the set of results
 		QueryExecution exec = QueryExecutionFactory.sparqlService(SERVER_URL, query);
 		ResultSet rs = exec.execSelect();
 
-		// HashMap of {column name : list of results for that column}
-		HashMap<String, ArrayList<String>> resultHmap = new LinkedHashMap<String, ArrayList<String>>();
-		
-		// Get the column names from the returned Parliament results
-		// Add the column names to the hash map and initialize a new ArrayList for that column name
-		Iterator<String> columnNames = rs.next().varNames();
-		while(columnNames.hasNext()) {
-			String columnName = columnNames.next();
-			resultHmap.put(columnName, new ArrayList<String>());
-		}
-		
-		// currentResult will be used to add to the ArrayList at each column name
-		ArrayList<String> currentResult = new ArrayList<String>();
-		
-		while(rs.hasNext()) {
+		// List of lists to store the results
+		// Each inner list represents a row, containing the results for that row
+		ArrayList<ArrayList<String>> results = new ArrayList<ArrayList<String>>();
+
+		while (rs.hasNext()) {
 			// Get current query result set
-		    QuerySolution qs = rs.next() ;
+			QuerySolution qs = rs.next();
 
-		    // Get column names from SPARQL SELECT
-	    	Iterator<String> columns = qs.varNames();
+			// Get column names from SPARQL SELECT
+			Iterator<String> columns = qs.varNames();
 
-	    	// For the current row, get the value at each column (resource or literal)
-	    	while(columns.hasNext()) {
-		    	String column = columns.next();
-		    	//System.out.println("column: " + column);
+			// Create a new list for the current result row
+			ArrayList<String> result = new ArrayList<String>();
 
-		    	RDFNode node = qs.get(column);
-		    	if(node.isLiteral()) {
-		    		// Get the ArrayList currently stored at the column name
-		    		currentResult = resultHmap.get(column);
-		    		
-		    		// Add our new value to the ArrayList
-		    		currentResult.add(qs.getLiteral(column).toString());
-		    		
-		    		// Store the update ArrayList at the column name
-		    		resultHmap.put(column, currentResult);
-		    		
-		    	} else if(node.isResource()){
-		    		// Same as for isLiteral() above except the result this time is a Resource
-		    		currentResult = resultHmap.get(column);
-		    		currentResult.add(qs.getResource(column).toString());
-		    		resultHmap.put(column, currentResult);
-		    	} else {
-		    		return null;
-		    	}
-	    	}
+			// Get the value at each column (resource or literal) for the current row
+			while (columns.hasNext()) {
+				String column = columns.next();
+				RDFNode node = qs.get(column);
+
+				if (node.isLiteral()) {
+					result.add(qs.getLiteral(column).toString());
+				} else if (node.isResource()) {
+					result.add(qs.getResource(column).toString());
+				} else {
+					return null;
+				}
+			}
+
+			// Add the row's results to the total list of results
+			results.add(result);
 		}
-		exec.close() ;
+		exec.close();
 
-		return resultHmap;
+		return results;
 	}
 
 	private static String getQuery(int queryId, String params[]) {
 		String query = queryDir + "\\" + String.valueOf(queryId) + ".sparql";
 		final Path queryPath = Paths.get(query);
 		if (!Files.isReadable(queryPath)) {
-			System.out.println(queryPath.toAbsolutePath() + " does not exist or is not readable, please check the path");
+			System.out
+					.println(queryPath.toAbsolutePath() + " does not exist or is not readable, please check the path");
 			System.exit(1);
 		}
 
@@ -140,14 +131,14 @@ public class RemoteJenaMain {
 		}
 		String ret = new String(fileBytes);
 
-		if(params != null) {
+		if (params != null) {
 			// do the parameter replacement
-			for(int i = 0; i < params.length; i++) {
-				ret = ret.replace("%PARAM_"+i+"%", params[i]);
-			}	
+			for (int i = 0; i < params.length; i++) {
+				ret = ret.replace("%PARAM_" + i + "%", params[i]);
+			}
 		}
-		
-		return  ret;
+
+		return ret;
 	}
 
 }
