@@ -1,0 +1,1235 @@
+<http://example.org/trail/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://example.org/trail/> <http://www.w3.org/2000/01/rdf-schema#comment> "This data set contains the National Trails Register a collection of looped walks, waymarked ways and cycling routes in the Republic of Ireland." .
+<http://example.org/trail/> <http://www.w3.org/2000/01/rdf-schema#label> "Sport Ireland Trails" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://example.org/trail/climb
+<http://example.org/trail/climb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://example.org/trail/climb> <http://www.w3.org/2000/01/rdf-schema#comment> "Overall trail climb in metres" .
+<http://example.org/trail/climb> <http://www.w3.org/2000/01/rdf-schema#label> "Climb" .
+# 
+# http://example.org/trail/dogs_allowed
+<http://example.org/trail/dogs_allowed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://example.org/trail/dogs_allowed> <http://www.w3.org/2000/01/rdf-schema#comment> "Whether dogs are allowed (1) or not allowed (0) on this trail." .
+<http://example.org/trail/dogs_allowed> <http://www.w3.org/2000/01/rdf-schema#label> "Dogs allowed" .
+# 
+# http://example.org/trail/estimated_time_to_complete
+<http://example.org/trail/estimated_time_to_complete> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://example.org/trail/estimated_time_to_complete> <http://www.w3.org/2000/01/rdf-schema#comment> "The estimated time to complete this walk in minutes." .
+<http://example.org/trail/estimated_time_to_complete> <http://www.w3.org/2000/01/rdf-schema#label> "Estimated time to complete" .
+# 
+# http://example.org/trail/hasFinishPoint
+<http://example.org/trail/hasFinishPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://example.org/trail/hasFinishPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the finish \"Point\" object for the trail" .
+<http://example.org/trail/hasFinishPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Finish point" .
+# 
+# http://example.org/trail/hasStartPoint
+<http://example.org/trail/hasStartPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://example.org/trail/hasStartPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the start \"Point\" object for the trail" .
+<http://example.org/trail/hasStartPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Start point" .
+# 
+# http://example.org/trail/id
+<http://example.org/trail/id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://example.org/trail/id> <http://www.w3.org/2000/01/rdf-schema#comment> "The trail ID as specified in the original Sport Ireland CSV dataset" .
+<http://example.org/trail/id> <http://www.w3.org/2000/01/rdf-schema#label> "Trail ID" .
+# 
+# http://example.org/trail/length
+<http://example.org/trail/length> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://example.org/trail/length> <http://www.w3.org/2000/01/rdf-schema#comment> "The length of the trail measured in kilometres" .
+<http://example.org/trail/length> <http://www.w3.org/2000/01/rdf-schema#label> "Length" .
+# 
+# http://example.org/trail/name
+<http://example.org/trail/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://example.org/trail/name> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the trail" .
+<http://example.org/trail/name> <http://www.w3.org/2000/01/rdf-schema#label> "Trail name" .
+# 
+# http://www.opengis.net/ont/geosparql#asWKT
+<http://www.opengis.net/ont/geosparql#asWKT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.opengis.net/ont/geosparql#wktLiteral
+<http://www.opengis.net/ont/geosparql#wktLiteral> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://example.org/trail/hasCategory
+<http://example.org/trail/hasCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/trail/hasCategory> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/trail/isCategoryOf> .
+# 
+# http://example.org/trail/hasCounty
+<http://example.org/trail/hasCounty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/trail/hasCounty> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/trail/isCountyOf> .
+# 
+# http://example.org/trail/hasFormat
+<http://example.org/trail/hasFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/trail/hasFormat> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/trail/isFormatOf> .
+# 
+# http://example.org/trail/hasGrade
+<http://example.org/trail/hasGrade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/trail/hasGrade> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/trail/isGradeOf> .
+# 
+# http://example.org/trail/hasQuality
+<http://example.org/trail/hasQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/trail/hasQuality> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/trail/isQualityOf> .
+# 
+# http://example.org/trail/hasType
+<http://example.org/trail/hasType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/trail/hasType> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/trail/isTypeOf> .
+# 
+# http://example.org/trail/isCategoryOf
+<http://example.org/trail/isCategoryOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://example.org/trail/isCountyOf
+<http://example.org/trail/isCountyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://example.org/trail/isFormatOf
+<http://example.org/trail/isFormatOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://example.org/trail/isGradeOf
+<http://example.org/trail/isGradeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://example.org/trail/isQualityOf
+<http://example.org/trail/isQualityOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://example.org/trail/isTypeOf
+<http://example.org/trail/isTypeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://example.org/trail/Category
+<http://example.org/trail/Category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/trail/Category> <http://www.w3.org/2000/01/rdf-schema#comment> "The category of trail signified as an integer." .
+<http://example.org/trail/Category> <http://www.w3.org/2000/01/rdf-schema#label> "Category" .
+# 
+# http://example.org/trail/County
+<http://example.org/trail/County> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/trail/County> <http://www.w3.org/2000/01/rdf-schema#comment> "The counties which this trail passes through." .
+<http://example.org/trail/County> <http://www.w3.org/2000/01/rdf-schema#label> "County" .
+# 
+# http://example.org/trail/FinishPoint
+<http://example.org/trail/FinishPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/trail/FinishPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/sf#Point> .
+<http://example.org/trail/FinishPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "The end point of the trail." .
+<http://example.org/trail/FinishPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Finish point" .
+# 
+# http://example.org/trail/Format
+<http://example.org/trail/Format> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/trail/Format> <http://www.w3.org/2000/01/rdf-schema#comment> "The trail format signifying whether the trail is linear, circular, etc." .
+<http://example.org/trail/Format> <http://www.w3.org/2000/01/rdf-schema#label> "Format" .
+# 
+# http://example.org/trail/Grade
+<http://example.org/trail/Grade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/trail/Grade> <http://www.w3.org/2000/01/rdf-schema#comment> "A measure of how difficult the trail will be to walk." .
+<http://example.org/trail/Grade> <http://www.w3.org/2000/01/rdf-schema#label> "Grade" .
+# 
+# http://example.org/trail/Quality
+<http://example.org/trail/Quality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/trail/Quality> <http://www.w3.org/2000/01/rdf-schema#comment> "The quality of the trail, measured on a 3 star system" .
+<http://example.org/trail/Quality> <http://www.w3.org/2000/01/rdf-schema#label> "Quality" .
+# 
+# http://example.org/trail/StartPoint
+<http://example.org/trail/StartPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/trail/StartPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/sf#Point> .
+<http://example.org/trail/StartPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "The starting point of the trail" .
+<http://example.org/trail/StartPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Start point" .
+# 
+# http://example.org/trail/Trail
+<http://example.org/trail/Trail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/trail/Trail> <http://www.w3.org/2000/01/rdf-schema#comment> "A trail as specified by Sport Ireland" .
+<http://example.org/trail/Trail> <http://www.w3.org/2000/01/rdf-schema#label> "Trail" .
+# 
+# http://example.org/trail/Type
+<http://example.org/trail/Type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/trail/Type> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of trail" .
+<http://example.org/trail/Type> <http://www.w3.org/2000/01/rdf-schema#comment> "Type" .
+# 
+# http://www.opengis.net/ont/sf#Point
+<http://www.opengis.net/ont/sf#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://example.org/trail/Carlow
+<http://example.org/trail/Carlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Carlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/County> .
+# 
+# http://example.org/trail/Cavan
+<http://example.org/trail/Cavan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Cavan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/County> .
+# 
+# http://example.org/trail/Circular
+<http://example.org/trail/Circular> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Circular> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Format> .
+# 
+# http://example.org/trail/Clare
+<http://example.org/trail/Clare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Clare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/County> .
+# 
+# http://example.org/trail/Cork
+<http://example.org/trail/Cork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Cork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/County> .
+# 
+# http://example.org/trail/Donegal
+<http://example.org/trail/Donegal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Donegal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/County> .
+# 
+# http://example.org/trail/Dublin
+<http://example.org/trail/Dublin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Dublin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/County> .
+# 
+# http://example.org/trail/Easy
+<http://example.org/trail/Easy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Easy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Grade> .
+# 
+# http://example.org/trail/Kerry
+<http://example.org/trail/Kerry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Kerry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/County> .
+# 
+# http://example.org/trail/Kildare
+<http://example.org/trail/Kildare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Kildare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/County> .
+# 
+# http://example.org/trail/Kilkenny
+<http://example.org/trail/Kilkenny> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Kilkenny> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/County> .
+# 
+# http://example.org/trail/Laois
+<http://example.org/trail/Laois> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Laois> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/County> .
+# 
+# http://example.org/trail/Leitrim
+<http://example.org/trail/Leitrim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Leitrim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/County> .
+# 
+# http://example.org/trail/Limerick
+<http://example.org/trail/Limerick> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Limerick> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/County> .
+# 
+# http://example.org/trail/Linear
+<http://example.org/trail/Linear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Linear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Format> .
+# 
+# http://example.org/trail/Longford
+<http://example.org/trail/Longford> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Longford> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/County> .
+# 
+# http://example.org/trail/Loop
+<http://example.org/trail/Loop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Loop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Format> .
+# 
+# http://example.org/trail/Mayo
+<http://example.org/trail/Mayo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Mayo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/County> .
+# 
+# http://example.org/trail/Meath
+<http://example.org/trail/Meath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Meath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/County> .
+# 
+# http://example.org/trail/Moderate
+<http://example.org/trail/Moderate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Moderate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Grade> .
+# 
+# http://example.org/trail/Monaghan
+<http://example.org/trail/Monaghan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Monaghan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/County> .
+# 
+# http://example.org/trail/National_Waymarked_Trail
+<http://example.org/trail/National_Waymarked_Trail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/National_Waymarked_Trail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Type> .
+# 
+# http://example.org/trail/Offaly
+<http://example.org/trail/Offaly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Offaly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/County> .
+# 
+# http://example.org/trail/Roscommon
+<http://example.org/trail/Roscommon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Roscommon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/County> .
+# 
+# http://example.org/trail/Sligo
+<http://example.org/trail/Sligo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Sligo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/County> .
+# 
+# http://example.org/trail/Strenuous
+<http://example.org/trail/Strenuous> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Strenuous> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Grade> .
+# 
+# http://example.org/trail/Tipperary
+<http://example.org/trail/Tipperary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Tipperary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/County> .
+# 
+# http://example.org/trail/Waterford
+<http://example.org/trail/Waterford> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Waterford> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/County> .
+# 
+# http://example.org/trail/Westmeath
+<http://example.org/trail/Westmeath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Westmeath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/County> .
+# 
+# http://example.org/trail/1
+<http://example.org/trail/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Category> .
+# 
+# http://example.org/trail/1-star
+<http://example.org/trail/1-star> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/1-star> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Quality> .
+# 
+# http://example.org/trail/2Circulars
+<http://example.org/trail/2Circulars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/2Circulars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Format> .
+# 
+# http://example.org/trail/2-star
+<http://example.org/trail/2-star> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/2-star> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Quality> .
+# 
+# http://example.org/trail/3-star
+<http://example.org/trail/3-star> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/3-star> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Quality> .
+# 
+# http://example.org/trail/Linear+Circular
+<http://example.org/trail/Linear+Circular> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/trail/Linear+Circular> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Format> .
+# 
+# http://www.example.org/finish_point/1
+<http://www.example.org/finish_point/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/1> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.20321 52.49782)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/10
+<http://www.example.org/finish_point/10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/10> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-9.63981 53.77363)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/11
+<http://www.example.org/finish_point/11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/11> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-9.706469 52.267018)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/12
+<http://www.example.org/finish_point/12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/12> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.12041 55.02554)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/13
+<http://www.example.org/finish_point/13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/13> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.41017 54.76438)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/14
+<http://www.example.org/finish_point/14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/14> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.11371 54.87013)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/15
+<http://www.example.org/finish_point/15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/15> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.36055 54.94961)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/16
+<http://www.example.org/finish_point/16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/16> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.44094 52.80688)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/17
+<http://www.example.org/finish_point/17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/17> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-7.99413 52.276)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/18
+<http://www.example.org/finish_point/18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/18> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-7.96406 53.21962)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/19
+<http://www.example.org/finish_point/19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/19> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-9.51208 52.05777)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/2
+<http://www.example.org/finish_point/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/2> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-6.928 52.48748)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/21
+<http://www.example.org/finish_point/21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/21> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.27658 52.92455)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/22
+<http://www.example.org/finish_point/22> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/22> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/22> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/22> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.89184 52.76065)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/23
+<http://www.example.org/finish_point/23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/23> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.01378 54.18917)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/24
+<http://www.example.org/finish_point/24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/24> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-6.57391 54.00191)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/25
+<http://www.example.org/finish_point/25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/25> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-7.13657 52.5218)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/26
+<http://www.example.org/finish_point/26> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/26> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/26> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/26> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-9.706467 52.267016)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/27
+<http://www.example.org/finish_point/27> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/27> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/27> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/27> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-7.74353 53.29304)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/28
+<http://www.example.org/finish_point/28> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/28> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/28> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/28> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-7.90495 53.73118)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/29
+<http://www.example.org/finish_point/29> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/29> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/29> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/29> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-9.45466 51.68096)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/3
+<http://www.example.org/finish_point/3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/3> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-9.55246 51.74982)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/30
+<http://www.example.org/finish_point/30> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/30> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/30> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/30> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-7.45025 53.12221)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/31
+<http://www.example.org/finish_point/31> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/31> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/31> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/31> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.23721 52.79432)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/32
+<http://www.example.org/finish_point/32> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/32> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/32> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/32> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.30366 54.23192)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/4
+<http://www.example.org/finish_point/4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/4> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.72886 52.04634)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/5
+<http://www.example.org/finish_point/5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/5> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-9.25637 52.0392)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/6
+<http://www.example.org/finish_point/6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/6> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.41017 54.76438)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/7
+<http://www.example.org/finish_point/7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/7> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-9.06373 52.94437)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/finish_point/8
+<http://www.example.org/finish_point/8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/finish_point/8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/FinishPoint> .
+<http://www.example.org/finish_point/8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/finish_point/8> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-7.87559 54.29153)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/1
+<http://www.example.org/start_point/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/1> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.88862 52.2367)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/10
+<http://www.example.org/start_point/10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/10> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-9.13093 53.80467)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/11
+<http://www.example.org/start_point/11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/11> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-9.706469 52.267018)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/12
+<http://www.example.org/start_point/12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/12> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.12041 55.02554)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/13
+<http://www.example.org/start_point/13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/13> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.41017 54.76438)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/14
+<http://www.example.org/start_point/14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/14> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.11371 54.87013)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/15
+<http://www.example.org/start_point/15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/15> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.36055 54.94961)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/16
+<http://www.example.org/start_point/16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/16> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.44094 52.80688)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/17
+<http://www.example.org/start_point/17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/17> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-7.40711 52.34551)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/18
+<http://www.example.org/start_point/18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/18> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-6.45527 53.33094)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/19
+<http://www.example.org/start_point/19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/19> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-9.51208 52.05777)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/2
+<http://www.example.org/start_point/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/2> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-6.81597 53.26985)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/21
+<http://www.example.org/start_point/21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/21> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.62529 52.6653)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/22
+<http://www.example.org/start_point/22> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/22> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/22> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/22> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.89184 52.76065)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/23
+<http://www.example.org/start_point/23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/23> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.11 54.07591)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/24
+<http://www.example.org/start_point/24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/24> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-6.841532 54.205504)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/25
+<http://www.example.org/start_point/25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/25> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-7.06362 52.48799)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/26
+<http://www.example.org/start_point/26> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/26> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/26> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/26> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-9.706467 52.267016)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/27
+<http://www.example.org/start_point/27> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/27> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/27> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/27> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-7.65936 53.12658)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/28
+<http://www.example.org/start_point/28> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/28> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/28> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/28> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-6.24501 53.35712)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/29
+<http://www.example.org/start_point/29> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/29> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/29> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/29> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-9.45466 51.68096)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/3
+<http://www.example.org/start_point/3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/3> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-9.55246 51.74982)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/30
+<http://www.example.org/start_point/30> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/30> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/30> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/30> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-7.45025 53.12221)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/31
+<http://www.example.org/start_point/31> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/31> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/31> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/31> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.39897 52.6492)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/32
+<http://www.example.org/start_point/32> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/32> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/32> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/32> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.93385 54.08941)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/4
+<http://www.example.org/start_point/4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/4> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-7.99413 52.276)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/5
+<http://www.example.org/start_point/5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/5> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.72886 52.04634)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/6
+<http://www.example.org/start_point/6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/6> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.11001 54.65362)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/7
+<http://www.example.org/start_point/7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/7> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-9.34754 52.93251)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/start_point/8
+<http://www.example.org/start_point/8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/start_point/8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/StartPoint> .
+<http://www.example.org/start_point/8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+<http://www.example.org/start_point/8> <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-8.01378 54.18917)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+# 
+# http://www.example.org/trail/1
+<http://www.example.org/trail/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/1> <http://example.org/trail/hasCategory> <http://example.org/trail/1> .
+<http://www.example.org/trail/1> <http://example.org/trail/hasCounty> <http://example.org/trail/Cork> .
+<http://www.example.org/trail/1> <http://example.org/trail/hasCounty> <http://example.org/trail/Limerick> .
+<http://www.example.org/trail/1> <http://example.org/trail/hasCounty> <http://example.org/trail/Tipperary> .
+<http://www.example.org/trail/1> <http://example.org/trail/hasFormat> <http://example.org/trail/Linear> .
+<http://www.example.org/trail/1> <http://example.org/trail/hasGrade> <http://example.org/trail/Moderate> .
+<http://www.example.org/trail/1> <http://example.org/trail/hasQuality> <http://example.org/trail/2-star> .
+<http://www.example.org/trail/1> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/1> <http://example.org/trail/climb> "1560" .
+<http://www.example.org/trail/1> <http://example.org/trail/dogs_allowed> "1" .
+<http://www.example.org/trail/1> <http://example.org/trail/estimated_time_to_complete> "5760" .
+<http://www.example.org/trail/1> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/1> .
+<http://www.example.org/trail/1> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/1> .
+<http://www.example.org/trail/1> <http://example.org/trail/id> "1" .
+<http://www.example.org/trail/1> <http://example.org/trail/length> "89" .
+<http://www.example.org/trail/1> <http://example.org/trail/name> "Ballyhoura Way" .
+# 
+# http://www.example.org/trail/10
+<http://www.example.org/trail/10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/10> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/10> <http://example.org/trail/hasCounty> <http://example.org/trail/Mayo> .
+<http://www.example.org/trail/10> <http://example.org/trail/hasFormat> <http://example.org/trail/Linear> .
+<http://www.example.org/trail/10> <http://example.org/trail/hasGrade> <http://example.org/trail/Moderate> .
+<http://www.example.org/trail/10> <http://example.org/trail/hasQuality> <http://example.org/trail/2-star> .
+<http://www.example.org/trail/10> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/10> <http://example.org/trail/climb> "310" .
+<http://www.example.org/trail/10> <http://example.org/trail/dogs_allowed> "0" .
+<http://www.example.org/trail/10> <http://example.org/trail/estimated_time_to_complete> "1550" .
+<http://www.example.org/trail/10> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/10> .
+<http://www.example.org/trail/10> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/10> .
+<http://www.example.org/trail/10> <http://example.org/trail/id> "10" .
+<http://www.example.org/trail/10> <http://example.org/trail/length> "61" .
+<http://www.example.org/trail/10> <http://example.org/trail/name> "Croagh Patrick Heritage Trail" .
+# 
+# http://www.example.org/trail/11
+<http://www.example.org/trail/11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/11> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/11> <http://example.org/trail/hasCounty> <http://example.org/trail/Kerry> .
+<http://www.example.org/trail/11> <http://example.org/trail/hasFormat> <http://example.org/trail/Circular> .
+<http://www.example.org/trail/11> <http://example.org/trail/hasFormat> <http://example.org/trail/Linear> .
+<http://www.example.org/trail/11> <http://example.org/trail/hasGrade> <http://example.org/trail/Strenuous> .
+<http://www.example.org/trail/11> <http://example.org/trail/hasQuality> <http://example.org/trail/2-star> .
+<http://www.example.org/trail/11> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/11> <http://example.org/trail/climb> "2590" .
+<http://www.example.org/trail/11> <http://example.org/trail/dogs_allowed> "0" .
+<http://www.example.org/trail/11> <http://example.org/trail/estimated_time_to_complete> "10080" .
+<http://www.example.org/trail/11> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/11> .
+<http://www.example.org/trail/11> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/11> .
+<http://www.example.org/trail/11> <http://example.org/trail/id> "11" .
+<http://www.example.org/trail/11> <http://example.org/trail/length> "162" .
+<http://www.example.org/trail/11> <http://example.org/trail/name> "Dingle Way" .
+# 
+# http://www.example.org/trail/12
+<http://www.example.org/trail/12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/12> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/12> <http://example.org/trail/hasCounty> <http://example.org/trail/Donegal> .
+<http://www.example.org/trail/12> <http://example.org/trail/hasFormat> <http://example.org/trail/Loop> .
+<http://www.example.org/trail/12> <http://example.org/trail/hasGrade> <http://example.org/trail/Easy> .
+<http://www.example.org/trail/12> <http://example.org/trail/hasQuality> <http://example.org/trail/2-star> .
+<http://www.example.org/trail/12> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/12> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/12> .
+<http://www.example.org/trail/12> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/12> .
+<http://www.example.org/trail/12> <http://example.org/trail/id> "12" .
+<http://www.example.org/trail/12> <http://example.org/trail/length> "77" .
+<http://www.example.org/trail/12> <http://example.org/trail/name> "Sl� An Earagail - Sli Dhun na nGall" .
+# 
+# http://www.example.org/trail/13
+<http://www.example.org/trail/13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/13> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/13> <http://example.org/trail/hasCounty> <http://example.org/trail/Donegal> .
+<http://www.example.org/trail/13> <http://example.org/trail/hasFormat> <http://example.org/trail/Circular> .
+<http://www.example.org/trail/13> <http://example.org/trail/hasGrade> <http://example.org/trail/Moderate> .
+<http://www.example.org/trail/13> <http://example.org/trail/hasQuality> <http://example.org/trail/2-star> .
+<http://www.example.org/trail/13> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/13> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/13> .
+<http://www.example.org/trail/13> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/13> .
+<http://www.example.org/trail/13> <http://example.org/trail/id> "13" .
+<http://www.example.org/trail/13> <http://example.org/trail/length> "65" .
+<http://www.example.org/trail/13> <http://example.org/trail/name> "Sl� Cholmcille - Sli Dhun na nGall" .
+# 
+# http://www.example.org/trail/14
+<http://www.example.org/trail/14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/14> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/14> <http://example.org/trail/hasCounty> <http://example.org/trail/Donegal> .
+<http://www.example.org/trail/14> <http://example.org/trail/hasFormat> <http://example.org/trail/Circular> .
+<http://www.example.org/trail/14> <http://example.org/trail/hasGrade> <http://example.org/trail/Moderate> .
+<http://www.example.org/trail/14> <http://example.org/trail/hasQuality> <http://example.org/trail/2-star> .
+<http://www.example.org/trail/14> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/14> <http://example.org/trail/climb> "1060" .
+<http://www.example.org/trail/14> <http://example.org/trail/estimated_time_to_complete> "990" .
+<http://www.example.org/trail/14> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/14> .
+<http://www.example.org/trail/14> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/14> .
+<http://www.example.org/trail/14> <http://example.org/trail/id> "14" .
+<http://www.example.org/trail/14> <http://example.org/trail/length> "51" .
+<http://www.example.org/trail/14> <http://example.org/trail/name> "Sl� Na Finne - Sli Dhun na nGall" .
+# 
+# http://www.example.org/trail/15
+<http://www.example.org/trail/15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/15> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/15> <http://example.org/trail/hasCounty> <http://example.org/trail/Donegal> .
+<http://www.example.org/trail/15> <http://example.org/trail/hasFormat> <http://example.org/trail/Circular> .
+<http://www.example.org/trail/15> <http://example.org/trail/hasGrade> <http://example.org/trail/Moderate> .
+<http://www.example.org/trail/15> <http://example.org/trail/hasQuality> <http://example.org/trail/2-star> .
+<http://www.example.org/trail/15> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/15> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/15> .
+<http://www.example.org/trail/15> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/15> .
+<http://www.example.org/trail/15> <http://example.org/trail/id> "15" .
+<http://www.example.org/trail/15> <http://example.org/trail/length> "65" .
+<http://www.example.org/trail/15> <http://example.org/trail/name> "Sl� Na Rosann - Sli Dhun na nGall" .
+# 
+# http://www.example.org/trail/16
+<http://www.example.org/trail/16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/16> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/16> <http://example.org/trail/hasCounty> <http://example.org/trail/Clare> .
+<http://www.example.org/trail/16> <http://example.org/trail/hasFormat> <http://example.org/trail/Circular> .
+<http://www.example.org/trail/16> <http://example.org/trail/hasGrade> <http://example.org/trail/Moderate> .
+<http://www.example.org/trail/16> <http://example.org/trail/hasQuality> <http://example.org/trail/3-star> .
+<http://www.example.org/trail/16> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/16> <http://example.org/trail/climb> "3060" .
+<http://www.example.org/trail/16> <http://example.org/trail/dogs_allowed> "0" .
+<http://www.example.org/trail/16> <http://example.org/trail/estimated_time_to_complete> "11520" .
+<http://www.example.org/trail/16> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/16> .
+<http://www.example.org/trail/16> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/16> .
+<http://www.example.org/trail/16> <http://example.org/trail/id> "16" .
+<http://www.example.org/trail/16> <http://example.org/trail/length> "180" .
+<http://www.example.org/trail/16> <http://example.org/trail/name> "East Clare Way" .
+# 
+# http://www.example.org/trail/17
+<http://www.example.org/trail/17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/17> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/17> <http://example.org/trail/hasCounty> <http://example.org/trail/Tipperary> .
+<http://www.example.org/trail/17> <http://example.org/trail/hasCounty> <http://example.org/trail/Waterford> .
+<http://www.example.org/trail/17> <http://example.org/trail/hasFormat> <http://example.org/trail/Linear> .
+<http://www.example.org/trail/17> <http://example.org/trail/hasGrade> <http://example.org/trail/Moderate> .
+<http://www.example.org/trail/17> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/17> <http://example.org/trail/climb> "1375" .
+<http://www.example.org/trail/17> <http://example.org/trail/estimated_time_to_complete> "4320" .
+<http://www.example.org/trail/17> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/17> .
+<http://www.example.org/trail/17> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/17> .
+<http://www.example.org/trail/17> <http://example.org/trail/id> "17" .
+<http://www.example.org/trail/17> <http://example.org/trail/length> "75" .
+<http://www.example.org/trail/17> <http://example.org/trail/name> "East Munster Way" .
+# 
+# http://www.example.org/trail/18
+<http://www.example.org/trail/18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/18> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/18> <http://example.org/trail/hasCounty> <http://example.org/trail/Dublin> .
+<http://www.example.org/trail/18> <http://example.org/trail/hasCounty> <http://example.org/trail/Kildare> .
+<http://www.example.org/trail/18> <http://example.org/trail/hasCounty> <http://example.org/trail/Offaly> .
+<http://www.example.org/trail/18> <http://example.org/trail/hasFormat> <http://example.org/trail/Linear> .
+<http://www.example.org/trail/18> <http://example.org/trail/hasGrade> <http://example.org/trail/Easy> .
+<http://www.example.org/trail/18> <http://example.org/trail/hasQuality> <http://example.org/trail/2-star> .
+<http://www.example.org/trail/18> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/18> <http://example.org/trail/climb> "0" .
+<http://www.example.org/trail/18> <http://example.org/trail/dogs_allowed> "1" .
+<http://www.example.org/trail/18> <http://example.org/trail/estimated_time_to_complete> "7200" .
+<http://www.example.org/trail/18> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/18> .
+<http://www.example.org/trail/18> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/18> .
+<http://www.example.org/trail/18> <http://example.org/trail/id> "18" .
+<http://www.example.org/trail/18> <http://example.org/trail/length> "117" .
+<http://www.example.org/trail/18> <http://example.org/trail/name> "Grand Canal Way" .
+# 
+# http://www.example.org/trail/19
+<http://www.example.org/trail/19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/19> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/19> <http://example.org/trail/hasCounty> <http://example.org/trail/Kerry> .
+<http://www.example.org/trail/19> <http://example.org/trail/hasFormat> <http://example.org/trail/Circular> .
+<http://www.example.org/trail/19> <http://example.org/trail/hasGrade> <http://example.org/trail/Strenuous> .
+<http://www.example.org/trail/19> <http://example.org/trail/hasQuality> <http://example.org/trail/3-star> .
+<http://www.example.org/trail/19> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/19> <http://example.org/trail/climb> "5310" .
+<http://www.example.org/trail/19> <http://example.org/trail/dogs_allowed> "0" .
+<http://www.example.org/trail/19> <http://example.org/trail/estimated_time_to_complete> "12960" .
+<http://www.example.org/trail/19> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/19> .
+<http://www.example.org/trail/19> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/19> .
+<http://www.example.org/trail/19> <http://example.org/trail/id> "19" .
+<http://www.example.org/trail/19> <http://example.org/trail/length> "214" .
+<http://www.example.org/trail/19> <http://example.org/trail/name> "Kerry Way" .
+# 
+# http://www.example.org/trail/2
+<http://www.example.org/trail/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/2> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/2> <http://example.org/trail/hasCounty> <http://example.org/trail/Carlow> .
+<http://www.example.org/trail/2> <http://example.org/trail/hasCounty> <http://example.org/trail/Kildare> .
+<http://www.example.org/trail/2> <http://example.org/trail/hasCounty> <http://example.org/trail/Laois> .
+<http://www.example.org/trail/2> <http://example.org/trail/hasFormat> <http://example.org/trail/Linear> .
+<http://www.example.org/trail/2> <http://example.org/trail/hasGrade> <http://example.org/trail/Easy> .
+<http://www.example.org/trail/2> <http://example.org/trail/hasQuality> <http://example.org/trail/2-star> .
+<http://www.example.org/trail/2> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/2> <http://example.org/trail/climb> "0" .
+<http://www.example.org/trail/2> <http://example.org/trail/dogs_allowed> "1" .
+<http://www.example.org/trail/2> <http://example.org/trail/estimated_time_to_complete> "5760" .
+<http://www.example.org/trail/2> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/2> .
+<http://www.example.org/trail/2> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/2> .
+<http://www.example.org/trail/2> <http://example.org/trail/id> "2" .
+<http://www.example.org/trail/2> <http://example.org/trail/length> "100" .
+<http://www.example.org/trail/2> <http://example.org/trail/name> "Barrow Way" .
+# 
+# http://www.example.org/trail/21
+<http://www.example.org/trail/21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/21> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/21> <http://example.org/trail/hasCounty> <http://example.org/trail/Clare> .
+<http://www.example.org/trail/21> <http://example.org/trail/hasCounty> <http://example.org/trail/Limerick> .
+<http://www.example.org/trail/21> <http://example.org/trail/hasCounty> <http://example.org/trail/Tipperary> .
+<http://www.example.org/trail/21> <http://example.org/trail/hasFormat> <http://example.org/trail/Linear> .
+<http://www.example.org/trail/21> <http://example.org/trail/hasGrade> <http://example.org/trail/Moderate> .
+<http://www.example.org/trail/21> <http://example.org/trail/hasQuality> <http://example.org/trail/3-star> .
+<http://www.example.org/trail/21> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/21> <http://example.org/trail/climb> "527" .
+<http://www.example.org/trail/21> <http://example.org/trail/dogs_allowed> "0" .
+<http://www.example.org/trail/21> <http://example.org/trail/estimated_time_to_complete> "4320" .
+<http://www.example.org/trail/21> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/21> .
+<http://www.example.org/trail/21> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/21> .
+<http://www.example.org/trail/21> <http://example.org/trail/id> "21" .
+<http://www.example.org/trail/21> <http://example.org/trail/length> "68" .
+<http://www.example.org/trail/21> <http://example.org/trail/name> "Lough Derg Way" .
+# 
+# http://www.example.org/trail/22
+<http://www.example.org/trail/22> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/22> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/22> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/22> <http://example.org/trail/hasCounty> <http://example.org/trail/Clare> .
+<http://www.example.org/trail/22> <http://example.org/trail/hasFormat> <http://example.org/trail/Circular> .
+<http://www.example.org/trail/22> <http://example.org/trail/hasGrade> <http://example.org/trail/Moderate> .
+<http://www.example.org/trail/22> <http://example.org/trail/hasQuality> <http://example.org/trail/3-star> .
+<http://www.example.org/trail/22> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/22> <http://example.org/trail/climb> "1620" .
+<http://www.example.org/trail/22> <http://example.org/trail/dogs_allowed> "0" .
+<http://www.example.org/trail/22> <http://example.org/trail/estimated_time_to_complete> "8640" .
+<http://www.example.org/trail/22> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/22> .
+<http://www.example.org/trail/22> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/22> .
+<http://www.example.org/trail/22> <http://example.org/trail/id> "22" .
+<http://www.example.org/trail/22> <http://example.org/trail/length> "148" .
+<http://www.example.org/trail/22> <http://example.org/trail/name> "Mid Clare Way" .
+# 
+# http://www.example.org/trail/23
+<http://www.example.org/trail/23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/23> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/23> <http://example.org/trail/hasCounty> <http://example.org/trail/Leitrim> .
+<http://www.example.org/trail/23> <http://example.org/trail/hasCounty> <http://example.org/trail/Roscommon> .
+<http://www.example.org/trail/23> <http://example.org/trail/hasCounty> <http://example.org/trail/Sligo> .
+<http://www.example.org/trail/23> <http://example.org/trail/hasFormat> <http://example.org/trail/2Circulars> .
+<http://www.example.org/trail/23> <http://example.org/trail/hasGrade> <http://example.org/trail/Strenuous> .
+<http://www.example.org/trail/23> <http://example.org/trail/hasQuality> <http://example.org/trail/3-star> .
+<http://www.example.org/trail/23> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/23> <http://example.org/trail/climb> "2340" .
+<http://www.example.org/trail/23> <http://example.org/trail/dogs_allowed> "0" .
+<http://www.example.org/trail/23> <http://example.org/trail/estimated_time_to_complete> "7200" .
+<http://www.example.org/trail/23> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/23> .
+<http://www.example.org/trail/23> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/23> .
+<http://www.example.org/trail/23> <http://example.org/trail/id> "23" .
+<http://www.example.org/trail/23> <http://example.org/trail/length> "118" .
+<http://www.example.org/trail/23> <http://example.org/trail/name> "Miner's Way & Historical Trail" .
+# 
+# http://www.example.org/trail/24
+<http://www.example.org/trail/24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/24> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/24> <http://example.org/trail/hasCounty> <http://example.org/trail/Monaghan> .
+<http://www.example.org/trail/24> <http://example.org/trail/hasFormat> <http://example.org/trail/Linear> .
+<http://www.example.org/trail/24> <http://example.org/trail/hasGrade> <http://example.org/trail/Moderate> .
+<http://www.example.org/trail/24> <http://example.org/trail/hasQuality> <http://example.org/trail/2-star> .
+<http://www.example.org/trail/24> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/24> <http://example.org/trail/dogs_allowed> "0" .
+<http://www.example.org/trail/24> <http://example.org/trail/estimated_time_to_complete> "1000" .
+<http://www.example.org/trail/24> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/24> .
+<http://www.example.org/trail/24> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/24> .
+<http://www.example.org/trail/24> <http://example.org/trail/id> "24" .
+<http://www.example.org/trail/24> <http://example.org/trail/length> "56.5" .
+<http://www.example.org/trail/24> <http://example.org/trail/name> "Monaghan Way" .
+# 
+# http://www.example.org/trail/25
+<http://www.example.org/trail/25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/25> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/25> <http://example.org/trail/hasCounty> <http://example.org/trail/Kilkenny> .
+<http://www.example.org/trail/25> <http://example.org/trail/hasFormat> <http://example.org/trail/Linear> .
+<http://www.example.org/trail/25> <http://example.org/trail/hasGrade> <http://example.org/trail/Easy> .
+<http://www.example.org/trail/25> <http://example.org/trail/hasQuality> <http://example.org/trail/3-star> .
+<http://www.example.org/trail/25> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/25> <http://example.org/trail/climb> "Minimal" .
+<http://www.example.org/trail/25> <http://example.org/trail/dogs_allowed> "0" .
+<http://www.example.org/trail/25> <http://example.org/trail/estimated_time_to_complete> "180" .
+<http://www.example.org/trail/25> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/25> .
+<http://www.example.org/trail/25> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/25> .
+<http://www.example.org/trail/25> <http://example.org/trail/id> "25" .
+<http://www.example.org/trail/25> <http://example.org/trail/length> "11" .
+<http://www.example.org/trail/25> <http://example.org/trail/name> "Nore Valley Walk - Inistioge to Thomastown Section" .
+# 
+# http://www.example.org/trail/26
+<http://www.example.org/trail/26> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/26> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/26> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/26> <http://example.org/trail/hasCounty> <http://example.org/trail/Kerry> .
+<http://www.example.org/trail/26> <http://example.org/trail/hasFormat> <http://example.org/trail/Linear+Circular> .
+<http://www.example.org/trail/26> <http://example.org/trail/hasGrade> <http://example.org/trail/Moderate> .
+<http://www.example.org/trail/26> <http://example.org/trail/hasQuality> <http://example.org/trail/3-star> .
+<http://www.example.org/trail/26> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/26> <http://example.org/trail/climb> "450" .
+<http://www.example.org/trail/26> <http://example.org/trail/dogs_allowed> "1" .
+<http://www.example.org/trail/26> <http://example.org/trail/estimated_time_to_complete> "2880" .
+<http://www.example.org/trail/26> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/26> .
+<http://www.example.org/trail/26> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/26> .
+<http://www.example.org/trail/26> <http://example.org/trail/id> "26" .
+<http://www.example.org/trail/26> <http://example.org/trail/length> "45" .
+<http://www.example.org/trail/26> <http://example.org/trail/name> "North Kerry Way" .
+# 
+# http://www.example.org/trail/27
+<http://www.example.org/trail/27> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/27> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/27> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/27> <http://example.org/trail/hasCounty> <http://example.org/trail/Offaly> .
+<http://www.example.org/trail/27> <http://example.org/trail/hasFormat> <http://example.org/trail/Linear> .
+<http://www.example.org/trail/27> <http://example.org/trail/hasGrade> <http://example.org/trail/Easy> .
+<http://www.example.org/trail/27> <http://example.org/trail/hasQuality> <http://example.org/trail/3-star> .
+<http://www.example.org/trail/27> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/27> <http://example.org/trail/climb> "Minimal" .
+<http://www.example.org/trail/27> <http://example.org/trail/dogs_allowed> "1" .
+<http://www.example.org/trail/27> <http://example.org/trail/estimated_time_to_complete> "2880" .
+<http://www.example.org/trail/27> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/27> .
+<http://www.example.org/trail/27> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/27> .
+<http://www.example.org/trail/27> <http://example.org/trail/id> "27" .
+<http://www.example.org/trail/27> <http://example.org/trail/length> "37" .
+<http://www.example.org/trail/27> <http://example.org/trail/name> "Offaly Way" .
+# 
+# http://www.example.org/trail/28
+<http://www.example.org/trail/28> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/28> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/28> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/28> <http://example.org/trail/hasCounty> <http://example.org/trail/Dublin> .
+<http://www.example.org/trail/28> <http://example.org/trail/hasCounty> <http://example.org/trail/Kildare> .
+<http://www.example.org/trail/28> <http://example.org/trail/hasCounty> <http://example.org/trail/Longford> .
+<http://www.example.org/trail/28> <http://example.org/trail/hasCounty> <http://example.org/trail/Meath> .
+<http://www.example.org/trail/28> <http://example.org/trail/hasCounty> <http://example.org/trail/Westmeath> .
+<http://www.example.org/trail/28> <http://example.org/trail/hasFormat> <http://example.org/trail/Linear> .
+<http://www.example.org/trail/28> <http://example.org/trail/hasGrade> <http://example.org/trail/Easy> .
+<http://www.example.org/trail/28> <http://example.org/trail/hasQuality> <http://example.org/trail/2-star> .
+<http://www.example.org/trail/28> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/28> <http://example.org/trail/climb> "Minimal" .
+<http://www.example.org/trail/28> <http://example.org/trail/dogs_allowed> "1" .
+<http://www.example.org/trail/28> <http://example.org/trail/estimated_time_to_complete> "4320" .
+<http://www.example.org/trail/28> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/28> .
+<http://www.example.org/trail/28> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/28> .
+<http://www.example.org/trail/28> <http://example.org/trail/id> "28" .
+<http://www.example.org/trail/28> <http://example.org/trail/length> "144" .
+<http://www.example.org/trail/28> <http://example.org/trail/name> "Royal Canal Way" .
+# 
+# http://www.example.org/trail/29
+<http://www.example.org/trail/29> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/29> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/29> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/29> <http://example.org/trail/hasCounty> <http://example.org/trail/Cork> .
+<http://www.example.org/trail/29> <http://example.org/trail/hasFormat> <http://example.org/trail/Circular> .
+<http://www.example.org/trail/29> <http://example.org/trail/hasGrade> <http://example.org/trail/Moderate> .
+<http://www.example.org/trail/29> <http://example.org/trail/hasQuality> <http://example.org/trail/2-star> .
+<http://www.example.org/trail/29> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/29> <http://example.org/trail/climb> "2190" .
+<http://www.example.org/trail/29> <http://example.org/trail/dogs_allowed> "0" .
+<http://www.example.org/trail/29> <http://example.org/trail/estimated_time_to_complete> "5760" .
+<http://www.example.org/trail/29> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/29> .
+<http://www.example.org/trail/29> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/29> .
+<http://www.example.org/trail/29> <http://example.org/trail/id> "29" .
+<http://www.example.org/trail/29> <http://example.org/trail/length> "175" .
+<http://www.example.org/trail/29> <http://example.org/trail/name> "Sheeps Head Way" .
+# 
+# http://www.example.org/trail/3
+<http://www.example.org/trail/3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/3> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/3> <http://example.org/trail/hasCounty> <http://example.org/trail/Cork> .
+<http://www.example.org/trail/3> <http://example.org/trail/hasCounty> <http://example.org/trail/Kerry> .
+<http://www.example.org/trail/3> <http://example.org/trail/hasFormat> <http://example.org/trail/Loop> .
+<http://www.example.org/trail/3> <http://example.org/trail/hasGrade> <http://example.org/trail/Strenuous> .
+<http://www.example.org/trail/3> <http://example.org/trail/hasQuality> <http://example.org/trail/2-star> .
+<http://www.example.org/trail/3> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/3> <http://example.org/trail/climb> "5245" .
+<http://www.example.org/trail/3> <http://example.org/trail/dogs_allowed> "0" .
+<http://www.example.org/trail/3> <http://example.org/trail/estimated_time_to_complete> "12960" .
+<http://www.example.org/trail/3> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/3> .
+<http://www.example.org/trail/3> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/3> .
+<http://www.example.org/trail/3> <http://example.org/trail/id> "3" .
+<http://www.example.org/trail/3> <http://example.org/trail/length> "206" .
+<http://www.example.org/trail/3> <http://example.org/trail/name> "Beara Way" .
+# 
+# http://www.example.org/trail/30
+<http://www.example.org/trail/30> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/30> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/30> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/30> <http://example.org/trail/hasCounty> <http://example.org/trail/Laois> .
+<http://www.example.org/trail/30> <http://example.org/trail/hasCounty> <http://example.org/trail/Offaly> .
+<http://www.example.org/trail/30> <http://example.org/trail/hasFormat> <http://example.org/trail/Circular> .
+<http://www.example.org/trail/30> <http://example.org/trail/hasGrade> <http://example.org/trail/Strenuous> .
+<http://www.example.org/trail/30> <http://example.org/trail/hasQuality> <http://example.org/trail/2-star> .
+<http://www.example.org/trail/30> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/30> <http://example.org/trail/climb> "1275" .
+<http://www.example.org/trail/30> <http://example.org/trail/dogs_allowed> "0" .
+<http://www.example.org/trail/30> <http://example.org/trail/estimated_time_to_complete> "5400" .
+<http://www.example.org/trail/30> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/30> .
+<http://www.example.org/trail/30> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/30> .
+<http://www.example.org/trail/30> <http://example.org/trail/id> "30" .
+<http://www.example.org/trail/30> <http://example.org/trail/length> "70.5" .
+<http://www.example.org/trail/30> <http://example.org/trail/name> "Slieve Bloom Way" .
+# 
+# http://www.example.org/trail/31
+<http://www.example.org/trail/31> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/31> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/31> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/31> <http://example.org/trail/hasCounty> <http://example.org/trail/Limerick> .
+<http://www.example.org/trail/31> <http://example.org/trail/hasCounty> <http://example.org/trail/Tipperary> .
+<http://www.example.org/trail/31> <http://example.org/trail/hasFormat> <http://example.org/trail/Linear> .
+<http://www.example.org/trail/31> <http://example.org/trail/hasGrade> <http://example.org/trail/Moderate> .
+<http://www.example.org/trail/31> <http://example.org/trail/hasQuality> <http://example.org/trail/3-star> .
+<http://www.example.org/trail/31> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/31> <http://example.org/trail/climb> "870" .
+<http://www.example.org/trail/31> <http://example.org/trail/dogs_allowed> "1" .
+<http://www.example.org/trail/31> <http://example.org/trail/estimated_time_to_complete> "2880" .
+<http://www.example.org/trail/31> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/31> .
+<http://www.example.org/trail/31> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/31> .
+<http://www.example.org/trail/31> <http://example.org/trail/id> "31" .
+<http://www.example.org/trail/31> <http://example.org/trail/length> "43" .
+<http://www.example.org/trail/31> <http://example.org/trail/name> "Slieve Felim Way" .
+# 
+# http://www.example.org/trail/32
+<http://www.example.org/trail/32> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/32> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/32> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/32> <http://example.org/trail/hasCounty> <http://example.org/trail/Sligo> .
+<http://www.example.org/trail/32> <http://example.org/trail/hasFormat> <http://example.org/trail/Linear> .
+<http://www.example.org/trail/32> <http://example.org/trail/hasGrade> <http://example.org/trail/Moderate> .
+<http://www.example.org/trail/32> <http://example.org/trail/hasQuality> <http://example.org/trail/2-star> .
+<http://www.example.org/trail/32> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/32> <http://example.org/trail/climb> "890" .
+<http://www.example.org/trail/32> <http://example.org/trail/dogs_allowed> "0" .
+<http://www.example.org/trail/32> <http://example.org/trail/estimated_time_to_complete> "4320" .
+<http://www.example.org/trail/32> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/32> .
+<http://www.example.org/trail/32> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/32> .
+<http://www.example.org/trail/32> <http://example.org/trail/id> "32" .
+<http://www.example.org/trail/32> <http://example.org/trail/length> "78" .
+<http://www.example.org/trail/32> <http://example.org/trail/name> "Sligo Way" .
+# 
+# http://www.example.org/trail/4
+<http://www.example.org/trail/4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/4> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/4> <http://example.org/trail/hasCounty> <http://example.org/trail/Cork> .
+<http://www.example.org/trail/4> <http://example.org/trail/hasCounty> <http://example.org/trail/Tipperary> .
+<http://www.example.org/trail/4> <http://example.org/trail/hasFormat> <http://example.org/trail/Linear> .
+<http://www.example.org/trail/4> <http://example.org/trail/hasGrade> <http://example.org/trail/Moderate> .
+<http://www.example.org/trail/4> <http://example.org/trail/hasQuality> <http://example.org/trail/3-star> .
+<http://www.example.org/trail/4> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/4> <http://example.org/trail/climb> "3690" .
+<http://www.example.org/trail/4> <http://example.org/trail/dogs_allowed> "0" .
+<http://www.example.org/trail/4> <http://example.org/trail/estimated_time_to_complete> "10080" .
+<http://www.example.org/trail/4> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/4> .
+<http://www.example.org/trail/4> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/4> .
+<http://www.example.org/trail/4> <http://example.org/trail/id> "4" .
+<http://www.example.org/trail/4> <http://example.org/trail/length> "94" .
+<http://www.example.org/trail/4> <http://example.org/trail/name> "Blackwater Way - Avondhu" .
+# 
+# http://www.example.org/trail/5
+<http://www.example.org/trail/5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/5> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/5> <http://example.org/trail/hasCounty> <http://example.org/trail/Cork> .
+<http://www.example.org/trail/5> <http://example.org/trail/hasCounty> <http://example.org/trail/Kerry> .
+<http://www.example.org/trail/5> <http://example.org/trail/hasFormat> <http://example.org/trail/Linear> .
+<http://www.example.org/trail/5> <http://example.org/trail/hasGrade> <http://example.org/trail/Moderate> .
+<http://www.example.org/trail/5> <http://example.org/trail/hasQuality> <http://example.org/trail/2-star> .
+<http://www.example.org/trail/5> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/5> <http://example.org/trail/dogs_allowed> "0" .
+<http://www.example.org/trail/5> <http://example.org/trail/estimated_time_to_complete> "4320" .
+<http://www.example.org/trail/5> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/5> .
+<http://www.example.org/trail/5> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/5> .
+<http://www.example.org/trail/5> <http://example.org/trail/id> "5" .
+<http://www.example.org/trail/5> <http://example.org/trail/length> "67" .
+<http://www.example.org/trail/5> <http://example.org/trail/name> "Blackwater Way - Duhallow" .
+# 
+# http://www.example.org/trail/6
+<http://www.example.org/trail/6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/6> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/6> <http://example.org/trail/hasCounty> <http://example.org/trail/Donegal> .
+<http://www.example.org/trail/6> <http://example.org/trail/hasFormat> <http://example.org/trail/Linear> .
+<http://www.example.org/trail/6> <http://example.org/trail/hasGrade> <http://example.org/trail/Moderate> .
+<http://www.example.org/trail/6> <http://example.org/trail/hasQuality> <http://example.org/trail/3-star> .
+<http://www.example.org/trail/6> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/6> <http://example.org/trail/climb> "1230" .
+<http://www.example.org/trail/6> <http://example.org/trail/dogs_allowed> "0" .
+<http://www.example.org/trail/6> <http://example.org/trail/estimated_time_to_complete> "4320" .
+<http://www.example.org/trail/6> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/6> .
+<http://www.example.org/trail/6> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/6> .
+<http://www.example.org/trail/6> <http://example.org/trail/id> "6" .
+<http://www.example.org/trail/6> <http://example.org/trail/length> "65" .
+<http://www.example.org/trail/6> <http://example.org/trail/name> "Bluestack Way" .
+# 
+# http://www.example.org/trail/7
+<http://www.example.org/trail/7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/7> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/7> <http://example.org/trail/hasCounty> <http://example.org/trail/Clare> .
+<http://www.example.org/trail/7> <http://example.org/trail/hasFormat> <http://example.org/trail/Linear> .
+<http://www.example.org/trail/7> <http://example.org/trail/hasGrade> <http://example.org/trail/Moderate> .
+<http://www.example.org/trail/7> <http://example.org/trail/hasQuality> <http://example.org/trail/3-star> .
+<http://www.example.org/trail/7> <http://example.org/trail/hasType> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/7> <http://example.org/trail/climb> "540" .
+<http://www.example.org/trail/7> <http://example.org/trail/dogs_allowed> "0" .
+<http://www.example.org/trail/7> <http://example.org/trail/estimated_time_to_complete> "7200" .
+<http://www.example.org/trail/7> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/7> .
+<http://www.example.org/trail/7> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/7> .
+<http://www.example.org/trail/7> <http://example.org/trail/id> "7" .
+<http://www.example.org/trail/7> <http://example.org/trail/length> "114" .
+<http://www.example.org/trail/7> <http://example.org/trail/name> "Burren Way" .
+# 
+# http://www.example.org/trail/8
+<http://www.example.org/trail/8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/trail/8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/trail/Trail> .
+<http://www.example.org/trail/8> <http://example.org/trail/hasCategory> <http://www.example.org/trail/1> .
+<http://www.example.org/trail/8> <http://example.org/trail/hasCounty> <http://example.org/trail/Cavan> .
+<http://www.example.org/trail/8> <http://example.org/trail/hasFormat> <http://example.org/trail/Linear> .
+<http://www.example.org/trail/8> <http://example.org/trail/hasFormat> <http://example.org/trail/National_Waymarked_Trail> .
+<http://www.example.org/trail/8> <http://example.org/trail/hasGrade> <http://example.org/trail/Moderate> .
+<http://www.example.org/trail/8> <http://example.org/trail/hasQuality> <http://example.org/trail/2-star> .
+<http://www.example.org/trail/8> <http://example.org/trail/climb> "330" .
+<http://www.example.org/trail/8> <http://example.org/trail/dogs_allowed> "0" .
+<http://www.example.org/trail/8> <http://example.org/trail/estimated_time_to_complete> "1440" .
+<http://www.example.org/trail/8> <http://example.org/trail/hasFinishPoint> <http://www.example.org/finish_point/8> .
+<http://www.example.org/trail/8> <http://example.org/trail/hasStartPoint> <http://www.example.org/start_point/8> .
+<http://www.example.org/trail/8> <http://example.org/trail/id> "8" .
+<http://www.example.org/trail/8> <http://example.org/trail/length> "22" .
+<http://www.example.org/trail/8> <http://example.org/trail/name> "Cavan Way" .
+# 
+_:genid1 <http://www.w3.org/2000/01/rdf-schema#comment> "Approximately how long it takes to complete this trail" .
+# Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/

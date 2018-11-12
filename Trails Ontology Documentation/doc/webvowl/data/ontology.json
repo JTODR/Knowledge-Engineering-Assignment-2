@@ -1,0 +1,3864 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.4), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://www.opengis.net/ont/sf", "http://www.w3.org/2000/01/rdf-schema", "http://example.org/trail", "http://www.w3.org/2001/XMLSchema", "http://www.opengis.net/ont/geosparql" ],
+    "iri" : "http://example.org/trail/",
+    "labels" : {
+      "undefined" : "Sport Ireland Trails"
+    },
+    "comments" : {
+      "undefined" : "This data set contains the National Trails Register a collection of looped walks, waymarked ways and cycling routes in the Republic of Ireland."
+    }
+  },
+  "namespace" : [ ],
+  "metrics" : {
+    "classCount" : 10,
+    "objectPropertyCount" : 12,
+    "datatypePropertyCount" : 0,
+    "individualCount" : 125
+  },
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://example.org/trail/Grade",
+    "baseIri" : "http://example.org/trail",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Grade",
+      "undefined" : "Grade"
+    },
+    "individuals" : [ {
+      "iri" : "http://example.org/trail/Moderate",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Moderate"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Easy",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Easy"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Strenuous",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Strenuous"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "A measure of how difficult the trail will be to walk."
+    },
+    "id" : "3"
+  }, {
+    "iri" : "http://example.org/trail/Trail",
+    "baseIri" : "http://example.org/trail",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Trail",
+      "undefined" : "Trail"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.example.org/trail/29",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "2190",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "5760",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/29",
+          "type" : "iri"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "0",
+          "type" : "label"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "175",
+          "type" : "label"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Sheeps Head Way",
+          "type" : "label"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "29",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/29",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "29"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/27",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "Minimal",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "2880",
+          "type" : "label"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "1",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/27",
+          "type" : "iri"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "37",
+          "type" : "label"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Offaly Way",
+          "type" : "label"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "27",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/27",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "27"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/28",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "Minimal",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "4320",
+          "type" : "label"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "1",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/28",
+          "type" : "iri"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Royal Canal Way",
+          "type" : "label"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "144",
+          "type" : "label"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "28",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/28",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "28"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/25",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "Minimal",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "180",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/25",
+          "type" : "iri"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "0",
+          "type" : "label"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Nore Valley Walk - Inistioge to Thomastown Section",
+          "type" : "label"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "11",
+          "type" : "label"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "25",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/25",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "25"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/26",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "450",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "2880",
+          "type" : "label"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "1",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/26",
+          "type" : "iri"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "45",
+          "type" : "label"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "North Kerry Way",
+          "type" : "label"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "26",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/26",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "26"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/23",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "2340",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "7200",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/23",
+          "type" : "iri"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "0",
+          "type" : "label"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "118",
+          "type" : "label"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Miner's Way & Historical Trail",
+          "type" : "label"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "23",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/23",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "23"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/24",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "1000",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/24",
+          "type" : "iri"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "0",
+          "type" : "label"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Monaghan Way",
+          "type" : "label"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "56.5",
+          "type" : "label"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "24",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/24",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "24"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/21",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "527",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "4320",
+          "type" : "label"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "0",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/21",
+          "type" : "iri"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Lough Derg Way",
+          "type" : "label"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "68",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/21",
+          "type" : "iri"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "21",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "21"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/22",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "1620",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "8640",
+          "type" : "label"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "0",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/22",
+          "type" : "iri"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "148",
+          "type" : "label"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Mid Clare Way",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/22",
+          "type" : "iri"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "22",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "22"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/30",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "1275",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "5400",
+          "type" : "label"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "0",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/30",
+          "type" : "iri"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "70.5",
+          "type" : "label"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Slieve Bloom Way",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/30",
+          "type" : "iri"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "30",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "30"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/31",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "870",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "2880",
+          "type" : "label"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "1",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/31",
+          "type" : "iri"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Slieve Felim Way",
+          "type" : "label"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "43",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/31",
+          "type" : "iri"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "31",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "31"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/5",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "4320",
+          "type" : "label"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "0",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/5",
+          "type" : "iri"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Blackwater Way - Duhallow",
+          "type" : "label"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "67",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/5",
+          "type" : "iri"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "5",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "5"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/6",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "1230",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "4320",
+          "type" : "label"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "0",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/6",
+          "type" : "iri"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "65",
+          "type" : "label"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Bluestack Way",
+          "type" : "label"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "6",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/6",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "6"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/7",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "540",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "7200",
+          "type" : "label"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "0",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/7",
+          "type" : "iri"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Burren Way",
+          "type" : "label"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "114",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/7",
+          "type" : "iri"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "7",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "7"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/8",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "330",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "1440",
+          "type" : "label"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "0",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/8",
+          "type" : "iri"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Cavan Way",
+          "type" : "label"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "22",
+          "type" : "label"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "8",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/8",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "8"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/1",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "1560",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "5760",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/1",
+          "type" : "iri"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "1",
+          "type" : "label"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "89",
+          "type" : "label"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Ballyhoura Way",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/1",
+          "type" : "iri"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "1",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "1"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/2",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "0",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "5760",
+          "type" : "label"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "1",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/2",
+          "type" : "iri"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "100",
+          "type" : "label"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Barrow Way",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/2",
+          "type" : "iri"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "2",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "2"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/18",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "0",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "7200",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/18",
+          "type" : "iri"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "1",
+          "type" : "label"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Grand Canal Way",
+          "type" : "label"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "117",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/18",
+          "type" : "iri"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "18",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "18"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/3",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "5245",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "12960",
+          "type" : "label"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "0",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/3",
+          "type" : "iri"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "206",
+          "type" : "label"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Beara Way",
+          "type" : "label"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "3",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/3",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "3"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/19",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "5310",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "12960",
+          "type" : "label"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "0",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/19",
+          "type" : "iri"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Kerry Way",
+          "type" : "label"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "214",
+          "type" : "label"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "19",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/19",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "19"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/4",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "3690",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "10080",
+          "type" : "label"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "0",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/4",
+          "type" : "iri"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "94",
+          "type" : "label"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Blackwater Way - Avondhu",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/4",
+          "type" : "iri"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "4",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "4"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/16",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "3060",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "11520",
+          "type" : "label"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "0",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/16",
+          "type" : "iri"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "180",
+          "type" : "label"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "East Clare Way",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/16",
+          "type" : "iri"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "16",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "16"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/17",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "1375",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "4320",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/17",
+          "type" : "iri"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "East Munster Way",
+          "type" : "label"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "75",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/17",
+          "type" : "iri"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "17",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "17"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/14",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "1060",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "990",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/14",
+          "type" : "iri"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "51",
+          "type" : "label"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Sl? Na Finne - Sli Dhun na nGall",
+          "type" : "label"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "14",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/14",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "14"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/15",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/15",
+          "type" : "iri"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Sl? Na Rosann - Sli Dhun na nGall",
+          "type" : "label"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "65",
+          "type" : "label"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "15",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/15",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "15"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/12",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/12",
+          "type" : "iri"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "77",
+          "type" : "label"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Sl? An Earagail - Sli Dhun na nGall",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/12",
+          "type" : "iri"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "12",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "12"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/13",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/13",
+          "type" : "iri"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "65",
+          "type" : "label"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Sl? Cholmcille - Sli Dhun na nGall",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/13",
+          "type" : "iri"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "13",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "13"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/32",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "890",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "4320",
+          "type" : "label"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "0",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/32",
+          "type" : "iri"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Sligo Way",
+          "type" : "label"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "78",
+          "type" : "label"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "32",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/32",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "32"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/10",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "310",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "1550",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/10",
+          "type" : "iri"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "0",
+          "type" : "label"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "61",
+          "type" : "label"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Croagh Patrick Heritage Trail",
+          "type" : "label"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "10",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/10",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "10"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/11",
+      "baseIri" : "http://www.example.org/trail",
+      "annotations" : {
+        "climb" : [ {
+          "identifier" : "climb",
+          "language" : "undefined",
+          "value" : "2590",
+          "type" : "label"
+        } ],
+        "estimated_time_to_complete" : [ {
+          "identifier" : "estimated_time_to_complete",
+          "language" : "undefined",
+          "value" : "10080",
+          "type" : "label"
+        } ],
+        "hasStartPoint" : [ {
+          "identifier" : "hasStartPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/start_point/11",
+          "type" : "iri"
+        } ],
+        "dogs_allowed" : [ {
+          "identifier" : "dogs_allowed",
+          "language" : "undefined",
+          "value" : "0",
+          "type" : "label"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Dingle Way",
+          "type" : "label"
+        } ],
+        "length" : [ {
+          "identifier" : "length",
+          "language" : "undefined",
+          "value" : "162",
+          "type" : "label"
+        } ],
+        "hasFinishPoint" : [ {
+          "identifier" : "hasFinishPoint",
+          "language" : "undefined",
+          "value" : "http://www.example.org/finish_point/11",
+          "type" : "iri"
+        } ],
+        "id" : [ {
+          "identifier" : "id",
+          "language" : "undefined",
+          "value" : "11",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "11"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "A trail as specified by Sport Ireland"
+    },
+    "id" : "10"
+  }, {
+    "iri" : "http://example.org/trail/Format",
+    "baseIri" : "http://example.org/trail",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Format",
+      "undefined" : "Format"
+    },
+    "individuals" : [ {
+      "iri" : "http://example.org/trail/Loop",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Loop"
+      }
+    }, {
+      "iri" : "http://example.org/trail/2Circulars",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "2Circulars"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Linear",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Linear"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Linear+Circular",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Linear+Circular"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Circular",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Circular"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "The trail format signifying whether the trail is linear, circular, etc."
+    },
+    "id" : "11"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "1",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://example.org/trail/Quality",
+    "baseIri" : "http://example.org/trail",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Quality",
+      "undefined" : "Quality"
+    },
+    "individuals" : [ {
+      "iri" : "http://example.org/trail/2-star",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "2-star"
+      }
+    }, {
+      "iri" : "http://example.org/trail/3-star",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "3-star"
+      }
+    }, {
+      "iri" : "http://example.org/trail/1-star",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "1-star"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "The quality of the trail, measured on a 3 star system"
+    },
+    "id" : "19"
+  }, {
+    "iri" : "http://example.org/trail/StartPoint",
+    "baseIri" : "http://example.org/trail",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StartPoint",
+      "undefined" : "Start point"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.example.org/start_point/2",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-6.81597 53.26985)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "2"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/3",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.55246 51.74982)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "3"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/19",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.51208 52.05777)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "19"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/1",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.88862 52.2367)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "1"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/16",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.44094 52.80688)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "16"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/15",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.36055 54.94961)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "15"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/18",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-6.45527 53.33094)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "18"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/17",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.40711 52.34551)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "17"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/12",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.12041 55.02554)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "12"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/11",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.706469 52.267018)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "11"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/14",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.11371 54.87013)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "14"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/13",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.41017 54.76438)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "13"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/30",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.45025 53.12221)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "30"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/32",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.93385 54.08941)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "32"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/10",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.13093 53.80467)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "10"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/31",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.39897 52.6492)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "31"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/27",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.65936 53.12658)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "27"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/26",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.706467 52.267016)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "26"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/29",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.45466 51.68096)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "29"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/28",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-6.24501 53.35712)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "28"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/23",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.11 54.07591)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "23"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/22",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.89184 52.76065)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "22"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/25",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.06362 52.48799)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "25"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/24",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-6.841532 54.205504)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "24"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/21",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.62529 52.6653)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "21"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/8",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.01378 54.18917)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "8"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/6",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.11001 54.65362)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "6"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/7",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.34754 52.93251)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "7"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/4",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.99413 52.276)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "4"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/5",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.72886 52.04634)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "5"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "The starting point of the trail"
+    },
+    "id" : "6",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://example.org/trail/Type",
+    "baseIri" : "http://example.org/trail",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Type"
+    },
+    "individuals" : [ {
+      "iri" : "http://example.org/trail/National_Waymarked_Trail",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "National_Waymarked_Trail"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "The type of trail"
+    },
+    "id" : "21"
+  }, {
+    "iri" : "http://example.org/trail/Category",
+    "baseIri" : "http://example.org/trail",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Category",
+      "undefined" : "Category"
+    },
+    "individuals" : [ {
+      "iri" : "http://example.org/trail/1",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "1"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "The category of trail signified as an integer."
+    },
+    "id" : "22"
+  }, {
+    "iri" : "http://www.opengis.net/ont/sf#Point",
+    "baseIri" : "http://www.opengis.net/ont/sf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Point"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.example.org/start_point/2",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-6.81597 53.26985)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "2"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/3",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.55246 51.74982)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "3"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/19",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.51208 52.05777)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "19"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/1",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.88862 52.2367)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "1"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/16",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.44094 52.80688)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "16"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/15",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.36055 54.94961)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "15"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/18",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-6.45527 53.33094)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "18"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/17",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.40711 52.34551)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "17"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/12",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.12041 55.02554)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "12"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/11",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.706469 52.267018)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "11"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/14",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.11371 54.87013)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "14"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/13",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.41017 54.76438)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "13"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/10",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.13093 53.80467)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "10"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/32",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.30366 54.23192)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "32"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/5",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.25637 52.0392)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "5"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/6",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.41017 54.76438)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "6"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/3",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.55246 51.74982)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "3"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/30",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.45025 53.12221)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "30"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/4",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.72886 52.04634)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "4"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/31",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.23721 52.79432)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "31"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/7",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.06373 52.94437)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "7"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/8",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.87559 54.29153)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "8"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/1",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.20321 52.49782)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "1"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/27",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.65936 53.12658)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "27"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/2",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-6.928 52.48748)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "2"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/26",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.706467 52.267016)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "26"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/29",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.45466 51.68096)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "29"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/28",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-6.24501 53.35712)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "28"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/23",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.11 54.07591)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "23"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/22",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.89184 52.76065)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "22"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/25",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.06362 52.48799)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "25"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/24",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-6.841532 54.205504)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "24"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/21",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.62529 52.6653)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "21"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/30",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.45025 53.12221)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "30"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/32",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.93385 54.08941)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "32"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/31",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.39897 52.6492)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "31"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/18",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.96406 53.21962)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "18"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/19",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.51208 52.05777)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "19"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/16",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.44094 52.80688)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "16"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/17",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.99413 52.276)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "17"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/10",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.63981 53.77363)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "10"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/11",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.706469 52.267018)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "11"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/14",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.11371 54.87013)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "14"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/15",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.36055 54.94961)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "15"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/12",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.12041 55.02554)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "12"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/13",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.41017 54.76438)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "13"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/29",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.45466 51.68096)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "29"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/27",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.74353 53.29304)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "27"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/28",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.90495 53.73118)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "28"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/21",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.27658 52.92455)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "21"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/22",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.89184 52.76065)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "22"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/8",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.01378 54.18917)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "8"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/25",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.13657 52.5218)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "25"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/6",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.11001 54.65362)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "6"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/26",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.706467 52.267016)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "26"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/7",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.34754 52.93251)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "7"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/4",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.99413 52.276)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "4"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/23",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.01378 54.18917)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "23"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/24",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-6.57391 54.00191)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "24"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/5",
+      "baseIri" : "http://www.example.org/start_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.72886 52.04634)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "5"
+      }
+    } ],
+    "subClasses" : [ "18", "6" ],
+    "attributes" : [ "external" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://example.org/trail/FinishPoint",
+    "baseIri" : "http://example.org/trail",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FinishPoint",
+      "undefined" : "Finish point"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.example.org/finish_point/18",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.96406 53.21962)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "18"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/19",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.51208 52.05777)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "19"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/16",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.44094 52.80688)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "16"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/17",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.99413 52.276)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "17"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/32",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.30366 54.23192)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "32"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/5",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.25637 52.0392)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "5"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/10",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.63981 53.77363)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "10"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/11",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.706469 52.267018)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "11"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/6",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.41017 54.76438)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "6"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/3",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.55246 51.74982)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "3"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/30",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.45025 53.12221)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "30"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/4",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.72886 52.04634)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "4"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/31",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.23721 52.79432)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "31"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/14",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.11371 54.87013)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "14"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/15",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.36055 54.94961)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "15"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/12",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.12041 55.02554)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "12"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/7",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.06373 52.94437)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "7"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/8",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.87559 54.29153)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "8"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/13",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.41017 54.76438)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "13"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/1",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.20321 52.49782)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "1"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/2",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-6.928 52.48748)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "2"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/29",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.45466 51.68096)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "29"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/27",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.74353 53.29304)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "27"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/28",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.90495 53.73118)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "28"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/21",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.27658 52.92455)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "21"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/22",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.89184 52.76065)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "22"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/25",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-7.13657 52.5218)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "25"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/26",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-9.706467 52.267016)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "26"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/23",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-8.01378 54.18917)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "23"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/24",
+      "baseIri" : "http://www.example.org/finish_point",
+      "annotations" : {
+        "asWKT" : [ {
+          "identifier" : "asWKT",
+          "language" : "undefined",
+          "value" : "POINT(-6.57391 54.00191)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "24"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "The end point of the trail."
+    },
+    "id" : "18",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://example.org/trail/County",
+    "baseIri" : "http://example.org/trail",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "County",
+      "undefined" : "County"
+    },
+    "individuals" : [ {
+      "iri" : "http://example.org/trail/Kildare",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Kildare"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Waterford",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Waterford"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Carlow",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Carlow"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Longford",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Longford"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Leitrim",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Leitrim"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Tipperary",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Tipperary"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Cork",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Cork"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Sligo",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Sligo"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Limerick",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Limerick"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Cavan",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Cavan"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Laois",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Laois"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Offaly",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Offaly"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Roscommon",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Roscommon"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Donegal",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Donegal"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Kerry",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Kerry"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Meath",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Meath"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Westmeath",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Westmeath"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Kilkenny",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Kilkenny"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Mayo",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Mayo"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Dublin",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Dublin"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Clare",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Clare"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Monaghan",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Monaghan"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "The counties which this trail passes through."
+    },
+    "id" : "23"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "4",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "2",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://example.org/trail/hasFormat",
+    "inverse" : "2",
+    "baseIri" : "http://example.org/trail",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasFormat"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://example.org/trail/isGradeOf",
+    "baseIri" : "http://example.org/trail",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "isGradeOf"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "4"
+  }, {
+    "range" : "7",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://example.org/trail/hasType",
+    "inverse" : "9",
+    "baseIri" : "http://example.org/trail",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasType"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://example.org/trail/hasQuality",
+    "inverse" : "13",
+    "baseIri" : "http://example.org/trail",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasQuality"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://example.org/trail/isCategoryOf",
+    "baseIri" : "http://example.org/trail",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "isCategoryOf"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://example.org/trail/hasCounty",
+    "inverse" : "16",
+    "baseIri" : "http://example.org/trail",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasCounty"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "15"
+  }, {
+    "range" : "7",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://example.org/trail/hasGrade",
+    "inverse" : "4",
+    "baseIri" : "http://example.org/trail",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasGrade"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://example.org/trail/isTypeOf",
+    "baseIri" : "http://example.org/trail",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "isTypeOf"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://example.org/trail/isFormatOf",
+    "baseIri" : "http://example.org/trail",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "isFormatOf"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://example.org/trail/isCountyOf",
+    "baseIri" : "http://example.org/trail",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "isCountyOf"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://example.org/trail/hasCategory",
+    "inverse" : "14",
+    "baseIri" : "http://example.org/trail",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasCategory"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://example.org/trail/isQualityOf",
+    "baseIri" : "http://example.org/trail",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "isQualityOf"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "13"
+  } ]
+}

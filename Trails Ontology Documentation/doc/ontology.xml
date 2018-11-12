@@ -1,0 +1,2045 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/trail/"
+     xml:base="http://example.org/trail/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:trail="http://example.org/trail/"
+     xmlns:geosparql="http://www.opengis.net/ont/geosparql#">
+    <owl:Ontology rdf:about="http://example.org/trail/">
+        <rdfs:comment>This data set contains the National Trails Register a collection of looped walks, waymarked ways and cycling routes in the Republic of Ireland.</rdfs:comment>
+        <rdfs:label>Sport Ireland Trails</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/trail/climb -->
+
+
+    <owl:AnnotationProperty rdf:about="http://example.org/trail/climb">
+        <rdfs:comment>Overall trail climb in metres</rdfs:comment>
+        <rdfs:label>Climb</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.org/trail/dogs_allowed -->
+
+
+    <owl:AnnotationProperty rdf:about="http://example.org/trail/dogs_allowed">
+        <rdfs:comment>Whether dogs are allowed (1) or not allowed (0) on this trail.</rdfs:comment>
+        <rdfs:label>Dogs allowed</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.org/trail/estimated_time_to_complete -->
+
+
+    <owl:AnnotationProperty rdf:about="http://example.org/trail/estimated_time_to_complete">
+        <rdfs:comment>The estimated time to complete this walk in minutes.</rdfs:comment>
+        <rdfs:label>Estimated time to complete</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.org/trail/hasFinishPoint -->
+
+
+    <owl:AnnotationProperty rdf:about="http://example.org/trail/hasFinishPoint">
+        <rdfs:comment>Specifies the finish &quot;Point&quot; object for the trail</rdfs:comment>
+        <rdfs:label>Finish point</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.org/trail/hasStartPoint -->
+
+
+    <owl:AnnotationProperty rdf:about="http://example.org/trail/hasStartPoint">
+        <rdfs:comment>Defines the start &quot;Point&quot; object for the trail</rdfs:comment>
+        <rdfs:label>Start point</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.org/trail/id -->
+
+
+    <owl:AnnotationProperty rdf:about="http://example.org/trail/id">
+        <rdfs:comment>The trail ID as specified in the original Sport Ireland CSV dataset</rdfs:comment>
+        <rdfs:label>Trail ID</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.org/trail/length -->
+
+
+    <owl:AnnotationProperty rdf:about="http://example.org/trail/length">
+        <rdfs:comment>The length of the trail measured in kilometres</rdfs:comment>
+        <rdfs:label>Length</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.org/trail/name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://example.org/trail/name">
+        <rdfs:comment>The name of the trail</rdfs:comment>
+        <rdfs:label>Trail name</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#asWKT -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.opengis.net/ont/geosparql#asWKT"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#wktLiteral -->
+
+
+    <rdfs:Datatype rdf:about="http://www.opengis.net/ont/geosparql#wktLiteral"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/trail/hasCategory -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/trail/hasCategory">
+        <owl:inverseOf rdf:resource="http://example.org/trail/isCategoryOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/trail/hasCounty -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/trail/hasCounty">
+        <owl:inverseOf rdf:resource="http://example.org/trail/isCountyOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/trail/hasFormat -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/trail/hasFormat">
+        <owl:inverseOf rdf:resource="http://example.org/trail/isFormatOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/trail/hasGrade -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/trail/hasGrade">
+        <owl:inverseOf rdf:resource="http://example.org/trail/isGradeOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/trail/hasQuality -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/trail/hasQuality">
+        <owl:inverseOf rdf:resource="http://example.org/trail/isQualityOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/trail/hasType -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/trail/hasType">
+        <owl:inverseOf rdf:resource="http://example.org/trail/isTypeOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/trail/isCategoryOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/trail/isCategoryOf"/>
+    
+
+
+    <!-- http://example.org/trail/isCountyOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/trail/isCountyOf"/>
+    
+
+
+    <!-- http://example.org/trail/isFormatOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/trail/isFormatOf"/>
+    
+
+
+    <!-- http://example.org/trail/isGradeOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/trail/isGradeOf"/>
+    
+
+
+    <!-- http://example.org/trail/isQualityOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/trail/isQualityOf"/>
+    
+
+
+    <!-- http://example.org/trail/isTypeOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/trail/isTypeOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/trail/Category -->
+
+
+    <owl:Class rdf:about="http://example.org/trail/Category">
+        <rdfs:comment>The category of trail signified as an integer.</rdfs:comment>
+        <rdfs:label>Category</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/trail/County -->
+
+
+    <owl:Class rdf:about="http://example.org/trail/County">
+        <rdfs:comment>The counties which this trail passes through.</rdfs:comment>
+        <rdfs:label>County</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/trail/FinishPoint -->
+
+
+    <owl:Class rdf:about="http://example.org/trail/FinishPoint">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <rdfs:comment>The end point of the trail.</rdfs:comment>
+        <rdfs:label>Finish point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/trail/Format -->
+
+
+    <owl:Class rdf:about="http://example.org/trail/Format">
+        <rdfs:comment>The trail format signifying whether the trail is linear, circular, etc.</rdfs:comment>
+        <rdfs:label>Format</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/trail/Grade -->
+
+
+    <owl:Class rdf:about="http://example.org/trail/Grade">
+        <rdfs:comment>A measure of how difficult the trail will be to walk.</rdfs:comment>
+        <rdfs:label>Grade</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/trail/Quality -->
+
+
+    <owl:Class rdf:about="http://example.org/trail/Quality">
+        <rdfs:comment>The quality of the trail, measured on a 3 star system</rdfs:comment>
+        <rdfs:label>Quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/trail/StartPoint -->
+
+
+    <owl:Class rdf:about="http://example.org/trail/StartPoint">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <rdfs:comment>The starting point of the trail</rdfs:comment>
+        <rdfs:label>Start point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/trail/Trail -->
+
+
+    <owl:Class rdf:about="http://example.org/trail/Trail">
+        <rdfs:comment>A trail as specified by Sport Ireland</rdfs:comment>
+        <rdfs:label>Trail</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/trail/Type -->
+
+
+    <owl:Class rdf:about="http://example.org/trail/Type">
+        <rdfs:comment>The type of trail</rdfs:comment>
+        <rdfs:comment>Type</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opengis.net/ont/sf#Point -->
+
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/sf#Point"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/trail/Carlow -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Carlow">
+        <rdf:type rdf:resource="http://example.org/trail/County"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Cavan -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Cavan">
+        <rdf:type rdf:resource="http://example.org/trail/County"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Circular -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Circular">
+        <rdf:type rdf:resource="http://example.org/trail/Format"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Clare -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Clare">
+        <rdf:type rdf:resource="http://example.org/trail/County"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Cork -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Cork">
+        <rdf:type rdf:resource="http://example.org/trail/County"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Donegal -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Donegal">
+        <rdf:type rdf:resource="http://example.org/trail/County"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Dublin -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Dublin">
+        <rdf:type rdf:resource="http://example.org/trail/County"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Easy -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Easy">
+        <rdf:type rdf:resource="http://example.org/trail/Grade"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Kerry -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Kerry">
+        <rdf:type rdf:resource="http://example.org/trail/County"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Kildare -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Kildare">
+        <rdf:type rdf:resource="http://example.org/trail/County"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Kilkenny -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Kilkenny">
+        <rdf:type rdf:resource="http://example.org/trail/County"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Laois -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Laois">
+        <rdf:type rdf:resource="http://example.org/trail/County"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Leitrim -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Leitrim">
+        <rdf:type rdf:resource="http://example.org/trail/County"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Limerick -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Limerick">
+        <rdf:type rdf:resource="http://example.org/trail/County"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Linear -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Linear">
+        <rdf:type rdf:resource="http://example.org/trail/Format"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Longford -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Longford">
+        <rdf:type rdf:resource="http://example.org/trail/County"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Loop -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Loop">
+        <rdf:type rdf:resource="http://example.org/trail/Format"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Mayo -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Mayo">
+        <rdf:type rdf:resource="http://example.org/trail/County"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Meath -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Meath">
+        <rdf:type rdf:resource="http://example.org/trail/County"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Moderate -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Moderate">
+        <rdf:type rdf:resource="http://example.org/trail/Grade"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Monaghan -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Monaghan">
+        <rdf:type rdf:resource="http://example.org/trail/County"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/National_Waymarked_Trail -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/National_Waymarked_Trail">
+        <rdf:type rdf:resource="http://example.org/trail/Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Offaly -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Offaly">
+        <rdf:type rdf:resource="http://example.org/trail/County"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Roscommon -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Roscommon">
+        <rdf:type rdf:resource="http://example.org/trail/County"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Sligo -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Sligo">
+        <rdf:type rdf:resource="http://example.org/trail/County"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Strenuous -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Strenuous">
+        <rdf:type rdf:resource="http://example.org/trail/Grade"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Tipperary -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Tipperary">
+        <rdf:type rdf:resource="http://example.org/trail/County"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Waterford -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Waterford">
+        <rdf:type rdf:resource="http://example.org/trail/County"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Westmeath -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Westmeath">
+        <rdf:type rdf:resource="http://example.org/trail/County"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/1">
+        <rdf:type rdf:resource="http://example.org/trail/Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/1-star -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/1-star">
+        <rdf:type rdf:resource="http://example.org/trail/Quality"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/2Circulars -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/2Circulars">
+        <rdf:type rdf:resource="http://example.org/trail/Format"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/2-star -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/2-star">
+        <rdf:type rdf:resource="http://example.org/trail/Quality"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/3-star -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/3-star">
+        <rdf:type rdf:resource="http://example.org/trail/Quality"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Linear+Circular -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Linear+Circular">
+        <rdf:type rdf:resource="http://example.org/trail/Format"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/1">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.20321 52.49782)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/10 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/10">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-9.63981 53.77363)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/11 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/11">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-9.706469 52.267018)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/12 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/12">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.12041 55.02554)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/13 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/13">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.41017 54.76438)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/14 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/14">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.11371 54.87013)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/15 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/15">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.36055 54.94961)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/16 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/16">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.44094 52.80688)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/17 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/17">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-7.99413 52.276)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/18 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/18">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-7.96406 53.21962)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/19 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/19">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-9.51208 52.05777)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/2">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-6.928 52.48748)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/21 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/21">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.27658 52.92455)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/22 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/22">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.89184 52.76065)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/23 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/23">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.01378 54.18917)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/24 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/24">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-6.57391 54.00191)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/25 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/25">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-7.13657 52.5218)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/26 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/26">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-9.706467 52.267016)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/27 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/27">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-7.74353 53.29304)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/28 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/28">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-7.90495 53.73118)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/29 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/29">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-9.45466 51.68096)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/3">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-9.55246 51.74982)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/30 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/30">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-7.45025 53.12221)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/31 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/31">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.23721 52.79432)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/32 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/32">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.30366 54.23192)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/4">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.72886 52.04634)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/5">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-9.25637 52.0392)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/6 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/6">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.41017 54.76438)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/7 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/7">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-9.06373 52.94437)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/finish_point/8 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/finish_point/8">
+        <rdf:type rdf:resource="http://example.org/trail/FinishPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-7.87559 54.29153)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/1">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.88862 52.2367)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/10 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/10">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-9.13093 53.80467)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/11 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/11">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-9.706469 52.267018)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/12 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/12">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.12041 55.02554)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/13 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/13">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.41017 54.76438)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/14 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/14">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.11371 54.87013)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/15 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/15">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.36055 54.94961)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/16 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/16">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.44094 52.80688)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/17 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/17">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-7.40711 52.34551)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/18 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/18">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-6.45527 53.33094)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/19 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/19">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-9.51208 52.05777)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/2">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-6.81597 53.26985)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/21 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/21">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.62529 52.6653)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/22 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/22">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.89184 52.76065)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/23 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/23">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.11 54.07591)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/24 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/24">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-6.841532 54.205504)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/25 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/25">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-7.06362 52.48799)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/26 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/26">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-9.706467 52.267016)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/27 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/27">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-7.65936 53.12658)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/28 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/28">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-6.24501 53.35712)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/29 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/29">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-9.45466 51.68096)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/3">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-9.55246 51.74982)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/30 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/30">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-7.45025 53.12221)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/31 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/31">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.39897 52.6492)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/32 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/32">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.93385 54.08941)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/4">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-7.99413 52.276)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/5">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.72886 52.04634)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/6 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/6">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.11001 54.65362)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/7 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/7">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-9.34754 52.93251)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/start_point/8 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/start_point/8">
+        <rdf:type rdf:resource="http://example.org/trail/StartPoint"/>
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-8.01378 54.18917)</geosparql:asWKT>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/1">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Cork"/>
+        <hasCounty rdf:resource="http://example.org/trail/Limerick"/>
+        <hasCounty rdf:resource="http://example.org/trail/Tipperary"/>
+        <hasFormat rdf:resource="http://example.org/trail/Linear"/>
+        <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
+        <hasQuality rdf:resource="http://example.org/trail/2-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>1560</climb>
+        <dogs_allowed>1</dogs_allowed>
+        <estimated_time_to_complete>5760</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/1"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/1"/>
+        <id>1</id>
+        <length>89</length>
+        <name>Ballyhoura Way</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/10 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/10">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Mayo"/>
+        <hasFormat rdf:resource="http://example.org/trail/Linear"/>
+        <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
+        <hasQuality rdf:resource="http://example.org/trail/2-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>310</climb>
+        <dogs_allowed>0</dogs_allowed>
+        <estimated_time_to_complete>1550</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/10"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/10"/>
+        <id>10</id>
+        <length>61</length>
+        <name>Croagh Patrick Heritage Trail</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/11 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/11">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Kerry"/>
+        <hasFormat rdf:resource="http://example.org/trail/Circular"/>
+        <hasFormat rdf:resource="http://example.org/trail/Linear"/>
+        <hasGrade rdf:resource="http://example.org/trail/Strenuous"/>
+        <hasQuality rdf:resource="http://example.org/trail/2-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>2590</climb>
+        <dogs_allowed>0</dogs_allowed>
+        <estimated_time_to_complete>10080</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/11"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/11"/>
+        <id>11</id>
+        <length>162</length>
+        <name>Dingle Way</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/12 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/12">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Donegal"/>
+        <hasFormat rdf:resource="http://example.org/trail/Loop"/>
+        <hasGrade rdf:resource="http://example.org/trail/Easy"/>
+        <hasQuality rdf:resource="http://example.org/trail/2-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/12"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/12"/>
+        <id>12</id>
+        <length>77</length>
+        <name>Sl� An Earagail - Sli Dhun na nGall</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/13 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/13">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Donegal"/>
+        <hasFormat rdf:resource="http://example.org/trail/Circular"/>
+        <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
+        <hasQuality rdf:resource="http://example.org/trail/2-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/13"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/13"/>
+        <id>13</id>
+        <length>65</length>
+        <name>Sl� Cholmcille - Sli Dhun na nGall</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/14 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/14">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Donegal"/>
+        <hasFormat rdf:resource="http://example.org/trail/Circular"/>
+        <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
+        <hasQuality rdf:resource="http://example.org/trail/2-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>1060</climb>
+        <estimated_time_to_complete>990</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/14"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/14"/>
+        <id>14</id>
+        <length>51</length>
+        <name>Sl� Na Finne - Sli Dhun na nGall</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/15 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/15">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Donegal"/>
+        <hasFormat rdf:resource="http://example.org/trail/Circular"/>
+        <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
+        <hasQuality rdf:resource="http://example.org/trail/2-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/15"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/15"/>
+        <id>15</id>
+        <length>65</length>
+        <name>Sl� Na Rosann - Sli Dhun na nGall</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/16 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/16">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Clare"/>
+        <hasFormat rdf:resource="http://example.org/trail/Circular"/>
+        <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
+        <hasQuality rdf:resource="http://example.org/trail/3-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>3060</climb>
+        <dogs_allowed>0</dogs_allowed>
+        <estimated_time_to_complete>11520</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/16"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/16"/>
+        <id>16</id>
+        <length>180</length>
+        <name>East Clare Way</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/17 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/17">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Tipperary"/>
+        <hasCounty rdf:resource="http://example.org/trail/Waterford"/>
+        <hasFormat rdf:resource="http://example.org/trail/Linear"/>
+        <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>1375</climb>
+        <estimated_time_to_complete>4320</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/17"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/17"/>
+        <id>17</id>
+        <length>75</length>
+        <name>East Munster Way</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/18 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/18">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Dublin"/>
+        <hasCounty rdf:resource="http://example.org/trail/Kildare"/>
+        <hasCounty rdf:resource="http://example.org/trail/Offaly"/>
+        <hasFormat rdf:resource="http://example.org/trail/Linear"/>
+        <hasGrade rdf:resource="http://example.org/trail/Easy"/>
+        <hasQuality rdf:resource="http://example.org/trail/2-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>0</climb>
+        <dogs_allowed>1</dogs_allowed>
+        <estimated_time_to_complete>7200</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/18"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/18"/>
+        <id>18</id>
+        <length>117</length>
+        <name>Grand Canal Way</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/19 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/19">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Kerry"/>
+        <hasFormat rdf:resource="http://example.org/trail/Circular"/>
+        <hasGrade rdf:resource="http://example.org/trail/Strenuous"/>
+        <hasQuality rdf:resource="http://example.org/trail/3-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>5310</climb>
+        <dogs_allowed>0</dogs_allowed>
+        <estimated_time_to_complete>12960</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/19"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/19"/>
+        <id>19</id>
+        <length>214</length>
+        <name>Kerry Way</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/2">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Carlow"/>
+        <hasCounty rdf:resource="http://example.org/trail/Kildare"/>
+        <hasCounty rdf:resource="http://example.org/trail/Laois"/>
+        <hasFormat rdf:resource="http://example.org/trail/Linear"/>
+        <hasGrade rdf:resource="http://example.org/trail/Easy"/>
+        <hasQuality rdf:resource="http://example.org/trail/2-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>0</climb>
+        <dogs_allowed>1</dogs_allowed>
+        <estimated_time_to_complete>5760</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/2"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/2"/>
+        <id>2</id>
+        <length>100</length>
+        <name>Barrow Way</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/21 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/21">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Clare"/>
+        <hasCounty rdf:resource="http://example.org/trail/Limerick"/>
+        <hasCounty rdf:resource="http://example.org/trail/Tipperary"/>
+        <hasFormat rdf:resource="http://example.org/trail/Linear"/>
+        <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
+        <hasQuality rdf:resource="http://example.org/trail/3-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>527</climb>
+        <dogs_allowed>0</dogs_allowed>
+        <estimated_time_to_complete>4320</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/21"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/21"/>
+        <id>21</id>
+        <length>68</length>
+        <name>Lough Derg Way</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/22 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/22">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Clare"/>
+        <hasFormat rdf:resource="http://example.org/trail/Circular"/>
+        <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
+        <hasQuality rdf:resource="http://example.org/trail/3-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>1620</climb>
+        <dogs_allowed>0</dogs_allowed>
+        <estimated_time_to_complete>8640</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/22"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/22"/>
+        <id>22</id>
+        <length>148</length>
+        <name>Mid Clare Way</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/23 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/23">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Leitrim"/>
+        <hasCounty rdf:resource="http://example.org/trail/Roscommon"/>
+        <hasCounty rdf:resource="http://example.org/trail/Sligo"/>
+        <hasFormat rdf:resource="http://example.org/trail/2Circulars"/>
+        <hasGrade rdf:resource="http://example.org/trail/Strenuous"/>
+        <hasQuality rdf:resource="http://example.org/trail/3-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>2340</climb>
+        <dogs_allowed>0</dogs_allowed>
+        <estimated_time_to_complete>7200</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/23"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/23"/>
+        <id>23</id>
+        <length>118</length>
+        <name>Miner&apos;s Way &amp; Historical Trail</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/24 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/24">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Monaghan"/>
+        <hasFormat rdf:resource="http://example.org/trail/Linear"/>
+        <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
+        <hasQuality rdf:resource="http://example.org/trail/2-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <dogs_allowed>0</dogs_allowed>
+        <estimated_time_to_complete>1000</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/24"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/24"/>
+        <id>24</id>
+        <length>56.5</length>
+        <name>Monaghan Way</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/25 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/25">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Kilkenny"/>
+        <hasFormat rdf:resource="http://example.org/trail/Linear"/>
+        <hasGrade rdf:resource="http://example.org/trail/Easy"/>
+        <hasQuality rdf:resource="http://example.org/trail/3-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>Minimal</climb>
+        <dogs_allowed>0</dogs_allowed>
+        <estimated_time_to_complete>180</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/25"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/25"/>
+        <id>25</id>
+        <length>11</length>
+        <name>Nore Valley Walk - Inistioge to Thomastown Section</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/26 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/26">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Kerry"/>
+        <hasFormat rdf:resource="http://example.org/trail/Linear+Circular"/>
+        <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
+        <hasQuality rdf:resource="http://example.org/trail/3-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>450</climb>
+        <dogs_allowed>1</dogs_allowed>
+        <estimated_time_to_complete>2880</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/26"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/26"/>
+        <id>26</id>
+        <length>45</length>
+        <name>North Kerry Way</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/27 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/27">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Offaly"/>
+        <hasFormat rdf:resource="http://example.org/trail/Linear"/>
+        <hasGrade rdf:resource="http://example.org/trail/Easy"/>
+        <hasQuality rdf:resource="http://example.org/trail/3-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>Minimal</climb>
+        <dogs_allowed>1</dogs_allowed>
+        <estimated_time_to_complete>2880</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/27"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/27"/>
+        <id>27</id>
+        <length>37</length>
+        <name>Offaly Way</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/28 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/28">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Dublin"/>
+        <hasCounty rdf:resource="http://example.org/trail/Kildare"/>
+        <hasCounty rdf:resource="http://example.org/trail/Longford"/>
+        <hasCounty rdf:resource="http://example.org/trail/Meath"/>
+        <hasCounty rdf:resource="http://example.org/trail/Westmeath"/>
+        <hasFormat rdf:resource="http://example.org/trail/Linear"/>
+        <hasGrade rdf:resource="http://example.org/trail/Easy"/>
+        <hasQuality rdf:resource="http://example.org/trail/2-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>Minimal</climb>
+        <dogs_allowed>1</dogs_allowed>
+        <estimated_time_to_complete>4320</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/28"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/28"/>
+        <id>28</id>
+        <length>144</length>
+        <name>Royal Canal Way</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/29 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/29">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Cork"/>
+        <hasFormat rdf:resource="http://example.org/trail/Circular"/>
+        <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
+        <hasQuality rdf:resource="http://example.org/trail/2-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>2190</climb>
+        <dogs_allowed>0</dogs_allowed>
+        <estimated_time_to_complete>5760</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/29"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/29"/>
+        <id>29</id>
+        <length>175</length>
+        <name>Sheeps Head Way</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/3">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Cork"/>
+        <hasCounty rdf:resource="http://example.org/trail/Kerry"/>
+        <hasFormat rdf:resource="http://example.org/trail/Loop"/>
+        <hasGrade rdf:resource="http://example.org/trail/Strenuous"/>
+        <hasQuality rdf:resource="http://example.org/trail/2-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>5245</climb>
+        <dogs_allowed>0</dogs_allowed>
+        <estimated_time_to_complete>12960</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/3"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/3"/>
+        <id>3</id>
+        <length>206</length>
+        <name>Beara Way</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/30 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/30">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Laois"/>
+        <hasCounty rdf:resource="http://example.org/trail/Offaly"/>
+        <hasFormat rdf:resource="http://example.org/trail/Circular"/>
+        <hasGrade rdf:resource="http://example.org/trail/Strenuous"/>
+        <hasQuality rdf:resource="http://example.org/trail/2-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>1275</climb>
+        <dogs_allowed>0</dogs_allowed>
+        <estimated_time_to_complete>5400</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/30"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/30"/>
+        <id>30</id>
+        <length>70.5</length>
+        <name>Slieve Bloom Way</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/31 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/31">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Limerick"/>
+        <hasCounty rdf:resource="http://example.org/trail/Tipperary"/>
+        <hasFormat rdf:resource="http://example.org/trail/Linear"/>
+        <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
+        <hasQuality rdf:resource="http://example.org/trail/3-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>870</climb>
+        <dogs_allowed>1</dogs_allowed>
+        <estimated_time_to_complete>2880</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/31"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/31"/>
+        <id>31</id>
+        <length>43</length>
+        <name>Slieve Felim Way</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/32 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/32">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Sligo"/>
+        <hasFormat rdf:resource="http://example.org/trail/Linear"/>
+        <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
+        <hasQuality rdf:resource="http://example.org/trail/2-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>890</climb>
+        <dogs_allowed>0</dogs_allowed>
+        <estimated_time_to_complete>4320</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/32"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/32"/>
+        <id>32</id>
+        <length>78</length>
+        <name>Sligo Way</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/4">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Cork"/>
+        <hasCounty rdf:resource="http://example.org/trail/Tipperary"/>
+        <hasFormat rdf:resource="http://example.org/trail/Linear"/>
+        <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
+        <hasQuality rdf:resource="http://example.org/trail/3-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>3690</climb>
+        <dogs_allowed>0</dogs_allowed>
+        <estimated_time_to_complete>10080</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/4"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/4"/>
+        <id>4</id>
+        <length>94</length>
+        <name>Blackwater Way - Avondhu</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/5">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Cork"/>
+        <hasCounty rdf:resource="http://example.org/trail/Kerry"/>
+        <hasFormat rdf:resource="http://example.org/trail/Linear"/>
+        <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
+        <hasQuality rdf:resource="http://example.org/trail/2-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <dogs_allowed>0</dogs_allowed>
+        <estimated_time_to_complete>4320</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/5"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/5"/>
+        <id>5</id>
+        <length>67</length>
+        <name>Blackwater Way - Duhallow</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/6 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/6">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Donegal"/>
+        <hasFormat rdf:resource="http://example.org/trail/Linear"/>
+        <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
+        <hasQuality rdf:resource="http://example.org/trail/3-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>1230</climb>
+        <dogs_allowed>0</dogs_allowed>
+        <estimated_time_to_complete>4320</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/6"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/6"/>
+        <id>6</id>
+        <length>65</length>
+        <name>Bluestack Way</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/7 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/7">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Clare"/>
+        <hasFormat rdf:resource="http://example.org/trail/Linear"/>
+        <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
+        <hasQuality rdf:resource="http://example.org/trail/3-star"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <climb>540</climb>
+        <dogs_allowed>0</dogs_allowed>
+        <estimated_time_to_complete>7200</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/7"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/7"/>
+        <id>7</id>
+        <length>114</length>
+        <name>Burren Way</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/trail/8 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/trail/8">
+        <rdf:type rdf:resource="http://example.org/trail/Trail"/>
+        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
+        <hasCounty rdf:resource="http://example.org/trail/Cavan"/>
+        <hasFormat rdf:resource="http://example.org/trail/Linear"/>
+        <hasFormat rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
+        <hasQuality rdf:resource="http://example.org/trail/2-star"/>
+        <climb>330</climb>
+        <dogs_allowed>0</dogs_allowed>
+        <estimated_time_to_complete>1440</estimated_time_to_complete>
+        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/8"/>
+        <hasStartPoint rdf:resource="http://www.example.org/start_point/8"/>
+        <id>8</id>
+        <length>22</length>
+        <name>Cavan Way</name>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdfs:comment>Approximately how long it takes to complete this trail</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/ -->
+
+

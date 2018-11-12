@@ -1,0 +1,2110 @@
+[ {
+  "@id" : "_:genid1",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Approximately how long it takes to complete this trail"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This data set contains the National Trails Register a collection of looped walks, waymarked ways and cycling routes in the Republic of Ireland."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Sport Ireland Trails"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Category" ]
+}, {
+  "@id" : "http://example.org/trail/1-star",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Quality" ]
+}, {
+  "@id" : "http://example.org/trail/2-star",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Quality" ]
+}, {
+  "@id" : "http://example.org/trail/2Circulars",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Format" ]
+}, {
+  "@id" : "http://example.org/trail/3-star",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Quality" ]
+}, {
+  "@id" : "http://example.org/trail/Carlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/County" ]
+}, {
+  "@id" : "http://example.org/trail/Category",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The category of trail signified as an integer."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Category"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/Cavan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/County" ]
+}, {
+  "@id" : "http://example.org/trail/Circular",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Format" ]
+}, {
+  "@id" : "http://example.org/trail/Clare",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/County" ]
+}, {
+  "@id" : "http://example.org/trail/Cork",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/County" ]
+}, {
+  "@id" : "http://example.org/trail/County",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The counties which this trail passes through."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "County"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/Donegal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/County" ]
+}, {
+  "@id" : "http://example.org/trail/Dublin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/County" ]
+}, {
+  "@id" : "http://example.org/trail/Easy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Grade" ]
+}, {
+  "@id" : "http://example.org/trail/FinishPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The end point of the trail."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Finish point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/sf#Point"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/Format",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The trail format signifying whether the trail is linear, circular, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Format"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/Grade",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A measure of how difficult the trail will be to walk."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Grade"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/Kerry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/County" ]
+}, {
+  "@id" : "http://example.org/trail/Kildare",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/County" ]
+}, {
+  "@id" : "http://example.org/trail/Kilkenny",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/County" ]
+}, {
+  "@id" : "http://example.org/trail/Laois",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/County" ]
+}, {
+  "@id" : "http://example.org/trail/Leitrim",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/County" ]
+}, {
+  "@id" : "http://example.org/trail/Limerick",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/County" ]
+}, {
+  "@id" : "http://example.org/trail/Linear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Format" ]
+}, {
+  "@id" : "http://example.org/trail/Linear+Circular",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Format" ]
+}, {
+  "@id" : "http://example.org/trail/Longford",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/County" ]
+}, {
+  "@id" : "http://example.org/trail/Loop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Format" ]
+}, {
+  "@id" : "http://example.org/trail/Mayo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/County" ]
+}, {
+  "@id" : "http://example.org/trail/Meath",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/County" ]
+}, {
+  "@id" : "http://example.org/trail/Moderate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Grade" ]
+}, {
+  "@id" : "http://example.org/trail/Monaghan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/County" ]
+}, {
+  "@id" : "http://example.org/trail/National_Waymarked_Trail",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Type" ]
+}, {
+  "@id" : "http://example.org/trail/Offaly",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/County" ]
+}, {
+  "@id" : "http://example.org/trail/Quality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The quality of the trail, measured on a 3 star system"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Quality"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/Roscommon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/County" ]
+}, {
+  "@id" : "http://example.org/trail/Sligo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/County" ]
+}, {
+  "@id" : "http://example.org/trail/StartPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The starting point of the trail"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Start point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/sf#Point"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/Strenuous",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Grade" ]
+}, {
+  "@id" : "http://example.org/trail/Tipperary",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/County" ]
+}, {
+  "@id" : "http://example.org/trail/Trail",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A trail as specified by Sport Ireland"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Trail"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/Type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The type of trail"
+  }, {
+    "@value" : "Type"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/Waterford",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/County" ]
+}, {
+  "@id" : "http://example.org/trail/Westmeath",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/County" ]
+}, {
+  "@id" : "http://example.org/trail/climb",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Overall trail climb in metres"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Climb"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/dogs_allowed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Whether dogs are allowed (1) or not allowed (0) on this trail."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Dogs allowed"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/estimated_time_to_complete",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The estimated time to complete this walk in minutes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Estimated time to complete"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/hasCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://example.org/trail/isCategoryOf"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/hasCounty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://example.org/trail/isCountyOf"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/hasFinishPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specifies the finish \"Point\" object for the trail"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Finish point"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/hasFormat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://example.org/trail/isFormatOf"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/hasGrade",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://example.org/trail/isGradeOf"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/hasQuality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://example.org/trail/isQualityOf"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/hasStartPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Defines the start \"Point\" object for the trail"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Start point"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/hasType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://example.org/trail/isTypeOf"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/id",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The trail ID as specified in the original Sport Ireland CSV dataset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Trail ID"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/isCategoryOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://example.org/trail/isCountyOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://example.org/trail/isFormatOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://example.org/trail/isGradeOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://example.org/trail/isQualityOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://example.org/trail/isTypeOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://example.org/trail/length",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The length of the trail measured in kilometres"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Length"
+  } ]
+}, {
+  "@id" : "http://example.org/trail/name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The name of the trail"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Trail name"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.20321 52.49782)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-9.63981 53.77363)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-9.706469 52.267018)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.12041 55.02554)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.41017 54.76438)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.11371 54.87013)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.36055 54.94961)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.44094 52.80688)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-7.99413 52.276)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-7.96406 53.21962)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-9.51208 52.05777)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-6.928 52.48748)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.27658 52.92455)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.89184 52.76065)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.01378 54.18917)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-6.57391 54.00191)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-7.13657 52.5218)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-9.706467 52.267016)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-7.74353 53.29304)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-7.90495 53.73118)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-9.45466 51.68096)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-9.55246 51.74982)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-7.45025 53.12221)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.23721 52.79432)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.30366 54.23192)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.72886 52.04634)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-9.25637 52.0392)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.41017 54.76438)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-9.06373 52.94437)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/finish_point/8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-7.87559 54.29153)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.88862 52.2367)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-9.13093 53.80467)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-9.706469 52.267018)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.12041 55.02554)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.41017 54.76438)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.11371 54.87013)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.36055 54.94961)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.44094 52.80688)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-7.40711 52.34551)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-6.45527 53.33094)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-9.51208 52.05777)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-6.81597 53.26985)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.62529 52.6653)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.89184 52.76065)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.11 54.07591)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-6.841532 54.205504)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-7.06362 52.48799)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-9.706467 52.267016)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-7.65936 53.12658)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-6.24501 53.35712)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-9.45466 51.68096)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-9.55246 51.74982)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-7.45025 53.12221)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.39897 52.6492)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.93385 54.08941)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-7.99413 52.276)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.72886 52.04634)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.11001 54.65362)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-9.34754 52.93251)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/start_point/8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/StartPoint", "http://www.opengis.net/ont/sf#Point" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "@value" : "POINT(-8.01378 54.18917)"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "1560"
+  } ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "1"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "5760"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Cork"
+  }, {
+    "@id" : "http://example.org/trail/Limerick"
+  }, {
+    "@id" : "http://example.org/trail/Tipperary"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/1"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Linear"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Moderate"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/2-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/1"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "1"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "89"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Ballyhoura Way"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "310"
+  } ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "0"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "1550"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Mayo"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/10"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Linear"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Moderate"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/2-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/10"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "10"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "61"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Croagh Patrick Heritage Trail"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "2590"
+  } ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "0"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "10080"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Kerry"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/11"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Circular"
+  }, {
+    "@id" : "http://example.org/trail/Linear"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Strenuous"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/2-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/11"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "11"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "162"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Dingle Way"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Donegal"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/12"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Loop"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Easy"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/2-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/12"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "12"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "77"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Sl� An Earagail - Sli Dhun na nGall"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Donegal"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/13"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Circular"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Moderate"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/2-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/13"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "13"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "65"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Sl� Cholmcille - Sli Dhun na nGall"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "1060"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "990"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Donegal"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/14"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Circular"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Moderate"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/2-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/14"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "14"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "51"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Sl� Na Finne - Sli Dhun na nGall"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Donegal"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/15"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Circular"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Moderate"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/2-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/15"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "15"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "65"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Sl� Na Rosann - Sli Dhun na nGall"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "3060"
+  } ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "0"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "11520"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Clare"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/16"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Circular"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Moderate"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/3-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/16"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "16"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "180"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "East Clare Way"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "1375"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "4320"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Tipperary"
+  }, {
+    "@id" : "http://example.org/trail/Waterford"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/17"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Linear"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Moderate"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/17"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "17"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "75"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "East Munster Way"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "0"
+  } ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "1"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "7200"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Dublin"
+  }, {
+    "@id" : "http://example.org/trail/Kildare"
+  }, {
+    "@id" : "http://example.org/trail/Offaly"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/18"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Linear"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Easy"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/2-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/18"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "18"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "117"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Grand Canal Way"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "5310"
+  } ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "0"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "12960"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Kerry"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/19"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Circular"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Strenuous"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/3-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/19"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "19"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "214"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Kerry Way"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "0"
+  } ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "1"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "5760"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Carlow"
+  }, {
+    "@id" : "http://example.org/trail/Kildare"
+  }, {
+    "@id" : "http://example.org/trail/Laois"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/2"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Linear"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Easy"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/2-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/2"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "2"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "100"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Barrow Way"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "527"
+  } ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "0"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "4320"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Clare"
+  }, {
+    "@id" : "http://example.org/trail/Limerick"
+  }, {
+    "@id" : "http://example.org/trail/Tipperary"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/21"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Linear"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Moderate"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/3-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/21"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "21"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "68"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Lough Derg Way"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "1620"
+  } ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "0"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "8640"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Clare"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/22"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Circular"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Moderate"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/3-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/22"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "22"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "148"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Mid Clare Way"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "2340"
+  } ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "0"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "7200"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Leitrim"
+  }, {
+    "@id" : "http://example.org/trail/Roscommon"
+  }, {
+    "@id" : "http://example.org/trail/Sligo"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/23"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/2Circulars"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Strenuous"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/3-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/23"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "23"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "118"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Miner's Way & Historical Trail"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "0"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "1000"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Monaghan"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/24"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Linear"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Moderate"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/2-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/24"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "24"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "56.5"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Monaghan Way"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "Minimal"
+  } ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "0"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "180"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Kilkenny"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/25"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Linear"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Easy"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/3-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/25"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "25"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "11"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Nore Valley Walk - Inistioge to Thomastown Section"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "450"
+  } ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "1"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "2880"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Kerry"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/26"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Linear+Circular"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Moderate"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/3-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/26"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "26"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "45"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "North Kerry Way"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "Minimal"
+  } ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "1"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "2880"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Offaly"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/27"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Linear"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Easy"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/3-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/27"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "27"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "37"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Offaly Way"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "Minimal"
+  } ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "1"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "4320"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Dublin"
+  }, {
+    "@id" : "http://example.org/trail/Kildare"
+  }, {
+    "@id" : "http://example.org/trail/Longford"
+  }, {
+    "@id" : "http://example.org/trail/Meath"
+  }, {
+    "@id" : "http://example.org/trail/Westmeath"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/28"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Linear"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Easy"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/2-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/28"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "28"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "144"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Royal Canal Way"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "2190"
+  } ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "0"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "5760"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Cork"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/29"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Circular"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Moderate"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/2-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/29"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "29"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "175"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Sheeps Head Way"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "5245"
+  } ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "0"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "12960"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Cork"
+  }, {
+    "@id" : "http://example.org/trail/Kerry"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/3"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Loop"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Strenuous"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/2-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/3"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "3"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "206"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Beara Way"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "1275"
+  } ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "0"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "5400"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Laois"
+  }, {
+    "@id" : "http://example.org/trail/Offaly"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/30"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Circular"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Strenuous"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/2-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/30"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "30"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "70.5"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Slieve Bloom Way"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "870"
+  } ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "1"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "2880"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Limerick"
+  }, {
+    "@id" : "http://example.org/trail/Tipperary"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/31"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Linear"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Moderate"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/3-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/31"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "31"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "43"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Slieve Felim Way"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "890"
+  } ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "0"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "4320"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Sligo"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/32"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Linear"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Moderate"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/2-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/32"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "32"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "78"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Sligo Way"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "3690"
+  } ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "0"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "10080"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Cork"
+  }, {
+    "@id" : "http://example.org/trail/Tipperary"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/4"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Linear"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Moderate"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/3-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/4"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "4"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "94"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Blackwater Way - Avondhu"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "0"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "4320"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Cork"
+  }, {
+    "@id" : "http://example.org/trail/Kerry"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/5"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Linear"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Moderate"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/2-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/5"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "5"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "67"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Blackwater Way - Duhallow"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "1230"
+  } ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "0"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "4320"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Donegal"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/6"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Linear"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Moderate"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/3-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/6"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "6"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "65"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Bluestack Way"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "540"
+  } ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "0"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "7200"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Clare"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/7"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Linear"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Moderate"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/3-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/7"
+  } ],
+  "http://example.org/trail/hasType" : [ {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "7"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "114"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Burren Way"
+  } ]
+}, {
+  "@id" : "http://www.example.org/trail/8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/Trail" ],
+  "http://example.org/trail/climb" : [ {
+    "@value" : "330"
+  } ],
+  "http://example.org/trail/dogs_allowed" : [ {
+    "@value" : "0"
+  } ],
+  "http://example.org/trail/estimated_time_to_complete" : [ {
+    "@value" : "1440"
+  } ],
+  "http://example.org/trail/hasCategory" : [ {
+    "@id" : "http://www.example.org/trail/1"
+  } ],
+  "http://example.org/trail/hasCounty" : [ {
+    "@id" : "http://example.org/trail/Cavan"
+  } ],
+  "http://example.org/trail/hasFinishPoint" : [ {
+    "@id" : "http://www.example.org/finish_point/8"
+  } ],
+  "http://example.org/trail/hasFormat" : [ {
+    "@id" : "http://example.org/trail/Linear"
+  }, {
+    "@id" : "http://example.org/trail/National_Waymarked_Trail"
+  } ],
+  "http://example.org/trail/hasGrade" : [ {
+    "@id" : "http://example.org/trail/Moderate"
+  } ],
+  "http://example.org/trail/hasQuality" : [ {
+    "@id" : "http://example.org/trail/2-star"
+  } ],
+  "http://example.org/trail/hasStartPoint" : [ {
+    "@id" : "http://www.example.org/start_point/8"
+  } ],
+  "http://example.org/trail/id" : [ {
+    "@value" : "8"
+  } ],
+  "http://example.org/trail/length" : [ {
+    "@value" : "22"
+  } ],
+  "http://example.org/trail/name" : [ {
+    "@value" : "Cavan Way"
+  } ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#asWKT",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.opengis.net/ont/sf#Point",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+} ]
