@@ -783,6 +783,12 @@
 ###  http://www.example.org/trail/10
 <http://www.example.org/trail/10> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :hasCategory <http://www.example.org/trail/1> ;
+                                  :hasCounty :Mayo ;
+                                  :hasFormat :Linear ;
+                                  :hasGrade :Moderate ;
+                                  :hasQuality <http://example.org/trail/2-star> ;
+                                  :hasType :National_Waymarked_Trail ;
                                   :climb "310" ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "1550" ;
@@ -796,6 +802,13 @@
 ###  http://www.example.org/trail/11
 <http://www.example.org/trail/11> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :hasCategory <http://www.example.org/trail/1> ;
+                                  :hasCounty :Kerry ;
+                                  :hasFormat :Circular ,
+                                             :Linear ;
+                                  :hasGrade :Strenuous ;
+                                  :hasQuality <http://example.org/trail/2-star> ;
+                                  :hasType :National_Waymarked_Trail ;
                                   :climb "2590" ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "10080" ;
@@ -809,6 +822,12 @@
 ###  http://www.example.org/trail/12
 <http://www.example.org/trail/12> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :hasCategory <http://www.example.org/trail/1> ;
+                                  :hasCounty :Donegal ;
+                                  :hasFormat :Loop ;
+                                  :hasGrade :Easy ;
+                                  :hasQuality <http://example.org/trail/2-star> ;
+                                  :hasType :National_Waymarked_Trail ;
                                   :hasFinishPoint <http://www.example.org/finish_point/12> ;
                                   :hasStartPoint <http://www.example.org/start_point/12> ;
                                   :id "12" ;
@@ -819,6 +838,12 @@
 ###  http://www.example.org/trail/13
 <http://www.example.org/trail/13> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :hasCategory <http://www.example.org/trail/1> ;
+                                  :hasCounty :Donegal ;
+                                  :hasFormat :Circular ;
+                                  :hasGrade :Moderate ;
+                                  :hasQuality <http://example.org/trail/2-star> ;
+                                  :hasType :National_Waymarked_Trail ;
                                   :hasFinishPoint <http://www.example.org/finish_point/13> ;
                                   :hasStartPoint <http://www.example.org/start_point/13> ;
                                   :id "13" ;
@@ -829,6 +854,12 @@
 ###  http://www.example.org/trail/14
 <http://www.example.org/trail/14> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :hasCategory <http://www.example.org/trail/1> ;
+                                  :hasCounty :Donegal ;
+                                  :hasFormat :Circular ;
+                                  :hasGrade :Moderate ;
+                                  :hasQuality <http://example.org/trail/2-star> ;
+                                  :hasType :National_Waymarked_Trail ;
                                   :climb "1060" ;
                                   :estimated_time_to_complete "990" ;
                                   :hasFinishPoint <http://www.example.org/finish_point/14> ;
@@ -841,6 +872,12 @@
 ###  http://www.example.org/trail/15
 <http://www.example.org/trail/15> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :hasCategory <http://www.example.org/trail/1> ;
+                                  :hasCounty :Donegal ;
+                                  :hasFormat :Circular ;
+                                  :hasGrade :Moderate ;
+                                  :hasQuality <http://example.org/trail/2-star> ;
+                                  :hasType :National_Waymarked_Trail ;
                                   :hasFinishPoint <http://www.example.org/finish_point/15> ;
                                   :hasStartPoint <http://www.example.org/start_point/15> ;
                                   :id "15" ;
@@ -851,6 +888,12 @@
 ###  http://www.example.org/trail/16
 <http://www.example.org/trail/16> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :hasCategory <http://www.example.org/trail/1> ;
+                                  :hasCounty :Clare ;
+                                  :hasFormat :Circular ;
+                                  :hasGrade :Moderate ;
+                                  :hasQuality <http://example.org/trail/3-star> ;
+                                  :hasType :National_Waymarked_Trail ;
                                   :climb "3060" ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "11520" ;
@@ -864,6 +907,12 @@
 ###  http://www.example.org/trail/17
 <http://www.example.org/trail/17> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :hasCategory <http://www.example.org/trail/1> ;
+                                  :hasCounty :Tipperary ,
+                                             :Waterford ;
+                                  :hasFormat :Linear ;
+                                  :hasGrade :Moderate ;
+                                  :hasType :National_Waymarked_Trail ;
                                   :climb "1375" ;
                                   :estimated_time_to_complete "4320" ;
                                   :hasFinishPoint <http://www.example.org/finish_point/17> ;
@@ -876,6 +925,14 @@
 ###  http://www.example.org/trail/18
 <http://www.example.org/trail/18> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :hasCategory <http://www.example.org/trail/1> ;
+                                  :hasCounty :Dublin ,
+                                             :Kildare ,
+                                             :Offaly ;
+                                  :hasFormat :Linear ;
+                                  :hasGrade :Easy ;
+                                  :hasQuality <http://example.org/trail/2-star> ;
+                                  :hasType :National_Waymarked_Trail ;
                                   :climb "0" ;
                                   :dogs_allowed "1" ;
                                   :estimated_time_to_complete "7200" ;
@@ -889,6 +946,12 @@
 ###  http://www.example.org/trail/19
 <http://www.example.org/trail/19> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :hasCategory <http://www.example.org/trail/1> ;
+                                  :hasCounty :Kerry ;
+                                  :hasFormat :Circular ;
+                                  :hasGrade :Strenuous ;
+                                  :hasQuality <http://example.org/trail/3-star> ;
+                                  :hasType :National_Waymarked_Trail ;
                                   :climb "5310" ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "12960" ;
@@ -902,6 +965,14 @@
 ###  http://www.example.org/trail/2
 <http://www.example.org/trail/2> rdf:type owl:NamedIndividual ,
                                           :Trail ;
+                                 :hasCategory <http://www.example.org/trail/1> ;
+                                 :hasCounty :Carlow ,
+                                            :Kildare ,
+                                            :Laois ;
+                                 :hasFormat :Linear ;
+                                 :hasGrade :Easy ;
+                                 :hasQuality <http://example.org/trail/2-star> ;
+                                 :hasType :National_Waymarked_Trail ;
                                  :climb "0" ;
                                  :dogs_allowed "1" ;
                                  :estimated_time_to_complete "5760" ;
@@ -915,6 +986,14 @@
 ###  http://www.example.org/trail/21
 <http://www.example.org/trail/21> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :hasCategory <http://www.example.org/trail/1> ;
+                                  :hasCounty :Clare ,
+                                             :Limerick ,
+                                             :Tipperary ;
+                                  :hasFormat :Linear ;
+                                  :hasGrade :Moderate ;
+                                  :hasQuality <http://example.org/trail/3-star> ;
+                                  :hasType :National_Waymarked_Trail ;
                                   :climb "527" ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "4320" ;
@@ -928,6 +1007,12 @@
 ###  http://www.example.org/trail/22
 <http://www.example.org/trail/22> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :hasCategory <http://www.example.org/trail/1> ;
+                                  :hasCounty :Clare ;
+                                  :hasFormat :Circular ;
+                                  :hasGrade :Moderate ;
+                                  :hasQuality <http://example.org/trail/3-star> ;
+                                  :hasType :National_Waymarked_Trail ;
                                   :climb "1620" ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "8640" ;
@@ -941,6 +1026,14 @@
 ###  http://www.example.org/trail/23
 <http://www.example.org/trail/23> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :hasCategory <http://www.example.org/trail/1> ;
+                                  :hasCounty :Leitrim ,
+                                             :Roscommon ,
+                                             :Sligo ;
+                                  :hasFormat <http://example.org/trail/2Circulars> ;
+                                  :hasGrade :Strenuous ;
+                                  :hasQuality <http://example.org/trail/3-star> ;
+                                  :hasType :National_Waymarked_Trail ;
                                   :climb "2340" ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "7200" ;
@@ -954,6 +1047,12 @@
 ###  http://www.example.org/trail/24
 <http://www.example.org/trail/24> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :hasCategory <http://www.example.org/trail/1> ;
+                                  :hasCounty :Monaghan ;
+                                  :hasFormat :Linear ;
+                                  :hasGrade :Moderate ;
+                                  :hasQuality <http://example.org/trail/2-star> ;
+                                  :hasType :National_Waymarked_Trail ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "1000" ;
                                   :hasFinishPoint <http://www.example.org/finish_point/24> ;
@@ -966,6 +1065,12 @@
 ###  http://www.example.org/trail/25
 <http://www.example.org/trail/25> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :hasCategory <http://www.example.org/trail/1> ;
+                                  :hasCounty :Kilkenny ;
+                                  :hasFormat :Linear ;
+                                  :hasGrade :Easy ;
+                                  :hasQuality <http://example.org/trail/3-star> ;
+                                  :hasType :National_Waymarked_Trail ;
                                   :climb "Minimal" ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "180" ;
@@ -979,6 +1084,12 @@
 ###  http://www.example.org/trail/26
 <http://www.example.org/trail/26> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :hasCategory <http://www.example.org/trail/1> ;
+                                  :hasCounty :Kerry ;
+                                  :hasFormat <http://example.org/trail/Linear+Circular> ;
+                                  :hasGrade :Moderate ;
+                                  :hasQuality <http://example.org/trail/3-star> ;
+                                  :hasType :National_Waymarked_Trail ;
                                   :climb "450" ;
                                   :dogs_allowed "1" ;
                                   :estimated_time_to_complete "2880" ;
@@ -992,6 +1103,12 @@
 ###  http://www.example.org/trail/27
 <http://www.example.org/trail/27> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :hasCategory <http://www.example.org/trail/1> ;
+                                  :hasCounty :Offaly ;
+                                  :hasFormat :Linear ;
+                                  :hasGrade :Easy ;
+                                  :hasQuality <http://example.org/trail/3-star> ;
+                                  :hasType :National_Waymarked_Trail ;
                                   :climb "Minimal" ;
                                   :dogs_allowed "1" ;
                                   :estimated_time_to_complete "2880" ;
@@ -1005,6 +1122,16 @@
 ###  http://www.example.org/trail/28
 <http://www.example.org/trail/28> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :hasCategory <http://www.example.org/trail/1> ;
+                                  :hasCounty :Dublin ,
+                                             :Kildare ,
+                                             :Longford ,
+                                             :Meath ,
+                                             :Westmeath ;
+                                  :hasFormat :Linear ;
+                                  :hasGrade :Easy ;
+                                  :hasQuality <http://example.org/trail/2-star> ;
+                                  :hasType :National_Waymarked_Trail ;
                                   :climb "Minimal" ;
                                   :dogs_allowed "1" ;
                                   :estimated_time_to_complete "4320" ;
@@ -1018,6 +1145,12 @@
 ###  http://www.example.org/trail/29
 <http://www.example.org/trail/29> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :hasCategory <http://www.example.org/trail/1> ;
+                                  :hasCounty :Cork ;
+                                  :hasFormat :Circular ;
+                                  :hasGrade :Moderate ;
+                                  :hasQuality <http://example.org/trail/2-star> ;
+                                  :hasType :National_Waymarked_Trail ;
                                   :climb "2190" ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "5760" ;
@@ -1031,6 +1164,13 @@
 ###  http://www.example.org/trail/3
 <http://www.example.org/trail/3> rdf:type owl:NamedIndividual ,
                                           :Trail ;
+                                 :hasCategory <http://www.example.org/trail/1> ;
+                                 :hasCounty :Cork ,
+                                            :Kerry ;
+                                 :hasFormat :Loop ;
+                                 :hasGrade :Strenuous ;
+                                 :hasQuality <http://example.org/trail/2-star> ;
+                                 :hasType :National_Waymarked_Trail ;
                                  :climb "5245" ;
                                  :dogs_allowed "0" ;
                                  :estimated_time_to_complete "12960" ;
@@ -1044,6 +1184,13 @@
 ###  http://www.example.org/trail/30
 <http://www.example.org/trail/30> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :hasCategory <http://www.example.org/trail/1> ;
+                                  :hasCounty :Laois ,
+                                             :Offaly ;
+                                  :hasFormat :Circular ;
+                                  :hasGrade :Strenuous ;
+                                  :hasQuality <http://example.org/trail/2-star> ;
+                                  :hasType :National_Waymarked_Trail ;
                                   :climb "1275" ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "5400" ;
@@ -1057,6 +1204,13 @@
 ###  http://www.example.org/trail/31
 <http://www.example.org/trail/31> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :hasCategory <http://www.example.org/trail/1> ;
+                                  :hasCounty :Limerick ,
+                                             :Tipperary ;
+                                  :hasFormat :Linear ;
+                                  :hasGrade :Moderate ;
+                                  :hasQuality <http://example.org/trail/3-star> ;
+                                  :hasType :National_Waymarked_Trail ;
                                   :climb "870" ;
                                   :dogs_allowed "1" ;
                                   :estimated_time_to_complete "2880" ;
@@ -1070,6 +1224,12 @@
 ###  http://www.example.org/trail/32
 <http://www.example.org/trail/32> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :hasCategory <http://www.example.org/trail/1> ;
+                                  :hasCounty :Sligo ;
+                                  :hasFormat :Linear ;
+                                  :hasGrade :Moderate ;
+                                  :hasQuality <http://example.org/trail/2-star> ;
+                                  :hasType :National_Waymarked_Trail ;
                                   :climb "890" ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "4320" ;
@@ -1083,6 +1243,13 @@
 ###  http://www.example.org/trail/4
 <http://www.example.org/trail/4> rdf:type owl:NamedIndividual ,
                                           :Trail ;
+                                 :hasCategory <http://www.example.org/trail/1> ;
+                                 :hasCounty :Cork ,
+                                            :Tipperary ;
+                                 :hasFormat :Linear ;
+                                 :hasGrade :Moderate ;
+                                 :hasQuality <http://example.org/trail/3-star> ;
+                                 :hasType :National_Waymarked_Trail ;
                                  :climb "3690" ;
                                  :dogs_allowed "0" ;
                                  :estimated_time_to_complete "10080" ;
@@ -1096,6 +1263,13 @@
 ###  http://www.example.org/trail/5
 <http://www.example.org/trail/5> rdf:type owl:NamedIndividual ,
                                           :Trail ;
+                                 :hasCategory <http://www.example.org/trail/1> ;
+                                 :hasCounty :Cork ,
+                                            :Kerry ;
+                                 :hasFormat :Linear ;
+                                 :hasGrade :Moderate ;
+                                 :hasQuality <http://example.org/trail/2-star> ;
+                                 :hasType :National_Waymarked_Trail ;
                                  :dogs_allowed "0" ;
                                  :estimated_time_to_complete "4320" ;
                                  :hasFinishPoint <http://www.example.org/finish_point/5> ;
@@ -1108,6 +1282,12 @@
 ###  http://www.example.org/trail/6
 <http://www.example.org/trail/6> rdf:type owl:NamedIndividual ,
                                           :Trail ;
+                                 :hasCategory <http://www.example.org/trail/1> ;
+                                 :hasCounty :Donegal ;
+                                 :hasFormat :Linear ;
+                                 :hasGrade :Moderate ;
+                                 :hasQuality <http://example.org/trail/3-star> ;
+                                 :hasType :National_Waymarked_Trail ;
                                  :climb "1230" ;
                                  :dogs_allowed "0" ;
                                  :estimated_time_to_complete "4320" ;
@@ -1121,6 +1301,12 @@
 ###  http://www.example.org/trail/7
 <http://www.example.org/trail/7> rdf:type owl:NamedIndividual ,
                                           :Trail ;
+                                 :hasCategory <http://www.example.org/trail/1> ;
+                                 :hasCounty :Clare ;
+                                 :hasFormat :Linear ;
+                                 :hasGrade :Moderate ;
+                                 :hasQuality <http://example.org/trail/3-star> ;
+                                 :hasType :National_Waymarked_Trail ;
                                  :climb "540" ;
                                  :dogs_allowed "0" ;
                                  :estimated_time_to_complete "7200" ;
@@ -1134,6 +1320,12 @@
 ###  http://www.example.org/trail/8
 <http://www.example.org/trail/8> rdf:type owl:NamedIndividual ,
                                           :Trail ;
+                                 :hasCategory <http://www.example.org/trail/1> ;
+                                 :hasCounty :Cavan ;
+                                 :hasFormat :Linear ,
+                                            :National_Waymarked_Trail ;
+                                 :hasGrade :Moderate ;
+                                 :hasQuality <http://example.org/trail/2-star> ;
                                  :climb "330" ;
                                  :dogs_allowed "0" ;
                                  :estimated_time_to_complete "1440" ;
