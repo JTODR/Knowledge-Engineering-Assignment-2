@@ -133,6 +133,14 @@
 
 
 #################################################################
+#    Data properties
+#################################################################
+
+###  http://example.org/trail/value
+:value rdf:type owl:DatatypeProperty .
+
+
+#################################################################
 #    Classes
 #################################################################
 
@@ -182,6 +190,15 @@
 
 ###  http://example.org/trail/Trail
 :Trail rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasCounty ;
+                         owl:allValuesFrom :County
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasQuality ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :Quality
+                       ] ;
        rdfs:comment "A trail as specified by Sport Ireland" ;
        rdfs:label "Trail" .
 
@@ -212,7 +229,8 @@
 
 ###  http://example.org/trail/Circular
 :Circular rdf:type owl:NamedIndividual ,
-                   :Format .
+                   :Format ;
+          :value "Circular"^^xsd:string .
 
 
 ###  http://example.org/trail/Clare
@@ -272,7 +290,8 @@
 
 ###  http://example.org/trail/Linear
 :Linear rdf:type owl:NamedIndividual ,
-                 :Format .
+                 :Format ;
+        :value "Linear"^^xsd:string .
 
 
 ###  http://example.org/trail/Longford
@@ -282,7 +301,8 @@
 
 ###  http://example.org/trail/Loop
 :Loop rdf:type owl:NamedIndividual ,
-               :Format .
+               :Format ;
+      :value "Loop"^^xsd:string .
 
 
 ###  http://example.org/trail/Mayo
@@ -352,27 +372,32 @@
 
 ###  http://example.org/trail/1-star
 <http://example.org/trail/1-star> rdf:type owl:NamedIndividual ,
-                                           :Quality .
+                                           :Quality ;
+                                  :value 1 .
 
 
 ###  http://example.org/trail/2Circulars
 <http://example.org/trail/2Circulars> rdf:type owl:NamedIndividual ,
-                                               :Format .
+                                               :Format ;
+                                      :value "2Circulars"^^xsd:string .
 
 
 ###  http://example.org/trail/2-star
 <http://example.org/trail/2-star> rdf:type owl:NamedIndividual ,
-                                           :Quality .
+                                           :Quality ;
+                                  :value 2 .
 
 
 ###  http://example.org/trail/3-star
 <http://example.org/trail/3-star> rdf:type owl:NamedIndividual ,
-                                           :Quality .
+                                           :Quality ;
+                                  :value 3 .
 
 
 ###  http://example.org/trail/Linear+Circular
 <http://example.org/trail/Linear+Circular> rdf:type owl:NamedIndividual ,
-                                                    :Format .
+                                                    :Format ;
+                                           :value "Linear+Circular"^^xsd:string .
 
 
 ###  http://www.example.org/finish_point/1
