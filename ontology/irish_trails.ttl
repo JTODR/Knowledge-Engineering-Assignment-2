@@ -11,62 +11,6 @@
                              rdfs:label "Sport Ireland Trails" .
 
 #################################################################
-#    Annotation properties
-#################################################################
-
-###  http://example.org/trail/climb
-:climb rdf:type owl:AnnotationProperty ;
-       rdfs:comment "Overall trail climb in metres" ;
-       rdfs:label "Climb" .
-
-
-###  http://example.org/trail/dogs_allowed
-:dogs_allowed rdf:type owl:AnnotationProperty ;
-              rdfs:comment "Whether dogs are allowed (1) or not allowed (0) on this trail." ;
-              rdfs:label "Dogs allowed" .
-
-
-###  http://example.org/trail/estimated_time_to_complete
-:estimated_time_to_complete rdf:type owl:AnnotationProperty ;
-                            rdfs:comment "The estimated time to complete this walk in minutes." ;
-                            rdfs:label "Estimated time to complete" .
-
-
-###  http://example.org/trail/hasFinishPoint
-:hasFinishPoint rdf:type owl:AnnotationProperty ;
-                rdfs:comment "Specifies the finish \"Point\" object for the trail" ;
-                rdfs:label "Finish point" .
-
-
-###  http://example.org/trail/hasStartPoint
-:hasStartPoint rdf:type owl:AnnotationProperty ;
-               rdfs:comment "Defines the start \"Point\" object for the trail" ;
-               rdfs:label "Start point" .
-
-
-###  http://example.org/trail/id
-:id rdf:type owl:AnnotationProperty ;
-    rdfs:comment "The trail ID as specified in the original Sport Ireland CSV dataset" ;
-    rdfs:label "Trail ID" .
-
-
-###  http://example.org/trail/length
-:length rdf:type owl:AnnotationProperty ;
-        rdfs:comment "The length of the trail measured in kilometres" ;
-        rdfs:label "Length" .
-
-
-###  http://example.org/trail/name
-:name rdf:type owl:AnnotationProperty ;
-      rdfs:comment "The name of the trail" ;
-      rdfs:label "Trail name" .
-
-
-###  http://www.opengis.net/ont/geosparql#asWKT
-<http://www.opengis.net/ont/geosparql#asWKT> rdf:type owl:AnnotationProperty .
-
-
-#################################################################
 #    Datatypes
 #################################################################
 
@@ -77,6 +21,13 @@
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://example.org/trail/finishPoint
+:finishPoint rdf:type owl:ObjectProperty ,
+                      owl:SymmetricProperty ;
+             rdfs:comment "Specifies the finish \"Point\" object for the trail" ;
+             rdfs:label "Finish point" .
+
 
 ###  http://example.org/trail/hasCategory
 :hasCategory rdf:type owl:ObjectProperty ;
@@ -132,12 +83,59 @@
 :isTypeOf rdf:type owl:ObjectProperty .
 
 
+###  http://example.org/trail/startPoint
+:startPoint rdf:type owl:ObjectProperty ,
+                     owl:SymmetricProperty ;
+            rdfs:comment "Defines the start \"Point\" object for the trail" ;
+            rdfs:label "Start point" .
+
+
 #################################################################
 #    Data properties
 #################################################################
 
+###  http://example.org/trail/climb
+:climb rdf:type owl:DatatypeProperty ;
+       rdfs:comment "Overall trail climb in metres" ;
+       rdfs:label "Climb" .
+
+
+###  http://example.org/trail/dogs_allowed
+:dogs_allowed rdf:type owl:DatatypeProperty ;
+              rdfs:comment "Whether dogs are allowed (1) or not allowed (0) on this trail." ;
+              rdfs:label "Dogs allowed" .
+
+
+###  http://example.org/trail/estimated_time_to_complete
+:estimated_time_to_complete rdf:type owl:DatatypeProperty ;
+                            rdfs:comment "The estimated time to complete this walk in minutes." ;
+                            rdfs:label "Estimated time to complete" .
+
+
+###  http://example.org/trail/id
+:id rdf:type owl:DatatypeProperty ;
+    rdfs:comment "The trail ID as specified in the original Sport Ireland CSV dataset" ;
+    rdfs:label "Trail ID" .
+
+
+###  http://example.org/trail/length
+:length rdf:type owl:DatatypeProperty ;
+        rdfs:comment "The length of the trail measured in kilometres" ;
+        rdfs:label "Length" .
+
+
+###  http://example.org/trail/name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:comment "The name of the trail" ;
+      rdfs:label "Trail name" .
+
+
 ###  http://example.org/trail/value
 :value rdf:type owl:DatatypeProperty .
+
+
+###  http://www.opengis.net/ont/geosparql#asWKT
+<http://www.opengis.net/ont/geosparql#asWKT> rdf:type owl:DatatypeProperty .
 
 
 #################################################################
@@ -823,6 +821,7 @@
 ###  http://www.example.org/trail/1
 <http://www.example.org/trail/1> rdf:type owl:NamedIndividual ,
                                           :Trail ;
+                                 :finishPoint <http://www.example.org/finish_point/1> ;
                                  :hasCategory <http://example.org/trail/1> ;
                                  :hasCounty :Cork ,
                                             :Limerick ,
@@ -831,11 +830,10 @@
                                  :hasGrade :Moderate ;
                                  :hasQuality <http://example.org/trail/2-star> ;
                                  :hasType :National_Waymarked_Trail ;
+                                 :startPoint <http://www.example.org/start_point/1> ;
                                  :climb "1560" ;
                                  :dogs_allowed "1" ;
                                  :estimated_time_to_complete "5760" ;
-                                 :hasFinishPoint <http://www.example.org/finish_point/1> ;
-                                 :hasStartPoint <http://www.example.org/start_point/1> ;
                                  :id "1" ;
                                  :length "89" ;
                                  :name "Ballyhoura Way" .
@@ -844,17 +842,17 @@
 ###  http://www.example.org/trail/10
 <http://www.example.org/trail/10> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :finishPoint <http://www.example.org/finish_point/10> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
                                   :hasCounty :Mayo ;
                                   :hasFormat :Linear ;
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :startPoint <http://www.example.org/start_point/10> ;
                                   :climb "310" ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "1550" ;
-                                  :hasFinishPoint <http://www.example.org/finish_point/10> ;
-                                  :hasStartPoint <http://www.example.org/start_point/10> ;
                                   :id "10" ;
                                   :length "61" ;
                                   :name "Croagh Patrick Heritage Trail" .
@@ -863,6 +861,7 @@
 ###  http://www.example.org/trail/11
 <http://www.example.org/trail/11> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :finishPoint <http://www.example.org/finish_point/11> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
                                   :hasCounty :Kerry ;
                                   :hasFormat :Circular ,
@@ -870,11 +869,10 @@
                                   :hasGrade :Strenuous ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :startPoint <http://www.example.org/start_point/11> ;
                                   :climb "2590" ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "10080" ;
-                                  :hasFinishPoint <http://www.example.org/finish_point/11> ;
-                                  :hasStartPoint <http://www.example.org/start_point/11> ;
                                   :id "11" ;
                                   :length "162" ;
                                   :name "Dingle Way" .
@@ -883,14 +881,14 @@
 ###  http://www.example.org/trail/12
 <http://www.example.org/trail/12> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :finishPoint <http://www.example.org/finish_point/12> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
                                   :hasCounty :Donegal ;
                                   :hasFormat :Loop ;
                                   :hasGrade :Easy ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
-                                  :hasFinishPoint <http://www.example.org/finish_point/12> ;
-                                  :hasStartPoint <http://www.example.org/start_point/12> ;
+                                  :startPoint <http://www.example.org/start_point/12> ;
                                   :id "12" ;
                                   :length "77" ;
                                   :name "Sl� An Earagail - Sli Dhun na nGall" .
@@ -899,14 +897,14 @@
 ###  http://www.example.org/trail/13
 <http://www.example.org/trail/13> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :finishPoint <http://www.example.org/finish_point/13> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
                                   :hasCounty :Donegal ;
                                   :hasFormat :Circular ;
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
-                                  :hasFinishPoint <http://www.example.org/finish_point/13> ;
-                                  :hasStartPoint <http://www.example.org/start_point/13> ;
+                                  :startPoint <http://www.example.org/start_point/13> ;
                                   :id "13" ;
                                   :length "65" ;
                                   :name "Sl� Cholmcille - Sli Dhun na nGall" .
@@ -915,16 +913,16 @@
 ###  http://www.example.org/trail/14
 <http://www.example.org/trail/14> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :finishPoint <http://www.example.org/finish_point/14> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
                                   :hasCounty :Donegal ;
                                   :hasFormat :Circular ;
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :startPoint <http://www.example.org/start_point/14> ;
                                   :climb "1060" ;
                                   :estimated_time_to_complete "990" ;
-                                  :hasFinishPoint <http://www.example.org/finish_point/14> ;
-                                  :hasStartPoint <http://www.example.org/start_point/14> ;
                                   :id "14" ;
                                   :length "51" ;
                                   :name "Sl� Na Finne - Sli Dhun na nGall" .
@@ -933,14 +931,14 @@
 ###  http://www.example.org/trail/15
 <http://www.example.org/trail/15> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :finishPoint <http://www.example.org/finish_point/15> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
                                   :hasCounty :Donegal ;
                                   :hasFormat :Circular ;
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
-                                  :hasFinishPoint <http://www.example.org/finish_point/15> ;
-                                  :hasStartPoint <http://www.example.org/start_point/15> ;
+                                  :startPoint <http://www.example.org/start_point/15> ;
                                   :id "15" ;
                                   :length "65" ;
                                   :name "Sl� Na Rosann - Sli Dhun na nGall" .
@@ -949,17 +947,17 @@
 ###  http://www.example.org/trail/16
 <http://www.example.org/trail/16> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :finishPoint <http://www.example.org/finish_point/16> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
                                   :hasCounty :Clare ;
                                   :hasFormat :Circular ;
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/3-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :startPoint <http://www.example.org/start_point/16> ;
                                   :climb "3060" ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "11520" ;
-                                  :hasFinishPoint <http://www.example.org/finish_point/16> ;
-                                  :hasStartPoint <http://www.example.org/start_point/16> ;
                                   :id "16" ;
                                   :length "180" ;
                                   :name "East Clare Way" .
@@ -968,16 +966,16 @@
 ###  http://www.example.org/trail/17
 <http://www.example.org/trail/17> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :finishPoint <http://www.example.org/finish_point/17> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
                                   :hasCounty :Tipperary ,
                                              :Waterford ;
                                   :hasFormat :Linear ;
                                   :hasGrade :Moderate ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :startPoint <http://www.example.org/start_point/17> ;
                                   :climb "1375" ;
                                   :estimated_time_to_complete "4320" ;
-                                  :hasFinishPoint <http://www.example.org/finish_point/17> ;
-                                  :hasStartPoint <http://www.example.org/start_point/17> ;
                                   :id "17" ;
                                   :length "75" ;
                                   :name "East Munster Way" .
@@ -986,6 +984,7 @@
 ###  http://www.example.org/trail/18
 <http://www.example.org/trail/18> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :finishPoint <http://www.example.org/finish_point/18> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
                                   :hasCounty :Dublin ,
                                              :Kildare ,
@@ -994,11 +993,10 @@
                                   :hasGrade :Easy ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :startPoint <http://www.example.org/start_point/18> ;
                                   :climb "0" ;
                                   :dogs_allowed "1" ;
                                   :estimated_time_to_complete "7200" ;
-                                  :hasFinishPoint <http://www.example.org/finish_point/18> ;
-                                  :hasStartPoint <http://www.example.org/start_point/18> ;
                                   :id "18" ;
                                   :length "117" ;
                                   :name "Grand Canal Way" .
@@ -1007,17 +1005,17 @@
 ###  http://www.example.org/trail/19
 <http://www.example.org/trail/19> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :finishPoint <http://www.example.org/finish_point/19> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
                                   :hasCounty :Kerry ;
                                   :hasFormat :Circular ;
                                   :hasGrade :Strenuous ;
                                   :hasQuality <http://example.org/trail/3-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :startPoint <http://www.example.org/start_point/19> ;
                                   :climb "5310" ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "12960" ;
-                                  :hasFinishPoint <http://www.example.org/finish_point/19> ;
-                                  :hasStartPoint <http://www.example.org/start_point/19> ;
                                   :id "19" ;
                                   :length "214" ;
                                   :name "Kerry Way" .
@@ -1026,6 +1024,7 @@
 ###  http://www.example.org/trail/2
 <http://www.example.org/trail/2> rdf:type owl:NamedIndividual ,
                                           :Trail ;
+                                 :finishPoint <http://www.example.org/finish_point/2> ;
                                  :hasCategory <http://www.example.org/trail/1> ;
                                  :hasCounty :Carlow ,
                                             :Kildare ,
@@ -1034,11 +1033,10 @@
                                  :hasGrade :Easy ;
                                  :hasQuality <http://example.org/trail/2-star> ;
                                  :hasType :National_Waymarked_Trail ;
+                                 :startPoint <http://www.example.org/start_point/2> ;
                                  :climb "0" ;
                                  :dogs_allowed "1" ;
                                  :estimated_time_to_complete "5760" ;
-                                 :hasFinishPoint <http://www.example.org/finish_point/2> ;
-                                 :hasStartPoint <http://www.example.org/start_point/2> ;
                                  :id "2" ;
                                  :length "100" ;
                                  :name "Barrow Way" .
@@ -1047,6 +1045,7 @@
 ###  http://www.example.org/trail/21
 <http://www.example.org/trail/21> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :finishPoint <http://www.example.org/finish_point/21> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
                                   :hasCounty :Clare ,
                                              :Limerick ,
@@ -1055,11 +1054,10 @@
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/3-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :startPoint <http://www.example.org/start_point/21> ;
                                   :climb "527" ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "4320" ;
-                                  :hasFinishPoint <http://www.example.org/finish_point/21> ;
-                                  :hasStartPoint <http://www.example.org/start_point/21> ;
                                   :id "21" ;
                                   :length "68" ;
                                   :name "Lough Derg Way" .
@@ -1068,17 +1066,17 @@
 ###  http://www.example.org/trail/22
 <http://www.example.org/trail/22> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :finishPoint <http://www.example.org/finish_point/22> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
                                   :hasCounty :Clare ;
                                   :hasFormat :Circular ;
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/3-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :startPoint <http://www.example.org/start_point/22> ;
                                   :climb "1620" ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "8640" ;
-                                  :hasFinishPoint <http://www.example.org/finish_point/22> ;
-                                  :hasStartPoint <http://www.example.org/start_point/22> ;
                                   :id "22" ;
                                   :length "148" ;
                                   :name "Mid Clare Way" .
@@ -1087,6 +1085,7 @@
 ###  http://www.example.org/trail/23
 <http://www.example.org/trail/23> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :finishPoint <http://www.example.org/finish_point/23> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
                                   :hasCounty :Leitrim ,
                                              :Roscommon ,
@@ -1095,11 +1094,10 @@
                                   :hasGrade :Strenuous ;
                                   :hasQuality <http://example.org/trail/3-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :startPoint <http://www.example.org/start_point/23> ;
                                   :climb "2340" ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "7200" ;
-                                  :hasFinishPoint <http://www.example.org/finish_point/23> ;
-                                  :hasStartPoint <http://www.example.org/start_point/23> ;
                                   :id "23" ;
                                   :length "118" ;
                                   :name "Miner's Way & Historical Trail" .
@@ -1108,16 +1106,16 @@
 ###  http://www.example.org/trail/24
 <http://www.example.org/trail/24> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :finishPoint <http://www.example.org/finish_point/24> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
                                   :hasCounty :Monaghan ;
                                   :hasFormat :Linear ;
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :startPoint <http://www.example.org/start_point/24> ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "1000" ;
-                                  :hasFinishPoint <http://www.example.org/finish_point/24> ;
-                                  :hasStartPoint <http://www.example.org/start_point/24> ;
                                   :id "24" ;
                                   :length "56.5" ;
                                   :name "Monaghan Way" .
@@ -1126,17 +1124,17 @@
 ###  http://www.example.org/trail/25
 <http://www.example.org/trail/25> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :finishPoint <http://www.example.org/finish_point/25> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
                                   :hasCounty :Kilkenny ;
                                   :hasFormat :Linear ;
                                   :hasGrade :Easy ;
                                   :hasQuality <http://example.org/trail/3-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :startPoint <http://www.example.org/start_point/25> ;
                                   :climb "Minimal" ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "180" ;
-                                  :hasFinishPoint <http://www.example.org/finish_point/25> ;
-                                  :hasStartPoint <http://www.example.org/start_point/25> ;
                                   :id "25" ;
                                   :length "11" ;
                                   :name "Nore Valley Walk - Inistioge to Thomastown Section" .
@@ -1145,17 +1143,17 @@
 ###  http://www.example.org/trail/26
 <http://www.example.org/trail/26> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :finishPoint <http://www.example.org/finish_point/26> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
                                   :hasCounty :Kerry ;
                                   :hasFormat <http://example.org/trail/Linear+Circular> ;
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/3-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :startPoint <http://www.example.org/start_point/26> ;
                                   :climb "450" ;
                                   :dogs_allowed "1" ;
                                   :estimated_time_to_complete "2880" ;
-                                  :hasFinishPoint <http://www.example.org/finish_point/26> ;
-                                  :hasStartPoint <http://www.example.org/start_point/26> ;
                                   :id "26" ;
                                   :length "45" ;
                                   :name "North Kerry Way" .
@@ -1164,17 +1162,17 @@
 ###  http://www.example.org/trail/27
 <http://www.example.org/trail/27> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :finishPoint <http://www.example.org/finish_point/27> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
                                   :hasCounty :Offaly ;
                                   :hasFormat :Linear ;
                                   :hasGrade :Easy ;
                                   :hasQuality <http://example.org/trail/3-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :startPoint <http://www.example.org/start_point/27> ;
                                   :climb "Minimal" ;
                                   :dogs_allowed "1" ;
                                   :estimated_time_to_complete "2880" ;
-                                  :hasFinishPoint <http://www.example.org/finish_point/27> ;
-                                  :hasStartPoint <http://www.example.org/start_point/27> ;
                                   :id "27" ;
                                   :length "37" ;
                                   :name "Offaly Way" .
@@ -1183,6 +1181,7 @@
 ###  http://www.example.org/trail/28
 <http://www.example.org/trail/28> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :finishPoint <http://www.example.org/finish_point/28> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
                                   :hasCounty :Dublin ,
                                              :Kildare ,
@@ -1193,11 +1192,10 @@
                                   :hasGrade :Easy ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :startPoint <http://www.example.org/start_point/28> ;
                                   :climb "Minimal" ;
                                   :dogs_allowed "1" ;
                                   :estimated_time_to_complete "4320" ;
-                                  :hasFinishPoint <http://www.example.org/finish_point/28> ;
-                                  :hasStartPoint <http://www.example.org/start_point/28> ;
                                   :id "28" ;
                                   :length "144" ;
                                   :name "Royal Canal Way" .
@@ -1206,17 +1204,17 @@
 ###  http://www.example.org/trail/29
 <http://www.example.org/trail/29> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :finishPoint <http://www.example.org/finish_point/29> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
                                   :hasCounty :Cork ;
                                   :hasFormat :Circular ;
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :startPoint <http://www.example.org/start_point/29> ;
                                   :climb "2190" ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "5760" ;
-                                  :hasFinishPoint <http://www.example.org/finish_point/29> ;
-                                  :hasStartPoint <http://www.example.org/start_point/29> ;
                                   :id "29" ;
                                   :length "175" ;
                                   :name "Sheeps Head Way" .
@@ -1225,6 +1223,7 @@
 ###  http://www.example.org/trail/3
 <http://www.example.org/trail/3> rdf:type owl:NamedIndividual ,
                                           :Trail ;
+                                 :finishPoint <http://www.example.org/finish_point/3> ;
                                  :hasCategory <http://www.example.org/trail/1> ;
                                  :hasCounty :Cork ,
                                             :Kerry ;
@@ -1232,11 +1231,10 @@
                                  :hasGrade :Strenuous ;
                                  :hasQuality <http://example.org/trail/2-star> ;
                                  :hasType :National_Waymarked_Trail ;
+                                 :startPoint <http://www.example.org/start_point/3> ;
                                  :climb "5245" ;
                                  :dogs_allowed "0" ;
                                  :estimated_time_to_complete "12960" ;
-                                 :hasFinishPoint <http://www.example.org/finish_point/3> ;
-                                 :hasStartPoint <http://www.example.org/start_point/3> ;
                                  :id "3" ;
                                  :length "206" ;
                                  :name "Beara Way" .
@@ -1245,6 +1243,7 @@
 ###  http://www.example.org/trail/30
 <http://www.example.org/trail/30> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :finishPoint <http://www.example.org/finish_point/30> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
                                   :hasCounty :Laois ,
                                              :Offaly ;
@@ -1252,11 +1251,10 @@
                                   :hasGrade :Strenuous ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :startPoint <http://www.example.org/start_point/30> ;
                                   :climb "1275" ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "5400" ;
-                                  :hasFinishPoint <http://www.example.org/finish_point/30> ;
-                                  :hasStartPoint <http://www.example.org/start_point/30> ;
                                   :id "30" ;
                                   :length "70.5" ;
                                   :name "Slieve Bloom Way" .
@@ -1265,6 +1263,7 @@
 ###  http://www.example.org/trail/31
 <http://www.example.org/trail/31> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :finishPoint <http://www.example.org/finish_point/31> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
                                   :hasCounty :Limerick ,
                                              :Tipperary ;
@@ -1272,11 +1271,10 @@
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/3-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :startPoint <http://www.example.org/start_point/31> ;
                                   :climb "870" ;
                                   :dogs_allowed "1" ;
                                   :estimated_time_to_complete "2880" ;
-                                  :hasFinishPoint <http://www.example.org/finish_point/31> ;
-                                  :hasStartPoint <http://www.example.org/start_point/31> ;
                                   :id "31" ;
                                   :length "43" ;
                                   :name "Slieve Felim Way" .
@@ -1285,17 +1283,17 @@
 ###  http://www.example.org/trail/32
 <http://www.example.org/trail/32> rdf:type owl:NamedIndividual ,
                                            :Trail ;
+                                  :finishPoint <http://www.example.org/finish_point/32> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
                                   :hasCounty :Sligo ;
                                   :hasFormat :Linear ;
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :startPoint <http://www.example.org/start_point/32> ;
                                   :climb "890" ;
                                   :dogs_allowed "0" ;
                                   :estimated_time_to_complete "4320" ;
-                                  :hasFinishPoint <http://www.example.org/finish_point/32> ;
-                                  :hasStartPoint <http://www.example.org/start_point/32> ;
                                   :id "32" ;
                                   :length "78" ;
                                   :name "Sligo Way" .
@@ -1304,6 +1302,7 @@
 ###  http://www.example.org/trail/4
 <http://www.example.org/trail/4> rdf:type owl:NamedIndividual ,
                                           :Trail ;
+                                 :finishPoint <http://www.example.org/finish_point/4> ;
                                  :hasCategory <http://www.example.org/trail/1> ;
                                  :hasCounty :Cork ,
                                             :Tipperary ;
@@ -1311,11 +1310,10 @@
                                  :hasGrade :Moderate ;
                                  :hasQuality <http://example.org/trail/3-star> ;
                                  :hasType :National_Waymarked_Trail ;
+                                 :startPoint <http://www.example.org/start_point/4> ;
                                  :climb "3690" ;
                                  :dogs_allowed "0" ;
                                  :estimated_time_to_complete "10080" ;
-                                 :hasFinishPoint <http://www.example.org/finish_point/4> ;
-                                 :hasStartPoint <http://www.example.org/start_point/4> ;
                                  :id "4" ;
                                  :length "94" ;
                                  :name "Blackwater Way - Avondhu" .
@@ -1324,6 +1322,7 @@
 ###  http://www.example.org/trail/5
 <http://www.example.org/trail/5> rdf:type owl:NamedIndividual ,
                                           :Trail ;
+                                 :finishPoint <http://www.example.org/finish_point/5> ;
                                  :hasCategory <http://www.example.org/trail/1> ;
                                  :hasCounty :Cork ,
                                             :Kerry ;
@@ -1331,10 +1330,9 @@
                                  :hasGrade :Moderate ;
                                  :hasQuality <http://example.org/trail/2-star> ;
                                  :hasType :National_Waymarked_Trail ;
+                                 :startPoint <http://www.example.org/start_point/5> ;
                                  :dogs_allowed "0" ;
                                  :estimated_time_to_complete "4320" ;
-                                 :hasFinishPoint <http://www.example.org/finish_point/5> ;
-                                 :hasStartPoint <http://www.example.org/start_point/5> ;
                                  :id "5" ;
                                  :length "67" ;
                                  :name "Blackwater Way - Duhallow" .
@@ -1343,17 +1341,17 @@
 ###  http://www.example.org/trail/6
 <http://www.example.org/trail/6> rdf:type owl:NamedIndividual ,
                                           :Trail ;
+                                 :finishPoint <http://www.example.org/finish_point/6> ;
                                  :hasCategory <http://www.example.org/trail/1> ;
                                  :hasCounty :Donegal ;
                                  :hasFormat :Linear ;
                                  :hasGrade :Moderate ;
                                  :hasQuality <http://example.org/trail/3-star> ;
                                  :hasType :National_Waymarked_Trail ;
+                                 :startPoint <http://www.example.org/start_point/6> ;
                                  :climb "1230" ;
                                  :dogs_allowed "0" ;
                                  :estimated_time_to_complete "4320" ;
-                                 :hasFinishPoint <http://www.example.org/finish_point/6> ;
-                                 :hasStartPoint <http://www.example.org/start_point/6> ;
                                  :id "6" ;
                                  :length "65" ;
                                  :name "Bluestack Way" .
@@ -1362,17 +1360,17 @@
 ###  http://www.example.org/trail/7
 <http://www.example.org/trail/7> rdf:type owl:NamedIndividual ,
                                           :Trail ;
+                                 :finishPoint <http://www.example.org/finish_point/7> ;
                                  :hasCategory <http://www.example.org/trail/1> ;
                                  :hasCounty :Clare ;
                                  :hasFormat :Linear ;
                                  :hasGrade :Moderate ;
                                  :hasQuality <http://example.org/trail/3-star> ;
                                  :hasType :National_Waymarked_Trail ;
+                                 :startPoint <http://www.example.org/start_point/7> ;
                                  :climb "540" ;
                                  :dogs_allowed "0" ;
                                  :estimated_time_to_complete "7200" ;
-                                 :hasFinishPoint <http://www.example.org/finish_point/7> ;
-                                 :hasStartPoint <http://www.example.org/start_point/7> ;
                                  :id "7" ;
                                  :length "114" ;
                                  :name "Burren Way" .
@@ -1381,17 +1379,17 @@
 ###  http://www.example.org/trail/8
 <http://www.example.org/trail/8> rdf:type owl:NamedIndividual ,
                                           :Trail ;
+                                 :finishPoint <http://www.example.org/finish_point/8> ;
                                  :hasCategory <http://www.example.org/trail/1> ;
                                  :hasCounty :Cavan ;
                                  :hasFormat :Linear ,
                                             :National_Waymarked_Trail ;
                                  :hasGrade :Moderate ;
                                  :hasQuality <http://example.org/trail/2-star> ;
+                                 :startPoint <http://www.example.org/start_point/8> ;
                                  :climb "330" ;
                                  :dogs_allowed "0" ;
                                  :estimated_time_to_complete "1440" ;
-                                 :hasFinishPoint <http://www.example.org/finish_point/8> ;
-                                 :hasStartPoint <http://www.example.org/start_point/8> ;
                                  :id "8" ;
                                  :length "22" ;
                                  :name "Cavan Way" .
