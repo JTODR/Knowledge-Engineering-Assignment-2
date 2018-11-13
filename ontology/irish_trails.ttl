@@ -32,7 +32,8 @@
 
 ###  http://example.org/trail/hasCategory
 :hasCategory rdf:type owl:ObjectProperty ;
-             owl:inverseOf :isCategoryOf .
+             owl:inverseOf :isCategoryOf ;
+             rdf:type owl:FunctionalProperty .
 
 
 ###  http://example.org/trail/hasFormat
@@ -42,17 +43,20 @@
 
 ###  http://example.org/trail/hasGrade
 :hasGrade rdf:type owl:ObjectProperty ;
-          owl:inverseOf :isGradeOf .
+          owl:inverseOf :isGradeOf ;
+          rdf:type owl:FunctionalProperty .
 
 
 ###  http://example.org/trail/hasQuality
 :hasQuality rdf:type owl:ObjectProperty ;
-            owl:inverseOf :isQualityOf .
+            owl:inverseOf :isQualityOf ;
+            rdf:type owl:FunctionalProperty .
 
 
 ###  http://example.org/trail/hasType
 :hasType rdf:type owl:ObjectProperty ;
-         owl:inverseOf :isTypeOf .
+         owl:inverseOf :isTypeOf ;
+         rdf:type owl:FunctionalProperty .
 
 
 ###  http://example.org/trail/isCategoryOf
@@ -219,14 +223,6 @@
                          owl:allValuesFrom :FinishPoint
                        ] ,
                        [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasCategory ;
-                         owl:allValuesFrom :Category
-                       ] ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasFormat ;
-                         owl:allValuesFrom :Format
-                       ] ,
-                       [ rdf:type owl:Restriction ;
                          owl:onProperty :hasGrade ;
                          owl:allValuesFrom :Grade
                        ] ,
@@ -263,11 +259,6 @@
                          owl:onClass :Category
                        ] ,
                        [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasFormat ;
-                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                         owl:onClass :Format
-                       ] ,
-                       [ rdf:type owl:Restriction ;
                          owl:onProperty :hasGrade ;
                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                          owl:onClass :Grade
@@ -283,10 +274,6 @@
 
 ###  http://example.org/trail/TrailType
 :TrailType rdf:type owl:Class ;
-           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                             owl:onProperty :isTypeOf ;
-                             owl:allValuesFrom :Trail
-                           ] ;
            rdfs:comment "The type of trail" ,
                         "TrailType" .
 
