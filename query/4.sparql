@@ -27,10 +27,11 @@ WHERE {
   ?geom geo:asWKT ?wkt.
 
   ?trail a trail:Trail.
-  ?trail trail:trail_name ?trailName.
-  ?trail trail:hasStartPoint ?spGeom.
+  ?trail trail:name ?trailName.
+  ?trail trail:startPoint ?spGeom.
   ?spGeom geo:asWKT ?trailStartPoint.
   ?trail trail:hasQuality ?trailQuality.
+  ?trailQuality trail:value ?trailQualityValue.
 
-  FILTER(?trailQuality > %PARAM_0% && geof:sfWithin(?trailStartPoint, ?wkt)).
+  FILTER(?trailQualityValue > %PARAM_0% && geof:sfWithin(?trailStartPoint, ?wkt)).
 }

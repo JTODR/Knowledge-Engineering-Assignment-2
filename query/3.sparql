@@ -27,7 +27,7 @@ WHERE {
   ?geom geo:asWKT ?wkt.
 
   ?trail a trail:Trail.
-  ?trail trail:hasStartPoint ?spGeom.
+  ?trail trail:startPoint ?spGeom.
   ?spGeom geo:asWKT ?trailStartPoint.
   ?trail trail:length ?trailLength.
 
