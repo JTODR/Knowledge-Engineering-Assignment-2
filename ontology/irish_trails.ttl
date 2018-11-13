@@ -201,10 +201,10 @@
        rdfs:label "Trail" .
 
 
-###  http://example.org/trail/Type
-:Type rdf:type owl:Class ;
+###  http://example.org/trail/TrailType
+:TrailType rdf:type owl:Class ;
       rdfs:comment "The type of trail" ,
-                   "Type" .
+                   "TrailType" .
 
 
 ###  http://www.opengis.net/ont/sf#Point
@@ -356,7 +356,7 @@
 
 ###  http://example.org/trail/National_Waymarked_Trail
 :National_Waymarked_Trail rdf:type owl:NamedIndividual ,
-                                   :Type .
+                                   :TrailType .
 
 
 ###  http://example.org/trail/Offaly
