@@ -140,6 +140,10 @@
 
 ###  http://example.org/trail/Category
 :Category rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :isCategoryOf ;
+                            owl:allValuesFrom :Trail
+                          ] ;
           rdfs:comment "The category of trail signified as an integer." ;
           rdfs:label "Category" .
 
@@ -152,19 +156,31 @@
 
 ###  http://example.org/trail/FinishPoint
 :FinishPoint rdf:type owl:Class ;
-             rdfs:subClassOf <http://www.opengis.net/ont/sf#Point> ;
+             rdfs:subClassOf <http://www.opengis.net/ont/sf#Point> ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :finishPoint ;
+                               owl:allValuesFrom :Trail
+                             ] ;
              rdfs:comment "The end point of the trail." ;
              rdfs:label "Finish point" .
 
 
 ###  http://example.org/trail/Format
 :Format rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :isFormatOf ;
+                          owl:allValuesFrom :Trail
+                        ] ;
         rdfs:comment "The trail format signifying whether the trail is linear, circular, etc." ;
         rdfs:label "Format" .
 
 
 ###  http://example.org/trail/Grade
 :Grade rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :isGradeOf ;
+                         owl:allValuesFrom :Trail
+                       ] ;
        rdfs:comment "A measure of how difficult the trail will be to walk." ;
        rdfs:label "Grade" .
 
@@ -175,13 +191,21 @@
 
 ###  http://example.org/trail/Quality
 :Quality rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :isQualityOf ;
+                           owl:allValuesFrom :Trail
+                         ] ;
          rdfs:comment "The quality of the trail, measured on a 3 star system" ;
          rdfs:label "Quality" .
 
 
 ###  http://example.org/trail/StartPoint
 :StartPoint rdf:type owl:Class ;
-            rdfs:subClassOf <http://www.opengis.net/ont/sf#Point> ;
+            rdfs:subClassOf <http://www.opengis.net/ont/sf#Point> ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :startPoint ;
+                              owl:allValuesFrom :Trail
+                            ] ;
             rdfs:comment "The starting point of the trail" ;
             rdfs:label "Start point" .
 
@@ -189,12 +213,52 @@
 ###  http://example.org/trail/Trail
 :Trail rdf:type owl:Class ;
        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasCategory ;
+                         owl:allValuesFrom :Category
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasFormat ;
+                         owl:allValuesFrom :Format
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasGrade ;
+                         owl:allValuesFrom :Grade
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasQuality ;
+                         owl:allValuesFrom :Quality
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasType ;
+                         owl:allValuesFrom :TrailType
+                       ] ,
+                       [ rdf:type owl:Restriction ;
                          owl:onProperty :locatedIn ;
                          owl:allValuesFrom :County
                        ] ,
                        [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasCategory ;
+                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :Category
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasFormat ;
+                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :Format
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :locatedIn ;
+                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :County
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasGrade ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :Grade
+                       ] ,
+                       [ rdf:type owl:Restriction ;
                          owl:onProperty :hasQuality ;
-                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                          owl:onClass :Quality
                        ] ;
        rdfs:comment "A trail as specified by Sport Ireland" ;
@@ -203,8 +267,12 @@
 
 ###  http://example.org/trail/TrailType
 :TrailType rdf:type owl:Class ;
-      rdfs:comment "The type of trail" ,
-                   "TrailType" .
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :isTypeOf ;
+                             owl:allValuesFrom :Trail
+                           ] ;
+           rdfs:comment "The type of trail" ,
+                        "TrailType" .
 
 
 ###  http://www.opengis.net/ont/sf#Point
