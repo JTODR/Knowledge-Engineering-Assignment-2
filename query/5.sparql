@@ -33,4 +33,7 @@ WHERE {
   ?trail trail:climb ?trailClimb.
 
   FILTER(xsd:integer(?trailClimb) < %PARAM_0% && geof:sfWithin(?trailStartPoint, ?wkt)).
+  
+  # Remove duplicates that have the @en language tag
+    FILTER ( LANG(?districtName) = "" && LANG(?trailName) = "").
 } ORDER BY DESC(xsd:integer(?trailClimb))

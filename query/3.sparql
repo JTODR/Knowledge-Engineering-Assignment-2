@@ -19,7 +19,7 @@ PREFIX trail: <http://example.org/trail/>
 #   Parameters:  length(km)
 #   Returns:     district
 
-SELECT ?districtName
+SELECT ?districtName ?trailName ?trailLength
 WHERE {
   ?district a osi:Municipal_District.
   ?district rdfs:label ?districtName.
@@ -30,6 +30,10 @@ WHERE {
   ?trail trail:startPoint ?spGeom.
   ?spGeom geo:asWKT ?trailStartPoint.
   ?trail trail:length ?trailLength.
+  ?trail trail:name ?trailName.
 
   FILTER(xsd:integer(?trailLength) > %PARAM_0% && geof:sfWithin(?trailStartPoint, ?wkt)).
-}
+  
+  # Remove duplicates that have the @en language tag
+  FILTER ( LANG(?districtName) = "" && LANG(?trailName) = "").
+} ORDER BY ?trailLength

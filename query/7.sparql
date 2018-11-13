@@ -34,4 +34,7 @@ WHERE {
   ?epGeom geo:asWKT ?trailFinishPoint.
 
   FILTER(geof:sfWithin(?trailStartPoint, ?wkt) && geof:sfWithin(?trailFinishPoint, ?wkt)).
+  
+  # Remove duplicates that have the @en language tag
+  FILTER ( LANG(?districtName) = "" && LANG(?trailName) = "").
 }

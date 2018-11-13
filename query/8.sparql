@@ -33,9 +33,8 @@ WHERE {
   ?trail trail:dogs_allowed ?trailDogsAllowed.
   ?trail trail:estimated_time_to_complete ?trailEstimatedCompletionTime.
   
-  FILTER(geof:sfWithin(?trailStartPoint, ?wkt) && ?trailDogsAllowed = "true"^^xsd:boolean)
+  FILTER(geof:sfWithin(?trailStartPoint, ?wkt) && ?trailDogsAllowed = "true"^^xsd:boolean).
+  
+  # Remove duplicates that have the @en language tag
+   FILTER ( LANG(?districtName) = "" && LANG(?trailName) = "").
 }ORDER BY ASC(?trailEstimatedCompletionTime)
-
-
-#FILTER(geof:sfWithin(?trailStartPoint, ?wkt) && (xsd:integer(?trailDogsAllowed) = 1))
- #ORDER BY ASC(xsd:integer(?trailEstimatedCompletionTime))

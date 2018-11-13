@@ -35,4 +35,7 @@ WHERE {
 
   # Get the current district. POINT(LONG, LAT).
   FILTER(geof:sfWithin("POINT(%PARAM_0% %PARAM_1%)"^^sf:wktLiteral, ?wkt) && geof:sfWithin(?trailStartPoint, ?wkt)).
+  
+  # Remove duplicates that have the @en language tag
+    FILTER ( LANG(?districtName) = "" && LANG(?trailName) = "").
 }
