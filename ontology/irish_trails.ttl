@@ -24,6 +24,7 @@
 
 ###  http://example.org/trail/finishPoint
 :finishPoint rdf:type owl:ObjectProperty ,
+                      owl:FunctionalProperty ,
                       owl:SymmetricProperty ;
              rdfs:comment "Specifies the finish \"Point\" object for the trail" ;
              rdfs:label "Finish point" .
@@ -81,6 +82,7 @@
 
 ###  http://example.org/trail/startPoint
 :startPoint rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ,
                      owl:SymmetricProperty ;
             rdfs:comment "Defines the start \"Point\" object for the trail" ;
             rdfs:label "Start point" .
@@ -213,6 +215,10 @@
 ###  http://example.org/trail/Trail
 :Trail rdf:type owl:Class ;
        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :finishPoint ;
+                         owl:allValuesFrom :FinishPoint
+                       ] ,
+                       [ rdf:type owl:Restriction ;
                          owl:onProperty :hasCategory ;
                          owl:allValuesFrom :Category
                        ] ,
@@ -237,19 +243,33 @@
                          owl:allValuesFrom :County
                        ] ,
                        [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasCategory ;
-                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                         owl:onClass :Category
-                       ] ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasFormat ;
-                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                         owl:onClass :Format
+                         owl:onProperty :startPoint ;
+                         owl:allValuesFrom :StartPoint
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :locatedIn ;
                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                          owl:onClass :County
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :finishPoint ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :FinishPoint
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :startPoint ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :StartPoint
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasCategory ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :Category
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasFormat ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :Format
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :hasGrade ;
