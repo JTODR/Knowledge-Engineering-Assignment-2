@@ -34,11 +34,6 @@
              owl:inverseOf :isCategoryOf .
 
 
-###  http://example.org/trail/locatedIn
-:locatedIn rdf:type owl:ObjectProperty ;
-           owl:inverseOf :isCountyOf .
-
-
 ###  http://example.org/trail/hasFormat
 :hasFormat rdf:type owl:ObjectProperty ;
            owl:inverseOf :isFormatOf .
@@ -63,10 +58,6 @@
 :isCategoryOf rdf:type owl:ObjectProperty .
 
 
-###  http://example.org/trail/isCountyOf
-:isCountyOf rdf:type owl:ObjectProperty .
-
-
 ###  http://example.org/trail/isFormatOf
 :isFormatOf rdf:type owl:ObjectProperty .
 
@@ -81,6 +72,11 @@
 
 ###  http://example.org/trail/isTypeOf
 :isTypeOf rdf:type owl:ObjectProperty .
+
+
+###  http://example.org/trail/locatedIn
+:locatedIn rdf:type owl:ObjectProperty ,
+                    owl:TransitiveProperty .
 
 
 ###  http://example.org/trail/startPoint
@@ -173,6 +169,10 @@
        rdfs:label "Grade" .
 
 
+###  http://example.org/trail/Province
+:Province rdf:type owl:Class .
+
+
 ###  http://example.org/trail/Quality
 :Quality rdf:type owl:Class ;
          rdfs:comment "The quality of the trail, measured on a 3 star system" ;
@@ -217,12 +217,14 @@
 
 ###  http://example.org/trail/Carlow
 :Carlow rdf:type owl:NamedIndividual ,
-                 :County .
+                 :County ;
+        :locatedIn :Leinster .
 
 
 ###  http://example.org/trail/Cavan
 :Cavan rdf:type owl:NamedIndividual ,
-                :County .
+                :County ;
+       :locatedIn :Ulster .
 
 
 ###  http://example.org/trail/Circular
@@ -233,22 +235,31 @@
 
 ###  http://example.org/trail/Clare
 :Clare rdf:type owl:NamedIndividual ,
-                :County .
+                :County ;
+       :locatedIn :Munster .
+
+
+###  http://example.org/trail/Connaught
+:Connaught rdf:type owl:NamedIndividual ,
+                    :Province .
 
 
 ###  http://example.org/trail/Cork
 :Cork rdf:type owl:NamedIndividual ,
-               :County .
+               :County ;
+      :locatedIn :Munster .
 
 
 ###  http://example.org/trail/Donegal
 :Donegal rdf:type owl:NamedIndividual ,
-                  :County .
+                  :County ;
+         :locatedIn :Ulster .
 
 
 ###  http://example.org/trail/Dublin
 :Dublin rdf:type owl:NamedIndividual ,
-                 :County .
+                 :County ;
+        :locatedIn :Leinster .
 
 
 ###  http://example.org/trail/Easy
@@ -258,32 +269,43 @@
 
 ###  http://example.org/trail/Kerry
 :Kerry rdf:type owl:NamedIndividual ,
-                :County .
+                :County ;
+       :locatedIn :Munster .
 
 
 ###  http://example.org/trail/Kildare
 :Kildare rdf:type owl:NamedIndividual ,
-                  :County .
+                  :County ;
+         :locatedIn :Leinster .
 
 
 ###  http://example.org/trail/Kilkenny
 :Kilkenny rdf:type owl:NamedIndividual ,
-                   :County .
+                   :County ;
+          :locatedIn :Leinster .
 
 
 ###  http://example.org/trail/Laois
 :Laois rdf:type owl:NamedIndividual ,
-                :County .
+                :County ;
+       :locatedIn :Leinster .
+
+
+###  http://example.org/trail/Leinster
+:Leinster rdf:type owl:NamedIndividual ,
+                   :Province .
 
 
 ###  http://example.org/trail/Leitrim
 :Leitrim rdf:type owl:NamedIndividual ,
-                  :County .
+                  :County ;
+         :locatedIn :Connaught .
 
 
 ###  http://example.org/trail/Limerick
 :Limerick rdf:type owl:NamedIndividual ,
-                   :County .
+                   :County ;
+          :locatedIn :Munster .
 
 
 ###  http://example.org/trail/Linear
@@ -294,7 +316,8 @@
 
 ###  http://example.org/trail/Longford
 :Longford rdf:type owl:NamedIndividual ,
-                   :County .
+                   :County ;
+          :locatedIn :Leinster .
 
 
 ###  http://example.org/trail/Loop
@@ -305,12 +328,14 @@
 
 ###  http://example.org/trail/Mayo
 :Mayo rdf:type owl:NamedIndividual ,
-               :County .
+               :County ;
+      :locatedIn :Connaught .
 
 
 ###  http://example.org/trail/Meath
 :Meath rdf:type owl:NamedIndividual ,
-                :County .
+                :County ;
+       :locatedIn :Leinster .
 
 
 ###  http://example.org/trail/Moderate
@@ -320,7 +345,13 @@
 
 ###  http://example.org/trail/Monaghan
 :Monaghan rdf:type owl:NamedIndividual ,
-                   :County .
+                   :County ;
+          :locatedIn :Ulster .
+
+
+###  http://example.org/trail/Munster
+:Munster rdf:type owl:NamedIndividual ,
+                  :Province .
 
 
 ###  http://example.org/trail/National_Waymarked_Trail
@@ -330,17 +361,20 @@
 
 ###  http://example.org/trail/Offaly
 :Offaly rdf:type owl:NamedIndividual ,
-                 :County .
+                 :County ;
+        :locatedIn :Leinster .
 
 
 ###  http://example.org/trail/Roscommon
 :Roscommon rdf:type owl:NamedIndividual ,
-                    :County .
+                    :County ;
+           :locatedIn :Connaught .
 
 
 ###  http://example.org/trail/Sligo
 :Sligo rdf:type owl:NamedIndividual ,
-                :County .
+                :County ;
+       :locatedIn :Connaught .
 
 
 ###  http://example.org/trail/Strenuous
@@ -350,17 +384,25 @@
 
 ###  http://example.org/trail/Tipperary
 :Tipperary rdf:type owl:NamedIndividual ,
-                    :County .
+                    :County ;
+           :locatedIn :Munster .
+
+
+###  http://example.org/trail/Ulster
+:Ulster rdf:type owl:NamedIndividual ,
+                 :Province .
 
 
 ###  http://example.org/trail/Waterford
 :Waterford rdf:type owl:NamedIndividual ,
-                    :County .
+                    :County ;
+           :locatedIn :Leinster .
 
 
 ###  http://example.org/trail/Westmeath
 :Westmeath rdf:type owl:NamedIndividual ,
-                    :County .
+                    :County ;
+           :locatedIn :Leinster .
 
 
 ###  http://example.org/trail/1
@@ -823,19 +865,19 @@
                                           :Trail ;
                                  :finishPoint <http://www.example.org/finish_point/1> ;
                                  :hasCategory <http://example.org/trail/1> ;
-                                 :locatedIn :Cork ,
-                                            :Limerick ,
-                                            :Tipperary ;
                                  :hasFormat :Linear ;
                                  :hasGrade :Moderate ;
                                  :hasQuality <http://example.org/trail/2-star> ;
                                  :hasType :National_Waymarked_Trail ;
+                                 :locatedIn :Cork ,
+                                            :Limerick ,
+                                            :Tipperary ;
                                  :startPoint <http://www.example.org/start_point/1> ;
-                                 :climb "1560" ;
-                                 :dogs_allowed "1" ;
-                                 :estimated_time_to_complete "5760" ;
+                                 :climb 1560 ;
+                                 :dogs_allowed "true"^^xsd:boolean ;
+                                 :estimated_time_to_complete 5760 ;
                                  :id "1" ;
-                                 :length "89" ;
+                                 :length 89 ;
                                  :name "Ballyhoura Way" .
 
 
@@ -844,17 +886,17 @@
                                            :Trail ;
                                   :finishPoint <http://www.example.org/finish_point/10> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
-                                  :locatedIn :Mayo ;
                                   :hasFormat :Linear ;
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :locatedIn :Mayo ;
                                   :startPoint <http://www.example.org/start_point/10> ;
-                                  :climb "310" ;
-                                  :dogs_allowed "0" ;
-                                  :estimated_time_to_complete "1550" ;
+                                  :climb 310 ;
+                                  :dogs_allowed "false"^^xsd:boolean ;
+                                  :estimated_time_to_complete 1550 ;
                                   :id "10" ;
-                                  :length "61" ;
+                                  :length 61 ;
                                   :name "Croagh Patrick Heritage Trail" .
 
 
@@ -863,18 +905,18 @@
                                            :Trail ;
                                   :finishPoint <http://www.example.org/finish_point/11> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
-                                  :locatedIn :Kerry ;
                                   :hasFormat :Circular ,
                                              :Linear ;
                                   :hasGrade :Strenuous ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :locatedIn :Kerry ;
                                   :startPoint <http://www.example.org/start_point/11> ;
-                                  :climb "2590" ;
-                                  :dogs_allowed "0" ;
-                                  :estimated_time_to_complete "10080" ;
+                                  :climb 2590 ;
+                                  :dogs_allowed "false"^^xsd:boolean ;
+                                  :estimated_time_to_complete 10080 ;
                                   :id "11" ;
-                                  :length "162" ;
+                                  :length 162 ;
                                   :name "Dingle Way" .
 
 
@@ -883,14 +925,14 @@
                                            :Trail ;
                                   :finishPoint <http://www.example.org/finish_point/12> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
-                                  :locatedIn :Donegal ;
                                   :hasFormat :Loop ;
                                   :hasGrade :Easy ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :locatedIn :Donegal ;
                                   :startPoint <http://www.example.org/start_point/12> ;
                                   :id "12" ;
-                                  :length "77" ;
+                                  :length 77 ;
                                   :name "Sl� An Earagail - Sli Dhun na nGall" .
 
 
@@ -899,14 +941,14 @@
                                            :Trail ;
                                   :finishPoint <http://www.example.org/finish_point/13> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
-                                  :locatedIn :Donegal ;
                                   :hasFormat :Circular ;
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :locatedIn :Donegal ;
                                   :startPoint <http://www.example.org/start_point/13> ;
                                   :id "13" ;
-                                  :length "65" ;
+                                  :length 65 ;
                                   :name "Sl� Cholmcille - Sli Dhun na nGall" .
 
 
@@ -915,16 +957,16 @@
                                            :Trail ;
                                   :finishPoint <http://www.example.org/finish_point/14> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
-                                  :locatedIn :Donegal ;
                                   :hasFormat :Circular ;
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :locatedIn :Donegal ;
                                   :startPoint <http://www.example.org/start_point/14> ;
-                                  :climb "1060" ;
-                                  :estimated_time_to_complete "990" ;
+                                  :climb 1060 ;
+                                  :estimated_time_to_complete 990 ;
                                   :id "14" ;
-                                  :length "51" ;
+                                  :length 51 ;
                                   :name "Sl� Na Finne - Sli Dhun na nGall" .
 
 
@@ -933,14 +975,14 @@
                                            :Trail ;
                                   :finishPoint <http://www.example.org/finish_point/15> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
-                                  :locatedIn :Donegal ;
                                   :hasFormat :Circular ;
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :locatedIn :Donegal ;
                                   :startPoint <http://www.example.org/start_point/15> ;
                                   :id "15" ;
-                                  :length "65" ;
+                                  :length 65 ;
                                   :name "Sl� Na Rosann - Sli Dhun na nGall" .
 
 
@@ -949,17 +991,17 @@
                                            :Trail ;
                                   :finishPoint <http://www.example.org/finish_point/16> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
-                                  :locatedIn :Clare ;
                                   :hasFormat :Circular ;
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/3-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :locatedIn :Clare ;
                                   :startPoint <http://www.example.org/start_point/16> ;
-                                  :climb "3060" ;
-                                  :dogs_allowed "0" ;
-                                  :estimated_time_to_complete "11520" ;
+                                  :climb 3060 ;
+                                  :dogs_allowed "false"^^xsd:boolean ;
+                                  :estimated_time_to_complete 11520 ;
                                   :id "16" ;
-                                  :length "180" ;
+                                  :length 180 ;
                                   :name "East Clare Way" .
 
 
@@ -968,16 +1010,16 @@
                                            :Trail ;
                                   :finishPoint <http://www.example.org/finish_point/17> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
-                                  :locatedIn :Tipperary ,
-                                             :Waterford ;
                                   :hasFormat :Linear ;
                                   :hasGrade :Moderate ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :locatedIn :Tipperary ,
+                                             :Waterford ;
                                   :startPoint <http://www.example.org/start_point/17> ;
-                                  :climb "1375" ;
-                                  :estimated_time_to_complete "4320" ;
+                                  :climb 1375 ;
+                                  :estimated_time_to_complete 4320 ;
                                   :id "17" ;
-                                  :length "75" ;
+                                  :length 75 ;
                                   :name "East Munster Way" .
 
 
@@ -986,19 +1028,19 @@
                                            :Trail ;
                                   :finishPoint <http://www.example.org/finish_point/18> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
-                                  :locatedIn :Dublin ,
-                                             :Kildare ,
-                                             :Offaly ;
                                   :hasFormat :Linear ;
                                   :hasGrade :Easy ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :locatedIn :Dublin ,
+                                             :Kildare ,
+                                             :Offaly ;
                                   :startPoint <http://www.example.org/start_point/18> ;
-                                  :climb "0" ;
-                                  :dogs_allowed "1" ;
-                                  :estimated_time_to_complete "7200" ;
+                                  :climb 0 ;
+                                  :dogs_allowed "true"^^xsd:boolean ;
+                                  :estimated_time_to_complete 7200 ;
                                   :id "18" ;
-                                  :length "117" ;
+                                  :length 117 ;
                                   :name "Grand Canal Way" .
 
 
@@ -1007,17 +1049,17 @@
                                            :Trail ;
                                   :finishPoint <http://www.example.org/finish_point/19> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
-                                  :locatedIn :Kerry ;
                                   :hasFormat :Circular ;
                                   :hasGrade :Strenuous ;
                                   :hasQuality <http://example.org/trail/3-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :locatedIn :Kerry ;
                                   :startPoint <http://www.example.org/start_point/19> ;
-                                  :climb "5310" ;
-                                  :dogs_allowed "0" ;
-                                  :estimated_time_to_complete "12960" ;
+                                  :climb 5310 ;
+                                  :dogs_allowed "false"^^xsd:boolean ;
+                                  :estimated_time_to_complete 12960 ;
                                   :id "19" ;
-                                  :length "214" ;
+                                  :length 214 ;
                                   :name "Kerry Way" .
 
 
@@ -1026,19 +1068,19 @@
                                           :Trail ;
                                  :finishPoint <http://www.example.org/finish_point/2> ;
                                  :hasCategory <http://www.example.org/trail/1> ;
-                                 :locatedIn :Carlow ,
-                                            :Kildare ,
-                                            :Laois ;
                                  :hasFormat :Linear ;
                                  :hasGrade :Easy ;
                                  :hasQuality <http://example.org/trail/2-star> ;
                                  :hasType :National_Waymarked_Trail ;
+                                 :locatedIn :Carlow ,
+                                            :Kildare ,
+                                            :Laois ;
                                  :startPoint <http://www.example.org/start_point/2> ;
-                                 :climb "0" ;
-                                 :dogs_allowed "1" ;
-                                 :estimated_time_to_complete "5760" ;
+                                 :climb 0 ;
+                                 :dogs_allowed "true"^^xsd:boolean ;
+                                 :estimated_time_to_complete 5760 ;
                                  :id "2" ;
-                                 :length "100" ;
+                                 :length 100 ;
                                  :name "Barrow Way" .
 
 
@@ -1047,19 +1089,19 @@
                                            :Trail ;
                                   :finishPoint <http://www.example.org/finish_point/21> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
-                                  :locatedIn :Clare ,
-                                             :Limerick ,
-                                             :Tipperary ;
                                   :hasFormat :Linear ;
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/3-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :locatedIn :Clare ,
+                                             :Limerick ,
+                                             :Tipperary ;
                                   :startPoint <http://www.example.org/start_point/21> ;
-                                  :climb "527" ;
-                                  :dogs_allowed "0" ;
-                                  :estimated_time_to_complete "4320" ;
+                                  :climb 527 ;
+                                  :dogs_allowed "false"^^xsd:boolean ;
+                                  :estimated_time_to_complete 4320 ;
                                   :id "21" ;
-                                  :length "68" ;
+                                  :length 68 ;
                                   :name "Lough Derg Way" .
 
 
@@ -1068,17 +1110,17 @@
                                            :Trail ;
                                   :finishPoint <http://www.example.org/finish_point/22> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
-                                  :locatedIn :Clare ;
                                   :hasFormat :Circular ;
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/3-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :locatedIn :Clare ;
                                   :startPoint <http://www.example.org/start_point/22> ;
-                                  :climb "1620" ;
-                                  :dogs_allowed "0" ;
-                                  :estimated_time_to_complete "8640" ;
+                                  :climb 1620 ;
+                                  :dogs_allowed "false"^^xsd:boolean ;
+                                  :estimated_time_to_complete 8640 ;
                                   :id "22" ;
-                                  :length "148" ;
+                                  :length 148 ;
                                   :name "Mid Clare Way" .
 
 
@@ -1087,19 +1129,19 @@
                                            :Trail ;
                                   :finishPoint <http://www.example.org/finish_point/23> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
-                                  :locatedIn :Leitrim ,
-                                             :Roscommon ,
-                                             :Sligo ;
                                   :hasFormat <http://example.org/trail/2Circulars> ;
                                   :hasGrade :Strenuous ;
                                   :hasQuality <http://example.org/trail/3-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :locatedIn :Leitrim ,
+                                             :Roscommon ,
+                                             :Sligo ;
                                   :startPoint <http://www.example.org/start_point/23> ;
-                                  :climb "2340" ;
-                                  :dogs_allowed "0" ;
-                                  :estimated_time_to_complete "7200" ;
+                                  :climb 2340 ;
+                                  :dogs_allowed "false"^^xsd:boolean ;
+                                  :estimated_time_to_complete 7200 ;
                                   :id "23" ;
-                                  :length "118" ;
+                                  :length 118 ;
                                   :name "Miner's Way & Historical Trail" .
 
 
@@ -1108,16 +1150,16 @@
                                            :Trail ;
                                   :finishPoint <http://www.example.org/finish_point/24> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
-                                  :locatedIn :Monaghan ;
                                   :hasFormat :Linear ;
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :locatedIn :Monaghan ;
                                   :startPoint <http://www.example.org/start_point/24> ;
-                                  :dogs_allowed "0" ;
-                                  :estimated_time_to_complete "1000" ;
+                                  :dogs_allowed "false"^^xsd:boolean ;
+                                  :estimated_time_to_complete 1000 ;
                                   :id "24" ;
-                                  :length "56.5" ;
+                                  :length 56.5 ;
                                   :name "Monaghan Way" .
 
 
@@ -1126,17 +1168,16 @@
                                            :Trail ;
                                   :finishPoint <http://www.example.org/finish_point/25> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
-                                  :locatedIn :Kilkenny ;
                                   :hasFormat :Linear ;
                                   :hasGrade :Easy ;
                                   :hasQuality <http://example.org/trail/3-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :locatedIn :Kilkenny ;
                                   :startPoint <http://www.example.org/start_point/25> ;
-                                  :climb "Minimal" ;
-                                  :dogs_allowed "0" ;
-                                  :estimated_time_to_complete "180" ;
+                                  :dogs_allowed "false"^^xsd:boolean ;
+                                  :estimated_time_to_complete 180 ;
                                   :id "25" ;
-                                  :length "11" ;
+                                  :length 11 ;
                                   :name "Nore Valley Walk - Inistioge to Thomastown Section" .
 
 
@@ -1145,17 +1186,17 @@
                                            :Trail ;
                                   :finishPoint <http://www.example.org/finish_point/26> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
-                                  :locatedIn :Kerry ;
                                   :hasFormat <http://example.org/trail/Linear+Circular> ;
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/3-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :locatedIn :Kerry ;
                                   :startPoint <http://www.example.org/start_point/26> ;
-                                  :climb "450" ;
-                                  :dogs_allowed "1" ;
-                                  :estimated_time_to_complete "2880" ;
+                                  :climb 450 ;
+                                  :dogs_allowed "true"^^xsd:boolean ;
+                                  :estimated_time_to_complete 2880 ;
                                   :id "26" ;
-                                  :length "45" ;
+                                  :length 45 ;
                                   :name "North Kerry Way" .
 
 
@@ -1164,17 +1205,16 @@
                                            :Trail ;
                                   :finishPoint <http://www.example.org/finish_point/27> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
-                                  :locatedIn :Offaly ;
                                   :hasFormat :Linear ;
                                   :hasGrade :Easy ;
                                   :hasQuality <http://example.org/trail/3-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :locatedIn :Offaly ;
                                   :startPoint <http://www.example.org/start_point/27> ;
-                                  :climb "Minimal" ;
-                                  :dogs_allowed "1" ;
-                                  :estimated_time_to_complete "2880" ;
+                                  :dogs_allowed "true"^^xsd:boolean ;
+                                  :estimated_time_to_complete 2880 ;
                                   :id "27" ;
-                                  :length "37" ;
+                                  :length 37 ;
                                   :name "Offaly Way" .
 
 
@@ -1183,21 +1223,20 @@
                                            :Trail ;
                                   :finishPoint <http://www.example.org/finish_point/28> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
+                                  :hasFormat :Linear ;
+                                  :hasGrade :Easy ;
+                                  :hasQuality <http://example.org/trail/2-star> ;
+                                  :hasType :National_Waymarked_Trail ;
                                   :locatedIn :Dublin ,
                                              :Kildare ,
                                              :Longford ,
                                              :Meath ,
                                              :Westmeath ;
-                                  :hasFormat :Linear ;
-                                  :hasGrade :Easy ;
-                                  :hasQuality <http://example.org/trail/2-star> ;
-                                  :hasType :National_Waymarked_Trail ;
                                   :startPoint <http://www.example.org/start_point/28> ;
-                                  :climb "Minimal" ;
-                                  :dogs_allowed "1" ;
-                                  :estimated_time_to_complete "4320" ;
+                                  :dogs_allowed "true"^^xsd:boolean ;
+                                  :estimated_time_to_complete 4320 ;
                                   :id "28" ;
-                                  :length "144" ;
+                                  :length 144 ;
                                   :name "Royal Canal Way" .
 
 
@@ -1206,17 +1245,17 @@
                                            :Trail ;
                                   :finishPoint <http://www.example.org/finish_point/29> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
-                                  :locatedIn :Cork ;
                                   :hasFormat :Circular ;
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :locatedIn :Cork ;
                                   :startPoint <http://www.example.org/start_point/29> ;
-                                  :climb "2190" ;
-                                  :dogs_allowed "0" ;
-                                  :estimated_time_to_complete "5760" ;
+                                  :climb 2190 ;
+                                  :dogs_allowed "false"^^xsd:boolean ;
+                                  :estimated_time_to_complete 5760 ;
                                   :id "29" ;
-                                  :length "175" ;
+                                  :length 175 ;
                                   :name "Sheeps Head Way" .
 
 
@@ -1225,18 +1264,18 @@
                                           :Trail ;
                                  :finishPoint <http://www.example.org/finish_point/3> ;
                                  :hasCategory <http://www.example.org/trail/1> ;
-                                 :locatedIn :Cork ,
-                                            :Kerry ;
                                  :hasFormat :Loop ;
                                  :hasGrade :Strenuous ;
                                  :hasQuality <http://example.org/trail/2-star> ;
                                  :hasType :National_Waymarked_Trail ;
+                                 :locatedIn :Cork ,
+                                            :Kerry ;
                                  :startPoint <http://www.example.org/start_point/3> ;
-                                 :climb "5245" ;
-                                 :dogs_allowed "0" ;
-                                 :estimated_time_to_complete "12960" ;
+                                 :climb 5245 ;
+                                 :dogs_allowed "false"^^xsd:boolean ;
+                                 :estimated_time_to_complete 12960 ;
                                  :id "3" ;
-                                 :length "206" ;
+                                 :length 206 ;
                                  :name "Beara Way" .
 
 
@@ -1245,18 +1284,18 @@
                                            :Trail ;
                                   :finishPoint <http://www.example.org/finish_point/30> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
-                                  :locatedIn :Laois ,
-                                             :Offaly ;
                                   :hasFormat :Circular ;
                                   :hasGrade :Strenuous ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :locatedIn :Laois ,
+                                             :Offaly ;
                                   :startPoint <http://www.example.org/start_point/30> ;
-                                  :climb "1275" ;
-                                  :dogs_allowed "0" ;
-                                  :estimated_time_to_complete "5400" ;
+                                  :climb 1275 ;
+                                  :dogs_allowed "false"^^xsd:boolean ;
+                                  :estimated_time_to_complete 5400 ;
                                   :id "30" ;
-                                  :length "70.5" ;
+                                  :length 70.5 ;
                                   :name "Slieve Bloom Way" .
 
 
@@ -1265,18 +1304,18 @@
                                            :Trail ;
                                   :finishPoint <http://www.example.org/finish_point/31> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
-                                  :locatedIn :Limerick ,
-                                             :Tipperary ;
                                   :hasFormat :Linear ;
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/3-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :locatedIn :Limerick ,
+                                             :Tipperary ;
                                   :startPoint <http://www.example.org/start_point/31> ;
-                                  :climb "870" ;
-                                  :dogs_allowed "1" ;
-                                  :estimated_time_to_complete "2880" ;
+                                  :climb 870 ;
+                                  :dogs_allowed "true"^^xsd:boolean ;
+                                  :estimated_time_to_complete 2880 ;
                                   :id "31" ;
-                                  :length "43" ;
+                                  :length 43 ;
                                   :name "Slieve Felim Way" .
 
 
@@ -1285,17 +1324,17 @@
                                            :Trail ;
                                   :finishPoint <http://www.example.org/finish_point/32> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
-                                  :locatedIn :Sligo ;
                                   :hasFormat :Linear ;
                                   :hasGrade :Moderate ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
+                                  :locatedIn :Sligo ;
                                   :startPoint <http://www.example.org/start_point/32> ;
-                                  :climb "890" ;
-                                  :dogs_allowed "0" ;
-                                  :estimated_time_to_complete "4320" ;
+                                  :climb 890 ;
+                                  :dogs_allowed "false"^^xsd:boolean ;
+                                  :estimated_time_to_complete 4320 ;
                                   :id "32" ;
-                                  :length "78" ;
+                                  :length 78 ;
                                   :name "Sligo Way" .
 
 
@@ -1304,18 +1343,18 @@
                                           :Trail ;
                                  :finishPoint <http://www.example.org/finish_point/4> ;
                                  :hasCategory <http://www.example.org/trail/1> ;
-                                 :locatedIn :Cork ,
-                                            :Tipperary ;
                                  :hasFormat :Linear ;
                                  :hasGrade :Moderate ;
                                  :hasQuality <http://example.org/trail/3-star> ;
                                  :hasType :National_Waymarked_Trail ;
+                                 :locatedIn :Cork ,
+                                            :Tipperary ;
                                  :startPoint <http://www.example.org/start_point/4> ;
-                                 :climb "3690" ;
-                                 :dogs_allowed "0" ;
-                                 :estimated_time_to_complete "10080" ;
+                                 :climb 3690 ;
+                                 :dogs_allowed "false"^^xsd:boolean ;
+                                 :estimated_time_to_complete 10080 ;
                                  :id "4" ;
-                                 :length "94" ;
+                                 :length 94 ;
                                  :name "Blackwater Way - Avondhu" .
 
 
@@ -1324,17 +1363,17 @@
                                           :Trail ;
                                  :finishPoint <http://www.example.org/finish_point/5> ;
                                  :hasCategory <http://www.example.org/trail/1> ;
-                                 :locatedIn :Cork ,
-                                            :Kerry ;
                                  :hasFormat :Linear ;
                                  :hasGrade :Moderate ;
                                  :hasQuality <http://example.org/trail/2-star> ;
                                  :hasType :National_Waymarked_Trail ;
+                                 :locatedIn :Cork ,
+                                            :Kerry ;
                                  :startPoint <http://www.example.org/start_point/5> ;
-                                 :dogs_allowed "0" ;
-                                 :estimated_time_to_complete "4320" ;
+                                 :dogs_allowed "false"^^xsd:boolean ;
+                                 :estimated_time_to_complete 4320 ;
                                  :id "5" ;
-                                 :length "67" ;
+                                 :length 67 ;
                                  :name "Blackwater Way - Duhallow" .
 
 
@@ -1343,17 +1382,17 @@
                                           :Trail ;
                                  :finishPoint <http://www.example.org/finish_point/6> ;
                                  :hasCategory <http://www.example.org/trail/1> ;
-                                 :locatedIn :Donegal ;
                                  :hasFormat :Linear ;
                                  :hasGrade :Moderate ;
                                  :hasQuality <http://example.org/trail/3-star> ;
                                  :hasType :National_Waymarked_Trail ;
+                                 :locatedIn :Donegal ;
                                  :startPoint <http://www.example.org/start_point/6> ;
-                                 :climb "1230" ;
-                                 :dogs_allowed "0" ;
-                                 :estimated_time_to_complete "4320" ;
+                                 :climb 1230 ;
+                                 :dogs_allowed "false"^^xsd:boolean ;
+                                 :estimated_time_to_complete 4320 ;
                                  :id "6" ;
-                                 :length "65" ;
+                                 :length 65 ;
                                  :name "Bluestack Way" .
 
 
@@ -1362,17 +1401,17 @@
                                           :Trail ;
                                  :finishPoint <http://www.example.org/finish_point/7> ;
                                  :hasCategory <http://www.example.org/trail/1> ;
-                                 :locatedIn :Clare ;
                                  :hasFormat :Linear ;
                                  :hasGrade :Moderate ;
                                  :hasQuality <http://example.org/trail/3-star> ;
                                  :hasType :National_Waymarked_Trail ;
+                                 :locatedIn :Clare ;
                                  :startPoint <http://www.example.org/start_point/7> ;
-                                 :climb "540" ;
-                                 :dogs_allowed "0" ;
-                                 :estimated_time_to_complete "7200" ;
+                                 :climb 540 ;
+                                 :dogs_allowed "false"^^xsd:boolean ;
+                                 :estimated_time_to_complete 7200 ;
                                  :id "7" ;
-                                 :length "114" ;
+                                 :length 114 ;
                                  :name "Burren Way" .
 
 
@@ -1381,17 +1420,17 @@
                                           :Trail ;
                                  :finishPoint <http://www.example.org/finish_point/8> ;
                                  :hasCategory <http://www.example.org/trail/1> ;
-                                 :locatedIn :Cavan ;
                                  :hasFormat :Linear ,
                                             :National_Waymarked_Trail ;
                                  :hasGrade :Moderate ;
                                  :hasQuality <http://example.org/trail/2-star> ;
+                                 :locatedIn :Cavan ;
                                  :startPoint <http://www.example.org/start_point/8> ;
-                                 :climb "330" ;
-                                 :dogs_allowed "0" ;
-                                 :estimated_time_to_complete "1440" ;
+                                 :climb 330 ;
+                                 :dogs_allowed "false"^^xsd:boolean ;
+                                 :estimated_time_to_complete 1440 ;
                                  :id "8" ;
-                                 :length "22" ;
+                                 :length 22 ;
                                  :name "Cavan Way" .
 
 
