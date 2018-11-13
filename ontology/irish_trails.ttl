@@ -235,10 +235,6 @@
                          owl:allValuesFrom :Quality
                        ] ,
                        [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasType ;
-                         owl:allValuesFrom :TrailType
-                       ] ,
-                       [ rdf:type owl:Restriction ;
                          owl:onProperty :locatedIn ;
                          owl:allValuesFrom :County
                        ] ,
@@ -993,8 +989,7 @@
                                            :Trail ;
                                   :finishPoint <http://www.example.org/finish_point/11> ;
                                   :hasCategory <http://www.example.org/trail/1> ;
-                                  :hasFormat :Circular ,
-                                             :Linear ;
+                                  :hasFormat <http://example.org/trail/Linear+Circular> ;
                                   :hasGrade :Strenuous ;
                                   :hasQuality <http://example.org/trail/2-star> ;
                                   :hasType :National_Waymarked_Trail ;
