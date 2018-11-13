@@ -13,7 +13,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX sf: <http://www.opengis.net/ont/sf#>
 
-PREFIX trail: <http://www.this.com/ontologies/irish-trails-ontology#>
+PREFIX trail: <http://example.org/trail/>
 
 # Find trails with given format in the current district.
 #   Parameters:  current long and lat, format
@@ -30,7 +30,7 @@ WHERE {
   ?trail trail:name ?trailName.
   ?trail trail:startPoint ?spGeom.
   ?spGeom geo:asWKT ?trailStartPoint.
-  ?trail trail:hasFormat ?trailFormat
+  ?trail trail:hasFormat ?trailFormat.
   ?trailFormat trail:value "%PARAM_2%"^^xsd:string
 
   # Get the current district. POINT(LONG, LAT).

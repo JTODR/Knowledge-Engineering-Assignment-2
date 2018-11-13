@@ -13,7 +13,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX sf: <http://www.opengis.net/ont/sf#>
 
-PREFIX trail: <http://www.this.com/ontologies/irish-trails-ontology#>
+PREFIX trail: <http://example.org/trail/>
 
 # Find districts with trails with climb < given
 #   Parameters:  climb(m)
@@ -32,5 +32,5 @@ WHERE {
   ?spGeom geo:asWKT ?trailStartPoint.
   ?trail trail:climb ?trailClimb.
 
-  FILTER(?trailClimb < %PARAM_0% && geof:sfWithin(?trailStartPoint, ?wkt)).
-}
+  FILTER(xsd:integer(?trailClimb) < %PARAM_0% && geof:sfWithin(?trailStartPoint, ?wkt)).
+} ORDER BY DESC(xsd:integer(?trailClimb))

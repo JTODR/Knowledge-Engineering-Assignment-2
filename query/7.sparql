@@ -13,13 +13,13 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX sf: <http://www.opengis.net/ont/sf#>
 
-PREFIX trail: <http://www.this.com/ontologies/irish-trails-ontology#>
+PREFIX trail: <http://example.org/trail/>
 
 # Find trails that start and end in the same district
 #   Parameters:
 #   Returns:     district, trailName, startPoint, endPoint
 
-SELECT ?districtName ?trailName, ?trailStartPoint, ?trailEndPoint
+SELECT ?districtName ?trailName ?trailStartPoint ?trailFinishPoint
 WHERE {
   ?district a osi:Municipal_District.
   ?district rdfs:label ?districtName.
@@ -31,7 +31,7 @@ WHERE {
   ?trail trail:startPoint ?spGeom.
   ?spGeom geo:asWKT ?trailStartPoint.
   ?trail trail:finishPoint ?epGeom.
-  ?epGeom geo:asWKT ?trailEndPoint.
+  ?epGeom geo:asWKT ?trailFinishPoint.
 
-  FILTER(geof:sfWithin(?trailStartPoint, ?wkt) && geof:sfWithin(?trailEndPoint, ?wkt)).
+  FILTER(geof:sfWithin(?trailStartPoint, ?wkt) && geof:sfWithin(?trailFinishPoint, ?wkt)).
 }

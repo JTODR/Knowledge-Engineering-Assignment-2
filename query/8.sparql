@@ -13,13 +13,13 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX sf: <http://www.opengis.net/ont/sf#>
 
-PREFIX trail: <http://www.this.com/ontologies/irish-trails-ontology#>
+PREFIX trail: <http://example.org/trail/>
 
 # Rank trails within a district based on Estimated Completion Time and that allow dogs.
 #   Parameters:
 #   Returns:     district, trailName, startPoint, completionTime, dogsAllowed
 
-SELECT ?districtName ?trailName, ?trailStartPoint, ?trailEstimatedCompletionTime, ?trailDogsAllowed
+SELECT ?districtName ?trailName ?trailStartPoint ?trailEstimatedCompletionTime ?trailDogsAllowed
 WHERE {
   ?district a osi:Municipal_District.
   ?district rdfs:label ?districtName.
@@ -30,6 +30,12 @@ WHERE {
   ?trail trail:name ?trailName.
   ?trail trail:startPoint ?spGeom.
   ?spGeom geo:asWKT ?trailStartPoint.
-  ?trail trail:dogs_allowed true.
+  ?trail trail:dogs_allowed ?trailDogsAllowed.
   ?trail trail:estimated_time_to_complete ?trailEstimatedCompletionTime.
-} ORDER BY ASC(?trailEstimatedCompletionTime)
+  
+  FILTER(geof:sfWithin(?trailStartPoint, ?wkt) && ?trailDogsAllowed = "true"^^xsd:boolean)
+}ORDER BY ASC(?trailEstimatedCompletionTime)
+
+
+#FILTER(geof:sfWithin(?trailStartPoint, ?wkt) && (xsd:integer(?trailDogsAllowed) = 1))
+ #ORDER BY ASC(xsd:integer(?trailEstimatedCompletionTime))
