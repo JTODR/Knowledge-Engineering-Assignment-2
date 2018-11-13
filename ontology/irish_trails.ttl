@@ -274,6 +274,10 @@
 
 ###  http://example.org/trail/TrailType
 :TrailType rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :isTypeOf ;
+                             owl:allValuesFrom :Trail
+                           ] ;
            rdfs:comment "The type of trail" ,
                         "TrailType" .
 
