@@ -1,0 +1,1886 @@
+Prefix: : <http://example.org/trail/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://example.org/trail/>
+
+
+Annotations: 
+    rdfs:comment "This data set contains the National Trails Register a collection of looped walks, waymarked ways and cycling routes in the Republic of Ireland.",
+    rdfs:label "Sport Ireland Trails"
+
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: rdfs:label
+
+    
+Datatype: <http://www.opengis.net/ont/geosparql#wktLiteral>
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:boolean
+
+    
+Datatype: xsd:decimal
+
+    
+Datatype: xsd:integer
+
+    
+Datatype: xsd:string
+
+    
+ObjectProperty: finishPoint
+
+    Annotations: 
+        rdfs:comment "Specifies the finish \"Point\" object for the trail",
+        rdfs:label "Finish point"
+    
+    Characteristics: 
+        Functional,
+        Symmetric
+    
+    
+ObjectProperty: hasCategory
+
+    Characteristics: 
+        Functional
+    
+    InverseOf: 
+        isCategoryOf
+    
+    
+ObjectProperty: hasFormat
+
+    InverseOf: 
+        isFormatOf
+    
+    
+ObjectProperty: hasGrade
+
+    Characteristics: 
+        Functional
+    
+    InverseOf: 
+        isGradeOf
+    
+    
+ObjectProperty: hasQuality
+
+    Characteristics: 
+        Functional
+    
+    InverseOf: 
+        isQualityOf
+    
+    
+ObjectProperty: hasType
+
+    Characteristics: 
+        Functional
+    
+    InverseOf: 
+        isTypeOf
+    
+    
+ObjectProperty: isCategoryOf
+
+    InverseOf: 
+        hasCategory
+    
+    
+ObjectProperty: isFormatOf
+
+    InverseOf: 
+        hasFormat
+    
+    
+ObjectProperty: isGradeOf
+
+    InverseOf: 
+        hasGrade
+    
+    
+ObjectProperty: isQualityOf
+
+    InverseOf: 
+        hasQuality
+    
+    
+ObjectProperty: isTypeOf
+
+    InverseOf: 
+        hasType
+    
+    
+ObjectProperty: locatedIn
+
+    Characteristics: 
+        Transitive
+    
+    
+ObjectProperty: startPoint
+
+    Annotations: 
+        rdfs:comment "Defines the start \"Point\" object for the trail",
+        rdfs:label "Start point"
+    
+    Characteristics: 
+        Functional,
+        Symmetric
+    
+    
+DataProperty: <http://www.opengis.net/ont/geosparql#asWKT>
+
+    
+DataProperty: climb
+
+    Annotations: 
+        rdfs:comment "Overall trail climb in metres",
+        rdfs:label "Climb"
+    
+    
+DataProperty: dogs_allowed
+
+    Annotations: 
+        rdfs:comment "Whether dogs are allowed (1) or not allowed (0) on this trail.",
+        rdfs:label "Dogs allowed"
+    
+    
+DataProperty: estimated_time_to_complete
+
+    Annotations: 
+        rdfs:comment "The estimated time to complete this walk in minutes.",
+        rdfs:label "Estimated time to complete"
+    
+    
+DataProperty: id
+
+    Annotations: 
+        rdfs:comment "The trail ID as specified in the original Sport Ireland CSV dataset",
+        rdfs:label "Trail ID"
+    
+    
+DataProperty: length
+
+    Annotations: 
+        rdfs:comment "The length of the trail measured in kilometres",
+        rdfs:label "Length"
+    
+    
+DataProperty: name
+
+    Annotations: 
+        rdfs:comment "The name of the trail",
+        rdfs:label "Trail name"
+    
+    
+DataProperty: value
+
+    
+Class: <http://www.opengis.net/ont/sf#Point>
+
+    
+Class: Category
+
+    Annotations: 
+        rdfs:comment "The category of trail signified as an integer.",
+        rdfs:label "Category"
+    
+    SubClassOf: 
+        isCategoryOf only Trail
+    
+    
+Class: County
+
+    Annotations: 
+        rdfs:comment "The counties which this trail passes through.",
+        rdfs:label "County"
+    
+    
+Class: FinishPoint
+
+    Annotations: 
+        rdfs:comment "The end point of the trail.",
+        rdfs:label "Finish point"
+    
+    SubClassOf: 
+        <http://www.opengis.net/ont/sf#Point>,
+        finishPoint only Trail
+    
+    
+Class: Format
+
+    Annotations: 
+        rdfs:comment "The trail format signifying whether the trail is linear, circular, etc.",
+        rdfs:label "Format"
+    
+    SubClassOf: 
+        isFormatOf only Trail
+    
+    
+Class: Grade
+
+    Annotations: 
+        rdfs:comment "A measure of how difficult the trail will be to walk.",
+        rdfs:label "Grade"
+    
+    SubClassOf: 
+        isGradeOf only Trail
+    
+    
+Class: Province
+
+    
+Class: Quality
+
+    Annotations: 
+        rdfs:comment "The quality of the trail, measured on a 3 star system",
+        rdfs:label "Quality"
+    
+    SubClassOf: 
+        isQualityOf only Trail
+    
+    
+Class: StartPoint
+
+    Annotations: 
+        rdfs:comment "The starting point of the trail",
+        rdfs:label "Start point"
+    
+    SubClassOf: 
+        <http://www.opengis.net/ont/sf#Point>,
+        startPoint only Trail
+    
+    
+Class: Trail
+
+    Annotations: 
+        rdfs:comment "A trail as specified by Sport Ireland",
+        rdfs:label "Trail"
+    
+    SubClassOf: 
+        finishPoint only FinishPoint,
+        hasGrade only Grade,
+        hasQuality only Quality,
+        locatedIn only County,
+        startPoint only StartPoint,
+        locatedIn min 1 County,
+        finishPoint exactly 1 FinishPoint,
+        startPoint exactly 1 StartPoint,
+        hasCategory max 1 Category,
+        hasGrade max 1 Grade,
+        hasQuality max 1 Quality
+    
+    
+Class: TrailType
+
+    Annotations: 
+        rdfs:comment "The type of trail",
+        rdfs:comment "TrailType"
+    
+    SubClassOf: 
+        isTypeOf only Trail
+    
+    
+Individual: <http://example.org/trail/1-star>
+
+    Types: 
+        Quality
+    
+    Facts:  
+     value  1
+    
+    
+Individual: <http://example.org/trail/2-star>
+
+    Types: 
+        Quality
+    
+    Facts:  
+     value  2
+    
+    
+Individual: <http://example.org/trail/2Circulars>
+
+    Types: 
+        Format
+    
+    Facts:  
+     value  "2Circulars"^^xsd:string
+    
+    
+Individual: <http://example.org/trail/3-star>
+
+    Types: 
+        Quality
+    
+    Facts:  
+     value  3
+    
+    
+Individual: <http://example.org/trail/Linear+Circular>
+
+    Types: 
+        Format
+    
+    Facts:  
+     value  "Linear+Circular"^^xsd:string
+    
+    
+Individual: <http://www.example.org/finish_point/10>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-9.63981 53.77363)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/11>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-9.706469 52.267018)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/12>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.12041 55.02554)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/13>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.41017 54.76438)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/14>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.11371 54.87013)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/15>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.36055 54.94961)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/16>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.44094 52.80688)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/17>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-7.99413 52.276)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/18>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-7.96406 53.21962)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/19>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-9.51208 52.05777)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/1>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.20321 52.49782)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/21>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.27658 52.92455)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/22>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.89184 52.76065)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/23>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.01378 54.18917)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/24>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-6.57391 54.00191)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/25>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-7.13657 52.5218)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/26>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-9.706467 52.267016)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/27>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-7.74353 53.29304)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/28>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-7.90495 53.73118)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/29>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-9.45466 51.68096)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/2>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-6.928 52.48748)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/30>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-7.45025 53.12221)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/31>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.23721 52.79432)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/32>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.30366 54.23192)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/3>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-9.55246 51.74982)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/4>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.72886 52.04634)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/5>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-9.25637 52.0392)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/6>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.41017 54.76438)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/7>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-9.06373 52.94437)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/finish_point/8>
+
+    Types: 
+        FinishPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-7.87559 54.29153)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/10>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-9.13093 53.80467)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/11>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-9.706469 52.267018)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/12>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.12041 55.02554)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/13>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.41017 54.76438)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/14>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.11371 54.87013)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/15>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.36055 54.94961)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/16>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.44094 52.80688)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/17>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-7.40711 52.34551)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/18>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-6.45527 53.33094)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/19>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-9.51208 52.05777)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/1>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.88862 52.2367)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/21>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.62529 52.6653)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/22>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.89184 52.76065)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/23>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.11 54.07591)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/24>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-6.841532 54.205504)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/25>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-7.06362 52.48799)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/26>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-9.706467 52.267016)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/27>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-7.65936 53.12658)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/28>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-6.24501 53.35712)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/29>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-9.45466 51.68096)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/2>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-6.81597 53.26985)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/30>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-7.45025 53.12221)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/31>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.39897 52.6492)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/32>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.93385 54.08941)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/3>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-9.55246 51.74982)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/4>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-7.99413 52.276)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/5>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.72886 52.04634)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/6>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.11001 54.65362)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/7>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-9.34754 52.93251)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/start_point/8>
+
+    Types: 
+        StartPoint,
+        <http://www.opengis.net/ont/sf#Point>
+    
+    Facts:  
+     <http://www.opengis.net/ont/geosparql#asWKT>  "POINT(-8.01378 54.18917)"^^<http://www.opengis.net/ont/geosparql#wktLiteral>
+    
+    
+Individual: <http://www.example.org/trail/10>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/10>,
+     hasCategory  category_1,
+     hasFormat  Linear,
+     hasGrade  Moderate,
+     hasQuality  <http://example.org/trail/2-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Mayo,
+     startPoint  <http://www.example.org/start_point/10>,
+     climb  310,
+     dogs_allowed  false,
+     estimated_time_to_complete  1550,
+     id  "10",
+     length  61,
+     name  "Croagh Patrick Heritage Trail"
+    
+    
+Individual: <http://www.example.org/trail/11>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/11>,
+     hasCategory  category_1,
+     hasFormat  <http://example.org/trail/Linear+Circular>,
+     hasGrade  Strenuous,
+     hasQuality  <http://example.org/trail/2-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Kerry,
+     startPoint  <http://www.example.org/start_point/11>,
+     climb  2590,
+     dogs_allowed  false,
+     estimated_time_to_complete  10080,
+     id  "11",
+     length  162,
+     name  "Dingle Way"
+    
+    
+Individual: <http://www.example.org/trail/12>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/12>,
+     hasCategory  category_1,
+     hasFormat  Loop,
+     hasGrade  Easy,
+     hasQuality  <http://example.org/trail/2-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Donegal,
+     startPoint  <http://www.example.org/start_point/12>,
+     id  "12",
+     length  77,
+     name  "Sl� An Earagail - Sli Dhun na nGall"
+    
+    
+Individual: <http://www.example.org/trail/13>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/13>,
+     hasCategory  category_1,
+     hasFormat  Circular,
+     hasGrade  Moderate,
+     hasQuality  <http://example.org/trail/2-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Donegal,
+     startPoint  <http://www.example.org/start_point/13>,
+     id  "13",
+     length  65,
+     name  "Sl� Cholmcille - Sli Dhun na nGall"
+    
+    
+Individual: <http://www.example.org/trail/14>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/14>,
+     hasCategory  category_1,
+     hasFormat  Circular,
+     hasGrade  Moderate,
+     hasQuality  <http://example.org/trail/2-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Donegal,
+     startPoint  <http://www.example.org/start_point/14>,
+     climb  1060,
+     estimated_time_to_complete  990,
+     id  "14",
+     length  51,
+     name  "Sl� Na Finne - Sli Dhun na nGall"
+    
+    
+Individual: <http://www.example.org/trail/15>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/15>,
+     hasCategory  category_1,
+     hasFormat  Circular,
+     hasGrade  Moderate,
+     hasQuality  <http://example.org/trail/2-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Donegal,
+     startPoint  <http://www.example.org/start_point/15>,
+     id  "15",
+     length  65,
+     name  "Sl� Na Rosann - Sli Dhun na nGall"
+    
+    
+Individual: <http://www.example.org/trail/16>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/16>,
+     hasCategory  category_1,
+     hasFormat  Circular,
+     hasGrade  Moderate,
+     hasQuality  <http://example.org/trail/3-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Clare,
+     startPoint  <http://www.example.org/start_point/16>,
+     climb  3060,
+     dogs_allowed  false,
+     estimated_time_to_complete  11520,
+     id  "16",
+     length  180,
+     name  "East Clare Way"
+    
+    
+Individual: <http://www.example.org/trail/17>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/17>,
+     hasCategory  category_1,
+     hasFormat  Linear,
+     hasGrade  Moderate,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Tipperary,
+     locatedIn  Waterford,
+     startPoint  <http://www.example.org/start_point/17>,
+     climb  1375,
+     estimated_time_to_complete  4320,
+     id  "17",
+     length  75,
+     name  "East Munster Way"
+    
+    
+Individual: <http://www.example.org/trail/18>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/18>,
+     hasCategory  category_1,
+     hasFormat  Linear,
+     hasGrade  Easy,
+     hasQuality  <http://example.org/trail/2-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Dublin,
+     locatedIn  Kildare,
+     locatedIn  Offaly,
+     startPoint  <http://www.example.org/start_point/18>,
+     climb  0,
+     dogs_allowed  true,
+     estimated_time_to_complete  7200,
+     id  "18",
+     length  117,
+     name  "Grand Canal Way"
+    
+    
+Individual: <http://www.example.org/trail/19>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/19>,
+     hasCategory  category_1,
+     hasFormat  Circular,
+     hasGrade  Strenuous,
+     hasQuality  <http://example.org/trail/3-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Kerry,
+     startPoint  <http://www.example.org/start_point/19>,
+     climb  5310,
+     dogs_allowed  false,
+     estimated_time_to_complete  12960,
+     id  "19",
+     length  214,
+     name  "Kerry Way"
+    
+    
+Individual: <http://www.example.org/trail/1>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/1>,
+     hasCategory  category_1,
+     hasFormat  Linear,
+     hasGrade  Moderate,
+     hasQuality  <http://example.org/trail/2-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Cork,
+     locatedIn  Limerick,
+     locatedIn  Tipperary,
+     startPoint  <http://www.example.org/start_point/1>,
+     climb  1560,
+     dogs_allowed  true,
+     estimated_time_to_complete  5760,
+     id  "1",
+     length  89,
+     name  "Ballyhoura Way"
+    
+    
+Individual: <http://www.example.org/trail/21>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/21>,
+     hasCategory  category_1,
+     hasFormat  Linear,
+     hasGrade  Moderate,
+     hasQuality  <http://example.org/trail/3-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Clare,
+     locatedIn  Limerick,
+     locatedIn  Tipperary,
+     startPoint  <http://www.example.org/start_point/21>,
+     climb  527,
+     dogs_allowed  false,
+     estimated_time_to_complete  4320,
+     id  "21",
+     length  68,
+     name  "Lough Derg Way"
+    
+    
+Individual: <http://www.example.org/trail/22>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/22>,
+     hasCategory  category_1,
+     hasFormat  Circular,
+     hasGrade  Moderate,
+     hasQuality  <http://example.org/trail/3-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Clare,
+     startPoint  <http://www.example.org/start_point/22>,
+     climb  1620,
+     dogs_allowed  false,
+     estimated_time_to_complete  8640,
+     id  "22",
+     length  148,
+     name  "Mid Clare Way"
+    
+    
+Individual: <http://www.example.org/trail/23>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/23>,
+     hasCategory  category_1,
+     hasFormat  <http://example.org/trail/2Circulars>,
+     hasGrade  Strenuous,
+     hasQuality  <http://example.org/trail/3-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Leitrim,
+     locatedIn  Roscommon,
+     locatedIn  Sligo,
+     startPoint  <http://www.example.org/start_point/23>,
+     climb  2340,
+     dogs_allowed  false,
+     estimated_time_to_complete  7200,
+     id  "23",
+     length  118,
+     name  "Miner's Way & Historical Trail"
+    
+    
+Individual: <http://www.example.org/trail/24>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/24>,
+     hasCategory  category_1,
+     hasFormat  Linear,
+     hasGrade  Moderate,
+     hasQuality  <http://example.org/trail/2-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Monaghan,
+     startPoint  <http://www.example.org/start_point/24>,
+     dogs_allowed  false,
+     estimated_time_to_complete  1000,
+     id  "24",
+     length  56.5,
+     name  "Monaghan Way"
+    
+    
+Individual: <http://www.example.org/trail/25>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/25>,
+     hasCategory  category_1,
+     hasFormat  Linear,
+     hasGrade  Easy,
+     hasQuality  <http://example.org/trail/3-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Kilkenny,
+     startPoint  <http://www.example.org/start_point/25>,
+     dogs_allowed  false,
+     estimated_time_to_complete  180,
+     id  "25",
+     length  11,
+     name  "Nore Valley Walk - Inistioge to Thomastown Section"
+    
+    
+Individual: <http://www.example.org/trail/26>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/26>,
+     hasCategory  category_1,
+     hasFormat  <http://example.org/trail/Linear+Circular>,
+     hasGrade  Moderate,
+     hasQuality  <http://example.org/trail/3-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Kerry,
+     startPoint  <http://www.example.org/start_point/26>,
+     climb  450,
+     dogs_allowed  true,
+     estimated_time_to_complete  2880,
+     id  "26",
+     length  45,
+     name  "North Kerry Way"
+    
+    
+Individual: <http://www.example.org/trail/27>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/27>,
+     hasCategory  category_1,
+     hasFormat  Linear,
+     hasGrade  Easy,
+     hasQuality  <http://example.org/trail/3-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Offaly,
+     startPoint  <http://www.example.org/start_point/27>,
+     dogs_allowed  true,
+     estimated_time_to_complete  2880,
+     id  "27",
+     length  37,
+     name  "Offaly Way"
+    
+    
+Individual: <http://www.example.org/trail/28>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/28>,
+     hasCategory  category_1,
+     hasFormat  Linear,
+     hasGrade  Easy,
+     hasQuality  <http://example.org/trail/2-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Dublin,
+     locatedIn  Kildare,
+     locatedIn  Longford,
+     locatedIn  Meath,
+     locatedIn  Westmeath,
+     startPoint  <http://www.example.org/start_point/28>,
+     dogs_allowed  true,
+     estimated_time_to_complete  4320,
+     id  "28",
+     length  144,
+     name  "Royal Canal Way"
+    
+    
+Individual: <http://www.example.org/trail/29>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/29>,
+     hasCategory  category_1,
+     hasFormat  Circular,
+     hasGrade  Moderate,
+     hasQuality  <http://example.org/trail/2-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Cork,
+     startPoint  <http://www.example.org/start_point/29>,
+     climb  2190,
+     dogs_allowed  false,
+     estimated_time_to_complete  5760,
+     id  "29",
+     length  175,
+     name  "Sheeps Head Way"
+    
+    
+Individual: <http://www.example.org/trail/2>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/2>,
+     hasCategory  category_1,
+     hasFormat  Linear,
+     hasGrade  Easy,
+     hasQuality  <http://example.org/trail/2-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Carlow,
+     locatedIn  Kildare,
+     locatedIn  Laois,
+     startPoint  <http://www.example.org/start_point/2>,
+     climb  0,
+     dogs_allowed  true,
+     estimated_time_to_complete  5760,
+     id  "2",
+     length  100,
+     name  "Barrow Way"
+    
+    
+Individual: <http://www.example.org/trail/30>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/30>,
+     hasCategory  category_1,
+     hasFormat  Circular,
+     hasGrade  Strenuous,
+     hasQuality  <http://example.org/trail/2-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Laois,
+     locatedIn  Offaly,
+     startPoint  <http://www.example.org/start_point/30>,
+     climb  1275,
+     dogs_allowed  false,
+     estimated_time_to_complete  5400,
+     id  "30",
+     length  70.5,
+     name  "Slieve Bloom Way"
+    
+    
+Individual: <http://www.example.org/trail/31>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/31>,
+     hasCategory  category_1,
+     hasFormat  Linear,
+     hasGrade  Moderate,
+     hasQuality  <http://example.org/trail/3-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Limerick,
+     locatedIn  Tipperary,
+     startPoint  <http://www.example.org/start_point/31>,
+     climb  870,
+     dogs_allowed  true,
+     estimated_time_to_complete  2880,
+     id  "31",
+     length  43,
+     name  "Slieve Felim Way"
+    
+    
+Individual: <http://www.example.org/trail/32>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/32>,
+     hasCategory  category_1,
+     hasFormat  Linear,
+     hasGrade  Moderate,
+     hasQuality  <http://example.org/trail/2-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Sligo,
+     startPoint  <http://www.example.org/start_point/32>,
+     climb  890,
+     dogs_allowed  false,
+     estimated_time_to_complete  4320,
+     id  "32",
+     length  78,
+     name  "Sligo Way"
+    
+    
+Individual: <http://www.example.org/trail/3>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/3>,
+     hasCategory  category_1,
+     hasFormat  Loop,
+     hasGrade  Strenuous,
+     hasQuality  <http://example.org/trail/2-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Cork,
+     locatedIn  Kerry,
+     startPoint  <http://www.example.org/start_point/3>,
+     climb  5245,
+     dogs_allowed  false,
+     estimated_time_to_complete  12960,
+     id  "3",
+     length  206,
+     name  "Beara Way"
+    
+    
+Individual: <http://www.example.org/trail/4>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/4>,
+     hasCategory  category_1,
+     hasFormat  Linear,
+     hasGrade  Moderate,
+     hasQuality  <http://example.org/trail/3-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Cork,
+     locatedIn  Tipperary,
+     startPoint  <http://www.example.org/start_point/4>,
+     climb  3690,
+     dogs_allowed  false,
+     estimated_time_to_complete  10080,
+     id  "4",
+     length  94,
+     name  "Blackwater Way - Avondhu"
+    
+    
+Individual: <http://www.example.org/trail/5>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/5>,
+     hasCategory  category_1,
+     hasFormat  Linear,
+     hasGrade  Moderate,
+     hasQuality  <http://example.org/trail/2-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Cork,
+     locatedIn  Kerry,
+     startPoint  <http://www.example.org/start_point/5>,
+     dogs_allowed  false,
+     estimated_time_to_complete  4320,
+     id  "5",
+     length  67,
+     name  "Blackwater Way - Duhallow"
+    
+    
+Individual: <http://www.example.org/trail/6>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/6>,
+     hasCategory  category_1,
+     hasFormat  Linear,
+     hasGrade  Moderate,
+     hasQuality  <http://example.org/trail/3-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Donegal,
+     startPoint  <http://www.example.org/start_point/6>,
+     climb  1230,
+     dogs_allowed  false,
+     estimated_time_to_complete  4320,
+     id  "6",
+     length  65,
+     name  "Bluestack Way"
+    
+    
+Individual: <http://www.example.org/trail/7>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/7>,
+     hasCategory  category_1,
+     hasFormat  Linear,
+     hasGrade  Moderate,
+     hasQuality  <http://example.org/trail/3-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Clare,
+     startPoint  <http://www.example.org/start_point/7>,
+     climb  540,
+     dogs_allowed  false,
+     estimated_time_to_complete  7200,
+     id  "7",
+     length  114,
+     name  "Burren Way"
+    
+    
+Individual: <http://www.example.org/trail/8>
+
+    Types: 
+        Trail
+    
+    Facts:  
+     finishPoint  <http://www.example.org/finish_point/8>,
+     hasCategory  category_1,
+     hasFormat  Linear,
+     hasGrade  Moderate,
+     hasQuality  <http://example.org/trail/2-star>,
+     hasType  National_Waymarked_Trail,
+     locatedIn  Cavan,
+     startPoint  <http://www.example.org/start_point/8>,
+     climb  330,
+     dogs_allowed  false,
+     estimated_time_to_complete  1440,
+     id  "8",
+     length  22,
+     name  "Cavan Way"
+    
+    
+Individual: Carlow
+
+    Types: 
+        County
+    
+    Facts:  
+     locatedIn  Leinster
+    
+    
+Individual: Cavan
+
+    Types: 
+        County
+    
+    Facts:  
+     locatedIn  Ulster
+    
+    
+Individual: Circular
+
+    Types: 
+        Format
+    
+    Facts:  
+     value  "Circular"^^xsd:string
+    
+    
+Individual: Clare
+
+    Types: 
+        County
+    
+    Facts:  
+     locatedIn  Munster
+    
+    
+Individual: Connaught
+
+    Types: 
+        Province
+    
+    
+Individual: Cork
+
+    Types: 
+        County
+    
+    Facts:  
+     locatedIn  Munster
+    
+    
+Individual: Donegal
+
+    Types: 
+        County
+    
+    Facts:  
+     locatedIn  Ulster
+    
+    
+Individual: Dublin
+
+    Types: 
+        County
+    
+    Facts:  
+     locatedIn  Leinster
+    
+    
+Individual: Easy
+
+    Types: 
+        Grade
+    
+    
+Individual: Kerry
+
+    Types: 
+        County
+    
+    Facts:  
+     locatedIn  Munster
+    
+    
+Individual: Kildare
+
+    Types: 
+        County
+    
+    Facts:  
+     locatedIn  Leinster
+    
+    
+Individual: Kilkenny
+
+    Types: 
+        County
+    
+    Facts:  
+     locatedIn  Leinster
+    
+    
+Individual: Laois
+
+    Types: 
+        County
+    
+    Facts:  
+     locatedIn  Leinster
+    
+    
+Individual: Leinster
+
+    Types: 
+        Province
+    
+    
+Individual: Leitrim
+
+    Types: 
+        County
+    
+    Facts:  
+     locatedIn  Connaught
+    
+    
+Individual: Limerick
+
+    Types: 
+        County
+    
+    Facts:  
+     locatedIn  Munster
+    
+    
+Individual: Linear
+
+    Types: 
+        Format
+    
+    Facts:  
+     value  "Linear"^^xsd:string
+    
+    
+Individual: Longford
+
+    Types: 
+        County
+    
+    Facts:  
+     locatedIn  Leinster
+    
+    
+Individual: Loop
+
+    Types: 
+        Format
+    
+    Facts:  
+     value  "Loop"^^xsd:string
+    
+    
+Individual: Mayo
+
+    Types: 
+        County
+    
+    Facts:  
+     locatedIn  Connaught
+    
+    
+Individual: Meath
+
+    Types: 
+        County
+    
+    Facts:  
+     locatedIn  Leinster
+    
+    
+Individual: Moderate
+
+    Types: 
+        Grade
+    
+    
+Individual: Monaghan
+
+    Types: 
+        County
+    
+    Facts:  
+     locatedIn  Ulster
+    
+    
+Individual: Munster
+
+    Types: 
+        Province
+    
+    
+Individual: National_Waymarked_Trail
+
+    Types: 
+        TrailType
+    
+    
+Individual: Offaly
+
+    Types: 
+        County
+    
+    Facts:  
+     locatedIn  Leinster
+    
+    
+Individual: Roscommon
+
+    Types: 
+        County
+    
+    Facts:  
+     locatedIn  Connaught
+    
+    
+Individual: Sligo
+
+    Types: 
+        County
+    
+    Facts:  
+     locatedIn  Connaught
+    
+    
+Individual: Strenuous
+
+    Types: 
+        Grade
+    
+    
+Individual: Tipperary
+
+    Types: 
+        County
+    
+    Facts:  
+     locatedIn  Munster
+    
+    
+Individual: Ulster
+
+    Types: 
+        Province
+    
+    
+Individual: Waterford
+
+    Types: 
+        County
+    
+    Facts:  
+     locatedIn  Leinster
+    
+    
+Individual: Westmeath
+
+    Types: 
+        County
+    
+    Facts:  
+     locatedIn  Leinster
+    
+    
+Individual: category_1
+
+    Types: 
+        Category
+    
+    
+Individual: _:genid2147483648
+
+    Annotations: 
+        rdfs:comment "Approximately how long it takes to complete this trail"
+    
+    
