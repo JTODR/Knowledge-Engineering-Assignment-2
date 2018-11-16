@@ -19,7 +19,7 @@ PREFIX trail: <http://example.org/trail/>
 #   Parameters:  format
 #   Returns:     district, trailName
 
-SELECT ?districtName ?trailName
+SELECT ?districtName ?trailName ?trailFormat
 WHERE {
   ?district a osi:Municipal_District.
   ?district rdfs:label ?districtName.
