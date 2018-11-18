@@ -1,17 +1,9 @@
-PREFIX afn: <http://jena.hpl.hp.com/ARQ/function#>
-PREFIX fn: <http://www.w3.org/2005/xpath-functions#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX par: <http://parliament.semwebcentral.org/parliament#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX time: <http://www.w3.org/2006/time#>
-PREFIX xml: <http://www.w3.org/XML/1998/namespace>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-
 PREFIX osi: <http://ontologies.geohive.ie/osi#>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX sf: <http://www.opengis.net/ont/sf#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 PREFIX trail: <http://example.org/trail/>
 
@@ -32,9 +24,9 @@ WHERE {
   ?spGeom geo:asWKT ?trailStartPoint.
   ?trail trail:dogs_allowed ?trailDogsAllowed.
   ?trail trail:estimated_time_to_complete ?trailEstimatedCompletionTime.
-  
+
   FILTER(geof:sfWithin(?trailStartPoint, ?wkt) && ?trailDogsAllowed = "true"^^xsd:boolean).
-  
+
   # Remove duplicates that have the @en language tag
    FILTER ( LANG(?districtName) = "" && LANG(?trailName) = "").
 }ORDER BY ASC(?trailEstimatedCompletionTime)

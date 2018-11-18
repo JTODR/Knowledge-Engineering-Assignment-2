@@ -1,7 +1,4 @@
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
 PREFIX osi: <http://ontologies.geohive.ie/osi#>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
@@ -27,7 +24,7 @@ WHERE {
 
   # Get the current district. POINT(LONG, LAT)
   FILTER(geof:sfWithin("POINT(%PARAM_0% %PARAM_1%)"^^sf:wktLiteral, ?wkt) && geof:sfWithin(?trailStartPoint, ?wkt)).
-  
+
   # Remove duplicates that have the @en language tag
   FILTER ( LANG(?districtName) = "" && LANG(?trailName) = "").
 }
