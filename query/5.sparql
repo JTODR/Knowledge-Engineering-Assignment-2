@@ -11,7 +11,7 @@ PREFIX trail: <http://example.org/trail/>
 #   Parameters:  climb(m)
 #   Returns:     district, trailClimb(m), trailName
 
-SELECT ?districtName ?trailClimb ?trailName
+SELECT DISTINCT ?districtName ?trailClimb ?trailName
 WHERE {
   ?district a osi:Municipal_District.
   ?district rdfs:label ?districtName.

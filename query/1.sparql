@@ -10,7 +10,7 @@ PREFIX trail: <http://example.org/trail/>
 #   Parameters:  current long and lat
 #   Returns:     districtName, number of trails
 
-SELECT ?districtName (count(distinct ?trail) AS ?count)
+SELECT DISTINCT ?districtName (count(distinct ?trail) AS ?count)
 WHERE {
   ?district a osi:Municipal_District.
   ?district rdfs:label ?districtName.

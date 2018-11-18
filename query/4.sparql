@@ -10,7 +10,7 @@ PREFIX trail: <http://example.org/trail/>
 #   Parameters:  quality
 #   Returns:     district, quality, trailName
 
-SELECT ?districtName ?trailQualityValue ?trailName
+SELECT DISTINCT ?districtName ?trailQualityValue ?trailName
 WHERE {
   ?district a osi:Municipal_District.
   ?district rdfs:label ?districtName.

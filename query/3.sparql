@@ -11,7 +11,7 @@ PREFIX trail: <http://example.org/trail/>
 #   Parameters:  length(km)
 #   Returns:     district
 
-SELECT ?districtName ?trailName ?trailLength
+SELECT DISTINCT ?districtName ?trailName ?trailLength
 WHERE {
   ?district a osi:Municipal_District.
   ?district rdfs:label ?districtName.
