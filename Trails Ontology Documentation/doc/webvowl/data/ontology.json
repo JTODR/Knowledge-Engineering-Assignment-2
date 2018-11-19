@@ -3,12 +3,58 @@
   "header" : {
     "languages" : [ "undefined" ],
     "baseIris" : [ "http://www.opengis.net/ont/sf", "http://www.w3.org/2000/01/rdf-schema", "http://example.org/trail", "http://www.w3.org/2001/XMLSchema", "http://www.opengis.net/ont/geosparql" ],
+    "title" : {
+      "undefined" : "Sport Ireland Trails Dataset Uplifted to RDF"
+    },
     "iri" : "http://example.org/trail/",
+    "version" : "1.0.1",
+    "author" : [ "Alanna O'Grady, Ammar Qureshi, Joseph O'Donovan Ryan, Keith Tunstead, Rowan Sutton" ],
+    "description" : {
+      "undefined" : "\"This data set contains the National Trails Register a collection of looped walks, waymarked ways and cycling routes in the Republic of Ireland.\" - Sport Ireland"
+    },
     "labels" : {
       "undefined" : "Sport Ireland Trails"
     },
     "comments" : {
-      "undefined" : "This data set contains the National Trails Register a collection of looped walks, waymarked ways and cycling routes in the Republic of Ireland."
+      "undefined" : "\"This data set contains the National Trails Register a collection of looped walks, waymarked ways and cycling routes in the Republic of Ireland.\" - Sport Ireland"
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Alanna O'Grady, Ammar Qureshi, Joseph O'Donovan Ryan, Keith Tunstead, Rowan Sutton",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2018-10-25T00:00:00",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2018-11-23T00:00:00Z",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "undefined",
+        "value" : "This ontology contains the RDF uplifted version of Sport Ireland's National Trails Register CSV [Available at https://data.gov.ie/dataset/sport-ireland-trails]. This ontology uses a mixture of object properties and data properties for storing trail information and is available in both Turtle and OWL format. The ontology is also LODE compatible with the documentation generated through Widoco [https://github.com/dgarijo/Widoco].\n\nThese object properties are used for storing information regarding the trail's start point, finish point, category, format, grade, quality, type and county. The data properties contian information about the trail's name, ID, length, climb, estimated time to complete and whether dogs are allowed on the trail.\n\nThis ontology was created for use with Geohive's \"Municipal Districts\" dataset [Available at http://data.geohive.ie/dumps/municipal-district/default.ttl] for district-based trail data queries.",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0.1",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Sport Ireland Trails Dataset Uplifted to RDF",
+        "type" : "label"
+      } ]
     }
   },
   "namespace" : [ ],
@@ -58,7 +104,7 @@
     "id" : "1",
     "type" : "owl:Thing"
   }, {
-    "id" : "31",
+    "id" : "27",
     "type" : "owl:Class"
   }, {
     "id" : "26",
@@ -70,13 +116,13 @@
     "id" : "43",
     "type" : "owl:Class"
   }, {
-    "id" : "29",
+    "id" : "30",
     "type" : "owl:Class"
   }, {
     "id" : "14",
     "type" : "owl:Class"
   }, {
-    "id" : "27",
+    "id" : "37",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -100,16 +146,16 @@
         "IRI-based" : "2Circulars"
       }
     }, {
-      "iri" : "http://example.org/trail/Linear+Circular",
-      "baseIri" : "http://example.org/trail",
-      "labels" : {
-        "IRI-based" : "Linear+Circular"
-      }
-    }, {
       "iri" : "http://example.org/trail/Linear",
       "baseIri" : "http://example.org/trail",
       "labels" : {
         "IRI-based" : "Linear"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Linear+Circular",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Linear+Circular"
       }
     }, {
       "iri" : "http://example.org/trail/Circular",
@@ -174,16 +220,16 @@
         "IRI-based" : "2"
       }
     }, {
-      "iri" : "http://www.example.org/start_point/19",
-      "baseIri" : "http://www.example.org/start_point",
-      "labels" : {
-        "IRI-based" : "19"
-      }
-    }, {
       "iri" : "http://www.example.org/start_point/3",
       "baseIri" : "http://www.example.org/start_point",
       "labels" : {
         "IRI-based" : "3"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/19",
+      "baseIri" : "http://www.example.org/start_point",
+      "labels" : {
+        "IRI-based" : "19"
       }
     }, {
       "iri" : "http://www.example.org/start_point/1",
@@ -246,16 +292,16 @@
         "IRI-based" : "10"
       }
     }, {
-      "iri" : "http://www.example.org/finish_point/5",
-      "baseIri" : "http://www.example.org/finish_point",
-      "labels" : {
-        "IRI-based" : "5"
-      }
-    }, {
       "iri" : "http://www.example.org/finish_point/32",
       "baseIri" : "http://www.example.org/finish_point",
       "labels" : {
         "IRI-based" : "32"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/5",
+      "baseIri" : "http://www.example.org/finish_point",
+      "labels" : {
+        "IRI-based" : "5"
       }
     }, {
       "iri" : "http://www.example.org/finish_point/6",
@@ -264,28 +310,28 @@
         "IRI-based" : "6"
       }
     }, {
-      "iri" : "http://www.example.org/finish_point/3",
-      "baseIri" : "http://www.example.org/finish_point",
-      "labels" : {
-        "IRI-based" : "3"
-      }
-    }, {
       "iri" : "http://www.example.org/finish_point/30",
       "baseIri" : "http://www.example.org/finish_point",
       "labels" : {
         "IRI-based" : "30"
       }
     }, {
-      "iri" : "http://www.example.org/finish_point/31",
+      "iri" : "http://www.example.org/finish_point/3",
       "baseIri" : "http://www.example.org/finish_point",
       "labels" : {
-        "IRI-based" : "31"
+        "IRI-based" : "3"
       }
     }, {
       "iri" : "http://www.example.org/finish_point/4",
       "baseIri" : "http://www.example.org/finish_point",
       "labels" : {
         "IRI-based" : "4"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/31",
+      "baseIri" : "http://www.example.org/finish_point",
+      "labels" : {
+        "IRI-based" : "31"
       }
     }, {
       "iri" : "http://www.example.org/finish_point/7",
@@ -300,28 +346,28 @@
         "IRI-based" : "8"
       }
     }, {
-      "iri" : "http://www.example.org/finish_point/1",
-      "baseIri" : "http://www.example.org/finish_point",
-      "labels" : {
-        "IRI-based" : "1"
-      }
-    }, {
       "iri" : "http://www.example.org/start_point/27",
       "baseIri" : "http://www.example.org/start_point",
       "labels" : {
         "IRI-based" : "27"
       }
     }, {
-      "iri" : "http://www.example.org/start_point/26",
-      "baseIri" : "http://www.example.org/start_point",
+      "iri" : "http://www.example.org/finish_point/1",
+      "baseIri" : "http://www.example.org/finish_point",
       "labels" : {
-        "IRI-based" : "26"
+        "IRI-based" : "1"
       }
     }, {
       "iri" : "http://www.example.org/finish_point/2",
       "baseIri" : "http://www.example.org/finish_point",
       "labels" : {
         "IRI-based" : "2"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/26",
+      "baseIri" : "http://www.example.org/start_point",
+      "labels" : {
+        "IRI-based" : "26"
       }
     }, {
       "iri" : "http://www.example.org/start_point/29",
@@ -504,28 +550,28 @@
         "IRI-based" : "7"
       }
     }, {
-      "iri" : "http://www.example.org/start_point/4",
-      "baseIri" : "http://www.example.org/start_point",
-      "labels" : {
-        "IRI-based" : "4"
-      }
-    }, {
       "iri" : "http://www.example.org/finish_point/23",
       "baseIri" : "http://www.example.org/finish_point",
       "labels" : {
         "IRI-based" : "23"
       }
     }, {
-      "iri" : "http://www.example.org/finish_point/24",
-      "baseIri" : "http://www.example.org/finish_point",
+      "iri" : "http://www.example.org/start_point/4",
+      "baseIri" : "http://www.example.org/start_point",
       "labels" : {
-        "IRI-based" : "24"
+        "IRI-based" : "4"
       }
     }, {
       "iri" : "http://www.example.org/start_point/5",
       "baseIri" : "http://www.example.org/start_point",
       "labels" : {
         "IRI-based" : "5"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/24",
+      "baseIri" : "http://www.example.org/finish_point",
+      "labels" : {
+        "IRI-based" : "24"
       }
     } ],
     "subClasses" : [ "14", "18" ],
@@ -650,7 +696,7 @@
     "comment" : {
       "undefined" : "A measure of how difficult the trail will be to walk."
     },
-    "id" : "31"
+    "id" : "27"
   }, {
     "iri" : "http://example.org/trail/Trail",
     "baseIri" : "http://example.org/trail",
@@ -762,16 +808,16 @@
         "IRI-based" : "2"
       }
     }, {
-      "iri" : "http://www.example.org/trail/3",
-      "baseIri" : "http://www.example.org/trail",
-      "labels" : {
-        "IRI-based" : "3"
-      }
-    }, {
       "iri" : "http://www.example.org/trail/18",
       "baseIri" : "http://www.example.org/trail",
       "labels" : {
         "IRI-based" : "18"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/3",
+      "baseIri" : "http://www.example.org/trail",
+      "labels" : {
+        "IRI-based" : "3"
       }
     }, {
       "iri" : "http://www.example.org/trail/19",
@@ -822,16 +868,16 @@
         "IRI-based" : "13"
       }
     }, {
-      "iri" : "http://www.example.org/trail/10",
-      "baseIri" : "http://www.example.org/trail",
-      "labels" : {
-        "IRI-based" : "10"
-      }
-    }, {
       "iri" : "http://www.example.org/trail/32",
       "baseIri" : "http://www.example.org/trail",
       "labels" : {
         "IRI-based" : "32"
+      }
+    }, {
+      "iri" : "http://www.example.org/trail/10",
+      "baseIri" : "http://www.example.org/trail",
+      "labels" : {
+        "IRI-based" : "10"
       }
     }, {
       "iri" : "http://www.example.org/trail/11",
@@ -859,16 +905,16 @@
         "IRI-based" : "2"
       }
     }, {
-      "iri" : "http://www.example.org/start_point/19",
-      "baseIri" : "http://www.example.org/start_point",
-      "labels" : {
-        "IRI-based" : "19"
-      }
-    }, {
       "iri" : "http://www.example.org/start_point/3",
       "baseIri" : "http://www.example.org/start_point",
       "labels" : {
         "IRI-based" : "3"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/19",
+      "baseIri" : "http://www.example.org/start_point",
+      "labels" : {
+        "IRI-based" : "19"
       }
     }, {
       "iri" : "http://www.example.org/start_point/1",
@@ -931,16 +977,16 @@
         "IRI-based" : "30"
       }
     }, {
-      "iri" : "http://www.example.org/start_point/32",
-      "baseIri" : "http://www.example.org/start_point",
-      "labels" : {
-        "IRI-based" : "32"
-      }
-    }, {
       "iri" : "http://www.example.org/start_point/10",
       "baseIri" : "http://www.example.org/start_point",
       "labels" : {
         "IRI-based" : "10"
+      }
+    }, {
+      "iri" : "http://www.example.org/start_point/32",
+      "baseIri" : "http://www.example.org/start_point",
+      "labels" : {
+        "IRI-based" : "32"
       }
     }, {
       "iri" : "http://www.example.org/start_point/31",
@@ -1074,7 +1120,7 @@
     "comment" : {
       "undefined" : "The type of trail"
     },
-    "id" : "29"
+    "id" : "30"
   }, {
     "iri" : "http://example.org/trail/FinishPoint",
     "baseIri" : "http://example.org/trail",
@@ -1114,16 +1160,16 @@
         "IRI-based" : "32"
       }
     }, {
-      "iri" : "http://www.example.org/finish_point/5",
-      "baseIri" : "http://www.example.org/finish_point",
-      "labels" : {
-        "IRI-based" : "5"
-      }
-    }, {
       "iri" : "http://www.example.org/finish_point/10",
       "baseIri" : "http://www.example.org/finish_point",
       "labels" : {
         "IRI-based" : "10"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/5",
+      "baseIri" : "http://www.example.org/finish_point",
+      "labels" : {
+        "IRI-based" : "5"
       }
     }, {
       "iri" : "http://www.example.org/finish_point/11",
@@ -1150,16 +1196,16 @@
         "IRI-based" : "3"
       }
     }, {
-      "iri" : "http://www.example.org/finish_point/31",
-      "baseIri" : "http://www.example.org/finish_point",
-      "labels" : {
-        "IRI-based" : "31"
-      }
-    }, {
       "iri" : "http://www.example.org/finish_point/4",
       "baseIri" : "http://www.example.org/finish_point",
       "labels" : {
         "IRI-based" : "4"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/31",
+      "baseIri" : "http://www.example.org/finish_point",
+      "labels" : {
+        "IRI-based" : "31"
       }
     }, {
       "iri" : "http://www.example.org/finish_point/14",
@@ -1174,16 +1220,16 @@
         "IRI-based" : "15"
       }
     }, {
-      "iri" : "http://www.example.org/finish_point/12",
-      "baseIri" : "http://www.example.org/finish_point",
-      "labels" : {
-        "IRI-based" : "12"
-      }
-    }, {
       "iri" : "http://www.example.org/finish_point/7",
       "baseIri" : "http://www.example.org/finish_point",
       "labels" : {
         "IRI-based" : "7"
+      }
+    }, {
+      "iri" : "http://www.example.org/finish_point/12",
+      "baseIri" : "http://www.example.org/finish_point",
+      "labels" : {
+        "IRI-based" : "12"
       }
     }, {
       "iri" : "http://www.example.org/finish_point/8",
@@ -1284,22 +1330,22 @@
         "IRI-based" : "Kildare"
       }
     }, {
-      "iri" : "http://example.org/trail/Carlow",
-      "baseIri" : "http://example.org/trail",
-      "labels" : {
-        "IRI-based" : "Carlow"
-      }
-    }, {
       "iri" : "http://example.org/trail/Waterford",
       "baseIri" : "http://example.org/trail",
       "labels" : {
         "IRI-based" : "Waterford"
       }
     }, {
-      "iri" : "http://example.org/trail/Leitrim",
+      "iri" : "http://example.org/trail/Carlow",
       "baseIri" : "http://example.org/trail",
       "labels" : {
-        "IRI-based" : "Leitrim"
+        "IRI-based" : "Carlow"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Longford",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Longford"
       }
     }, {
       "iri" : "http://example.org/trail/Tipperary",
@@ -1308,10 +1354,10 @@
         "IRI-based" : "Tipperary"
       }
     }, {
-      "iri" : "http://example.org/trail/Longford",
+      "iri" : "http://example.org/trail/Leitrim",
       "baseIri" : "http://example.org/trail",
       "labels" : {
-        "IRI-based" : "Longford"
+        "IRI-based" : "Leitrim"
       }
     }, {
       "iri" : "http://example.org/trail/Cork",
@@ -1326,10 +1372,16 @@
         "IRI-based" : "Sligo"
       }
     }, {
-      "iri" : "http://example.org/trail/Limerick",
+      "iri" : "http://example.org/trail/Cavan",
       "baseIri" : "http://example.org/trail",
       "labels" : {
-        "IRI-based" : "Limerick"
+        "IRI-based" : "Cavan"
+      }
+    }, {
+      "iri" : "http://example.org/trail/Offaly",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Offaly"
       }
     }, {
       "iri" : "http://example.org/trail/Laois",
@@ -1344,16 +1396,10 @@
         "IRI-based" : "Roscommon"
       }
     }, {
-      "iri" : "http://example.org/trail/Offaly",
+      "iri" : "http://example.org/trail/Limerick",
       "baseIri" : "http://example.org/trail",
       "labels" : {
-        "IRI-based" : "Offaly"
-      }
-    }, {
-      "iri" : "http://example.org/trail/Cavan",
-      "baseIri" : "http://example.org/trail",
-      "labels" : {
-        "IRI-based" : "Cavan"
+        "IRI-based" : "Limerick"
       }
     }, {
       "iri" : "http://example.org/trail/Donegal",
@@ -1398,22 +1444,22 @@
         "IRI-based" : "Dublin"
       }
     }, {
-      "iri" : "http://example.org/trail/Clare",
-      "baseIri" : "http://example.org/trail",
-      "labels" : {
-        "IRI-based" : "Clare"
-      }
-    }, {
       "iri" : "http://example.org/trail/Monaghan",
       "baseIri" : "http://example.org/trail",
       "labels" : {
         "IRI-based" : "Monaghan"
       }
+    }, {
+      "iri" : "http://example.org/trail/Clare",
+      "baseIri" : "http://example.org/trail",
+      "labels" : {
+        "IRI-based" : "Clare"
+      }
     } ],
     "comment" : {
       "undefined" : "The counties which this trail passes through."
     },
-    "id" : "27"
+    "id" : "37"
   } ],
   "property" : [ {
     "id" : "0",
@@ -1443,10 +1489,10 @@
     "id" : "25",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "28",
+    "id" : "29",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "30",
+    "id" : "31",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "32",
@@ -1464,7 +1510,7 @@
     "id" : "36",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "37",
+    "id" : "38",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "39",
@@ -1525,7 +1571,7 @@
       "IRI-based" : "hasType"
     },
     "domain" : "1",
-    "attributes" : [ "functional", "object" ],
+    "attributes" : [ "object", "functional" ],
     "id" : "5"
   }, {
     "iri" : "http://example.org/trail/name",
@@ -1580,14 +1626,15 @@
     "attributes" : [ "datatype" ],
     "id" : "19"
   }, {
-    "iri" : "http://example.org/trail/locatedIn",
+    "iri" : "http://example.org/trail/hasGrade",
+    "inverse" : "28",
     "baseIri" : "http://example.org/trail",
     "range" : "27",
     "label" : {
-      "IRI-based" : "locatedIn"
+      "IRI-based" : "hasGrade"
     },
     "domain" : "26",
-    "attributes" : [ "transitive", "object", "allValues" ],
+    "attributes" : [ "allValues", "object", "functional" ],
     "id" : "25"
   }, {
     "iri" : "http://example.org/trail/isTypeOf",
@@ -1596,9 +1643,9 @@
     "label" : {
       "IRI-based" : "isTypeOf"
     },
-    "domain" : "29",
-    "attributes" : [ "object", "allValues" ],
-    "id" : "28"
+    "domain" : "30",
+    "attributes" : [ "allValues", "object" ],
+    "id" : "29"
   }, {
     "iri" : "http://example.org/trail/id",
     "baseIri" : "http://example.org/trail",
@@ -1612,7 +1659,7 @@
       "undefined" : "The trail ID as specified in the original Sport Ireland CSV dataset"
     },
     "attributes" : [ "datatype" ],
-    "id" : "30"
+    "id" : "31"
   }, {
     "iri" : "http://example.org/trail/isFormatOf",
     "baseIri" : "http://example.org/trail",
@@ -1621,7 +1668,7 @@
       "IRI-based" : "isFormatOf"
     },
     "domain" : "7",
-    "attributes" : [ "object", "allValues" ],
+    "attributes" : [ "allValues", "object" ],
     "id" : "32"
   }, {
     "iri" : "http://example.org/trail/isGradeOf",
@@ -1630,8 +1677,8 @@
     "label" : {
       "IRI-based" : "isGradeOf"
     },
-    "domain" : "31",
-    "attributes" : [ "object", "allValues" ],
+    "domain" : "27",
+    "attributes" : [ "allValues", "object" ],
     "id" : "33"
   }, {
     "iri" : "http://example.org/trail/isQualityOf",
@@ -1641,7 +1688,7 @@
       "IRI-based" : "isQualityOf"
     },
     "domain" : "10",
-    "attributes" : [ "object", "allValues" ],
+    "attributes" : [ "allValues", "object" ],
     "id" : "34"
   }, {
     "iri" : "http://example.org/trail/startPoint",
@@ -1655,33 +1702,18 @@
     "comment" : {
       "undefined" : "Defines the start \"Point\" object for the trail"
     },
-    "attributes" : [ "symmetric", "functional", "object", "allValues" ],
+    "attributes" : [ "allValues", "object", "functional", "symmetric" ],
     "id" : "35"
   }, {
-    "iri" : "http://example.org/trail/finishPoint",
+    "iri" : "http://example.org/trail/locatedIn",
     "baseIri" : "http://example.org/trail",
-    "range" : "14",
+    "range" : "37",
     "label" : {
-      "IRI-based" : "finishPoint",
-      "undefined" : "Finish point"
+      "IRI-based" : "locatedIn"
     },
     "domain" : "26",
-    "comment" : {
-      "undefined" : "Specifies the finish \"Point\" object for the trail"
-    },
-    "attributes" : [ "symmetric", "functional", "object", "allValues" ],
+    "attributes" : [ "allValues", "transitive", "object" ],
     "id" : "36"
-  }, {
-    "iri" : "http://example.org/trail/hasQuality",
-    "inverse" : "38",
-    "baseIri" : "http://example.org/trail",
-    "range" : "10",
-    "label" : {
-      "IRI-based" : "hasQuality"
-    },
-    "domain" : "26",
-    "attributes" : [ "functional", "object", "allValues" ],
-    "id" : "37"
   }, {
     "iri" : "http://example.org/trail/startPoint",
     "baseIri" : "http://example.org/trail",
@@ -1694,18 +1726,32 @@
     "comment" : {
       "undefined" : "Defines the start \"Point\" object for the trail"
     },
-    "attributes" : [ "symmetric", "functional", "object", "allValues" ],
-    "id" : "39"
+    "attributes" : [ "allValues", "object", "functional", "symmetric" ],
+    "id" : "38"
   }, {
-    "iri" : "http://example.org/trail/hasGrade",
-    "inverse" : "41",
+    "iri" : "http://example.org/trail/finishPoint",
     "baseIri" : "http://example.org/trail",
-    "range" : "31",
+    "range" : "14",
     "label" : {
-      "IRI-based" : "hasGrade"
+      "IRI-based" : "finishPoint",
+      "undefined" : "Finish point"
     },
     "domain" : "26",
-    "attributes" : [ "functional", "object", "allValues" ],
+    "comment" : {
+      "undefined" : "Specifies the finish \"Point\" object for the trail"
+    },
+    "attributes" : [ "allValues", "object", "functional", "symmetric" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://example.org/trail/hasQuality",
+    "inverse" : "41",
+    "baseIri" : "http://example.org/trail",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "hasQuality"
+    },
+    "domain" : "26",
+    "attributes" : [ "allValues", "object", "functional" ],
     "id" : "40"
   }, {
     "iri" : "http://example.org/trail/isCategoryOf",
@@ -1715,7 +1761,7 @@
       "IRI-based" : "isCategoryOf"
     },
     "domain" : "43",
-    "attributes" : [ "object", "allValues" ],
+    "attributes" : [ "allValues", "object" ],
     "id" : "42"
   }, {
     "iri" : "http://example.org/trail/dogs_allowed",
@@ -1743,7 +1789,7 @@
     "comment" : {
       "undefined" : "Specifies the finish \"Point\" object for the trail"
     },
-    "attributes" : [ "symmetric", "functional", "object", "allValues" ],
+    "attributes" : [ "allValues", "object", "functional", "symmetric" ],
     "id" : "45"
   }, {
     "iri" : "http://www.opengis.net/ont/geosparql#asWKT",
@@ -1753,7 +1799,7 @@
       "IRI-based" : "asWKT"
     },
     "domain" : "1",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "46"
   }, {
     "iri" : "http://example.org/trail/value",
@@ -1774,7 +1820,7 @@
       "IRI-based" : "hasCategory"
     },
     "domain" : "1",
-    "attributes" : [ "functional", "object" ],
+    "attributes" : [ "object", "functional" ],
     "id" : "48"
   } ]
 }

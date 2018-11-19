@@ -192,11 +192,34 @@
 }, {
   "@id" : "http://example.org/trail/",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@value" : "This ontology contains the RDF uplifted version of Sport Ireland's National Trails Register CSV [Available at https://data.gov.ie/dataset/sport-ireland-trails]. This ontology uses a mixture of object properties and data properties for storing trail information and is available in both Turtle and OWL format. The ontology is also LODE compatible with the documentation generated through Widoco [https://github.com/dgarijo/Widoco].\n\nThese object properties are used for storing information regarding the trail's start point, finish point, category, format, grade, quality, type and county. The data properties contian information about the trail's name, ID, length, climb, estimated time to complete and whether dogs are allowed on the trail.\n\nThis ontology was created for use with Geohive's \"Municipal Districts\" dataset [Available at http://data.geohive.ie/dumps/municipal-district/default.ttl] for district-based trail data queries."
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2018-10-25T00:00:00"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Alanna O'Grady, Ammar Qureshi, Joseph O'Donovan Ryan, Keith Tunstead, Rowan Sutton"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "\"This data set contains the National Trails Register a collection of looped walks, waymarked ways and cycling routes in the Republic of Ireland.\" - Sport Ireland"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2018-11-23T00:00:00Z"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "Sport Ireland Trails Dataset Uplifted to RDF"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This data set contains the National Trails Register a collection of looped walks, waymarked ways and cycling routes in the Republic of Ireland."
+    "@value" : "\"This data set contains the National Trails Register a collection of looped walks, waymarked ways and cycling routes in the Republic of Ireland.\" - Sport Ireland"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Sport Ireland Trails"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "1.0.1"
   } ]
 }, {
   "@id" : "http://example.org/trail/1-star",
@@ -662,6 +685,24 @@
 }, {
   "@id" : "http://example.org/trail/value",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.example.org/finish_point/1",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.org/trail/FinishPoint", "http://www.opengis.net/ont/sf#Point" ],

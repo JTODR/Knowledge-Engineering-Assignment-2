@@ -7,8 +7,47 @@
 @base <http://example.org/trail/> .
 
 <http://example.org/trail/> rdf:type owl:Ontology ;
-                             rdfs:comment "This data set contains the National Trails Register a collection of looped walks, waymarked ways and cycling routes in the Republic of Ireland." ;
-                             rdfs:label "Sport Ireland Trails" .
+                             <http://purl.org/dc/terms/abstract> """This ontology contains the RDF uplifted version of Sport Ireland's National Trails Register CSV [Available at https://data.gov.ie/dataset/sport-ireland-trails]. This ontology uses a mixture of object properties and data properties for storing trail information and is available in both Turtle and OWL format. The ontology is also LODE compatible with the documentation generated through Widoco [https://github.com/dgarijo/Widoco].
+
+These object properties are used for storing information regarding the trail's start point, finish point, category, format, grade, quality, type and county. The data properties contian information about the trail's name, ID, length, climb, estimated time to complete and whether dogs are allowed on the trail.
+
+This ontology was created for use with Geohive's \"Municipal Districts\" dataset [Available at http://data.geohive.ie/dumps/municipal-district/default.ttl] for district-based trail data queries.""" ;
+                             <http://purl.org/dc/terms/created> "2018-10-25T00:00:00"^^xsd:dateTime ;
+                             <http://purl.org/dc/terms/creator> "Alanna O'Grady, Ammar Qureshi, Joseph O'Donovan Ryan, Keith Tunstead, Rowan Sutton" ;
+                             <http://purl.org/dc/terms/description> "\"This data set contains the National Trails Register a collection of looped walks, waymarked ways and cycling routes in the Republic of Ireland.\" - Sport Ireland" ;
+                             <http://purl.org/dc/terms/modified> "2018-11-23T00:00:00Z"^^xsd:dateTime ;
+                             <http://purl.org/dc/terms/title> "Sport Ireland Trails Dataset Uplifted to RDF" ;
+                             rdfs:comment "\"This data set contains the National Trails Register a collection of looped walks, waymarked ways and cycling routes in the Republic of Ireland.\" - Sport Ireland" ;
+                             rdfs:label "Sport Ireland Trails" ;
+                             owl:versionInfo "1.0.1" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
 
 #################################################################
 #    Datatypes
