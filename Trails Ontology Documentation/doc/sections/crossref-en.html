@@ -28,8 +28,8 @@ This section provides details for each class and property defined by Sport Irela
          <a href="#Trail" title="http://example.org/trail/Trail">Trail</a>
       </li>
       <li>
-         <a href="#Type" title="http://example.org/trail/Type">
-            <span>type</span>
+         <a href="#TrailType" title="http://example.org/trail/TrailType">
+            <span>trail type</span>
          </a>
       </li>
    </ul>
@@ -44,9 +44,17 @@ This section provides details for each class and property defined by Sport Irela
          <span class="markdown">The category of trail signified as an integer.</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://example.org/trail/isCategoryOf">is category of</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Trail" title="http://example.org/trail/Trail">Trail</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has members</dt>
          <dd>
-            <a href="#1" title="http://example.org/trail/1">1</a>
+            <a href="#category_1" title="http://example.org/trail/category_1">category 1</a>
             <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
@@ -106,6 +114,13 @@ This section provides details for each class and property defined by Sport Irela
             <span class="dotted" title="http://www.opengis.net/ont/sf#Point">point</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dd>
+            <a href="#finishPoint" title="http://example.org/trail/finishPoint">Finish point</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Trail" title="http://example.org/trail/Trail">Trail</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has members</dt>
          <dd>
             <a href="#http://www.example.org/finish_point/1" title="http://www.example.org/finish_point/1">1</a>
@@ -153,6 +168,14 @@ This section provides details for each class and property defined by Sport Irela
          <span class="markdown">The trail format signifying whether the trail is linear, circular, etc.</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://example.org/trail/isFormatOf">is format of</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Trail" title="http://example.org/trail/Trail">Trail</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has members</dt>
          <dd>
             <a href="#2Circulars" title="http://example.org/trail/2Circulars">2 circulars</a>
@@ -175,6 +198,14 @@ This section provides details for each class and property defined by Sport Irela
          <span class="markdown">A measure of how difficult the trail will be to walk.</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://example.org/trail/isGradeOf">is grade of</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Trail" title="http://example.org/trail/Trail">Trail</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has members</dt>
          <dd>
             <a href="#Easy" title="http://example.org/trail/Easy">easy</a>
@@ -195,6 +226,14 @@ This section provides details for each class and property defined by Sport Irela
          <span class="markdown">The quality of the trail, measured on a 3 star system</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://example.org/trail/isQualityOf">is quality of</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Trail" title="http://example.org/trail/Trail">Trail</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has members</dt>
          <dd>
             <a href="#1-star" title="http://example.org/trail/1-star">1 star</a>
@@ -218,6 +257,13 @@ This section provides details for each class and property defined by Sport Irela
          <dt>has super-classes</dt>
          <dd>
             <span class="dotted" title="http://www.opengis.net/ont/sf#Point">point</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#startPoint" title="http://example.org/trail/startPoint">Start point</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Trail" title="http://example.org/trail/Trail">Trail</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has members</dt>
@@ -267,6 +313,78 @@ This section provides details for each class and property defined by Sport Irela
          <span class="markdown">A trail as specified by Sport Ireland</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#finishPoint" title="http://example.org/trail/finishPoint">Finish point</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#FinishPoint" title="http://example.org/trail/FinishPoint">Finish point</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasGrade" title="http://example.org/trail/hasGrade">has grade</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Grade" title="http://example.org/trail/Grade">Grade</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasQuality" title="http://example.org/trail/hasQuality">has quality</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Quality" title="http://example.org/trail/Quality">Quality</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#locatedIn" title="http://example.org/trail/locatedIn">located in</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#County" title="http://example.org/trail/County">County</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#startPoint" title="http://example.org/trail/startPoint">Start point</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#StartPoint" title="http://example.org/trail/StartPoint">Start point</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#locatedIn" title="http://example.org/trail/locatedIn">located in</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">min</span> 1 <a href="#County" title="http://example.org/trail/County">County</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#finishPoint" title="http://example.org/trail/finishPoint">Finish point</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="#FinishPoint" title="http://example.org/trail/FinishPoint">Finish point</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#startPoint" title="http://example.org/trail/startPoint">Start point</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="#StartPoint" title="http://example.org/trail/StartPoint">Start point</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasCategory" title="http://example.org/trail/hasCategory">has category</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">max</span> 1 <a href="#Category" title="http://example.org/trail/Category">Category</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasGrade" title="http://example.org/trail/hasGrade">has grade</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">max</span> 1 <a href="#Grade" title="http://example.org/trail/Grade">Grade</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasQuality" title="http://example.org/trail/hasQuality">has quality</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">max</span> 1 <a href="#Quality" title="http://example.org/trail/Quality">Quality</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has members</dt>
          <dd>
             <a href="#http://www.example.org/trail/1" title="http://www.example.org/trail/1">1</a>
@@ -303,17 +421,25 @@ This section provides details for each class and property defined by Sport Irela
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Type">
-      <h3>type<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="TrailType">
+      <h3>trail type<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://example.org/trail/Type</p>
+         <strong>IRI:</strong> http://example.org/trail/TrailType</p>
       <div class="comment">
          <span class="markdown">The type of trail</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://example.org/trail/isTypeOf">is type of</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Trail" title="http://example.org/trail/Trail">Trail</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has members</dt>
          <dd>
             <a href="#National_Waymarked_Trail"
@@ -326,13 +452,11 @@ This section provides details for each class and property defined by Sport Irela
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#hasCategory" title="http://example.org/trail/hasCategory">
-            <span>has category</span>
-         </a>
+         <a href="#finishPoint" title="http://example.org/trail/finishPoint">Finish point</a>
       </li>
       <li>
-         <a href="#hasCounty" title="http://example.org/trail/hasCounty">
-            <span>has county</span>
+         <a href="#hasCategory" title="http://example.org/trail/hasCategory">
+            <span>has category</span>
          </a>
       </li>
       <li>
@@ -355,7 +479,26 @@ This section provides details for each class and property defined by Sport Irela
             <span>has type</span>
          </a>
       </li>
+      <li>
+         <a href="#locatedIn" title="http://example.org/trail/locatedIn">
+            <span>located in</span>
+         </a>
+      </li>
+      <li>
+         <a href="#startPoint" title="http://example.org/trail/startPoint">Start point</a>
+      </li>
    </ul>
+   <div class="entity" id="finishPoint">
+      <h3>Finish point<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/trail/finishPoint</p>
+      <div class="comment">
+         <span class="markdown">Specifies the finish "Point" object for the trail</span>
+      </div>
+   </div>
    <div class="entity" id="hasCategory">
       <h3>has category<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -364,27 +507,12 @@ This section provides details for each class and property defined by Sport Irela
       <p>
          <strong>IRI:</strong> http://example.org/trail/hasCategory</p>
       <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
          <dl>
             <dt>is inverse of</dt>
             <dd>
                <span class="dotted" title="http://example.org/trail/isCategoryOf">is category of</span>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasCounty">
-      <h3>has county<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://example.org/trail/hasCounty</p>
-      <div class="description">
-         <dl>
-            <dt>is inverse of</dt>
-            <dd>
-               <span class="dotted" title="http://example.org/trail/isCountyOf">is county of</span>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -415,6 +543,8 @@ This section provides details for each class and property defined by Sport Irela
       <p>
          <strong>IRI:</strong> http://example.org/trail/hasGrade</p>
       <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
          <dl>
             <dt>is inverse of</dt>
             <dd>
@@ -432,6 +562,8 @@ This section provides details for each class and property defined by Sport Irela
       <p>
          <strong>IRI:</strong> http://example.org/trail/hasQuality</p>
       <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
          <dl>
             <dt>is inverse of</dt>
             <dd>
@@ -449,6 +581,8 @@ This section provides details for each class and property defined by Sport Irela
       <p>
          <strong>IRI:</strong> http://example.org/trail/hasType</p>
       <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
          <dl>
             <dt>is inverse of</dt>
             <dd>
@@ -458,14 +592,28 @@ This section provides details for each class and property defined by Sport Irela
          </dl>
       </div>
    </div>
-</div><div id="annotationproperties">
-   <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+   <div class="entity" id="locatedIn">
+      <h3>located in<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/trail/locatedIn</p>
+   </div>
+   <div class="entity" id="startPoint">
+      <h3>Start point<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/trail/startPoint</p>
+      <div class="comment">
+         <span class="markdown">Defines the start "Point" object for the trail</span>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
-      <li>
-         <a href="#http://www.opengis.net/ont/geosparql#asWKT" title="http://www.opengis.net/ont/geosparql#asWKT">
-            <span>as w k t</span>
-         </a>
-      </li>
       <li>
          <a href="#climb" title="http://example.org/trail/climb">Climb</a>
       </li>
@@ -477,13 +625,7 @@ This section provides details for each class and property defined by Sport Irela
             title="http://example.org/trail/estimated_time_to_complete">Estimated time to complete</a>
       </li>
       <li>
-         <a href="#hasFinishPoint" title="http://example.org/trail/hasFinishPoint">Finish point</a>
-      </li>
-      <li>
          <a href="#length" title="http://example.org/trail/length">Length</a>
-      </li>
-      <li>
-         <a href="#hasStartPoint" title="http://example.org/trail/hasStartPoint">Start point</a>
       </li>
       <li>
          <a href="#id" title="http://example.org/trail/id">Trail ID</a>
@@ -492,17 +634,9 @@ This section provides details for each class and property defined by Sport Irela
          <a href="#name" title="http://example.org/trail/name">Trail name</a>
       </li>
    </ul>
-   <div class="entity" id="http://www.opengis.net/ont/geosparql#asWKT">
-      <h3>as w k t<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#asWKT</p>
-   </div>
    <div class="entity" id="climb">
-      <h3>Climb<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+      <h3>Climb<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
@@ -512,8 +646,8 @@ This section provides details for each class and property defined by Sport Irela
       </div>
    </div>
    <div class="entity" id="dogs_allowed">
-      <h3>Dogs allowed<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+      <h3>Dogs allowed<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
@@ -523,8 +657,8 @@ This section provides details for each class and property defined by Sport Irela
       </div>
    </div>
    <div class="entity" id="estimated_time_to_complete">
-      <h3>Estimated time to complete<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+      <h3>Estimated time to complete<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
@@ -533,20 +667,9 @@ This section provides details for each class and property defined by Sport Irela
          <span class="markdown">The estimated time to complete this walk in minutes.</span>
       </div>
    </div>
-   <div class="entity" id="hasFinishPoint">
-      <h3>Finish point<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://example.org/trail/hasFinishPoint</p>
-      <div class="comment">
-         <span class="markdown">Specifies the finish "Point" object for the trail</span>
-      </div>
-   </div>
    <div class="entity" id="length">
-      <h3>Length<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+      <h3>Length<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
@@ -555,20 +678,9 @@ This section provides details for each class and property defined by Sport Irela
          <span class="markdown">The length of the trail measured in kilometres</span>
       </div>
    </div>
-   <div class="entity" id="hasStartPoint">
-      <h3>Start point<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://example.org/trail/hasStartPoint</p>
-      <div class="comment">
-         <span class="markdown">Defines the start "Point" object for the trail</span>
-      </div>
-   </div>
    <div class="entity" id="id">
-      <h3>Trail ID<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+      <h3>Trail ID<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
@@ -578,8 +690,8 @@ This section provides details for each class and property defined by Sport Irela
       </div>
    </div>
    <div class="entity" id="name">
-      <h3>Trail name<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+      <h3>Trail name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>

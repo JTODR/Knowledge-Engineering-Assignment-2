@@ -18,105 +18,6 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    
-
-
-    <!-- http://example.org/trail/climb -->
-
-
-    <owl:AnnotationProperty rdf:about="http://example.org/trail/climb">
-        <rdfs:comment>Overall trail climb in metres</rdfs:comment>
-        <rdfs:label>Climb</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://example.org/trail/dogs_allowed -->
-
-
-    <owl:AnnotationProperty rdf:about="http://example.org/trail/dogs_allowed">
-        <rdfs:comment>Whether dogs are allowed (1) or not allowed (0) on this trail.</rdfs:comment>
-        <rdfs:label>Dogs allowed</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://example.org/trail/estimated_time_to_complete -->
-
-
-    <owl:AnnotationProperty rdf:about="http://example.org/trail/estimated_time_to_complete">
-        <rdfs:comment>The estimated time to complete this walk in minutes.</rdfs:comment>
-        <rdfs:label>Estimated time to complete</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://example.org/trail/hasFinishPoint -->
-
-
-    <owl:AnnotationProperty rdf:about="http://example.org/trail/hasFinishPoint">
-        <rdfs:comment>Specifies the finish &quot;Point&quot; object for the trail</rdfs:comment>
-        <rdfs:label>Finish point</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://example.org/trail/hasStartPoint -->
-
-
-    <owl:AnnotationProperty rdf:about="http://example.org/trail/hasStartPoint">
-        <rdfs:comment>Defines the start &quot;Point&quot; object for the trail</rdfs:comment>
-        <rdfs:label>Start point</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://example.org/trail/id -->
-
-
-    <owl:AnnotationProperty rdf:about="http://example.org/trail/id">
-        <rdfs:comment>The trail ID as specified in the original Sport Ireland CSV dataset</rdfs:comment>
-        <rdfs:label>Trail ID</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://example.org/trail/length -->
-
-
-    <owl:AnnotationProperty rdf:about="http://example.org/trail/length">
-        <rdfs:comment>The length of the trail measured in kilometres</rdfs:comment>
-        <rdfs:label>Length</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://example.org/trail/name -->
-
-
-    <owl:AnnotationProperty rdf:about="http://example.org/trail/name">
-        <rdfs:comment>The name of the trail</rdfs:comment>
-        <rdfs:label>Trail name</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.opengis.net/ont/geosparql#asWKT -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.opengis.net/ont/geosparql#asWKT"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Datatypes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -145,20 +46,24 @@
     
 
 
+    <!-- http://example.org/trail/finishPoint -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/trail/finishPoint">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:comment>Specifies the finish &quot;Point&quot; object for the trail</rdfs:comment>
+        <rdfs:label>Finish point</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://example.org/trail/hasCategory -->
 
 
     <owl:ObjectProperty rdf:about="http://example.org/trail/hasCategory">
         <owl:inverseOf rdf:resource="http://example.org/trail/isCategoryOf"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://example.org/trail/hasCounty -->
-
-
-    <owl:ObjectProperty rdf:about="http://example.org/trail/hasCounty">
-        <owl:inverseOf rdf:resource="http://example.org/trail/isCountyOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
 
@@ -177,6 +82,7 @@
 
     <owl:ObjectProperty rdf:about="http://example.org/trail/hasGrade">
         <owl:inverseOf rdf:resource="http://example.org/trail/isGradeOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
 
@@ -186,6 +92,7 @@
 
     <owl:ObjectProperty rdf:about="http://example.org/trail/hasQuality">
         <owl:inverseOf rdf:resource="http://example.org/trail/isQualityOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
 
@@ -195,6 +102,7 @@
 
     <owl:ObjectProperty rdf:about="http://example.org/trail/hasType">
         <owl:inverseOf rdf:resource="http://example.org/trail/isTypeOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
 
@@ -203,13 +111,6 @@
 
 
     <owl:ObjectProperty rdf:about="http://example.org/trail/isCategoryOf"/>
-    
-
-
-    <!-- http://example.org/trail/isCountyOf -->
-
-
-    <owl:ObjectProperty rdf:about="http://example.org/trail/isCountyOf"/>
     
 
 
@@ -241,6 +142,113 @@
     
 
 
+    <!-- http://example.org/trail/locatedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/trail/locatedIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/trail/startPoint -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/trail/startPoint">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:comment>Defines the start &quot;Point&quot; object for the trail</rdfs:comment>
+        <rdfs:label>Start point</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/trail/climb -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/trail/climb">
+        <rdfs:comment>Overall trail climb in metres</rdfs:comment>
+        <rdfs:label>Climb</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/trail/dogs_allowed -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/trail/dogs_allowed">
+        <rdfs:comment>Whether dogs are allowed (1) or not allowed (0) on this trail.</rdfs:comment>
+        <rdfs:label>Dogs allowed</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/trail/estimated_time_to_complete -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/trail/estimated_time_to_complete">
+        <rdfs:comment>The estimated time to complete this walk in minutes.</rdfs:comment>
+        <rdfs:label>Estimated time to complete</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/trail/id -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/trail/id">
+        <rdfs:comment>The trail ID as specified in the original Sport Ireland CSV dataset</rdfs:comment>
+        <rdfs:label>Trail ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/trail/length -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/trail/length">
+        <rdfs:comment>The length of the trail measured in kilometres</rdfs:comment>
+        <rdfs:label>Length</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/trail/name -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/trail/name">
+        <rdfs:comment>The name of the trail</rdfs:comment>
+        <rdfs:label>Trail name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/trail/value -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/trail/value"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#asWKT -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.opengis.net/ont/geosparql#asWKT"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -257,6 +265,12 @@
 
 
     <owl:Class rdf:about="http://example.org/trail/Category">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/trail/isCategoryOf"/>
+                <owl:allValuesFrom rdf:resource="http://example.org/trail/Trail"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>The category of trail signified as an integer.</rdfs:comment>
         <rdfs:label>Category</rdfs:label>
     </owl:Class>
@@ -278,6 +292,12 @@
 
     <owl:Class rdf:about="http://example.org/trail/FinishPoint">
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/trail/finishPoint"/>
+                <owl:allValuesFrom rdf:resource="http://example.org/trail/Trail"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>The end point of the trail.</rdfs:comment>
         <rdfs:label>Finish point</rdfs:label>
     </owl:Class>
@@ -288,6 +308,12 @@
 
 
     <owl:Class rdf:about="http://example.org/trail/Format">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/trail/isFormatOf"/>
+                <owl:allValuesFrom rdf:resource="http://example.org/trail/Trail"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>The trail format signifying whether the trail is linear, circular, etc.</rdfs:comment>
         <rdfs:label>Format</rdfs:label>
     </owl:Class>
@@ -298,9 +324,22 @@
 
 
     <owl:Class rdf:about="http://example.org/trail/Grade">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/trail/isGradeOf"/>
+                <owl:allValuesFrom rdf:resource="http://example.org/trail/Trail"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>A measure of how difficult the trail will be to walk.</rdfs:comment>
         <rdfs:label>Grade</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://example.org/trail/Province -->
+
+
+    <owl:Class rdf:about="http://example.org/trail/Province"/>
     
 
 
@@ -308,6 +347,12 @@
 
 
     <owl:Class rdf:about="http://example.org/trail/Quality">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/trail/isQualityOf"/>
+                <owl:allValuesFrom rdf:resource="http://example.org/trail/Trail"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>The quality of the trail, measured on a 3 star system</rdfs:comment>
         <rdfs:label>Quality</rdfs:label>
     </owl:Class>
@@ -319,6 +364,12 @@
 
     <owl:Class rdf:about="http://example.org/trail/StartPoint">
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/trail/startPoint"/>
+                <owl:allValuesFrom rdf:resource="http://example.org/trail/Trail"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>The starting point of the trail</rdfs:comment>
         <rdfs:label>Start point</rdfs:label>
     </owl:Class>
@@ -329,18 +380,96 @@
 
 
     <owl:Class rdf:about="http://example.org/trail/Trail">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/trail/finishPoint"/>
+                <owl:allValuesFrom rdf:resource="http://example.org/trail/FinishPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/trail/hasGrade"/>
+                <owl:allValuesFrom rdf:resource="http://example.org/trail/Grade"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/trail/hasQuality"/>
+                <owl:allValuesFrom rdf:resource="http://example.org/trail/Quality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/trail/locatedIn"/>
+                <owl:allValuesFrom rdf:resource="http://example.org/trail/County"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/trail/startPoint"/>
+                <owl:allValuesFrom rdf:resource="http://example.org/trail/StartPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/trail/locatedIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.org/trail/County"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/trail/finishPoint"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.org/trail/FinishPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/trail/startPoint"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.org/trail/StartPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/trail/hasCategory"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.org/trail/Category"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/trail/hasGrade"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.org/trail/Grade"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/trail/hasQuality"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.org/trail/Quality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>A trail as specified by Sport Ireland</rdfs:comment>
         <rdfs:label>Trail</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://example.org/trail/Type -->
+    <!-- http://example.org/trail/TrailType -->
 
 
-    <owl:Class rdf:about="http://example.org/trail/Type">
+    <owl:Class rdf:about="http://example.org/trail/TrailType">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/trail/isTypeOf"/>
+                <owl:allValuesFrom rdf:resource="http://example.org/trail/Trail"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>The type of trail</rdfs:comment>
-        <rdfs:comment>Type</rdfs:comment>
+        <rdfs:comment>TrailType</rdfs:comment>
     </owl:Class>
     
 
@@ -369,6 +498,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Carlow">
         <rdf:type rdf:resource="http://example.org/trail/County"/>
+        <locatedIn rdf:resource="http://example.org/trail/Leinster"/>
     </owl:NamedIndividual>
     
 
@@ -378,6 +508,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Cavan">
         <rdf:type rdf:resource="http://example.org/trail/County"/>
+        <locatedIn rdf:resource="http://example.org/trail/Ulster"/>
     </owl:NamedIndividual>
     
 
@@ -387,6 +518,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Circular">
         <rdf:type rdf:resource="http://example.org/trail/Format"/>
+        <value>Circular</value>
     </owl:NamedIndividual>
     
 
@@ -396,6 +528,16 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Clare">
         <rdf:type rdf:resource="http://example.org/trail/County"/>
+        <locatedIn rdf:resource="http://example.org/trail/Munster"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Connaught -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Connaught">
+        <rdf:type rdf:resource="http://example.org/trail/Province"/>
     </owl:NamedIndividual>
     
 
@@ -405,6 +547,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Cork">
         <rdf:type rdf:resource="http://example.org/trail/County"/>
+        <locatedIn rdf:resource="http://example.org/trail/Munster"/>
     </owl:NamedIndividual>
     
 
@@ -414,6 +557,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Donegal">
         <rdf:type rdf:resource="http://example.org/trail/County"/>
+        <locatedIn rdf:resource="http://example.org/trail/Ulster"/>
     </owl:NamedIndividual>
     
 
@@ -423,6 +567,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Dublin">
         <rdf:type rdf:resource="http://example.org/trail/County"/>
+        <locatedIn rdf:resource="http://example.org/trail/Leinster"/>
     </owl:NamedIndividual>
     
 
@@ -441,6 +586,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Kerry">
         <rdf:type rdf:resource="http://example.org/trail/County"/>
+        <locatedIn rdf:resource="http://example.org/trail/Munster"/>
     </owl:NamedIndividual>
     
 
@@ -450,6 +596,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Kildare">
         <rdf:type rdf:resource="http://example.org/trail/County"/>
+        <locatedIn rdf:resource="http://example.org/trail/Leinster"/>
     </owl:NamedIndividual>
     
 
@@ -459,6 +606,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Kilkenny">
         <rdf:type rdf:resource="http://example.org/trail/County"/>
+        <locatedIn rdf:resource="http://example.org/trail/Leinster"/>
     </owl:NamedIndividual>
     
 
@@ -468,6 +616,16 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Laois">
         <rdf:type rdf:resource="http://example.org/trail/County"/>
+        <locatedIn rdf:resource="http://example.org/trail/Leinster"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Leinster -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Leinster">
+        <rdf:type rdf:resource="http://example.org/trail/Province"/>
     </owl:NamedIndividual>
     
 
@@ -477,6 +635,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Leitrim">
         <rdf:type rdf:resource="http://example.org/trail/County"/>
+        <locatedIn rdf:resource="http://example.org/trail/Connaught"/>
     </owl:NamedIndividual>
     
 
@@ -486,6 +645,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Limerick">
         <rdf:type rdf:resource="http://example.org/trail/County"/>
+        <locatedIn rdf:resource="http://example.org/trail/Munster"/>
     </owl:NamedIndividual>
     
 
@@ -495,6 +655,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Linear">
         <rdf:type rdf:resource="http://example.org/trail/Format"/>
+        <value>Linear</value>
     </owl:NamedIndividual>
     
 
@@ -504,6 +665,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Longford">
         <rdf:type rdf:resource="http://example.org/trail/County"/>
+        <locatedIn rdf:resource="http://example.org/trail/Leinster"/>
     </owl:NamedIndividual>
     
 
@@ -513,6 +675,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Loop">
         <rdf:type rdf:resource="http://example.org/trail/Format"/>
+        <value>Loop</value>
     </owl:NamedIndividual>
     
 
@@ -522,6 +685,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Mayo">
         <rdf:type rdf:resource="http://example.org/trail/County"/>
+        <locatedIn rdf:resource="http://example.org/trail/Connaught"/>
     </owl:NamedIndividual>
     
 
@@ -531,6 +695,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Meath">
         <rdf:type rdf:resource="http://example.org/trail/County"/>
+        <locatedIn rdf:resource="http://example.org/trail/Leinster"/>
     </owl:NamedIndividual>
     
 
@@ -549,6 +714,16 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Monaghan">
         <rdf:type rdf:resource="http://example.org/trail/County"/>
+        <locatedIn rdf:resource="http://example.org/trail/Ulster"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Munster -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Munster">
+        <rdf:type rdf:resource="http://example.org/trail/Province"/>
     </owl:NamedIndividual>
     
 
@@ -557,7 +732,7 @@
 
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/National_Waymarked_Trail">
-        <rdf:type rdf:resource="http://example.org/trail/Type"/>
+        <rdf:type rdf:resource="http://example.org/trail/TrailType"/>
     </owl:NamedIndividual>
     
 
@@ -567,6 +742,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Offaly">
         <rdf:type rdf:resource="http://example.org/trail/County"/>
+        <locatedIn rdf:resource="http://example.org/trail/Leinster"/>
     </owl:NamedIndividual>
     
 
@@ -576,6 +752,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Roscommon">
         <rdf:type rdf:resource="http://example.org/trail/County"/>
+        <locatedIn rdf:resource="http://example.org/trail/Connaught"/>
     </owl:NamedIndividual>
     
 
@@ -585,6 +762,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Sligo">
         <rdf:type rdf:resource="http://example.org/trail/County"/>
+        <locatedIn rdf:resource="http://example.org/trail/Connaught"/>
     </owl:NamedIndividual>
     
 
@@ -603,6 +781,16 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Tipperary">
         <rdf:type rdf:resource="http://example.org/trail/County"/>
+        <locatedIn rdf:resource="http://example.org/trail/Munster"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/trail/Ulster -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/trail/Ulster">
+        <rdf:type rdf:resource="http://example.org/trail/Province"/>
     </owl:NamedIndividual>
     
 
@@ -612,6 +800,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Waterford">
         <rdf:type rdf:resource="http://example.org/trail/County"/>
+        <locatedIn rdf:resource="http://example.org/trail/Leinster"/>
     </owl:NamedIndividual>
     
 
@@ -621,14 +810,15 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Westmeath">
         <rdf:type rdf:resource="http://example.org/trail/County"/>
+        <locatedIn rdf:resource="http://example.org/trail/Leinster"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://example.org/trail/1 -->
+    <!-- http://example.org/trail/category_1 -->
 
 
-    <owl:NamedIndividual rdf:about="http://example.org/trail/1">
+    <owl:NamedIndividual rdf:about="http://example.org/trail/category_1">
         <rdf:type rdf:resource="http://example.org/trail/Category"/>
     </owl:NamedIndividual>
     
@@ -639,6 +829,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/1-star">
         <rdf:type rdf:resource="http://example.org/trail/Quality"/>
+        <value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</value>
     </owl:NamedIndividual>
     
 
@@ -648,6 +839,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/2Circulars">
         <rdf:type rdf:resource="http://example.org/trail/Format"/>
+        <value>2Circulars</value>
     </owl:NamedIndividual>
     
 
@@ -657,6 +849,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/2-star">
         <rdf:type rdf:resource="http://example.org/trail/Quality"/>
+        <value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</value>
     </owl:NamedIndividual>
     
 
@@ -666,6 +859,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/3-star">
         <rdf:type rdf:resource="http://example.org/trail/Quality"/>
+        <value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</value>
     </owl:NamedIndividual>
     
 
@@ -675,6 +869,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/trail/Linear+Circular">
         <rdf:type rdf:resource="http://example.org/trail/Format"/>
+        <value>Linear+Circular</value>
     </owl:NamedIndividual>
     
 
@@ -1344,21 +1539,21 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/1">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Cork"/>
-        <hasCounty rdf:resource="http://example.org/trail/Limerick"/>
-        <hasCounty rdf:resource="http://example.org/trail/Tipperary"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/1"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Linear"/>
         <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
         <hasQuality rdf:resource="http://example.org/trail/2-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>1560</climb>
-        <dogs_allowed>1</dogs_allowed>
-        <estimated_time_to_complete>5760</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/1"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/1"/>
+        <locatedIn rdf:resource="http://example.org/trail/Cork"/>
+        <locatedIn rdf:resource="http://example.org/trail/Limerick"/>
+        <locatedIn rdf:resource="http://example.org/trail/Tipperary"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/1"/>
+        <climb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1560</climb>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5760</estimated_time_to_complete>
         <id>1</id>
-        <length>89</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">89</length>
         <name>Ballyhoura Way</name>
     </owl:NamedIndividual>
     
@@ -1369,19 +1564,19 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/10">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Mayo"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/10"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Linear"/>
         <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
         <hasQuality rdf:resource="http://example.org/trail/2-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>310</climb>
-        <dogs_allowed>0</dogs_allowed>
-        <estimated_time_to_complete>1550</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/10"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/10"/>
+        <locatedIn rdf:resource="http://example.org/trail/Mayo"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/10"/>
+        <climb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">310</climb>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1550</estimated_time_to_complete>
         <id>10</id>
-        <length>61</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">61</length>
         <name>Croagh Patrick Heritage Trail</name>
     </owl:NamedIndividual>
     
@@ -1392,20 +1587,19 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/11">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Kerry"/>
-        <hasFormat rdf:resource="http://example.org/trail/Circular"/>
-        <hasFormat rdf:resource="http://example.org/trail/Linear"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/11"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
+        <hasFormat rdf:resource="http://example.org/trail/Linear+Circular"/>
         <hasGrade rdf:resource="http://example.org/trail/Strenuous"/>
         <hasQuality rdf:resource="http://example.org/trail/2-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>2590</climb>
-        <dogs_allowed>0</dogs_allowed>
-        <estimated_time_to_complete>10080</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/11"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/11"/>
+        <locatedIn rdf:resource="http://example.org/trail/Kerry"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/11"/>
+        <climb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2590</climb>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10080</estimated_time_to_complete>
         <id>11</id>
-        <length>162</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">162</length>
         <name>Dingle Way</name>
     </owl:NamedIndividual>
     
@@ -1416,16 +1610,16 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/12">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Donegal"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/12"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Loop"/>
         <hasGrade rdf:resource="http://example.org/trail/Easy"/>
         <hasQuality rdf:resource="http://example.org/trail/2-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/12"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/12"/>
+        <locatedIn rdf:resource="http://example.org/trail/Donegal"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/12"/>
         <id>12</id>
-        <length>77</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</length>
         <name>Sl� An Earagail - Sli Dhun na nGall</name>
     </owl:NamedIndividual>
     
@@ -1436,16 +1630,16 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/13">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Donegal"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/13"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Circular"/>
         <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
         <hasQuality rdf:resource="http://example.org/trail/2-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/13"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/13"/>
+        <locatedIn rdf:resource="http://example.org/trail/Donegal"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/13"/>
         <id>13</id>
-        <length>65</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</length>
         <name>Sl� Cholmcille - Sli Dhun na nGall</name>
     </owl:NamedIndividual>
     
@@ -1456,18 +1650,18 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/14">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Donegal"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/14"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Circular"/>
         <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
         <hasQuality rdf:resource="http://example.org/trail/2-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>1060</climb>
-        <estimated_time_to_complete>990</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/14"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/14"/>
+        <locatedIn rdf:resource="http://example.org/trail/Donegal"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/14"/>
+        <climb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1060</climb>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">990</estimated_time_to_complete>
         <id>14</id>
-        <length>51</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</length>
         <name>Sl� Na Finne - Sli Dhun na nGall</name>
     </owl:NamedIndividual>
     
@@ -1478,16 +1672,16 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/15">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Donegal"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/15"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Circular"/>
         <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
         <hasQuality rdf:resource="http://example.org/trail/2-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/15"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/15"/>
+        <locatedIn rdf:resource="http://example.org/trail/Donegal"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/15"/>
         <id>15</id>
-        <length>65</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</length>
         <name>Sl� Na Rosann - Sli Dhun na nGall</name>
     </owl:NamedIndividual>
     
@@ -1498,19 +1692,19 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/16">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Clare"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/16"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Circular"/>
         <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
         <hasQuality rdf:resource="http://example.org/trail/3-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>3060</climb>
-        <dogs_allowed>0</dogs_allowed>
-        <estimated_time_to_complete>11520</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/16"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/16"/>
+        <locatedIn rdf:resource="http://example.org/trail/Clare"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/16"/>
+        <climb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3060</climb>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11520</estimated_time_to_complete>
         <id>16</id>
-        <length>180</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</length>
         <name>East Clare Way</name>
     </owl:NamedIndividual>
     
@@ -1521,18 +1715,18 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/17">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Tipperary"/>
-        <hasCounty rdf:resource="http://example.org/trail/Waterford"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/17"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Linear"/>
         <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>1375</climb>
-        <estimated_time_to_complete>4320</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/17"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/17"/>
+        <locatedIn rdf:resource="http://example.org/trail/Tipperary"/>
+        <locatedIn rdf:resource="http://example.org/trail/Waterford"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/17"/>
+        <climb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1375</climb>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4320</estimated_time_to_complete>
         <id>17</id>
-        <length>75</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</length>
         <name>East Munster Way</name>
     </owl:NamedIndividual>
     
@@ -1543,21 +1737,21 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/18">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Dublin"/>
-        <hasCounty rdf:resource="http://example.org/trail/Kildare"/>
-        <hasCounty rdf:resource="http://example.org/trail/Offaly"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/18"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Linear"/>
         <hasGrade rdf:resource="http://example.org/trail/Easy"/>
         <hasQuality rdf:resource="http://example.org/trail/2-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>0</climb>
-        <dogs_allowed>1</dogs_allowed>
-        <estimated_time_to_complete>7200</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/18"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/18"/>
+        <locatedIn rdf:resource="http://example.org/trail/Dublin"/>
+        <locatedIn rdf:resource="http://example.org/trail/Kildare"/>
+        <locatedIn rdf:resource="http://example.org/trail/Offaly"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/18"/>
+        <climb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</climb>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7200</estimated_time_to_complete>
         <id>18</id>
-        <length>117</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">117</length>
         <name>Grand Canal Way</name>
     </owl:NamedIndividual>
     
@@ -1568,19 +1762,19 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/19">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Kerry"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/19"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Circular"/>
         <hasGrade rdf:resource="http://example.org/trail/Strenuous"/>
         <hasQuality rdf:resource="http://example.org/trail/3-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>5310</climb>
-        <dogs_allowed>0</dogs_allowed>
-        <estimated_time_to_complete>12960</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/19"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/19"/>
+        <locatedIn rdf:resource="http://example.org/trail/Kerry"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/19"/>
+        <climb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5310</climb>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12960</estimated_time_to_complete>
         <id>19</id>
-        <length>214</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">214</length>
         <name>Kerry Way</name>
     </owl:NamedIndividual>
     
@@ -1591,21 +1785,21 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/2">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Carlow"/>
-        <hasCounty rdf:resource="http://example.org/trail/Kildare"/>
-        <hasCounty rdf:resource="http://example.org/trail/Laois"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/2"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Linear"/>
         <hasGrade rdf:resource="http://example.org/trail/Easy"/>
         <hasQuality rdf:resource="http://example.org/trail/2-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>0</climb>
-        <dogs_allowed>1</dogs_allowed>
-        <estimated_time_to_complete>5760</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/2"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/2"/>
+        <locatedIn rdf:resource="http://example.org/trail/Carlow"/>
+        <locatedIn rdf:resource="http://example.org/trail/Kildare"/>
+        <locatedIn rdf:resource="http://example.org/trail/Laois"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/2"/>
+        <climb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</climb>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5760</estimated_time_to_complete>
         <id>2</id>
-        <length>100</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</length>
         <name>Barrow Way</name>
     </owl:NamedIndividual>
     
@@ -1616,21 +1810,21 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/21">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Clare"/>
-        <hasCounty rdf:resource="http://example.org/trail/Limerick"/>
-        <hasCounty rdf:resource="http://example.org/trail/Tipperary"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/21"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Linear"/>
         <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
         <hasQuality rdf:resource="http://example.org/trail/3-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>527</climb>
-        <dogs_allowed>0</dogs_allowed>
-        <estimated_time_to_complete>4320</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/21"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/21"/>
+        <locatedIn rdf:resource="http://example.org/trail/Clare"/>
+        <locatedIn rdf:resource="http://example.org/trail/Limerick"/>
+        <locatedIn rdf:resource="http://example.org/trail/Tipperary"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/21"/>
+        <climb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">527</climb>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4320</estimated_time_to_complete>
         <id>21</id>
-        <length>68</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">68</length>
         <name>Lough Derg Way</name>
     </owl:NamedIndividual>
     
@@ -1641,19 +1835,19 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/22">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Clare"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/22"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Circular"/>
         <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
         <hasQuality rdf:resource="http://example.org/trail/3-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>1620</climb>
-        <dogs_allowed>0</dogs_allowed>
-        <estimated_time_to_complete>8640</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/22"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/22"/>
+        <locatedIn rdf:resource="http://example.org/trail/Clare"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/22"/>
+        <climb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1620</climb>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8640</estimated_time_to_complete>
         <id>22</id>
-        <length>148</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">148</length>
         <name>Mid Clare Way</name>
     </owl:NamedIndividual>
     
@@ -1664,21 +1858,21 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/23">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Leitrim"/>
-        <hasCounty rdf:resource="http://example.org/trail/Roscommon"/>
-        <hasCounty rdf:resource="http://example.org/trail/Sligo"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/23"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/2Circulars"/>
         <hasGrade rdf:resource="http://example.org/trail/Strenuous"/>
         <hasQuality rdf:resource="http://example.org/trail/3-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>2340</climb>
-        <dogs_allowed>0</dogs_allowed>
-        <estimated_time_to_complete>7200</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/23"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/23"/>
+        <locatedIn rdf:resource="http://example.org/trail/Leitrim"/>
+        <locatedIn rdf:resource="http://example.org/trail/Roscommon"/>
+        <locatedIn rdf:resource="http://example.org/trail/Sligo"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/23"/>
+        <climb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2340</climb>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7200</estimated_time_to_complete>
         <id>23</id>
-        <length>118</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">118</length>
         <name>Miner&apos;s Way &amp; Historical Trail</name>
     </owl:NamedIndividual>
     
@@ -1689,18 +1883,18 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/24">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Monaghan"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/24"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Linear"/>
         <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
         <hasQuality rdf:resource="http://example.org/trail/2-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <dogs_allowed>0</dogs_allowed>
-        <estimated_time_to_complete>1000</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/24"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/24"/>
+        <locatedIn rdf:resource="http://example.org/trail/Monaghan"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/24"/>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</estimated_time_to_complete>
         <id>24</id>
-        <length>56.5</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">56.5</length>
         <name>Monaghan Way</name>
     </owl:NamedIndividual>
     
@@ -1711,19 +1905,18 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/25">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Kilkenny"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/25"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Linear"/>
         <hasGrade rdf:resource="http://example.org/trail/Easy"/>
         <hasQuality rdf:resource="http://example.org/trail/3-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>Minimal</climb>
-        <dogs_allowed>0</dogs_allowed>
-        <estimated_time_to_complete>180</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/25"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/25"/>
+        <locatedIn rdf:resource="http://example.org/trail/Kilkenny"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/25"/>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</estimated_time_to_complete>
         <id>25</id>
-        <length>11</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</length>
         <name>Nore Valley Walk - Inistioge to Thomastown Section</name>
     </owl:NamedIndividual>
     
@@ -1734,19 +1927,19 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/26">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Kerry"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/26"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Linear+Circular"/>
         <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
         <hasQuality rdf:resource="http://example.org/trail/3-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>450</climb>
-        <dogs_allowed>1</dogs_allowed>
-        <estimated_time_to_complete>2880</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/26"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/26"/>
+        <locatedIn rdf:resource="http://example.org/trail/Kerry"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/26"/>
+        <climb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">450</climb>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2880</estimated_time_to_complete>
         <id>26</id>
-        <length>45</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</length>
         <name>North Kerry Way</name>
     </owl:NamedIndividual>
     
@@ -1757,19 +1950,18 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/27">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Offaly"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/27"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Linear"/>
         <hasGrade rdf:resource="http://example.org/trail/Easy"/>
         <hasQuality rdf:resource="http://example.org/trail/3-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>Minimal</climb>
-        <dogs_allowed>1</dogs_allowed>
-        <estimated_time_to_complete>2880</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/27"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/27"/>
+        <locatedIn rdf:resource="http://example.org/trail/Offaly"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/27"/>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2880</estimated_time_to_complete>
         <id>27</id>
-        <length>37</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37</length>
         <name>Offaly Way</name>
     </owl:NamedIndividual>
     
@@ -1780,23 +1972,22 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/28">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Dublin"/>
-        <hasCounty rdf:resource="http://example.org/trail/Kildare"/>
-        <hasCounty rdf:resource="http://example.org/trail/Longford"/>
-        <hasCounty rdf:resource="http://example.org/trail/Meath"/>
-        <hasCounty rdf:resource="http://example.org/trail/Westmeath"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/28"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Linear"/>
         <hasGrade rdf:resource="http://example.org/trail/Easy"/>
         <hasQuality rdf:resource="http://example.org/trail/2-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>Minimal</climb>
-        <dogs_allowed>1</dogs_allowed>
-        <estimated_time_to_complete>4320</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/28"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/28"/>
+        <locatedIn rdf:resource="http://example.org/trail/Dublin"/>
+        <locatedIn rdf:resource="http://example.org/trail/Kildare"/>
+        <locatedIn rdf:resource="http://example.org/trail/Longford"/>
+        <locatedIn rdf:resource="http://example.org/trail/Meath"/>
+        <locatedIn rdf:resource="http://example.org/trail/Westmeath"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/28"/>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4320</estimated_time_to_complete>
         <id>28</id>
-        <length>144</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">144</length>
         <name>Royal Canal Way</name>
     </owl:NamedIndividual>
     
@@ -1807,19 +1998,19 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/29">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Cork"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/29"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Circular"/>
         <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
         <hasQuality rdf:resource="http://example.org/trail/2-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>2190</climb>
-        <dogs_allowed>0</dogs_allowed>
-        <estimated_time_to_complete>5760</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/29"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/29"/>
+        <locatedIn rdf:resource="http://example.org/trail/Cork"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/29"/>
+        <climb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2190</climb>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5760</estimated_time_to_complete>
         <id>29</id>
-        <length>175</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">175</length>
         <name>Sheeps Head Way</name>
     </owl:NamedIndividual>
     
@@ -1830,20 +2021,20 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/3">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Cork"/>
-        <hasCounty rdf:resource="http://example.org/trail/Kerry"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/3"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Loop"/>
         <hasGrade rdf:resource="http://example.org/trail/Strenuous"/>
         <hasQuality rdf:resource="http://example.org/trail/2-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>5245</climb>
-        <dogs_allowed>0</dogs_allowed>
-        <estimated_time_to_complete>12960</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/3"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/3"/>
+        <locatedIn rdf:resource="http://example.org/trail/Cork"/>
+        <locatedIn rdf:resource="http://example.org/trail/Kerry"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/3"/>
+        <climb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5245</climb>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12960</estimated_time_to_complete>
         <id>3</id>
-        <length>206</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">206</length>
         <name>Beara Way</name>
     </owl:NamedIndividual>
     
@@ -1854,20 +2045,20 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/30">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Laois"/>
-        <hasCounty rdf:resource="http://example.org/trail/Offaly"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/30"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Circular"/>
         <hasGrade rdf:resource="http://example.org/trail/Strenuous"/>
         <hasQuality rdf:resource="http://example.org/trail/2-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>1275</climb>
-        <dogs_allowed>0</dogs_allowed>
-        <estimated_time_to_complete>5400</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/30"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/30"/>
+        <locatedIn rdf:resource="http://example.org/trail/Laois"/>
+        <locatedIn rdf:resource="http://example.org/trail/Offaly"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/30"/>
+        <climb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1275</climb>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5400</estimated_time_to_complete>
         <id>30</id>
-        <length>70.5</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70.5</length>
         <name>Slieve Bloom Way</name>
     </owl:NamedIndividual>
     
@@ -1878,20 +2069,20 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/31">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Limerick"/>
-        <hasCounty rdf:resource="http://example.org/trail/Tipperary"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/31"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Linear"/>
         <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
         <hasQuality rdf:resource="http://example.org/trail/3-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>870</climb>
-        <dogs_allowed>1</dogs_allowed>
-        <estimated_time_to_complete>2880</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/31"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/31"/>
+        <locatedIn rdf:resource="http://example.org/trail/Limerick"/>
+        <locatedIn rdf:resource="http://example.org/trail/Tipperary"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/31"/>
+        <climb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">870</climb>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2880</estimated_time_to_complete>
         <id>31</id>
-        <length>43</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43</length>
         <name>Slieve Felim Way</name>
     </owl:NamedIndividual>
     
@@ -1902,19 +2093,19 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/32">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Sligo"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/32"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Linear"/>
         <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
         <hasQuality rdf:resource="http://example.org/trail/2-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>890</climb>
-        <dogs_allowed>0</dogs_allowed>
-        <estimated_time_to_complete>4320</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/32"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/32"/>
+        <locatedIn rdf:resource="http://example.org/trail/Sligo"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/32"/>
+        <climb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">890</climb>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4320</estimated_time_to_complete>
         <id>32</id>
-        <length>78</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">78</length>
         <name>Sligo Way</name>
     </owl:NamedIndividual>
     
@@ -1925,20 +2116,20 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/4">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Cork"/>
-        <hasCounty rdf:resource="http://example.org/trail/Tipperary"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/4"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Linear"/>
         <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
         <hasQuality rdf:resource="http://example.org/trail/3-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>3690</climb>
-        <dogs_allowed>0</dogs_allowed>
-        <estimated_time_to_complete>10080</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/4"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/4"/>
+        <locatedIn rdf:resource="http://example.org/trail/Cork"/>
+        <locatedIn rdf:resource="http://example.org/trail/Tipperary"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/4"/>
+        <climb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3690</climb>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10080</estimated_time_to_complete>
         <id>4</id>
-        <length>94</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">94</length>
         <name>Blackwater Way - Avondhu</name>
     </owl:NamedIndividual>
     
@@ -1949,19 +2140,19 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/5">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Cork"/>
-        <hasCounty rdf:resource="http://example.org/trail/Kerry"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/5"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Linear"/>
         <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
         <hasQuality rdf:resource="http://example.org/trail/2-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <dogs_allowed>0</dogs_allowed>
-        <estimated_time_to_complete>4320</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/5"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/5"/>
+        <locatedIn rdf:resource="http://example.org/trail/Cork"/>
+        <locatedIn rdf:resource="http://example.org/trail/Kerry"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/5"/>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4320</estimated_time_to_complete>
         <id>5</id>
-        <length>67</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">67</length>
         <name>Blackwater Way - Duhallow</name>
     </owl:NamedIndividual>
     
@@ -1972,19 +2163,19 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/6">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Donegal"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/6"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Linear"/>
         <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
         <hasQuality rdf:resource="http://example.org/trail/3-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>1230</climb>
-        <dogs_allowed>0</dogs_allowed>
-        <estimated_time_to_complete>4320</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/6"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/6"/>
+        <locatedIn rdf:resource="http://example.org/trail/Donegal"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/6"/>
+        <climb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1230</climb>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4320</estimated_time_to_complete>
         <id>6</id>
-        <length>65</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</length>
         <name>Bluestack Way</name>
     </owl:NamedIndividual>
     
@@ -1995,19 +2186,19 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/7">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Clare"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/7"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Linear"/>
         <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
         <hasQuality rdf:resource="http://example.org/trail/3-star"/>
         <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
-        <climb>540</climb>
-        <dogs_allowed>0</dogs_allowed>
-        <estimated_time_to_complete>7200</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/7"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/7"/>
+        <locatedIn rdf:resource="http://example.org/trail/Clare"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/7"/>
+        <climb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">540</climb>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7200</estimated_time_to_complete>
         <id>7</id>
-        <length>114</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">114</length>
         <name>Burren Way</name>
     </owl:NamedIndividual>
     
@@ -2018,19 +2209,19 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/trail/8">
         <rdf:type rdf:resource="http://example.org/trail/Trail"/>
-        <hasCategory rdf:resource="http://www.example.org/trail/1"/>
-        <hasCounty rdf:resource="http://example.org/trail/Cavan"/>
+        <finishPoint rdf:resource="http://www.example.org/finish_point/8"/>
+        <hasCategory rdf:resource="http://example.org/trail/category_1"/>
         <hasFormat rdf:resource="http://example.org/trail/Linear"/>
-        <hasFormat rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
         <hasGrade rdf:resource="http://example.org/trail/Moderate"/>
         <hasQuality rdf:resource="http://example.org/trail/2-star"/>
-        <climb>330</climb>
-        <dogs_allowed>0</dogs_allowed>
-        <estimated_time_to_complete>1440</estimated_time_to_complete>
-        <hasFinishPoint rdf:resource="http://www.example.org/finish_point/8"/>
-        <hasStartPoint rdf:resource="http://www.example.org/start_point/8"/>
+        <hasType rdf:resource="http://example.org/trail/National_Waymarked_Trail"/>
+        <locatedIn rdf:resource="http://example.org/trail/Cavan"/>
+        <startPoint rdf:resource="http://www.example.org/start_point/8"/>
+        <climb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">330</climb>
+        <dogs_allowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dogs_allowed>
+        <estimated_time_to_complete rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1440</estimated_time_to_complete>
         <id>8</id>
-        <length>22</length>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</length>
         <name>Cavan Way</name>
     </owl:NamedIndividual>
     <rdf:Description>
