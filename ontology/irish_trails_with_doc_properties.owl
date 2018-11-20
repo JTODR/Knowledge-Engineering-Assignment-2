@@ -85,6 +85,10 @@ ObjectProperty: trail:finishPoint
     
 ObjectProperty: trail:hasCategory
 
+    Annotations: 
+        rdfs:comment "Relationship for the category of the trail",
+        rdfs:label "Has Category"
+    
     Characteristics: 
         Functional
     
@@ -94,12 +98,20 @@ ObjectProperty: trail:hasCategory
     
 ObjectProperty: trail:hasFormat
 
+    Annotations: 
+        rdfs:comment "Relationship for the format of the trail",
+        rdfs:label "Has Format"
+    
     InverseOf: 
         trail:isFormatOf
     
     
 ObjectProperty: trail:hasGrade
 
+    Annotations: 
+        rdfs:comment "Relationship for the grade of the trail",
+        rdfs:label "Has Grade"
+    
     Characteristics: 
         Functional
     
@@ -109,6 +121,10 @@ ObjectProperty: trail:hasGrade
     
 ObjectProperty: trail:hasQuality
 
+    Annotations: 
+        rdfs:comment "Relationship for the quality of the trail",
+        rdfs:label "Has Quality"
+    
     Characteristics: 
         Functional
     
@@ -118,6 +134,10 @@ ObjectProperty: trail:hasQuality
     
 ObjectProperty: trail:hasType
 
+    Annotations: 
+        rdfs:comment "Relationship for the type of the trail",
+        rdfs:label "Has Type"
+    
     Characteristics: 
         Functional
     
@@ -127,36 +147,60 @@ ObjectProperty: trail:hasType
     
 ObjectProperty: trail:isCategoryOf
 
+    Annotations: 
+        rdfs:comment "Inverse relationship from the category object to the corresponding trail",
+        rdfs:label "Is Category of"
+    
     InverseOf: 
         trail:hasCategory
     
     
 ObjectProperty: trail:isFormatOf
 
+    Annotations: 
+        rdfs:comment "Inverse relationship from the format object to the corresponding trail",
+        rdfs:label "Is Format of"
+    
     InverseOf: 
         trail:hasFormat
     
     
 ObjectProperty: trail:isGradeOf
 
+    Annotations: 
+        rdfs:comment "Inverse relationship from the grade object to the corresponding trail",
+        rdfs:label "Is Grade of"
+    
     InverseOf: 
         trail:hasGrade
     
     
 ObjectProperty: trail:isQualityOf
 
+    Annotations: 
+        rdfs:comment "Inverse relationship from the quality object to the corresponding trail",
+        rdfs:label "Is Quality of"
+    
     InverseOf: 
         trail:hasQuality
     
     
 ObjectProperty: trail:isTypeOf
 
+    Annotations: 
+        rdfs:comment "Inverse relationship from the type object to the corresponding trail",
+        rdfs:label "Is Type of"
+    
     InverseOf: 
         trail:hasType
     
     
 ObjectProperty: trail:locatedIn
 
+    Annotations: 
+        rdfs:comment "Relationship for the location of the trail",
+        rdfs:label "Located in"
+    
     Characteristics: 
         Transitive
     

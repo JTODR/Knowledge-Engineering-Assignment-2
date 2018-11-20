@@ -74,55 +74,77 @@ trail:finishPoint rdf:type owl:ObjectProperty ,
 ###  http://example.org/trail/hasCategory
 trail:hasCategory rdf:type owl:ObjectProperty ;
                   owl:inverseOf trail:isCategoryOf ;
-                  rdf:type owl:FunctionalProperty .
+                  rdf:type owl:FunctionalProperty ;
+                  rdfs:comment "Relationship for the category of the trail" ;
+                  rdfs:label "Has Category" .
 
 
 ###  http://example.org/trail/hasFormat
 trail:hasFormat rdf:type owl:ObjectProperty ;
-                owl:inverseOf trail:isFormatOf .
+                owl:inverseOf trail:isFormatOf ;
+                rdfs:comment "Relationship for the format of the trail" ;
+                rdfs:label "Has Format" .
 
 
 ###  http://example.org/trail/hasGrade
 trail:hasGrade rdf:type owl:ObjectProperty ;
                owl:inverseOf trail:isGradeOf ;
-               rdf:type owl:FunctionalProperty .
+               rdf:type owl:FunctionalProperty ;
+               rdfs:comment "Relationship for the grade of the trail" ;
+               rdfs:label "Has Grade" .
 
 
 ###  http://example.org/trail/hasQuality
 trail:hasQuality rdf:type owl:ObjectProperty ;
                  owl:inverseOf trail:isQualityOf ;
-                 rdf:type owl:FunctionalProperty .
+                 rdf:type owl:FunctionalProperty ;
+                 rdfs:comment "Relationship for the quality of the trail" ;
+                 rdfs:label "Has Quality" .
 
 
 ###  http://example.org/trail/hasType
 trail:hasType rdf:type owl:ObjectProperty ;
               owl:inverseOf trail:isTypeOf ;
-              rdf:type owl:FunctionalProperty .
+              rdf:type owl:FunctionalProperty ;
+              rdfs:comment "Relationship for the type of the trail" ;
+              rdfs:label "Has Type" .
 
 
 ###  http://example.org/trail/isCategoryOf
-trail:isCategoryOf rdf:type owl:ObjectProperty .
+trail:isCategoryOf rdf:type owl:ObjectProperty ;
+                   rdfs:comment "Inverse relationship from the category object to the corresponding trail" ;
+                   rdfs:label "Is Category of" .
 
 
 ###  http://example.org/trail/isFormatOf
-trail:isFormatOf rdf:type owl:ObjectProperty .
+trail:isFormatOf rdf:type owl:ObjectProperty ;
+                 rdfs:comment "Inverse relationship from the format object to the corresponding trail" ;
+                 rdfs:label "Is Format of" .
 
 
 ###  http://example.org/trail/isGradeOf
-trail:isGradeOf rdf:type owl:ObjectProperty .
+trail:isGradeOf rdf:type owl:ObjectProperty ;
+                rdfs:comment "Inverse relationship from the grade object to the corresponding trail" ;
+                rdfs:label "Is Grade of" .
 
 
 ###  http://example.org/trail/isQualityOf
-trail:isQualityOf rdf:type owl:ObjectProperty .
+trail:isQualityOf rdf:type owl:ObjectProperty ;
+                  rdfs:comment "Inverse relationship from the quality object to the corresponding trail" ;
+                  rdfs:label "Is Quality of" .
 
 
 ###  http://example.org/trail/isTypeOf
-trail:isTypeOf rdf:type owl:ObjectProperty .
+trail:isTypeOf rdf:type owl:ObjectProperty ;
+               rdfs:comment "Inverse relationship from the type object to the corresponding trail" ;
+               rdfs:label "Is Type of" .
 
 
 ###  http://example.org/trail/locatedIn
 trail:locatedIn rdf:type owl:ObjectProperty ,
-                         owl:TransitiveProperty .
+                         owl:TransitiveProperty ;
+                rdfs:comment "Relationship for the location of the trail" ;
+                rdfs:label "Located in" .
 
 
 ###  http://example.org/trail/startPoint
