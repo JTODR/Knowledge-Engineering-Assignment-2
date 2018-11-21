@@ -11,8 +11,9 @@ PREFIX trail: <http://example.org/trail/>
 #   Parameters:
 #   Returns:     district, trailName, startPoint, completionTime, dogsAllowed
 
-SELECT DISTINCT ?districtName ?trailName ?trailStartPoint ?trailEstimatedCompletionTime ?trailDogsAllowed
+SELECT DISTINCT ?province ?districtName ?trailName ?trailStartPoint ?trailEstimatedCompletionTime ?trailDogsAllowed
 WHERE {
+
   ?district a osi:Municipal_District.
   ?district rdfs:label ?districtName.
   ?district geo:hasGeometry ?geom.
@@ -24,9 +25,12 @@ WHERE {
   ?spGeom geo:asWKT ?trailStartPoint.
   ?trail trail:dogs_allowed ?trailDogsAllowed.
   ?trail trail:estimated_time_to_complete ?trailEstimatedCompletionTime.
+  ?trail trail:locatedIn ?county.
+  ?county trail:locatedIn ?province.
 
   FILTER(geof:sfWithin(?trailStartPoint, ?wkt) && ?trailDogsAllowed = "true"^^xsd:boolean).
-
+  
   # Remove duplicates that have the @en language tag
-   FILTER ( LANG(?districtName) = "" && LANG(?trailName) = "").
+  FILTER ( LANG(?districtName) = "" && LANG(?trailName) = "").
+
 }ORDER BY ASC(?trailEstimatedCompletionTime)

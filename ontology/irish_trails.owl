@@ -1,7 +1,9 @@
 Prefix: : <http://example.org/trail/>
+Prefix: dcterms: <http://purl.org/dc/terms/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: trail: <http://example.org/trail/>
 Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -11,9 +13,41 @@ Ontology: <http://example.org/trail/>
 
 
 Annotations: 
-    rdfs:comment "This data set contains the National Trails Register a collection of looped walks, waymarked ways and cycling routes in the Republic of Ireland.",
-    rdfs:label "Sport Ireland Trails"
+    dcterms:abstract "This ontology contains the RDF uplifted version of Sport Ireland's National Trails Register CSV [Available at https://data.gov.ie/dataset/sport-ireland-trails]. This ontology uses a mixture of object properties and data properties for storing trail information and is available in both Turtle and OWL format. The ontology is also LODE compatible with the documentation generated through Widoco [https://github.com/dgarijo/Widoco].
 
+These object properties are used for storing information regarding the trail's start point, finish point, category, format, grade, quality, type and county. The data properties contian information about the trail's name, ID, length, climb, estimated time to complete and whether dogs are allowed on the trail.
+
+This ontology was created for use with Geohive's \"Municipal Districts\" dataset [Available at http://data.geohive.ie/dumps/municipal-district/default.ttl] for district-based trail data queries."^^xsd:string,
+    dcterms:created "2018-10-25T00:00:00"^^xsd:dateTime,
+    dcterms:creator "Alanna O'Grady, Ammar Qureshi, Joseph O'Donovan Ryan, Keith Tunstead, Rowan Sutton"^^xsd:string,
+    dcterms:description "\"This data set contains the National Trails Register a collection of looped walks, waymarked ways and cycling routes in the Republic of Ireland.\" - Sport Ireland"^^xsd:string,
+    dcterms:modified "2018-11-23T00:00:00Z"^^xsd:dateTime,
+    dcterms:title "Sport Ireland Trails Dataset Uplifted to RDF"^^xsd:string,
+    rdfs:comment "\"This data set contains the National Trails Register a collection of looped walks, waymarked ways and cycling routes in the Republic of Ireland.\" - Sport Ireland"^^xsd:string,
+    rdfs:label "Sport Ireland Trails",
+    owl:versionInfo "1.0.1"^^xsd:string
+
+AnnotationProperty: dcterms:abstract
+
+    
+AnnotationProperty: dcterms:created
+
+    
+AnnotationProperty: dcterms:creator
+
+    
+AnnotationProperty: dcterms:description
+
+    
+AnnotationProperty: dcterms:modified
+
+    
+AnnotationProperty: dcterms:title
+
+    
+AnnotationProperty: owl:versionInfo
+
+    
 AnnotationProperty: rdfs:comment
 
     
@@ -38,7 +72,7 @@ Datatype: xsd:integer
 Datatype: xsd:string
 
     
-ObjectProperty: finishPoint
+ObjectProperty: trail:finishPoint
 
     Annotations: 
         rdfs:comment "Specifies the finish \"Point\" object for the trail",
@@ -49,85 +83,129 @@ ObjectProperty: finishPoint
         Symmetric
     
     
-ObjectProperty: hasCategory
+ObjectProperty: trail:hasCategory
 
+    Annotations: 
+        rdfs:comment "Relationship for the category of the trail",
+        rdfs:label "Has Category"
+    
     Characteristics: 
         Functional
     
     InverseOf: 
-        isCategoryOf
+        trail:isCategoryOf
     
     
-ObjectProperty: hasFormat
+ObjectProperty: trail:hasFormat
 
+    Annotations: 
+        rdfs:comment "Relationship for the format of the trail",
+        rdfs:label "Has Format"
+    
     InverseOf: 
-        isFormatOf
+        trail:isFormatOf
     
     
-ObjectProperty: hasGrade
+ObjectProperty: trail:hasGrade
 
+    Annotations: 
+        rdfs:comment "Relationship for the grade of the trail",
+        rdfs:label "Has Grade"
+    
     Characteristics: 
         Functional
     
     InverseOf: 
-        isGradeOf
+        trail:isGradeOf
     
     
-ObjectProperty: hasQuality
+ObjectProperty: trail:hasQuality
 
+    Annotations: 
+        rdfs:comment "Relationship for the quality of the trail",
+        rdfs:label "Has Quality"
+    
     Characteristics: 
         Functional
     
     InverseOf: 
-        isQualityOf
+        trail:isQualityOf
     
     
-ObjectProperty: hasType
+ObjectProperty: trail:hasType
 
+    Annotations: 
+        rdfs:comment "Relationship for the type of the trail",
+        rdfs:label "Has Type"
+    
     Characteristics: 
         Functional
     
     InverseOf: 
-        isTypeOf
+        trail:isTypeOf
     
     
-ObjectProperty: isCategoryOf
+ObjectProperty: trail:isCategoryOf
 
+    Annotations: 
+        rdfs:comment "Inverse relationship from the category object to the corresponding trail",
+        rdfs:label "Is Category of"
+    
     InverseOf: 
-        hasCategory
+        trail:hasCategory
     
     
-ObjectProperty: isFormatOf
+ObjectProperty: trail:isFormatOf
 
+    Annotations: 
+        rdfs:comment "Inverse relationship from the format object to the corresponding trail",
+        rdfs:label "Is Format of"
+    
     InverseOf: 
-        hasFormat
+        trail:hasFormat
     
     
-ObjectProperty: isGradeOf
+ObjectProperty: trail:isGradeOf
 
+    Annotations: 
+        rdfs:comment "Inverse relationship from the grade object to the corresponding trail",
+        rdfs:label "Is Grade of"
+    
     InverseOf: 
-        hasGrade
+        trail:hasGrade
     
     
-ObjectProperty: isQualityOf
+ObjectProperty: trail:isQualityOf
 
+    Annotations: 
+        rdfs:comment "Inverse relationship from the quality object to the corresponding trail",
+        rdfs:label "Is Quality of"
+    
     InverseOf: 
-        hasQuality
+        trail:hasQuality
     
     
-ObjectProperty: isTypeOf
+ObjectProperty: trail:isTypeOf
 
+    Annotations: 
+        rdfs:comment "Inverse relationship from the type object to the corresponding trail",
+        rdfs:label "Is Type of"
+    
     InverseOf: 
-        hasType
+        trail:hasType
     
     
-ObjectProperty: locatedIn
+ObjectProperty: trail:locatedIn
 
+    Annotations: 
+        rdfs:comment "Relationship for the location of the trail",
+        rdfs:label "Located in"
+    
     Characteristics: 
         Transitive
     
     
-ObjectProperty: startPoint
+ObjectProperty: trail:startPoint
 
     Annotations: 
         rdfs:comment "Defines the start \"Point\" object for the trail",
@@ -141,72 +219,72 @@ ObjectProperty: startPoint
 DataProperty: <http://www.opengis.net/ont/geosparql#asWKT>
 
     
-DataProperty: climb
+DataProperty: trail:climb
 
     Annotations: 
         rdfs:comment "Overall trail climb in metres",
         rdfs:label "Climb"
     
     
-DataProperty: dogs_allowed
+DataProperty: trail:dogs_allowed
 
     Annotations: 
         rdfs:comment "Whether dogs are allowed (1) or not allowed (0) on this trail.",
         rdfs:label "Dogs allowed"
     
     
-DataProperty: estimated_time_to_complete
+DataProperty: trail:estimated_time_to_complete
 
     Annotations: 
         rdfs:comment "The estimated time to complete this walk in minutes.",
         rdfs:label "Estimated time to complete"
     
     
-DataProperty: id
+DataProperty: trail:id
 
     Annotations: 
         rdfs:comment "The trail ID as specified in the original Sport Ireland CSV dataset",
         rdfs:label "Trail ID"
     
     
-DataProperty: length
+DataProperty: trail:length
 
     Annotations: 
         rdfs:comment "The length of the trail measured in kilometres",
         rdfs:label "Length"
     
     
-DataProperty: name
+DataProperty: trail:name
 
     Annotations: 
         rdfs:comment "The name of the trail",
         rdfs:label "Trail name"
     
     
-DataProperty: value
+DataProperty: trail:value
 
     
 Class: <http://www.opengis.net/ont/sf#Point>
 
     
-Class: Category
+Class: trail:Category
 
     Annotations: 
         rdfs:comment "The category of trail signified as an integer.",
         rdfs:label "Category"
     
     SubClassOf: 
-        isCategoryOf only Trail
+        trail:isCategoryOf only trail:Trail
     
     
-Class: County
+Class: trail:County
 
     Annotations: 
         rdfs:comment "The counties which this trail passes through.",
         rdfs:label "County"
     
     
-Class: FinishPoint
+Class: trail:FinishPoint
 
     Annotations: 
         rdfs:comment "The end point of the trail.",
@@ -214,43 +292,43 @@ Class: FinishPoint
     
     SubClassOf: 
         <http://www.opengis.net/ont/sf#Point>,
-        finishPoint only Trail
+        trail:finishPoint only trail:Trail
     
     
-Class: Format
+Class: trail:Format
 
     Annotations: 
         rdfs:comment "The trail format signifying whether the trail is linear, circular, etc.",
         rdfs:label "Format"
     
     SubClassOf: 
-        isFormatOf only Trail
+        trail:isFormatOf only trail:Trail
     
     
-Class: Grade
+Class: trail:Grade
 
     Annotations: 
         rdfs:comment "A measure of how difficult the trail will be to walk.",
         rdfs:label "Grade"
     
     SubClassOf: 
-        isGradeOf only Trail
+        trail:isGradeOf only trail:Trail
     
     
-Class: Province
+Class: trail:Province
 
     
-Class: Quality
+Class: trail:Quality
 
     Annotations: 
         rdfs:comment "The quality of the trail, measured on a 3 star system",
         rdfs:label "Quality"
     
     SubClassOf: 
-        isQualityOf only Trail
+        trail:isQualityOf only trail:Trail
     
     
-Class: StartPoint
+Class: trail:StartPoint
 
     Annotations: 
         rdfs:comment "The starting point of the trail",
@@ -258,88 +336,88 @@ Class: StartPoint
     
     SubClassOf: 
         <http://www.opengis.net/ont/sf#Point>,
-        startPoint only Trail
+        trail:startPoint only trail:Trail
     
     
-Class: Trail
+Class: trail:Trail
 
     Annotations: 
         rdfs:comment "A trail as specified by Sport Ireland",
         rdfs:label "Trail"
     
     SubClassOf: 
-        finishPoint only FinishPoint,
-        hasGrade only Grade,
-        hasQuality only Quality,
-        locatedIn only County,
-        startPoint only StartPoint,
-        locatedIn min 1 County,
-        finishPoint exactly 1 FinishPoint,
-        startPoint exactly 1 StartPoint,
-        hasCategory max 1 Category,
-        hasGrade max 1 Grade,
-        hasQuality max 1 Quality
+        trail:finishPoint only trail:FinishPoint,
+        trail:hasGrade only trail:Grade,
+        trail:hasQuality only trail:Quality,
+        trail:locatedIn only trail:County,
+        trail:startPoint only trail:StartPoint,
+        trail:locatedIn min 1 trail:County,
+        trail:finishPoint exactly 1 trail:FinishPoint,
+        trail:startPoint exactly 1 trail:StartPoint,
+        trail:hasCategory max 1 trail:Category,
+        trail:hasGrade max 1 trail:Grade,
+        trail:hasQuality max 1 trail:Quality
     
     
-Class: TrailType
+Class: trail:TrailType
 
     Annotations: 
         rdfs:comment "The type of trail",
         rdfs:comment "TrailType"
     
     SubClassOf: 
-        isTypeOf only Trail
+        trail:isTypeOf only trail:Trail
     
     
 Individual: <http://example.org/trail/1-star>
 
     Types: 
-        Quality
+        trail:Quality
     
     Facts:  
-     value  1
+     trail:value  1
     
     
 Individual: <http://example.org/trail/2-star>
 
     Types: 
-        Quality
+        trail:Quality
     
     Facts:  
-     value  2
+     trail:value  2
     
     
 Individual: <http://example.org/trail/2Circulars>
 
     Types: 
-        Format
+        trail:Format
     
     Facts:  
-     value  "2Circulars"^^xsd:string
+     trail:value  "2Circulars"^^xsd:string
     
     
 Individual: <http://example.org/trail/3-star>
 
     Types: 
-        Quality
+        trail:Quality
     
     Facts:  
-     value  3
+     trail:value  3
     
     
 Individual: <http://example.org/trail/Linear+Circular>
 
     Types: 
-        Format
+        trail:Format
     
     Facts:  
-     value  "Linear+Circular"^^xsd:string
+     trail:value  "Linear+Circular"^^xsd:string
     
     
 Individual: <http://www.example.org/finish_point/10>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -349,7 +427,7 @@ Individual: <http://www.example.org/finish_point/10>
 Individual: <http://www.example.org/finish_point/11>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -359,7 +437,7 @@ Individual: <http://www.example.org/finish_point/11>
 Individual: <http://www.example.org/finish_point/12>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -369,7 +447,7 @@ Individual: <http://www.example.org/finish_point/12>
 Individual: <http://www.example.org/finish_point/13>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -379,7 +457,7 @@ Individual: <http://www.example.org/finish_point/13>
 Individual: <http://www.example.org/finish_point/14>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -389,7 +467,7 @@ Individual: <http://www.example.org/finish_point/14>
 Individual: <http://www.example.org/finish_point/15>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -399,7 +477,7 @@ Individual: <http://www.example.org/finish_point/15>
 Individual: <http://www.example.org/finish_point/16>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -409,7 +487,7 @@ Individual: <http://www.example.org/finish_point/16>
 Individual: <http://www.example.org/finish_point/17>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -419,7 +497,7 @@ Individual: <http://www.example.org/finish_point/17>
 Individual: <http://www.example.org/finish_point/18>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -429,7 +507,7 @@ Individual: <http://www.example.org/finish_point/18>
 Individual: <http://www.example.org/finish_point/19>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -439,7 +517,7 @@ Individual: <http://www.example.org/finish_point/19>
 Individual: <http://www.example.org/finish_point/1>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -449,7 +527,7 @@ Individual: <http://www.example.org/finish_point/1>
 Individual: <http://www.example.org/finish_point/21>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -459,7 +537,7 @@ Individual: <http://www.example.org/finish_point/21>
 Individual: <http://www.example.org/finish_point/22>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -469,7 +547,7 @@ Individual: <http://www.example.org/finish_point/22>
 Individual: <http://www.example.org/finish_point/23>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -479,7 +557,7 @@ Individual: <http://www.example.org/finish_point/23>
 Individual: <http://www.example.org/finish_point/24>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -489,7 +567,7 @@ Individual: <http://www.example.org/finish_point/24>
 Individual: <http://www.example.org/finish_point/25>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -499,7 +577,7 @@ Individual: <http://www.example.org/finish_point/25>
 Individual: <http://www.example.org/finish_point/26>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -509,7 +587,7 @@ Individual: <http://www.example.org/finish_point/26>
 Individual: <http://www.example.org/finish_point/27>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -519,7 +597,7 @@ Individual: <http://www.example.org/finish_point/27>
 Individual: <http://www.example.org/finish_point/28>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -529,7 +607,7 @@ Individual: <http://www.example.org/finish_point/28>
 Individual: <http://www.example.org/finish_point/29>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -539,7 +617,7 @@ Individual: <http://www.example.org/finish_point/29>
 Individual: <http://www.example.org/finish_point/2>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -549,7 +627,7 @@ Individual: <http://www.example.org/finish_point/2>
 Individual: <http://www.example.org/finish_point/30>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -559,7 +637,7 @@ Individual: <http://www.example.org/finish_point/30>
 Individual: <http://www.example.org/finish_point/31>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -569,7 +647,7 @@ Individual: <http://www.example.org/finish_point/31>
 Individual: <http://www.example.org/finish_point/32>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -579,7 +657,7 @@ Individual: <http://www.example.org/finish_point/32>
 Individual: <http://www.example.org/finish_point/3>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -589,7 +667,7 @@ Individual: <http://www.example.org/finish_point/3>
 Individual: <http://www.example.org/finish_point/4>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -599,7 +677,7 @@ Individual: <http://www.example.org/finish_point/4>
 Individual: <http://www.example.org/finish_point/5>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -609,7 +687,7 @@ Individual: <http://www.example.org/finish_point/5>
 Individual: <http://www.example.org/finish_point/6>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -619,7 +697,7 @@ Individual: <http://www.example.org/finish_point/6>
 Individual: <http://www.example.org/finish_point/7>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -629,7 +707,7 @@ Individual: <http://www.example.org/finish_point/7>
 Individual: <http://www.example.org/finish_point/8>
 
     Types: 
-        FinishPoint,
+        trail:FinishPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -639,7 +717,7 @@ Individual: <http://www.example.org/finish_point/8>
 Individual: <http://www.example.org/start_point/10>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -649,7 +727,7 @@ Individual: <http://www.example.org/start_point/10>
 Individual: <http://www.example.org/start_point/11>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -659,7 +737,7 @@ Individual: <http://www.example.org/start_point/11>
 Individual: <http://www.example.org/start_point/12>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -669,7 +747,7 @@ Individual: <http://www.example.org/start_point/12>
 Individual: <http://www.example.org/start_point/13>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -679,7 +757,7 @@ Individual: <http://www.example.org/start_point/13>
 Individual: <http://www.example.org/start_point/14>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -689,7 +767,7 @@ Individual: <http://www.example.org/start_point/14>
 Individual: <http://www.example.org/start_point/15>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -699,7 +777,7 @@ Individual: <http://www.example.org/start_point/15>
 Individual: <http://www.example.org/start_point/16>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -709,7 +787,7 @@ Individual: <http://www.example.org/start_point/16>
 Individual: <http://www.example.org/start_point/17>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -719,7 +797,7 @@ Individual: <http://www.example.org/start_point/17>
 Individual: <http://www.example.org/start_point/18>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -729,7 +807,7 @@ Individual: <http://www.example.org/start_point/18>
 Individual: <http://www.example.org/start_point/19>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -739,7 +817,7 @@ Individual: <http://www.example.org/start_point/19>
 Individual: <http://www.example.org/start_point/1>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -749,7 +827,7 @@ Individual: <http://www.example.org/start_point/1>
 Individual: <http://www.example.org/start_point/21>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -759,7 +837,7 @@ Individual: <http://www.example.org/start_point/21>
 Individual: <http://www.example.org/start_point/22>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -769,7 +847,7 @@ Individual: <http://www.example.org/start_point/22>
 Individual: <http://www.example.org/start_point/23>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -779,7 +857,7 @@ Individual: <http://www.example.org/start_point/23>
 Individual: <http://www.example.org/start_point/24>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -789,7 +867,7 @@ Individual: <http://www.example.org/start_point/24>
 Individual: <http://www.example.org/start_point/25>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -799,7 +877,7 @@ Individual: <http://www.example.org/start_point/25>
 Individual: <http://www.example.org/start_point/26>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -809,7 +887,7 @@ Individual: <http://www.example.org/start_point/26>
 Individual: <http://www.example.org/start_point/27>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -819,7 +897,7 @@ Individual: <http://www.example.org/start_point/27>
 Individual: <http://www.example.org/start_point/28>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -829,7 +907,7 @@ Individual: <http://www.example.org/start_point/28>
 Individual: <http://www.example.org/start_point/29>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -839,7 +917,7 @@ Individual: <http://www.example.org/start_point/29>
 Individual: <http://www.example.org/start_point/2>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -849,7 +927,7 @@ Individual: <http://www.example.org/start_point/2>
 Individual: <http://www.example.org/start_point/30>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -859,7 +937,7 @@ Individual: <http://www.example.org/start_point/30>
 Individual: <http://www.example.org/start_point/31>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -869,7 +947,7 @@ Individual: <http://www.example.org/start_point/31>
 Individual: <http://www.example.org/start_point/32>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -879,7 +957,7 @@ Individual: <http://www.example.org/start_point/32>
 Individual: <http://www.example.org/start_point/3>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -889,7 +967,7 @@ Individual: <http://www.example.org/start_point/3>
 Individual: <http://www.example.org/start_point/4>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -899,7 +977,7 @@ Individual: <http://www.example.org/start_point/4>
 Individual: <http://www.example.org/start_point/5>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -909,7 +987,7 @@ Individual: <http://www.example.org/start_point/5>
 Individual: <http://www.example.org/start_point/6>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -919,7 +997,7 @@ Individual: <http://www.example.org/start_point/6>
 Individual: <http://www.example.org/start_point/7>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -929,7 +1007,7 @@ Individual: <http://www.example.org/start_point/7>
 Individual: <http://www.example.org/start_point/8>
 
     Types: 
-        StartPoint,
+        trail:StartPoint,
         <http://www.opengis.net/ont/sf#Point>
     
     Facts:  
@@ -939,943 +1017,943 @@ Individual: <http://www.example.org/start_point/8>
 Individual: <http://www.example.org/trail/10>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/10>,
-     hasCategory  category_1,
-     hasFormat  Linear,
-     hasGrade  Moderate,
-     hasQuality  <http://example.org/trail/2-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Mayo,
-     startPoint  <http://www.example.org/start_point/10>,
-     climb  310,
-     dogs_allowed  false,
-     estimated_time_to_complete  1550,
-     id  "10",
-     length  61,
-     name  "Croagh Patrick Heritage Trail"
+     trail:finishPoint  <http://www.example.org/finish_point/10>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Linear,
+     trail:hasGrade  trail:Moderate,
+     trail:hasQuality  <http://example.org/trail/2-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Mayo,
+     trail:startPoint  <http://www.example.org/start_point/10>,
+     trail:climb  310,
+     trail:dogs_allowed  false,
+     trail:estimated_time_to_complete  1550,
+     trail:id  "10",
+     trail:length  61,
+     trail:name  "Croagh Patrick Heritage Trail"
     
     
 Individual: <http://www.example.org/trail/11>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/11>,
-     hasCategory  category_1,
-     hasFormat  <http://example.org/trail/Linear+Circular>,
-     hasGrade  Strenuous,
-     hasQuality  <http://example.org/trail/2-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Kerry,
-     startPoint  <http://www.example.org/start_point/11>,
-     climb  2590,
-     dogs_allowed  false,
-     estimated_time_to_complete  10080,
-     id  "11",
-     length  162,
-     name  "Dingle Way"
+     trail:finishPoint  <http://www.example.org/finish_point/11>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  <http://example.org/trail/Linear+Circular>,
+     trail:hasGrade  trail:Strenuous,
+     trail:hasQuality  <http://example.org/trail/2-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Kerry,
+     trail:startPoint  <http://www.example.org/start_point/11>,
+     trail:climb  2590,
+     trail:dogs_allowed  false,
+     trail:estimated_time_to_complete  10080,
+     trail:id  "11",
+     trail:length  162,
+     trail:name  "Dingle Way"
     
     
 Individual: <http://www.example.org/trail/12>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/12>,
-     hasCategory  category_1,
-     hasFormat  Loop,
-     hasGrade  Easy,
-     hasQuality  <http://example.org/trail/2-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Donegal,
-     startPoint  <http://www.example.org/start_point/12>,
-     id  "12",
-     length  77,
-     name  "Sl� An Earagail - Sli Dhun na nGall"
+     trail:finishPoint  <http://www.example.org/finish_point/12>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Loop,
+     trail:hasGrade  trail:Easy,
+     trail:hasQuality  <http://example.org/trail/2-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Donegal,
+     trail:startPoint  <http://www.example.org/start_point/12>,
+     trail:id  "12",
+     trail:length  77,
+     trail:name  "Sl� An Earagail - Sli Dhun na nGall"
     
     
 Individual: <http://www.example.org/trail/13>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/13>,
-     hasCategory  category_1,
-     hasFormat  Circular,
-     hasGrade  Moderate,
-     hasQuality  <http://example.org/trail/2-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Donegal,
-     startPoint  <http://www.example.org/start_point/13>,
-     id  "13",
-     length  65,
-     name  "Sl� Cholmcille - Sli Dhun na nGall"
+     trail:finishPoint  <http://www.example.org/finish_point/13>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Circular,
+     trail:hasGrade  trail:Moderate,
+     trail:hasQuality  <http://example.org/trail/2-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Donegal,
+     trail:startPoint  <http://www.example.org/start_point/13>,
+     trail:id  "13",
+     trail:length  65,
+     trail:name  "Sl� Cholmcille - Sli Dhun na nGall"
     
     
 Individual: <http://www.example.org/trail/14>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/14>,
-     hasCategory  category_1,
-     hasFormat  Circular,
-     hasGrade  Moderate,
-     hasQuality  <http://example.org/trail/2-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Donegal,
-     startPoint  <http://www.example.org/start_point/14>,
-     climb  1060,
-     estimated_time_to_complete  990,
-     id  "14",
-     length  51,
-     name  "Sl� Na Finne - Sli Dhun na nGall"
+     trail:finishPoint  <http://www.example.org/finish_point/14>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Circular,
+     trail:hasGrade  trail:Moderate,
+     trail:hasQuality  <http://example.org/trail/2-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Donegal,
+     trail:startPoint  <http://www.example.org/start_point/14>,
+     trail:climb  1060,
+     trail:estimated_time_to_complete  990,
+     trail:id  "14",
+     trail:length  51,
+     trail:name  "Sl� Na Finne - Sli Dhun na nGall"
     
     
 Individual: <http://www.example.org/trail/15>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/15>,
-     hasCategory  category_1,
-     hasFormat  Circular,
-     hasGrade  Moderate,
-     hasQuality  <http://example.org/trail/2-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Donegal,
-     startPoint  <http://www.example.org/start_point/15>,
-     id  "15",
-     length  65,
-     name  "Sl� Na Rosann - Sli Dhun na nGall"
+     trail:finishPoint  <http://www.example.org/finish_point/15>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Circular,
+     trail:hasGrade  trail:Moderate,
+     trail:hasQuality  <http://example.org/trail/2-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Donegal,
+     trail:startPoint  <http://www.example.org/start_point/15>,
+     trail:id  "15",
+     trail:length  65,
+     trail:name  "Sl� Na Rosann - Sli Dhun na nGall"
     
     
 Individual: <http://www.example.org/trail/16>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/16>,
-     hasCategory  category_1,
-     hasFormat  Circular,
-     hasGrade  Moderate,
-     hasQuality  <http://example.org/trail/3-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Clare,
-     startPoint  <http://www.example.org/start_point/16>,
-     climb  3060,
-     dogs_allowed  false,
-     estimated_time_to_complete  11520,
-     id  "16",
-     length  180,
-     name  "East Clare Way"
+     trail:finishPoint  <http://www.example.org/finish_point/16>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Circular,
+     trail:hasGrade  trail:Moderate,
+     trail:hasQuality  <http://example.org/trail/3-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Clare,
+     trail:startPoint  <http://www.example.org/start_point/16>,
+     trail:climb  3060,
+     trail:dogs_allowed  false,
+     trail:estimated_time_to_complete  11520,
+     trail:id  "16",
+     trail:length  180,
+     trail:name  "East Clare Way"
     
     
 Individual: <http://www.example.org/trail/17>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/17>,
-     hasCategory  category_1,
-     hasFormat  Linear,
-     hasGrade  Moderate,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Tipperary,
-     locatedIn  Waterford,
-     startPoint  <http://www.example.org/start_point/17>,
-     climb  1375,
-     estimated_time_to_complete  4320,
-     id  "17",
-     length  75,
-     name  "East Munster Way"
+     trail:finishPoint  <http://www.example.org/finish_point/17>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Linear,
+     trail:hasGrade  trail:Moderate,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Tipperary,
+     trail:locatedIn  trail:Waterford,
+     trail:startPoint  <http://www.example.org/start_point/17>,
+     trail:climb  1375,
+     trail:estimated_time_to_complete  4320,
+     trail:id  "17",
+     trail:length  75,
+     trail:name  "East Munster Way"
     
     
 Individual: <http://www.example.org/trail/18>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/18>,
-     hasCategory  category_1,
-     hasFormat  Linear,
-     hasGrade  Easy,
-     hasQuality  <http://example.org/trail/2-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Dublin,
-     locatedIn  Kildare,
-     locatedIn  Offaly,
-     startPoint  <http://www.example.org/start_point/18>,
-     climb  0,
-     dogs_allowed  true,
-     estimated_time_to_complete  7200,
-     id  "18",
-     length  117,
-     name  "Grand Canal Way"
+     trail:finishPoint  <http://www.example.org/finish_point/18>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Linear,
+     trail:hasGrade  trail:Easy,
+     trail:hasQuality  <http://example.org/trail/2-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Dublin,
+     trail:locatedIn  trail:Kildare,
+     trail:locatedIn  trail:Offaly,
+     trail:startPoint  <http://www.example.org/start_point/18>,
+     trail:climb  0,
+     trail:dogs_allowed  true,
+     trail:estimated_time_to_complete  7200,
+     trail:id  "18",
+     trail:length  117,
+     trail:name  "Grand Canal Way"
     
     
 Individual: <http://www.example.org/trail/19>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/19>,
-     hasCategory  category_1,
-     hasFormat  Circular,
-     hasGrade  Strenuous,
-     hasQuality  <http://example.org/trail/3-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Kerry,
-     startPoint  <http://www.example.org/start_point/19>,
-     climb  5310,
-     dogs_allowed  false,
-     estimated_time_to_complete  12960,
-     id  "19",
-     length  214,
-     name  "Kerry Way"
+     trail:finishPoint  <http://www.example.org/finish_point/19>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Circular,
+     trail:hasGrade  trail:Strenuous,
+     trail:hasQuality  <http://example.org/trail/3-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Kerry,
+     trail:startPoint  <http://www.example.org/start_point/19>,
+     trail:climb  5310,
+     trail:dogs_allowed  false,
+     trail:estimated_time_to_complete  12960,
+     trail:id  "19",
+     trail:length  214,
+     trail:name  "Kerry Way"
     
     
 Individual: <http://www.example.org/trail/1>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/1>,
-     hasCategory  category_1,
-     hasFormat  Linear,
-     hasGrade  Moderate,
-     hasQuality  <http://example.org/trail/2-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Cork,
-     locatedIn  Limerick,
-     locatedIn  Tipperary,
-     startPoint  <http://www.example.org/start_point/1>,
-     climb  1560,
-     dogs_allowed  true,
-     estimated_time_to_complete  5760,
-     id  "1",
-     length  89,
-     name  "Ballyhoura Way"
+     trail:finishPoint  <http://www.example.org/finish_point/1>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Linear,
+     trail:hasGrade  trail:Moderate,
+     trail:hasQuality  <http://example.org/trail/2-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Cork,
+     trail:locatedIn  trail:Limerick,
+     trail:locatedIn  trail:Tipperary,
+     trail:startPoint  <http://www.example.org/start_point/1>,
+     trail:climb  1560,
+     trail:dogs_allowed  true,
+     trail:estimated_time_to_complete  5760,
+     trail:id  "1",
+     trail:length  89,
+     trail:name  "Ballyhoura Way"
     
     
 Individual: <http://www.example.org/trail/21>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/21>,
-     hasCategory  category_1,
-     hasFormat  Linear,
-     hasGrade  Moderate,
-     hasQuality  <http://example.org/trail/3-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Clare,
-     locatedIn  Limerick,
-     locatedIn  Tipperary,
-     startPoint  <http://www.example.org/start_point/21>,
-     climb  527,
-     dogs_allowed  false,
-     estimated_time_to_complete  4320,
-     id  "21",
-     length  68,
-     name  "Lough Derg Way"
+     trail:finishPoint  <http://www.example.org/finish_point/21>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Linear,
+     trail:hasGrade  trail:Moderate,
+     trail:hasQuality  <http://example.org/trail/3-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Clare,
+     trail:locatedIn  trail:Limerick,
+     trail:locatedIn  trail:Tipperary,
+     trail:startPoint  <http://www.example.org/start_point/21>,
+     trail:climb  527,
+     trail:dogs_allowed  false,
+     trail:estimated_time_to_complete  4320,
+     trail:id  "21",
+     trail:length  68,
+     trail:name  "Lough Derg Way"
     
     
 Individual: <http://www.example.org/trail/22>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/22>,
-     hasCategory  category_1,
-     hasFormat  Circular,
-     hasGrade  Moderate,
-     hasQuality  <http://example.org/trail/3-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Clare,
-     startPoint  <http://www.example.org/start_point/22>,
-     climb  1620,
-     dogs_allowed  false,
-     estimated_time_to_complete  8640,
-     id  "22",
-     length  148,
-     name  "Mid Clare Way"
+     trail:finishPoint  <http://www.example.org/finish_point/22>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Circular,
+     trail:hasGrade  trail:Moderate,
+     trail:hasQuality  <http://example.org/trail/3-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Clare,
+     trail:startPoint  <http://www.example.org/start_point/22>,
+     trail:climb  1620,
+     trail:dogs_allowed  false,
+     trail:estimated_time_to_complete  8640,
+     trail:id  "22",
+     trail:length  148,
+     trail:name  "Mid Clare Way"
     
     
 Individual: <http://www.example.org/trail/23>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/23>,
-     hasCategory  category_1,
-     hasFormat  <http://example.org/trail/2Circulars>,
-     hasGrade  Strenuous,
-     hasQuality  <http://example.org/trail/3-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Leitrim,
-     locatedIn  Roscommon,
-     locatedIn  Sligo,
-     startPoint  <http://www.example.org/start_point/23>,
-     climb  2340,
-     dogs_allowed  false,
-     estimated_time_to_complete  7200,
-     id  "23",
-     length  118,
-     name  "Miner's Way & Historical Trail"
+     trail:finishPoint  <http://www.example.org/finish_point/23>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  <http://example.org/trail/2Circulars>,
+     trail:hasGrade  trail:Strenuous,
+     trail:hasQuality  <http://example.org/trail/3-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Leitrim,
+     trail:locatedIn  trail:Roscommon,
+     trail:locatedIn  trail:Sligo,
+     trail:startPoint  <http://www.example.org/start_point/23>,
+     trail:climb  2340,
+     trail:dogs_allowed  false,
+     trail:estimated_time_to_complete  7200,
+     trail:id  "23",
+     trail:length  118,
+     trail:name  "Miner's Way & Historical Trail"
     
     
 Individual: <http://www.example.org/trail/24>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/24>,
-     hasCategory  category_1,
-     hasFormat  Linear,
-     hasGrade  Moderate,
-     hasQuality  <http://example.org/trail/2-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Monaghan,
-     startPoint  <http://www.example.org/start_point/24>,
-     dogs_allowed  false,
-     estimated_time_to_complete  1000,
-     id  "24",
-     length  56.5,
-     name  "Monaghan Way"
+     trail:finishPoint  <http://www.example.org/finish_point/24>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Linear,
+     trail:hasGrade  trail:Moderate,
+     trail:hasQuality  <http://example.org/trail/2-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Monaghan,
+     trail:startPoint  <http://www.example.org/start_point/24>,
+     trail:dogs_allowed  false,
+     trail:estimated_time_to_complete  1000,
+     trail:id  "24",
+     trail:length  56.5,
+     trail:name  "Monaghan Way"
     
     
 Individual: <http://www.example.org/trail/25>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/25>,
-     hasCategory  category_1,
-     hasFormat  Linear,
-     hasGrade  Easy,
-     hasQuality  <http://example.org/trail/3-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Kilkenny,
-     startPoint  <http://www.example.org/start_point/25>,
-     dogs_allowed  false,
-     estimated_time_to_complete  180,
-     id  "25",
-     length  11,
-     name  "Nore Valley Walk - Inistioge to Thomastown Section"
+     trail:finishPoint  <http://www.example.org/finish_point/25>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Linear,
+     trail:hasGrade  trail:Easy,
+     trail:hasQuality  <http://example.org/trail/3-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Kilkenny,
+     trail:startPoint  <http://www.example.org/start_point/25>,
+     trail:dogs_allowed  false,
+     trail:estimated_time_to_complete  180,
+     trail:id  "25",
+     trail:length  11,
+     trail:name  "Nore Valley Walk - Inistioge to Thomastown Section"
     
     
 Individual: <http://www.example.org/trail/26>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/26>,
-     hasCategory  category_1,
-     hasFormat  <http://example.org/trail/Linear+Circular>,
-     hasGrade  Moderate,
-     hasQuality  <http://example.org/trail/3-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Kerry,
-     startPoint  <http://www.example.org/start_point/26>,
-     climb  450,
-     dogs_allowed  true,
-     estimated_time_to_complete  2880,
-     id  "26",
-     length  45,
-     name  "North Kerry Way"
+     trail:finishPoint  <http://www.example.org/finish_point/26>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  <http://example.org/trail/Linear+Circular>,
+     trail:hasGrade  trail:Moderate,
+     trail:hasQuality  <http://example.org/trail/3-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Kerry,
+     trail:startPoint  <http://www.example.org/start_point/26>,
+     trail:climb  450,
+     trail:dogs_allowed  true,
+     trail:estimated_time_to_complete  2880,
+     trail:id  "26",
+     trail:length  45,
+     trail:name  "North Kerry Way"
     
     
 Individual: <http://www.example.org/trail/27>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/27>,
-     hasCategory  category_1,
-     hasFormat  Linear,
-     hasGrade  Easy,
-     hasQuality  <http://example.org/trail/3-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Offaly,
-     startPoint  <http://www.example.org/start_point/27>,
-     dogs_allowed  true,
-     estimated_time_to_complete  2880,
-     id  "27",
-     length  37,
-     name  "Offaly Way"
+     trail:finishPoint  <http://www.example.org/finish_point/27>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Linear,
+     trail:hasGrade  trail:Easy,
+     trail:hasQuality  <http://example.org/trail/3-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Offaly,
+     trail:startPoint  <http://www.example.org/start_point/27>,
+     trail:dogs_allowed  true,
+     trail:estimated_time_to_complete  2880,
+     trail:id  "27",
+     trail:length  37,
+     trail:name  "Offaly Way"
     
     
 Individual: <http://www.example.org/trail/28>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/28>,
-     hasCategory  category_1,
-     hasFormat  Linear,
-     hasGrade  Easy,
-     hasQuality  <http://example.org/trail/2-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Dublin,
-     locatedIn  Kildare,
-     locatedIn  Longford,
-     locatedIn  Meath,
-     locatedIn  Westmeath,
-     startPoint  <http://www.example.org/start_point/28>,
-     dogs_allowed  true,
-     estimated_time_to_complete  4320,
-     id  "28",
-     length  144,
-     name  "Royal Canal Way"
+     trail:finishPoint  <http://www.example.org/finish_point/28>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Linear,
+     trail:hasGrade  trail:Easy,
+     trail:hasQuality  <http://example.org/trail/2-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Dublin,
+     trail:locatedIn  trail:Kildare,
+     trail:locatedIn  trail:Longford,
+     trail:locatedIn  trail:Meath,
+     trail:locatedIn  trail:Westmeath,
+     trail:startPoint  <http://www.example.org/start_point/28>,
+     trail:dogs_allowed  true,
+     trail:estimated_time_to_complete  4320,
+     trail:id  "28",
+     trail:length  144,
+     trail:name  "Royal Canal Way"
     
     
 Individual: <http://www.example.org/trail/29>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/29>,
-     hasCategory  category_1,
-     hasFormat  Circular,
-     hasGrade  Moderate,
-     hasQuality  <http://example.org/trail/2-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Cork,
-     startPoint  <http://www.example.org/start_point/29>,
-     climb  2190,
-     dogs_allowed  false,
-     estimated_time_to_complete  5760,
-     id  "29",
-     length  175,
-     name  "Sheeps Head Way"
+     trail:finishPoint  <http://www.example.org/finish_point/29>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Circular,
+     trail:hasGrade  trail:Moderate,
+     trail:hasQuality  <http://example.org/trail/2-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Cork,
+     trail:startPoint  <http://www.example.org/start_point/29>,
+     trail:climb  2190,
+     trail:dogs_allowed  false,
+     trail:estimated_time_to_complete  5760,
+     trail:id  "29",
+     trail:length  175,
+     trail:name  "Sheeps Head Way"
     
     
 Individual: <http://www.example.org/trail/2>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/2>,
-     hasCategory  category_1,
-     hasFormat  Linear,
-     hasGrade  Easy,
-     hasQuality  <http://example.org/trail/2-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Carlow,
-     locatedIn  Kildare,
-     locatedIn  Laois,
-     startPoint  <http://www.example.org/start_point/2>,
-     climb  0,
-     dogs_allowed  true,
-     estimated_time_to_complete  5760,
-     id  "2",
-     length  100,
-     name  "Barrow Way"
+     trail:finishPoint  <http://www.example.org/finish_point/2>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Linear,
+     trail:hasGrade  trail:Easy,
+     trail:hasQuality  <http://example.org/trail/2-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Carlow,
+     trail:locatedIn  trail:Kildare,
+     trail:locatedIn  trail:Laois,
+     trail:startPoint  <http://www.example.org/start_point/2>,
+     trail:climb  0,
+     trail:dogs_allowed  true,
+     trail:estimated_time_to_complete  5760,
+     trail:id  "2",
+     trail:length  100,
+     trail:name  "Barrow Way"
     
     
 Individual: <http://www.example.org/trail/30>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/30>,
-     hasCategory  category_1,
-     hasFormat  Circular,
-     hasGrade  Strenuous,
-     hasQuality  <http://example.org/trail/2-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Laois,
-     locatedIn  Offaly,
-     startPoint  <http://www.example.org/start_point/30>,
-     climb  1275,
-     dogs_allowed  false,
-     estimated_time_to_complete  5400,
-     id  "30",
-     length  70.5,
-     name  "Slieve Bloom Way"
+     trail:finishPoint  <http://www.example.org/finish_point/30>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Circular,
+     trail:hasGrade  trail:Strenuous,
+     trail:hasQuality  <http://example.org/trail/2-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Laois,
+     trail:locatedIn  trail:Offaly,
+     trail:startPoint  <http://www.example.org/start_point/30>,
+     trail:climb  1275,
+     trail:dogs_allowed  false,
+     trail:estimated_time_to_complete  5400,
+     trail:id  "30",
+     trail:length  70.5,
+     trail:name  "Slieve Bloom Way"
     
     
 Individual: <http://www.example.org/trail/31>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/31>,
-     hasCategory  category_1,
-     hasFormat  Linear,
-     hasGrade  Moderate,
-     hasQuality  <http://example.org/trail/3-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Limerick,
-     locatedIn  Tipperary,
-     startPoint  <http://www.example.org/start_point/31>,
-     climb  870,
-     dogs_allowed  true,
-     estimated_time_to_complete  2880,
-     id  "31",
-     length  43,
-     name  "Slieve Felim Way"
+     trail:finishPoint  <http://www.example.org/finish_point/31>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Linear,
+     trail:hasGrade  trail:Moderate,
+     trail:hasQuality  <http://example.org/trail/3-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Limerick,
+     trail:locatedIn  trail:Tipperary,
+     trail:startPoint  <http://www.example.org/start_point/31>,
+     trail:climb  870,
+     trail:dogs_allowed  true,
+     trail:estimated_time_to_complete  2880,
+     trail:id  "31",
+     trail:length  43,
+     trail:name  "Slieve Felim Way"
     
     
 Individual: <http://www.example.org/trail/32>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/32>,
-     hasCategory  category_1,
-     hasFormat  Linear,
-     hasGrade  Moderate,
-     hasQuality  <http://example.org/trail/2-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Sligo,
-     startPoint  <http://www.example.org/start_point/32>,
-     climb  890,
-     dogs_allowed  false,
-     estimated_time_to_complete  4320,
-     id  "32",
-     length  78,
-     name  "Sligo Way"
+     trail:finishPoint  <http://www.example.org/finish_point/32>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Linear,
+     trail:hasGrade  trail:Moderate,
+     trail:hasQuality  <http://example.org/trail/2-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Sligo,
+     trail:startPoint  <http://www.example.org/start_point/32>,
+     trail:climb  890,
+     trail:dogs_allowed  false,
+     trail:estimated_time_to_complete  4320,
+     trail:id  "32",
+     trail:length  78,
+     trail:name  "Sligo Way"
     
     
 Individual: <http://www.example.org/trail/3>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/3>,
-     hasCategory  category_1,
-     hasFormat  Loop,
-     hasGrade  Strenuous,
-     hasQuality  <http://example.org/trail/2-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Cork,
-     locatedIn  Kerry,
-     startPoint  <http://www.example.org/start_point/3>,
-     climb  5245,
-     dogs_allowed  false,
-     estimated_time_to_complete  12960,
-     id  "3",
-     length  206,
-     name  "Beara Way"
+     trail:finishPoint  <http://www.example.org/finish_point/3>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Loop,
+     trail:hasGrade  trail:Strenuous,
+     trail:hasQuality  <http://example.org/trail/2-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Cork,
+     trail:locatedIn  trail:Kerry,
+     trail:startPoint  <http://www.example.org/start_point/3>,
+     trail:climb  5245,
+     trail:dogs_allowed  false,
+     trail:estimated_time_to_complete  12960,
+     trail:id  "3",
+     trail:length  206,
+     trail:name  "Beara Way"
     
     
 Individual: <http://www.example.org/trail/4>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/4>,
-     hasCategory  category_1,
-     hasFormat  Linear,
-     hasGrade  Moderate,
-     hasQuality  <http://example.org/trail/3-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Cork,
-     locatedIn  Tipperary,
-     startPoint  <http://www.example.org/start_point/4>,
-     climb  3690,
-     dogs_allowed  false,
-     estimated_time_to_complete  10080,
-     id  "4",
-     length  94,
-     name  "Blackwater Way - Avondhu"
+     trail:finishPoint  <http://www.example.org/finish_point/4>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Linear,
+     trail:hasGrade  trail:Moderate,
+     trail:hasQuality  <http://example.org/trail/3-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Cork,
+     trail:locatedIn  trail:Tipperary,
+     trail:startPoint  <http://www.example.org/start_point/4>,
+     trail:climb  3690,
+     trail:dogs_allowed  false,
+     trail:estimated_time_to_complete  10080,
+     trail:id  "4",
+     trail:length  94,
+     trail:name  "Blackwater Way - Avondhu"
     
     
 Individual: <http://www.example.org/trail/5>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/5>,
-     hasCategory  category_1,
-     hasFormat  Linear,
-     hasGrade  Moderate,
-     hasQuality  <http://example.org/trail/2-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Cork,
-     locatedIn  Kerry,
-     startPoint  <http://www.example.org/start_point/5>,
-     dogs_allowed  false,
-     estimated_time_to_complete  4320,
-     id  "5",
-     length  67,
-     name  "Blackwater Way - Duhallow"
+     trail:finishPoint  <http://www.example.org/finish_point/5>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Linear,
+     trail:hasGrade  trail:Moderate,
+     trail:hasQuality  <http://example.org/trail/2-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Cork,
+     trail:locatedIn  trail:Kerry,
+     trail:startPoint  <http://www.example.org/start_point/5>,
+     trail:dogs_allowed  false,
+     trail:estimated_time_to_complete  4320,
+     trail:id  "5",
+     trail:length  67,
+     trail:name  "Blackwater Way - Duhallow"
     
     
 Individual: <http://www.example.org/trail/6>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/6>,
-     hasCategory  category_1,
-     hasFormat  Linear,
-     hasGrade  Moderate,
-     hasQuality  <http://example.org/trail/3-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Donegal,
-     startPoint  <http://www.example.org/start_point/6>,
-     climb  1230,
-     dogs_allowed  false,
-     estimated_time_to_complete  4320,
-     id  "6",
-     length  65,
-     name  "Bluestack Way"
+     trail:finishPoint  <http://www.example.org/finish_point/6>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Linear,
+     trail:hasGrade  trail:Moderate,
+     trail:hasQuality  <http://example.org/trail/3-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Donegal,
+     trail:startPoint  <http://www.example.org/start_point/6>,
+     trail:climb  1230,
+     trail:dogs_allowed  false,
+     trail:estimated_time_to_complete  4320,
+     trail:id  "6",
+     trail:length  65,
+     trail:name  "Bluestack Way"
     
     
 Individual: <http://www.example.org/trail/7>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/7>,
-     hasCategory  category_1,
-     hasFormat  Linear,
-     hasGrade  Moderate,
-     hasQuality  <http://example.org/trail/3-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Clare,
-     startPoint  <http://www.example.org/start_point/7>,
-     climb  540,
-     dogs_allowed  false,
-     estimated_time_to_complete  7200,
-     id  "7",
-     length  114,
-     name  "Burren Way"
+     trail:finishPoint  <http://www.example.org/finish_point/7>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Linear,
+     trail:hasGrade  trail:Moderate,
+     trail:hasQuality  <http://example.org/trail/3-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Clare,
+     trail:startPoint  <http://www.example.org/start_point/7>,
+     trail:climb  540,
+     trail:dogs_allowed  false,
+     trail:estimated_time_to_complete  7200,
+     trail:id  "7",
+     trail:length  114,
+     trail:name  "Burren Way"
     
     
 Individual: <http://www.example.org/trail/8>
 
     Types: 
-        Trail
+        trail:Trail
     
     Facts:  
-     finishPoint  <http://www.example.org/finish_point/8>,
-     hasCategory  category_1,
-     hasFormat  Linear,
-     hasGrade  Moderate,
-     hasQuality  <http://example.org/trail/2-star>,
-     hasType  National_Waymarked_Trail,
-     locatedIn  Cavan,
-     startPoint  <http://www.example.org/start_point/8>,
-     climb  330,
-     dogs_allowed  false,
-     estimated_time_to_complete  1440,
-     id  "8",
-     length  22,
-     name  "Cavan Way"
+     trail:finishPoint  <http://www.example.org/finish_point/8>,
+     trail:hasCategory  trail:category_1,
+     trail:hasFormat  trail:Linear,
+     trail:hasGrade  trail:Moderate,
+     trail:hasQuality  <http://example.org/trail/2-star>,
+     trail:hasType  trail:National_Waymarked_Trail,
+     trail:locatedIn  trail:Cavan,
+     trail:startPoint  <http://www.example.org/start_point/8>,
+     trail:climb  330,
+     trail:dogs_allowed  false,
+     trail:estimated_time_to_complete  1440,
+     trail:id  "8",
+     trail:length  22,
+     trail:name  "Cavan Way"
     
     
-Individual: Carlow
+Individual: trail:Carlow
 
     Types: 
-        County
+        trail:County
     
     Facts:  
-     locatedIn  Leinster
+     trail:locatedIn  trail:Leinster
     
     
-Individual: Cavan
+Individual: trail:Cavan
 
     Types: 
-        County
+        trail:County
     
     Facts:  
-     locatedIn  Ulster
+     trail:locatedIn  trail:Ulster
     
     
-Individual: Circular
+Individual: trail:Circular
 
     Types: 
-        Format
+        trail:Format
     
     Facts:  
-     value  "Circular"^^xsd:string
+     trail:value  "Circular"^^xsd:string
     
     
-Individual: Clare
+Individual: trail:Clare
 
     Types: 
-        County
+        trail:County
     
     Facts:  
-     locatedIn  Munster
+     trail:locatedIn  trail:Munster
     
     
-Individual: Connaught
+Individual: trail:Connaught
 
     Types: 
-        Province
+        trail:Province
     
     
-Individual: Cork
+Individual: trail:Cork
 
     Types: 
-        County
+        trail:County
     
     Facts:  
-     locatedIn  Munster
+     trail:locatedIn  trail:Munster
     
     
-Individual: Donegal
+Individual: trail:Donegal
 
     Types: 
-        County
+        trail:County
     
     Facts:  
-     locatedIn  Ulster
+     trail:locatedIn  trail:Ulster
     
     
-Individual: Dublin
+Individual: trail:Dublin
 
     Types: 
-        County
+        trail:County
     
     Facts:  
-     locatedIn  Leinster
+     trail:locatedIn  trail:Leinster
     
     
-Individual: Easy
+Individual: trail:Easy
 
     Types: 
-        Grade
+        trail:Grade
     
     
-Individual: Kerry
+Individual: trail:Kerry
 
     Types: 
-        County
+        trail:County
     
     Facts:  
-     locatedIn  Munster
+     trail:locatedIn  trail:Munster
     
     
-Individual: Kildare
+Individual: trail:Kildare
 
     Types: 
-        County
+        trail:County
     
     Facts:  
-     locatedIn  Leinster
+     trail:locatedIn  trail:Leinster
     
     
-Individual: Kilkenny
+Individual: trail:Kilkenny
 
     Types: 
-        County
+        trail:County
     
     Facts:  
-     locatedIn  Leinster
+     trail:locatedIn  trail:Leinster
     
     
-Individual: Laois
+Individual: trail:Laois
 
     Types: 
-        County
+        trail:County
     
     Facts:  
-     locatedIn  Leinster
+     trail:locatedIn  trail:Leinster
     
     
-Individual: Leinster
+Individual: trail:Leinster
 
     Types: 
-        Province
+        trail:Province
     
     
-Individual: Leitrim
+Individual: trail:Leitrim
 
     Types: 
-        County
+        trail:County
     
     Facts:  
-     locatedIn  Connaught
+     trail:locatedIn  trail:Connaught
     
     
-Individual: Limerick
+Individual: trail:Limerick
 
     Types: 
-        County
+        trail:County
     
     Facts:  
-     locatedIn  Munster
+     trail:locatedIn  trail:Munster
     
     
-Individual: Linear
+Individual: trail:Linear
 
     Types: 
-        Format
+        trail:Format
     
     Facts:  
-     value  "Linear"^^xsd:string
+     trail:value  "Linear"^^xsd:string
     
     
-Individual: Longford
+Individual: trail:Longford
 
     Types: 
-        County
+        trail:County
     
     Facts:  
-     locatedIn  Leinster
+     trail:locatedIn  trail:Leinster
     
     
-Individual: Loop
+Individual: trail:Loop
 
     Types: 
-        Format
+        trail:Format
     
     Facts:  
-     value  "Loop"^^xsd:string
+     trail:value  "Loop"^^xsd:string
     
     
-Individual: Mayo
+Individual: trail:Mayo
 
     Types: 
-        County
+        trail:County
     
     Facts:  
-     locatedIn  Connaught
+     trail:locatedIn  trail:Connaught
     
     
-Individual: Meath
+Individual: trail:Meath
 
     Types: 
-        County
+        trail:County
     
     Facts:  
-     locatedIn  Leinster
+     trail:locatedIn  trail:Leinster
     
     
-Individual: Moderate
+Individual: trail:Moderate
 
     Types: 
-        Grade
+        trail:Grade
     
     
-Individual: Monaghan
+Individual: trail:Monaghan
 
     Types: 
-        County
+        trail:County
     
     Facts:  
-     locatedIn  Ulster
+     trail:locatedIn  trail:Ulster
     
     
-Individual: Munster
+Individual: trail:Munster
 
     Types: 
-        Province
+        trail:Province
     
     
-Individual: National_Waymarked_Trail
+Individual: trail:National_Waymarked_Trail
 
     Types: 
-        TrailType
+        trail:TrailType
     
     
-Individual: Offaly
+Individual: trail:Offaly
 
     Types: 
-        County
+        trail:County
     
     Facts:  
-     locatedIn  Leinster
+     trail:locatedIn  trail:Leinster
     
     
-Individual: Roscommon
+Individual: trail:Roscommon
 
     Types: 
-        County
+        trail:County
     
     Facts:  
-     locatedIn  Connaught
+     trail:locatedIn  trail:Connaught
     
     
-Individual: Sligo
+Individual: trail:Sligo
 
     Types: 
-        County
+        trail:County
     
     Facts:  
-     locatedIn  Connaught
+     trail:locatedIn  trail:Connaught
     
     
-Individual: Strenuous
+Individual: trail:Strenuous
 
     Types: 
-        Grade
+        trail:Grade
     
     
-Individual: Tipperary
+Individual: trail:Tipperary
 
     Types: 
-        County
+        trail:County
     
     Facts:  
-     locatedIn  Munster
+     trail:locatedIn  trail:Munster
     
     
-Individual: Ulster
+Individual: trail:Ulster
 
     Types: 
-        Province
+        trail:Province
     
     
-Individual: Waterford
+Individual: trail:Waterford
 
     Types: 
-        County
+        trail:County
     
     Facts:  
-     locatedIn  Leinster
+     trail:locatedIn  trail:Leinster
     
     
-Individual: Westmeath
+Individual: trail:Westmeath
 
     Types: 
-        County
+        trail:County
     
     Facts:  
-     locatedIn  Leinster
+     trail:locatedIn  trail:Leinster
     
     
-Individual: category_1
+Individual: trail:category_1
 
     Types: 
-        Category
+        trail:Category
     
     
 Individual: _:genid2147483648

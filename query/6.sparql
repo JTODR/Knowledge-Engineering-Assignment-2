@@ -11,7 +11,7 @@ PREFIX trail: <http://example.org/trail/>
 #   Parameters:  format
 #   Returns:     district, trailName
 
-SELECT DISTINCT ?districtName ?trailName ?trailFormat
+SELECT ?districtName ?trailName ?formatValue
 WHERE {
   ?district a osi:Municipal_District.
   ?district rdfs:label ?districtName.
@@ -23,11 +23,12 @@ WHERE {
   ?trail trail:startPoint ?spGeom.
   ?spGeom geo:asWKT ?trailStartPoint.
   ?trail trail:hasFormat ?trailFormat.
-  ?trailFormat trail:value "%PARAM_0%"^^xsd:string
+  ?trailFormat trail:value "%PARAM_2%"^^xsd:string.
+  ?trailFormat trail:value ?formatValue.
 
-  # Get the district of the trail.
-  FILTER(geof:sfWithin(?trailStartPoint, ?wkt)).
-
+  # Get the current district. POINT(LONG, LAT).
+  FILTER(geof:sfWithin("POINT(%PARAM_0% %PARAM_1%)"^^sf:wktLiteral, ?wkt) && geof:sfWithin(?trailStartPoint, ?wkt)).
+  
   # Remove duplicates that have the @en language tag
-  FILTER ( LANG(?districtName) = "" && LANG(?trailName) = "").
+    FILTER ( LANG(?districtName) = "" && LANG(?trailName) = "").
 }
